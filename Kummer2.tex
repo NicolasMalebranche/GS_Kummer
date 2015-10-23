@@ -18,6 +18,7 @@
 \DeclareMathOperator{\Hilb}{Hilb}
 \DeclareMathOperator{\ch}{ch}
 \DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\ad}{ad}
 
 \newcommand{\hilb}[1]{^{[#1]}}
 \newcommand{\ie}{{\it i.e. }}
@@ -115,7 +116,7 @@ Let $A$ be a complex projective torus of dimension $2$. Its first cohomology $H^
 $$
 H^*(A,\Z) = \Lambda^* H^1(A,\Z).
 $$
-We abbreviate for the products $a_i\cdot a_j =: a_{ij}$ and $a_i\cdot a_j\cdot a_k =: a_{ijk}$. We write $a_1\cdot a_2\cdot a_3 \cdot a_4 =:x$ for the class corresponding to a point on $A$. We choose the $a_i$ such that $\int_A x = 1$.
+We abbreviate for the products $a_i\cdot a_j =: a_{ij}$ and $a_i\cdot a_j\cdot a_k =: a_{ijk}$. We write $a_1\cdot a_2\cdot a_3 \cdot a_4 =:x$ for the class corresponding to a point on $A$. We choose the $a_i$ such that $\int_A x = 1$. We set $a_{\overline{i}}$ for the dual class of $a_i$, \ie  $a_i\cdot a_{\overline{i}} =x$.
 The bilinear form, given by $(a_{ij},a_{kl})\mapsto\int_A a_{ij}a_{kl}$ gives $H^2(A,\Z)$ the structure of a unimodular lattice, isomorphic to $U^{\oplus 3}$, three copies of the hyperbolic lattice. 
 
 Let $A\hilb{n}$ the Hilbert scheme of $n$ points on the torus, \ie the moduli space of finite subschemes of $A$ of length $n$. Their rational cohomology can be described in terms of Nakajima's operators. First consider the direct sum
@@ -137,7 +138,8 @@ We abbreviate for a partition $\lambda=(\lambda_1,\ldots ,\lambda_k)$: \begin{al
 \kq_\lambda(\alpha) & := \prod_{i=1}^k \p_{-\lambda_i}(\alpha) \\
 \kq_{*\lambda}(\alpha) & := \left(\prod_{i=1}^k \p_{-\lambda_i}\right)\Big(\Delta_{(k)}(\alpha)\Big)
 \end{align}
-For the study of integral cohomology, first note that if $\alpha \in H^*(A,\Z)$ is an integral class, then $\p_{-m}(\alpha) $ maps integral classes to integrall classes. 
+
+For the study of integral cohomology, first note that if $\alpha \in H^*(A,\Z)$ is an integral class, then $\p_{-m}(\alpha) $ maps integral classes to integral classes. 
 Moreover, there is the following theorem:
 \begin{theorem} \cite{QinWang}
 The following operators map integral classes in $\H$ to integral classes:
@@ -149,7 +151,12 @@ Here, $\mathfrak{m}_{\lambda}$ is defined as $\mathfrak{m}_{\lambda}(\alpha):=\s
 \end{theorem}
 %For classes $\alpha_1,\ldots ,\alpha_r \in H^*(A)$ and partitions $\lambda_1,\ldots, \lambda_r$ we write $\alpha_1^{\lambda_1}\ldots\alpha_r^{\lambda_r}$ for the class $\p_{-\lambda_1}(\alpha_1)\ldots\p_{-\lambda_r}(\alpha_r)\vac$.
 
-To obtain the multiplicative structure of $\H$, given by the cup-products, there is a description in \cite{LehnSorger} and \cite{LiQinWang} in terms of multiplication operators $\mathfrak{G}_n(\alpha)$ \cite[Def.~5.1]{LiQinWang}, related to chern characters. 
+To obtain the multiplicative structure of $\H$, given by the cup-products, there is a description in \cite{LehnSorger} and \cite{LiQinWang} in terms of multiplication operators $\mathfrak{G}_k(a),\ a\in H^*(A)$ \cite[Def.~5.1]{LiQinWang}, related to chern characters. There is the following commutation relation: 
+$$
+[\mathfrak{G}_k(a),\kq_1(b)] = \frac{1}{k!}\ad(\mathfrak{d})^k(\kq_1(ab)),
+$$
+where the operator $\mathfrak{d}$ means multiplication with the first Chern class of the tautological sheaf.
+We set $a^{(k)} := \mathfrak{G}_k(a) (1)$.
 
 Next we focus on the structure of $H^2(A\hilb{n},\Z)$ for $n\geq 2$. It has rank $13$, and there is a basis consisting of:
 \begin{itemize}
@@ -205,10 +212,10 @@ for all $a\in H^2(A)$. One computes $\int_{A\hilb{3}}j(a)^6 = 15 \left(\int_A a^
 
 
 \begin{proposition}
-Set $a_i^{(1)}:= \frac{1}{2}\kq_1(1)^2\kq_1(a_i)\vac$. The class of $\kum{A}{2}$ in $H^4(A\hilb{3},\Q)$ is given by
+We have $a_i^{(0)}= \frac{1}{2}\kq_1(1)^2\kq_1(a_i)\vac$. The class of $\kum{A}{2}$ in $H^4(A\hilb{3},\Q)$ is given by
 $$
 %\prod_{i=1}^4 \left(\tfrac{1}{2}\pone(1)^2\pone(\alpha_i)\vac\right).
-a_1^{(1)}\cdot a_2^{(1)}\cdot a_3^{(1)}\cdot a_4^{(1)}.
+a_1^{(0)}\cdot a_2^{(0)}\cdot a_3^{(0)}\cdot a_4^{(0)}.
 $$ 
 Conjecture: This is true for all $n$, not only $n=3$.
 \end{proposition}
@@ -240,14 +247,14 @@ $\theta^*\left(\p_{-3}(x)\vac\right) =0$
 $\theta^* \left(\p_{-2}(a_{ij})\pone(1)\vac\right) = \frac{1}{4}\theta^*\left( \p_{-2}(1)\pone(a_{ij})\vac\right) $
 \end{corollary}
 \begin{proof}
-Let  $a_{ij}$ and $a_{kl}$ be complementary, \ie $a_{ij}a_{kl}=1$. Let $\ch_1(a_{kl}) = -\frac{1}{2} \p_{-2}(a_{kl})\pone(1)\vac$ be the chern character in the vertex algebra description of $H^*(A\hilb{3})$. Then:
+Let  $a_{ij}$ and $a_{kl}$ be complementary, \ie $a_{ij}a_{kl}=1$. We have $a_{kl}^{(1)} = -\frac{1}{2} \p_{-2}(a_{kl})\pone(1)\vac$. Then:
 $$
-\theta^*\left(-\frac{1}{2}\ch_1(a_{kl})\cdot\p_{-2}(a_{ij})\pone(1)\vac \right) =
+\theta^*\left(a_{ij}^{(1)}\cdot a_{kl}^{(1)} \right) =
 \theta^*\left(\p_{-3}(1)\vac + \frac{1}{2}\pone(x)^2\pone(1)\vac \right)
 $$
 But on the other hand, $\delta \cdot j(a) = \frac{1}{2} \p_{-2}(1)\pone(a_{ij})\vac+\p_{-2}(a_{ij})\pone(1)\vac$, and
 $$
-\theta^*\left(\ch_1(a_{kl})\cdot \delta \cdot j(a)\right) =
+\theta^*\left(a_{kl}^{(1)} \cdot \delta \cdot j(a)\right) =
 \theta^*\left(-3\p_{-3}(1)\vac  - 3\pone(x)^2\pone(1)\vac \right).
 $$
 \end{proof}
@@ -341,6 +348,28 @@ $$\theta^{*}(j(a_{12})\cdot j(a_{34})-j(a_{13})\cdot j(a_{24})+j(a_{14})\cdot j(
 is divisible by 2.
 For the divisibility by 3 combine Proposition \ref{DelSum3} with Corollary \ref{DeltaSquare3}.
 \end{proof}
+
+Let us now look at cohomology classes of odd degree. Since $H^1(\kum{A}{2}) = H^7(\kum{A}{2}) =0$, we only need to consider the degrees 3 and 5.
+\begin{proposition}
+The map $\theta^* : H^*(A\hilb{3} ,\Q) \rightarrow H^*(\kum{A}{2},\Q)$ is surjective in degrees 3 and 5. 
+If we set
+\begin{align}
+B_3 &:= \{ a_{\overline{i}}^{(0)},\; 1\leq i\leq 4\} \cup \{ a_{i}^{(1)},\; 1\leq i\leq 4\}  \\
+B_5 &:= \{ a_{\overline{i}}^{(1)},\; 1\leq i\leq 4\} \cup \{ a_{i}^{(2)},\; 1\leq i\leq 4\} ,
+\end{align}
+then the images of $B_3$ and $B_5$ give bases of $H^3(\kum{A}{2},\Q)$ and $H^5(\kum{A}{2},\Q)$ that are orthogonal under the intersection pairing.
+We have
+\begin{align}
+\int \theta^* \left( a_{\overline{ i}}^{(0)} \cdot  a_i^{(2)}  \right ) &= \pm \frac{3}{2} \\
+\int \theta^* \left( a_i^{(1)} \cdot a_{\overline{ i}}^{(1)} \right ) &= \pm \frac{1}{2}.
+\end{align}
+Moreover, $a_{\overline{ i}}^{(0)}\cdot[\kum{A}{2}]$ and $\frac{2}{3} a_i^{(2)}\cdot[\kum{A}{2}]$ are integral classes. 
+This implies (by Poincar\'e duality) that $\theta^* a_{\overline{ i}}^{(0)}$ and $\frac{2}{3} \theta^*a_i^{(2)} $ are integral. 
+
+Question: Which of $\theta^*  a_i^{(1)} $ and $ \theta^*a_{\overline{ i}}^{(1)}$ is not integral?
+\end{proposition}
+ 
+
 
 \bibliographystyle{amsplain}
 \begin{thebibliography}{10}
