@@ -142,7 +142,7 @@ Every element in $\H$ can be decomposed uniquely as a linear combination of prod
 
 To give the cup product structure of $\H$, define oprators $\G(a)$ for $a \in H^*(A)$. Let $\Xi_n \subset A\hilb{n}\times A$ be the universal subscheme. Then the action of $\G(a)$ on $H^*(A\hilb{n})$ is multiplication with the class
 $$
-pr_{1*}\left( \ch(\mathcal{O}_{\Xi_n})\cdot pr_2^*(\td(X)\cdot a) \right) \in H^*(A\hilb{n}).
+pr_{1*}\left( \ch(\mathcal{O}_{\Xi_n})\cdot pr_2^*(\td(A)\cdot a) \right) \in H^*(A\hilb{n}).
 $$
 For $a \in H^k(A)$, we define $\G_i(a)$ to be the component of $\G(a)$ of cohomological degree $k+2i$. A differential operator $\mathfrak{d}$ is given by $\G_1(1)$. It means multiplication with the first Chern class of the tautological sheaf $pr_{1*}\left( \mathcal{O}_{\Xi_n}\right)$.
 
@@ -158,22 +158,40 @@ If $X$ is a homogeneous linear operator of degree $d$ and weight $m$, acting on 
 $$
 \int_{A\hilb{n+m}}X(\alpha)\cdot\beta = (-1)^{d\deg(\alpha)}\int_{A\hilb{n}} \alpha \cdot X^\dagger (\beta).
 $$
-Define $\q_0(a) :=0$ and for $m<0$, define $\q_m(a) := (-1)^n \q_{-m}(a)^\dagger$. Then define
+We put $\q_0(a) :=0$ and for $m<0$, $\q_m(a) := (-1)^n \q_{-m}(a)^\dagger$. Then define
 $$
-\mathfrak{L}_m(a) := \ldots
+\mathfrak{L}_m(a) := \left\{ 
+\begin{array}{ll}
+ \tfrac{1}{2}\sum\limits_{k\in\Z}\sum\limits_{i}\q_k(b_i)\q_{m-k}(c_i), & \text{ if } m\neq 0, \vspace{4mm}\\
+ \sum\limits_{k>0}\sum\limits_{i}\q_k(b_i)\q_{-k}(c_i), & \text{ if } m= 0. \\
+\end{array}
+\right.
 $$
+where $\sum_i b_i\otimes c_i$ is the push-forward of $a$ along the diagonal $:A \rightarrow A\times A$.
 Then we have (\cite[Thm.~2.16]{LiQinWang}):
 \begin{align}
 [\q_m(a), \q_l(b)] &= m\cdot \delta_{m+l} \cdot \int_A ab \\
 [\mathfrak{L}_m(a),\q_l(b)] &= -m\cdot \q_{m+l}(ab) \\
+\label{DiffNaka}
 [\mathfrak{d},\q_m(b)] &= m \cdot \mathfrak{L}_m(a) + \tfrac{m(|m|-1)}{2} \q_m(K\alpha) \\
 [\G(a),\q_1(b)] &= \exp(\ad(\mathfrak{d}))(\q_1(a b) )
 \end{align}
 Note (cf.~\cite[Thm.~3.8]{LehnSorger}) that this implies that 
-$$
+\begin{equation}\label{NakaDel}
 \q_{m+1}(a) = \tfrac{(-1)^m}{m!}\ad^m([\mathfrak{d},\q_1(1)])(\q_1(a)),
-$$
-so there are two ways of writing an element of $\H$: As a linear combination of products of creation operators $\q_m(a)$ or as a linear combination of products of the operators $\mathfrak{d}$ and $\q_1(a)$. While the first one is more intuitive, the second one is more suitable for computing cup-products.
+\end{equation}
+so there are two ways of writing an element of $\H$: As a linear combination of products of creation operators $\q_m(a)$ or as a linear combination of products of the operators $\mathfrak{d}$ and $\q_1(a)$. While the first one is more intuitive, the second one is more suitable for computing cup-products. 
+Equations (\ref{DiffNaka}) and (\ref{NakaDel}) permit now to switch between the two representations, using that
+\begin{gather}
+\mathfrak{d} \vac = 0 ,  \\
+\mathfrak{L}_m(a) \vac = \left\{ 
+\begin{array}{cl}
+ \tfrac{1}{2}\sum\limits_{k=1}^{m-1}\sum\limits_{i}\q_k(b_i)\q_{m-k}(c_i)\vac, & \text{ if } m>1, \vspace{4mm}\\
+ 0, & \text{ if } m\leq 1. \\
+\end{array}
+\right.\\
+\end{gather}
+
 
 \begin{remark}
 We adopted the notation from \cite{LiQinWang}, which differs from the conventions in \cite{LehnSorger}. Here is part of a dictionary:
@@ -183,6 +201,7 @@ Notation from \cite{LiQinWang} & Notation from \cite{LehnSorger} \\\hline
 operator of bidegree $(w,d)$ & operator of bidegree $(w,d-2w)$\\
 $\q_m(a) $ & $\p_{-m}(a)$ \\
 $ \mathfrak{L}_m(a) $ & $ - L_{-m}(a)$ \\
+$\mathfrak{G}(a)$ & $a\hilb{\bullet}$\\
 $ \mathfrak{d} $ & $ \partial $ \\
 $\tau_{2*}(a)$& $-\Delta(a)$
 \end{tabular}
