@@ -250,7 +250,7 @@ We abbreviate for the products $a_i\cdot a_j =: a_{ij}$ and $a_i\cdot a_j\cdot a
 The bilinear form, given by $(a_{ij},a_{kl})\mapsto\int_A a_{ij}a_{kl}$ gives $H^2(A,\Z)$ the structure of a unimodular lattice, isomorphic to $U^{\oplus 3}$, three copies of the hyperbolic lattice. 
 
 \begin{definition}
-Let $A$ be a complex projective torus of dimension $2$ and $A\hilb{n}$, $n\geq 1$, the corresponding Hilbert scheme of points. Denote $\Sigma : A\hilb{n} \rightarrow A$ the summation morphism, a smooth submersion that factorizes via the Hilbert--Chow morphism $: A\hilb{n}\rightarrow\Sym^n(A)\rightarrow A$. Then the generalized Kummer $K^{n-1} A $ is defined as the fiber over $0$:
+Let $A$ be a complex projective torus of dimension $2$ and $A\hilb{n}$, $n\geq 1$, the corresponding Hilbert scheme of points. Denote $\Sigma : A\hilb{n} \rightarrow A$ the summation morphism, a smooth submersion that factorizes via the Hilbert--Chow morphism $: A\hilb{n}\stackrel{\rho}{\rightarrow}\Sym^n(A)\stackrel{\sigma}{\rightarrow} A$. Then the generalized Kummer $K^{n-1} A $ is defined as the fiber over $0$:
 \begin{equation}\label{square}
 \begin{CD}
 K^{n-1}A @>\theta >> A\hilb{n}\\
@@ -274,7 +274,13 @@ a_1^{(0)}\cdot a_2^{(0)}\cdot a_3^{(0)}\cdot a_4^{(0)}.
 $$ 
 \end{proposition}
 \begin{proof}
-Since the generalized Kummer variety is the fiber over a point, its Poincar\'e dual must be the pullback of $x\in H^4(A)$ under $\Sigma$. But $\Sigma^* (x) = \Sigma^*(a_1)\cdot \Sigma^*(a_2)\cdot \Sigma^*(a_3)\cdot \Sigma^*(a_4)$, so we have to verify that $\Sigma^* (a_i) = a_i^{(0)}$. Since this identity is of degree 1, we may replace $A\hilb{n}$ by $\Sym^n(A)$, whose first cohomologies are isomorphic.
+Since the generalized Kummer variety is the fiber over a point, its Poincar\'e dual must be the pullback of $x\in H^4(A)$ under $\Sigma$. But $\Sigma^* (x) = \Sigma^*(a_1)\cdot \Sigma^*(a_2)\cdot \Sigma^*(a_3)\cdot \Sigma^*(a_4)$, so we have to verify that $\Sigma^* (a_i) = a_i^{(0)}$. To do this, we want to use the decomposition $\Sigma = \sigma\rho$.
+
+Let $\alpha = \sum \alpha_{(1)} \otimes\cdots\otimes \alpha_{(n)} $ be a class in $H^*(\Sym^n(A),\Q) \cong H^*(A^n,\Q)^{\mathfrak{S}_n}$ (in Sweedler notation). Then 
+$$
+\rho^ * \alpha = \frac{1}{n!} \sum \q_1( \alpha_{(1)} )\cdots\q_1( \alpha_{(n)} ) \vac.
+$$
+The pullback along $\sigma$ of a class $a\in H^1(A,\Q)$ on $H^1(\Sym^n(A),\Q) \cong H^*(A^n,\Q)^{\mathfrak{S}_n}$ is given by $a\otimes 1\otimes \cdots\otimes 1 + \ldots + 1\otimes \cdots\otimes 1\otimes a$. So $\Sigma^* (a_i) = \frac{1}{(n-1)!}\kq_{1}(1)^{n-1}\kq_1(a_i)\vac $.
 \end{proof}
 
 Or main reference is \cite{Beauville} where it is shown, that $K^{n-1}$ is an irreducible holomorphically symplectic manifold. So $H^2(\kum{A}{n-1},\Z)$ admits an integer-valued nondegenerated quadratic form (called Beauville--Bogomolov form) $q$ which gives $H^2(\kum{A}{n-1},\Z)$ the structure of a lattice isomorphic to $U^{\oplus 3}\oplus \left< -2n \right>$, for $n\geq 3$. We have the following formula for $\alpha\in H^2(\kum{A}{n-1},\Z)$:
