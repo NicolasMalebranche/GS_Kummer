@@ -162,12 +162,12 @@ We put $\q_0(a) :=0$ and for $m<0$, $\q_m(a) := (-1)^n \q_{-m}(a)^\dagger$. Then
 $$
 \mathfrak{L}_m(a) := \left\{ 
 \begin{array}{ll}
- \tfrac{1}{2}\sum\limits_{k\in\Z}\sum\limits_{i}\q_k(b_i)\q_{m-k}(c_i), & \text{ if } m\neq 0, \vspace{4mm}\\
- \sum\limits_{k>0}\sum\limits_{i}\q_k(b_i)\q_{-k}(c_i), & \text{ if } m= 0. \\
+ \tfrac{1}{2}\sum\limits_{k\in\Z}\sum\limits_{i}\q_k( a_{(1)})\q_{m-k}( a_{(2)}), & \text{ if } m\neq 0, \vspace{4mm}\\
+ \sum\limits_{k>0}\sum\limits_{i}\q_k( a_{(1)})\q_{-k}( a_{(2)}), & \text{ if } m= 0. \\
 \end{array}
 \right.
 $$
-where $\sum_i b_i\otimes c_i$ is the push-forward of $a$ along the diagonal $:A \rightarrow A\times A$.
+where $\sum_i a_{(1)}\otimes  a_{(2)}$ is the push-forward of $a$ along the diagonal $:A \rightarrow A\times A$ (in Sweedler notation).
 Then we have (\cite[Thm.~2.16]{LiQinWang}):
 \begin{align}
 [\q_m(a), \q_l(b)] &= m\cdot \delta_{m+l} \cdot \int_A ab \\
@@ -228,7 +228,7 @@ $$
 [\mathfrak{G}_k(a),\kq_1(b)] = \frac{1}{k!}\ad(\mathfrak{d})^k(\kq_1(ab)),
 $$
 where the operator $\mathfrak{d}$ means multiplication with the first Chern class of the tautological sheaf.
-We set $a^{(k)} := \mathfrak{G}_k(a) (1)$.
+We set $a^{(k)} := \mathfrak{G}_k(a) (1) \in H^{\deg a + 2k}(A\hilb{n},\Q)$.
 
 Next we focus on the structure of $H^2(A\hilb{n},\Z)$ for $n\geq 2$. It has rank $13$, and there is a basis consisting of:
 \begin{itemize}
@@ -313,6 +313,7 @@ Remark: $\theta^*\delta$ seems to be indivisible (because of (\ref{fujiki})), bu
 \begin{remark}
 This allows us to better understand the morphism $\theta^*$. Since the Poincar\'e pairing is nondegenerated, $[\kum{A}{n-1}]\cdot \alpha=0$ implies $\theta^* \alpha =0$.
 \end{remark}
+\section{Study of $\kum{A}{2}$}
 Let us summarize our results on $\theta^*$ for the case $n=3$:
 \begin{theorem}
 The homomorphism $\theta^* : H^*(A\hilb{3},\Q)\rightarrow H^*(\kum{A}{2},\Q)$ of graded rings is surjective in every degree except $4$. Moreover, the image of $H^4(A\hilb{3},\Q)$ is equal to $\Sym^2(H^2(\kum{A}{2},\Q))$. 
@@ -475,16 +476,16 @@ Question: Which of $\theta^*  a_i^{(1)} $ and $ \theta^*a_{\overline{ i}}^{(1)}$
 \begin{thebibliography}{10}
 
 \bibitem{Beauville}
-A.~Beauville, \emph{Variétés kähleriennes dont la première classe de Chern est nulle}, 
+A.~Beauville, \emph{Vari\'et\'es k\"ahleriennes dont la premi\`ere classe de Chern est nulle}, 
   J. Differential geometry, 18 (1983) 755-782
 
 \bibitem{Generating}
 S.~Boissi\`ere and M.~Nieper-Wi{\ss}kirchen, \emph{Generating series in the cohomology 
-  of Hilbert schemes of points on surfaces}, LMS J.~of Computation and Mathematics 10 (2007), 254--270 .
+  of Hilbert schemes of points on surfaces}, LMS J.~of Computation and Math.~10 (2007), 254--270 .
 
 \bibitem{BNS}
 S.~Boissi\`ere, M.~Nieper-Wi{\ss}kirchen, and A.~Sarti, \emph{Smith theory and 
-  Irreducible Holomorphic Symplectic Manifolds}, Journal of Topology 6 (2013), no.~2, 361–390.
+  Irreducible Holomorphic Symplectic Manifolds}, Journal of Topology 6 (2013), no.~2, 361–-390.
 
 \bibitem{Britze} 
 M.~Britze, \emph{On the cohomology of generalized Kummer varieties}, (2003) 
