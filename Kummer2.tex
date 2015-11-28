@@ -205,10 +205,29 @@ $\mathfrak{G}(a)$ & $a\hilb{\bullet}$\\
 $ \mathfrak{d} $ & $ \partial $ \\
 $\tau_{2*}(a)$& $-\Delta(a)$
 \end{tabular}
-
-
 \end{remark}
 
+By sending a subscheme in $A$ to is support, we define a morphism
+$$
+\rho : A\hilb{n} \longrightarrow \Sym^n(A),
+$$
+called the Hilbert--Chow morphism. The cohomology of $\Sym^n(A)$ is given by elements of the $n$-fold tensor power of $H^*(A)$ that are invariant under the action of the group of permutations $\mathfrak{S}_n$. A class in $H^*(A\hilb{n},\Q)$ which can be written using only the operators $\q_1$ comes from a pullback along $\rho$:
+\begin{equation}
+\q_1(b_1)\cdots \q_1(b_n)\vac = \rho^*\left( \sum_{\pi\in\mathfrak{S}_n } b_{\pi(1)}\otimes\ldots\otimes b_{\pi(n)} \right), \quad b_i\in H^*(A,\Q).
+\end{equation}
+In particular,
+\begin{gather} \label{q0primitive}
+\frac{1}{n!}\q_1(b)^n \vac = \rho^*\big( b\otimes \ldots \otimes b\big),
+\\ \label{q1primitive}
+\frac{1}{(n-1)!}\q_1(b)\left(\q_1(1)\right)^{n-1}\vac =\rho^*\Big( b\otimes\! 1\!\otimes\ldots\otimes\! 1\; + \;\ldots\; +\; 1\!\otimes\ldots\otimes\! 1\! \otimes b\Big) .
+\end{gather}
+This is sometimes useful for manually computing products. For instance, if $b\in H^2(A,\Q)$ is of degree $2$, then
+\begin{equation}\label{qprimitivepower}\begin{array}{rl}
+\left(\frac{1}{(n-1)!}\q_1(b)\left(\q_1(1)\right)^{n-1}\vac\right)^{2n}
+&= n! \cdot (2n-1)!! \cdot \rho^*\left(b^2 \otimes \cdots \otimes b^2\right) \\
+&= (2n-1)!! \cdot \q_1(b^2)^n\vac.
+\end{array}
+\end{equation}
 
 \section{Cohomology of Hilbert schemes of points on a torus surface}
 
@@ -249,21 +268,16 @@ We abbreviate for the products $a_i\cdot a_j =: a_{ij}$ and $a_i\cdot a_j\cdot a
 The bilinear form, given by $(a_{ij},a_{kl})\mapsto\int_A a_{ij}a_{kl}$ gives $H^2(A,\Z)$ the structure of a unimodular lattice, isomorphic to $U^{\oplus 3}$, three copies of the hyperbolic lattice. 
 
 \begin{definition}
-Let $A$ be a complex projective torus of dimension $2$ and $A\hilb{n}$, $n\geq 1$, the corresponding Hilbert scheme of points. Denote $\Sigma : A\hilb{n} \rightarrow A$ the summation morphism, a smooth submersion that factorizes via the Hilbert--Chow morphism $: A\hilb{n}\stackrel{\rho}{\rightarrow}\Sym^n(A)\stackrel{\sigma}{\rightarrow} A$. Then the generalized Kummer $K^{n-1} A $ is defined as the fiber over $0$:
+Let $A$ be a complex projective torus of dimension $2$ and $A\hilb{n}$, $n\geq 1$, the corresponding Hilbert scheme of points. Denote $\Sigma : A\hilb{n} \rightarrow A$ the summation morphism, a smooth submersion that factorizes via the Hilbert--Chow morphism $: A\hilb{n}\stackrel{\rho}{\rightarrow}\Sym^n(A)\stackrel{\sigma}{\rightarrow} A$. Then the generalized Kummer $\kum{A}{n-1}$ is defined as the fiber over $0$:
 \begin{equation}\label{square}
 \begin{CD}
-K^{n-1}A @>\theta >> A\hilb{n}\\
+\kum{A}{n-1} @>\theta >> A\hilb{n}\\
 @VVV @VV\Sigma V\\
 \{0\} @> >> A
 \end{CD}
 \end{equation}
 \end{definition}
 Our first objective is to collect some information about this pullback diagram. 
-We recall Theorem 2 of \cite{Spanier}.
-\begin{theorem}\label{torsion}
-The cohomology of $K_{2}(A)$ is torsion free. 
-\end{theorem}
-
 
 \begin{proposition}
 Recall that $a_i^{(0)}= \frac{1}{(n-1)!}\kq_{1}(1)^{n-1}\kq_1(a_i)\vac$. The class of the Poincar\'e dual of $\kum{A}{n-1}$ in $H^4(A\hilb{n},\Z)$ is given by
@@ -274,17 +288,24 @@ $$
 \end{proposition}
 \begin{proof}
 Since the generalized Kummer variety is the fiber over a point, its Poincar\'e dual must be the pullback of $x\in H^4(A)$ under $\Sigma$. But $\Sigma^* (x) = \Sigma^*(a_1)\cdot \Sigma^*(a_2)\cdot \Sigma^*(a_3)\cdot \Sigma^*(a_4)$, so we have to verify that $\Sigma^* (a_i) = a_i^{(0)}$. To do this, we want to use the decomposition $\Sigma = \sigma\rho$.
-
-Let $\alpha = \sum \alpha_{(1)} \otimes\cdots\otimes \alpha_{(n)} $ be a class in $H^*(\Sym^n(A),\Q) \cong H^*(A^n,\Q)^{\mathfrak{S}_n}$ (in Sweedler notation). Then 
-$$
-\rho^ * \alpha = \frac{1}{n!} \sum \q_1( \alpha_{(1)} )\cdots\q_1( \alpha_{(n)} ) \vac.
-$$
-The pullback along $\sigma$ of a class $a\in H^1(A,\Q)$ on $H^1(\Sym^n(A),\Q) \cong H^*(A^n,\Q)^{\mathfrak{S}_n}$ is given by $a\otimes 1\otimes \cdots\otimes 1 + \ldots + 1\otimes \cdots\otimes 1\otimes a$. So $\Sigma^* (a_i) = \frac{1}{(n-1)!}\kq_{1}(1)^{n-1}\kq_1(a_i)\vac $.
+The pullback along $\sigma$ of a class $a\in H^1(A,\Q)$ on $H^1(\Sym^n(A),\Q) \cong H^*(A^n,\Q)^{\mathfrak{S}_n}$ is given by $a\otimes 1\otimes \cdots\otimes 1 + \ldots + 1\otimes \cdots\otimes 1\otimes a$. It follows from (\ref{q1primitive}) that $\Sigma^* (a_i) = \frac{1}{(n-1)!}\kq_{1}(1)^{n-1}\kq_1(a_i)\vac $.
 \end{proof}
+\begin{remark}
+This allows us to better understand the morphism $\theta^*$. Since the Poincar\'e pairing is nondegenerated, $[\kum{A}{n-1}]\cdot \alpha=0$ implies $\theta^* \alpha =0$.
+\end{remark}
 
-Or main reference is \cite{Beauville} where it is shown, that $\kum{}{n-1}$ is an irreducible holomorphically symplectic manifold. So $H^2(\kum{A}{n-1},\Z)$ admits an integer-valued nondegenerated quadratic form (called Beauville--Bogomolov form) $q$ which gives $H^2(\kum{A}{n-1},\Z)$ the structure of a lattice isomorphic to $U^{\oplus 3}\oplus \left< -2n \right>$, for $n\geq 3$. We have the following formula for $\alpha\in H^2(\kum{A}{n-1},\Z)$:
+We recall Theorem 2 of \cite{Spanier}.
+\begin{theorem}\label{torsion}
+The cohomology of $\kum{A}{n-1}$ is torsion free. 
+\end{theorem}
+
+\begin{theorem}\cite{Beauville}
+$\kum{A}{n-1}$ is a irreducible holomorphically symplectic manifold. In particular, it is simply connected and the canonical bundle is trivial.
+\end{theorem}
+So $H^2(\kum{A}{n-1},\Z)$ admits an integer-valued nondegenerated quadratic form (called Beauville--Bogomolov form) $q$ which gives $H^2(\kum{A}{n-1},\Z)$ the structure of a lattice isomorphic to $U^{\oplus 3}\oplus \left< -2n \right>$, for $n\geq 3$. We have the following formula for $\alpha\in H^2(\kum{A}{n-1},\Z)$:
 \begin{equation} \label{fujiki}
-\int_{\kum{A}{n-1}} \alpha^{2n-2} = n\frac{(2n-2)!}{2^{n-1}(n-1)!} q(a)^{n-1}
+%\int_{\kum{A}{n-1}} \alpha^{2n-2} = n\frac{(2n-2)!}{2^{n-1}(n\! - \! 1)!} q(a)^{n-1}
+\int_{\kum{A}{n-1}} \alpha^{2n-2} = n\cdot(2n-3)!!\cdot q(\alpha)^{n-1}
 \end{equation}
 
 
@@ -293,26 +314,28 @@ The morphism $\theta$ induces a homomorphism of graded rings
 \theta^* :H^*(A\hilb{n},\Z)\longrightarrow H^*(\kum{A}{n-1},\Z).
 \end{equation}
 
-\begin{proposition}Let $n\geq 3$.
-\begin{enumerate} 
- \item $\theta^*$ maps $H^1(A\hilb{n},\Z)$ to zero.
- \item $\theta^*$ is surjective on $H^2(A\hilb{n},\Z)$ with kernel $\Lambda^2H^1(A\hilb{n},\Z)$.
-\end{enumerate}
+\begin{proposition} Assume $n\geq 3$. Then
+$\theta^*$ is surjective on $H^2(A\hilb{n},\Z)$ with kernel $\Lambda^2H^1(A\hilb{n},\Z)$.
 \end{proposition}
 \begin{proof}
-The first statement is clear since $H^1(\kum{A}{n-1})$ is always zero \cite[Thm.~3]{Beauville}. Furthermore, by \cite[Sect.~7]{Beauville}, $\theta^{\ast} : H^2(A\hilb{n},\C) \rightarrow H^2(\kum{A}{n-1},\C)$ is surjective. The second Betti numbers of $A\hilb{n}$ and $\kum{A}{n-1}$ are $13$ and $7$, respectively. It is clear that $\Lambda^2H^1(A\hilb{n},\Z)$ is contained in the kernel, and since the dimension of the kernel has to be $6$, it must be all.
+By \cite[Sect.~7]{Beauville}, $\theta^{\ast} : H^2(A\hilb{n},\C) \rightarrow H^2(\kum{A}{n-1},\C)$ is surjective. Because of $H^1(\kum{A}{n-1},\Z)=0$, it is clear that $\Lambda^2H^1(A\hilb{n},\Z)$ is contained in the kernel. This is a free $\Z$-module of rank $6$. But the second Betti numbers of $A\hilb{n}$ and $\kum{A}{n-1}$ are $13$ and $7$, respectively, so it must be all.  
 
-It remains to show that $\theta^*$  is surjective for integral coefficients, too. We do it only for $n=3$. We use a formula in \cite[p. 8]{Britze}, namely:
-\begin{equation} \int_{A\hilb{3}}j(a)^6 = \frac{5}{3} \int_A a^2 \int_{\kum{A}{2}} \theta^* j(a)^4
+It remains to show that $\theta^*$ is surjective for cohomology with integral coefficients, too.
+The idea is to prove that the lattice structure of $\im \theta^*$ is the same as of $H^2(\kum{A}{n-1})$.
+We use two formulas in \cite[pp.~8--11]{Britze}. Let $b\in H^2(A,\Z)$ and set $\alpha = \frac{1}{(n-1)!}\kq_{1}(1)^{n-1}\kq_1(b)\vac\in H^2(A\hilb{n},\Z)$. Then  
+\begin{equation} 
+\int_{A\hilb{n}}\alpha^{2n} = \binom{2n}{2} \frac{\int_A b^2}{n^2} \int_{\kum{A}{n-1}} \theta^* \alpha^{2n-2}
+%\int_{A\hilb{3}}j(a)^6 = \frac{5}{3} \int_A a^2 \int_{\kum{A}{2}} \theta^* j(a)^4
 \end{equation}
-for all $a\in H^2(A)$. One computes $\int_{A\hilb{3}}j(a)^6 = 15 \left(\int_A a^2\right)^3$. Comparing this with (\ref{fujiki}), we see that the sublattice given by the image of $\theta^*\circ j$ is unimodular. Secondly, we must show that $q(\theta^*\delta) = -6$. TODO: show this! 
-Remark: $\theta^*\delta$ seems to be indivisible (because of (\ref{fujiki})), but every product with $\theta^*\delta$ is divisible by 3. Indeed, the value of (\ref{fujiki}) for $\alpha=\theta^*\delta$ is 324.
+Combining this formula with (\ref{fujiki}) and (\ref{q1primitive}), we get
+$\int_A b^2 = q(\alpha)$.
+
+Secondly, we must show that $q(\theta^*\delta) = -2n$. TODO: show this! 
+%Remark: $\theta^*\delta$ seems to be indivisible (because of (\ref{fujiki})), but every product with $\theta^*\delta$ is divisible by 3. Indeed, the value of (\ref{fujiki}) for $\alpha=\theta^*\delta$ is 324.
 \end{proof}
 
 
-\begin{remark}
-This allows us to better understand the morphism $\theta^*$. Since the Poincar\'e pairing is nondegenerated, $[\kum{A}{n-1}]\cdot \alpha=0$ implies $\theta^* \alpha =0$.
-\end{remark}
+
 \section{Study of $\kum{A}{2}$}
 Let us summarize our results on $\theta^*$ for the case $n=3$:
 \begin{theorem}
