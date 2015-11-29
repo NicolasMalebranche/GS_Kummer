@@ -115,6 +115,17 @@ For the power sums, first define $p_n := x_1^n + x_2^n + \ldots$.
 Then $p_\lambda := p_{\lambda_1}p_{\lambda_2}\ldots p_{\lambda_k}$.
 The families $(m_\lambda)_\lambda$ and $(p_\lambda)_\lambda$ form two $\Q$-bases of $\Lambda$, so they are linearly related by $p_\lambda = \sum_{\mu} \psi_{\lambda\mu}m_\mu$. It turns out that the base change matrix $(\psi_{\lambda\mu})$ has integral entries, but its inverse $(\psi_{\lambda\mu}^{-1})$ has not.
 \end{definition}
+\begin{definition}\label{doublefactorial}
+We define the double factorial for $ n\geq -1$ by 
+$$n!! \,\coloneqq \prod_{i=0}^{\left\lfloor\!\frac{n-1}{2}\!\right\rfloor }(n-2i)=n(n-2)(n-4)\ldots $$
+Clearly, $(n-1)!!\,n!! = n!$ and $(2n)!! = 2^n n!$.
+\end{definition}
+\begin{proposition} \label{partitioncount}
+The number of partitions of the set $\{1,\ldots,2k\}$ into pairs equals $(2k-1)!! = \frac{(2k)!}{2^kk!}$.
+\end{proposition}
+\begin{proof}
+Given such a partition, look at the pair that contains the element $1$. There are $2k-1$ possible partners for this element; removing the pair leaves a partition of a set of cardinality $(2k-2)$ into pairs. Then proceed by induction.
+\end{proof}
 
 \section{Hilbert schemes of points on surfaces}
 Let $A$ be a smooth projective complex surface. Let $A\hilb{n}$ the Hilbert scheme of $n$ points on the surface, \ie the moduli space of finite subschemes of $A$ of length $n$.
@@ -173,7 +184,7 @@ Then we have (\cite[Thm.~2.16]{LiQinWang}):
 [\q_m(a), \q_l(b)] &= m\cdot \delta_{m+l} \cdot \int_A ab \\
 [\mathfrak{L}_m(a),\q_l(b)] &= -m\cdot \q_{m+l}(ab) \\
 \label{DiffNaka}
-[\mathfrak{d},\q_m(b)] &= m \cdot \mathfrak{L}_m(a) + \tfrac{m(|m|-1)}{2} \q_m(K\alpha) \\
+[\mathfrak{d},\q_m(a)] &= m \cdot \mathfrak{L}_m(a) + \tfrac{m(|m|-1)}{2} \q_m(K a) \\
 [\G(a),\q_1(b)] &= \exp(\ad(\mathfrak{d}))(\q_1(a b) )
 \end{align}
 Note (cf.~\cite[Thm.~3.8]{LehnSorger}) that this implies that 
@@ -221,13 +232,25 @@ In particular,
 \\ \label{q1primitive}
 \frac{1}{(n-1)!}\q_1(b)\left(\q_1(1)\right)^{n-1}\vac =\rho^*\Big( b\otimes\! 1\!\otimes\ldots\otimes\! 1\; + \;\ldots\; +\; 1\!\otimes\ldots\otimes\! 1\! \otimes b\Big) .
 \end{gather}
-This is sometimes useful for manually computing products. For instance, if $b\in H^2(A,\Q)$ is of degree $2$, then
-\begin{equation}\label{qprimitivepower}\begin{array}{rl}
-\left(\frac{1}{(n-1)!}\q_1(b)\left(\q_1(1)\right)^{n-1}\vac\right)^{2n}
-&= n! \cdot (2n-1)!! \cdot \rho^*\left(b^2 \otimes \cdots \otimes b^2\right) \\
-&= (2n-1)!! \cdot \q_1(b^2)^n\vac.
-\end{array}
-\end{equation}
+This is sometimes useful for manually computing products:
+\begin{proposition}\label{qprimitivepower}
+Let $b\in H^2(A,\Q)$ be of degree $2$ and set $B_n := \frac{1}{(n-1)!}\q_1(b)\left(\q_1(1)\right)^{n-1}\vac$, $Q_n:= B_n^{2n}$, $P_n :=B_n^{2n-2}$. Then:
+\begin{equation*}
+Q_n
+%&= n! \cdot (2n-1)!! \cdot \rho^*\left(b^2 \otimes \cdots \otimes b^2\right) \\
+= (2n-1)!! \cdot \q_1(b^2)^n\vac,
+\quad
+P_n = \q_1(1) Q_{n-1} + n\cdot \q_1(b)^2 Q_{n-2}.
+\end{equation*}
+\end{proposition}
+\begin{proof} First note that, by (\ref{q1primitive}),
+$$
+B_n^k = \rho^*\left(\sum_{i_1+\ldots+i_n= k}b^{i_1}\otimes\cdots\otimes b^{i_n}\right).
+$$
+It is clear by degree reasons that $Q_n$ must be a multiple of $ \rho^*\left(b^2 \otimes \cdots \otimes b^2\right)$. Using Prop.~\ref{partitioncount} one deduces the formula for $Q_n$. 
+The formula for $P_n$ follows in a similar manner.
+\end{proof}
+
 
 \section{Cohomology of Hilbert schemes of points on a torus surface}
 
@@ -327,10 +350,10 @@ We use two formulas in \cite[pp.~8--11]{Britze}. Let $b\in H^2(A,\Z)$ and set $\
 \int_{A\hilb{n}}\alpha^{2n} = \binom{2n}{2} \frac{\int_A b^2}{n^2} \int_{\kum{A}{n-1}} \theta^* \alpha^{2n-2}
 %\int_{A\hilb{3}}j(a)^6 = \frac{5}{3} \int_A a^2 \int_{\kum{A}{2}} \theta^* j(a)^4
 \end{equation}
-Combining this formula with (\ref{fujiki}) and (\ref{q1primitive}), we get
-$\int_A b^2 = q(\alpha)$.
-
-Secondly, we must show that $q(\theta^*\delta) = -2n$. TODO: show this! 
+By Proposition \ref{qprimitivepower}, the left hand side of this equation equals $(2n-1)!!\cdot \left(\int_a b^2\right)^n$. By (\ref{fujiki}), the right hand side gives $(2n-1)!! \cdot \left(\int_A b^2\right) \cdot q(\alpha)^{n-1}$. So
+we get
+$\int_A b^2 = q(\alpha)$, giving the set of all $\alpha$ a lattice structure isomorphic to $H^2(A,\Z)$. 
+Secondly, we must show that for $\delta=$ half of the exceptional divisor: $q(\theta^*\delta) = -2n$. But this follows now from Proposition 1 in \cite{Britze}.
 %Remark: $\theta^*\delta$ seems to be indivisible (because of (\ref{fujiki})), but every product with $\theta^*\delta$ is divisible by 3. Indeed, the value of (\ref{fujiki}) for $\alpha=\theta^*\delta$ is 324.
 \end{proof}
 
