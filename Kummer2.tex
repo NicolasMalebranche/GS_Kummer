@@ -86,8 +86,10 @@
 
 \author{Simon Kapfer}
 \author{Gr\'egoire Menet}
-\address{Simon Kapfer, Laboratoire de Math\'ematiques et Applications, UMR CNRS 6086, Universit\'e de Poitiers, T\'el\'eport 2, Boulevard Marie et Pierre Curie, F-86962 Futuroscope Chasseneuil}
-\email{simon.kapfer@math.univ-poitiers.fr}
+%\address{Simon Kapfer, Laboratoire de Math\'ematiques et Applications, UMR CNRS 6086, Universit\'e de Poitiers, T\'el\'eport 2, Boulevard Marie et Pierre Curie, F-86962 Futuroscope Chasseneuil}
+\address{Simon Kapfer, Institut f\"ur Mathematik, Universit\"at Augsburg, D--86159 Augsburg}
+%\email{simon.kapfer@math.univ-poitiers.fr}
+\email{simon.kapfer@math.uni-augsburg.de}
 %\urladdr{http://www.math.uni-augsburg.de/alg/}
 
 
@@ -178,7 +180,7 @@ $$
 \end{array}
 \right.
 $$
-where $\sum_i a_{(1)}\otimes  a_{(2)}$ is the push-forward of $a$ along the diagonal $:A \rightarrow A\times A$ (in Sweedler notation).
+where $\sum_i a_{(1)}\otimes  a_{(2)}$ is the push-forward of $a$ along the diagonal $\tau_2 :A \rightarrow A\times A$ (in Sweedler notation).
 Then we have (\cite[Thm.~2.16]{LiQinWang}):
 \begin{align}
 [\q_m(a), \q_l(b)] &= m\cdot \delta_{m+l} \cdot \int_A ab \\
@@ -197,7 +199,7 @@ Equations (\ref{DiffNaka}) and (\ref{NakaDel}) permit now to switch between the 
 \mathfrak{d} \vac = 0 ,  \\
 \mathfrak{L}_m(a) \vac = \left\{ 
 \begin{array}{cl}
- \tfrac{1}{2}\sum\limits_{k=1}^{m-1}\sum\limits_{i}\q_k(b_i)\q_{m-k}(c_i)\vac, & \text{ if } m>1, \vspace{4mm}\\
+ \tfrac{1}{2}\sum\limits_{k=1}^{m-1}\sum\limits_{i}\q_k(a_{(1)})\q_{m-k}(a_{(2)})\vac, & \text{ if } m>1, \vspace{4mm}\\
  0, & \text{ if } m\leq 1. \\
 \end{array}
 \right.\\
@@ -282,7 +284,7 @@ Moreover, the following classes form a basis of $H^2(A\hilb{n},\Z)/\text{Tors}$:
  \item $\G_0(a_i)\G_0(a_j)1 = \frac{1}{(n-2)!}\q_{1}(1)^{n-2}\q_{1}(a_{i})\q_{1}(a_{j})\vac,\  i < j$,
  \item $\mathfrak{d} 1 =  \frac{1}{2(n-2)!}\q_{1}(1)^{n-2}\q_{2}(1) \vac$. We denote this class by $\delta$.
 \end{itemize}
-Their respective duals are given by
+Their respective duals in $H^{2n-2}(A\hilb{n},\Z)/\text{Tors}$ are given by
 \begin{itemize}
  \item $\q_{1}(b_{i}^*)\q_{1}(x)^{n-1}\vac$,
  \item $\q_{1}(a_{j}^*)\q_{1}(a_{i}^*)\q_{1}(x)^{n-2}\vac,\  i < j$,
@@ -330,10 +332,10 @@ Let $A$ be a complex projective torus of dimension $2$ and $A\hilb{n}$, $n\geq 1
 Our first objective is to collect some information about this pullback diagram. 
 
 \begin{proposition}
-Recall that $a_i^{(0)}= \frac{1}{(n-1)!}\kq_{1}(1)^{n-1}\kq_1(a_i)\vac$. The class of the Poincar\'e dual of $\kum{A}{n-1}$ in $H^4(A\hilb{n},\Z)$ is given by
+Let $\alpha_i := \frac{1}{(n-1)!}\kq_{1}(1)^{n-1}\kq_1(a_i)\vac = \G_0(a_i)1$. The class of the Poincar\'e dual of $\kum{A}{n-1}$ in $H^4(A\hilb{n},\Z)$ is given by
 $$
 %\prod_{i=1}^4 \left(\tfrac{1}{2}\pone(1)^2\pone(\alpha_i)\vac\right).
-a_1^{(0)}\cdot a_2^{(0)}\cdot a_3^{(0)}\cdot a_4^{(0)}.
+\alpha_1\cdot\alpha_2\cdot\alpha_3\cdot\alpha_4.
 $$ 
 \end{proposition}
 \begin{proof}
