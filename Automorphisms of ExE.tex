@@ -1,0 +1,122 @@
+\documentclass{amsart}
+
+\usepackage{amsmath,amssymb,amsfonts,amscd}
+\usepackage[all]{xy}
+\usepackage{appendix,listings,hyperref}
+
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\trace}{tr}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Sp}{Sp}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Hilb}{Hilb}
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\td}{td}
+\DeclareMathOperator{\supp}{supp}
+
+
+\newcommand{\hilb}[1]{^{[#1]}}
+\newcommand{\ie}{{\it i.e. }}
+\newcommand{\eg}{{\it e.g. }}
+\newcommand{\loccit}{{\it loc. cit. }}
+\newcommand{\vac}{|0\rangle}
+\newcommand{\odd}{{\rm{odd}}}
+\newcommand{\even}{{\rm{even}}}
+\newcommand{\tors}{{\rm{tors}}}
+
+
+\newcommand{\coloneqq}{:=}
+\newcommand{\kum}[2]{K_{ #2 }( #1 )}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{{\mathbb{ F }_3}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\kS}{\mathfrak{S}}
+
+\newcommand{\km}{\mathfrak{m}}
+\newcommand{\kq}{\mathfrak{q}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\ra}{\rightarrow}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\title{Automorphisms of complex tori of the form $E\times E$}
+
+\author{Simon Kapfer}
+
+\date{\today}
+
+%\keywords{}
+
+\maketitle
+
+Let $\Lambda_0 \subset \C$ be a lattice of rank 2. We may assume that $\Lambda_0 =\Z +\Z\tau$ for a complex number $\tau\in\C\backslash\R$. We set $\Lambda:= \Lambda_0\times\Lambda_0$, $E:=\C/\Lambda_0$ and $A:= E\times E$. By an automorphism of $A$ we mean a biholomorphism preserving the group structure. This is the same as a $\C$-linear map $ M:\C^2 \rightarrow \C^2$ with $M\Lambda =\Lambda$. 
+
+In the appendix of \cite{Ghys} we find a study of automorphisms of 2-dimensional complex tori. In our case, $A=E\times E$, the automorphism group is given by $\GL(2,\End(\Lambda_0))$.
+Here, $\End(\Lambda_0)$ is the set $\{z\in\C \;|\; z\Lambda_0\subset \Lambda_0\}$. Given such a $z$, then we have $$z\cdot 1 = a + b\tau\text{ and }z\cdot \tau = c+ d\tau\text{ with }a,b,c,d\in \Z.$$ 
+We get the condition
+$$
+(a+b\tau)\tau = c+d\tau\quad \Leftrightarrow \quad b\tau^2 + (d-a)\tau +c =0.
+$$
+Up to scalar multiples, there is a unique real quadratic polynomial that annihilates $\tau$, namely $ (x -\tau )(x-\bar{\tau})=x^2 - 2\Re(\tau)x+ \|\tau\|^2$. So we have 2 possibilities:
+\begin{enumerate}
+ \item Both the real part and the square norm of $\tau$ are rational numbers, say $2\Re(\tau) = \frac{p}{r}$ and $\|\tau\|^2 = \frac{q}{r}$ with $r>0$ as small as possible. Then $z=a+b\tau$ with arbitrary $a\in \Z$ and $b\in r\Z$, so $\End(\Lambda_0)= \Z+ r\tau\Z$.
+ \item At least one of $\Re(\tau), \|\tau\|^2$ is irrational. Then $z=a $ and $\End(\Lambda_0)=\Z$.
+\end{enumerate}
+\vspace{0.5cm}
+
+
+If I understand properly, in \cite[proof of Prop.~5.2]{Hassett} it is claimed that the automorphism group of $A$, when restricted to the three-torsion points $A[3]$, contains the symplectic group $\Sp (A[3])=\Sp (4,\F )$. At least in the second case this is impossible, because then $\Aut(A) =\GL(2,\Z)$, so $\Aut(A)\otimes\F =\GL(2,\F)$ is a group of order 48 (cf \cite{GL}). On the other hand, the order of $\Sp(4,\F)$ is 51840 (cf. \cite{Sp}).
+
+
+\bibliographystyle{amsplain}
+\begin{thebibliography}{10}
+\bibitem{Ghys}
+  E.~Ghys, A.~Verjovsky, \emph{Locally free holomorphic actions of the complex affine group}, \url{http://perso.ens-lyon.fr/ghys/articles/locallyfreeaffine.pdf}.
+\bibitem{Hassett}
+  B.~Hassett, Y.~Tschinkel, \emph{Hodge theory and Lagrangian planes on generalized Kummer fourfolds}.
+\bibitem{GL}
+  \emph{Order of general linear group over finite fields}, \url{https://proofwiki.org/wiki/Order_of_General_Linear_Group_over_Finite_Field}.
+\bibitem{Sp}
+  \emph{Order of symplectic group over finite fields}, \url{http://groupprops.subwiki.org/wiki/Order_formulas_for_symplectic_groups}.
+\end{thebibliography}
+\end{document}

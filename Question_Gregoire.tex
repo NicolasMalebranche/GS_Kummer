@@ -1,0 +1,138 @@
+\documentclass{amsart}
+
+\usepackage{amsmath,amssymb,amsfonts,amscd}
+\usepackage[all]{xy}
+\usepackage{appendix,listings,hyperref}
+
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\trace}{tr}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Hilb}{Hilb}
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\td}{td}
+\DeclareMathOperator{\supp}{supp}
+
+
+\newcommand{\hilb}[1]{^{[#1]}}
+\newcommand{\ie}{{\it i.e. }}
+\newcommand{\eg}{{\it e.g. }}
+\newcommand{\loccit}{{\it loc. cit. }}
+\newcommand{\vac}{|0\rangle}
+\newcommand{\odd}{{\rm{odd}}}
+\newcommand{\even}{{\rm{even}}}
+\newcommand{\tors}{{\rm{tors}}}
+
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\G}{\mathfrak{G}}
+\newcommand{\q}{\mathfrak{q}}
+\newcommand{\pone}{ \mathfrak{p}_{ - 1} }
+
+\newcommand{\coloneqq}{:=}
+\newcommand{\kum}[2]{K_{ #2 }( #1 )}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\kS}{\mathfrak{S}}
+
+\newcommand{\km}{\mathfrak{m}}
+\newcommand{\kq}{\mathfrak{q}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\ra}{\rightarrow}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\title{Question on odd cohomology of $A\hilb{2}$}
+
+\author{Simon Kapfer}
+
+\date{\today}
+
+%\keywords{}
+
+\maketitle
+
+Let $A$ be a complex torus of dimension $2$ and $A\hilb{2}$ the Hilbert scheme of 2 points. It can be constructed as follows: Consider the direct product $A\times A$. Denote 
+$$b: \widetilde{A\times A} \rightarrow A\times A $$ 
+the blow-up along the diagonal $\Delta \cong A$ with exceptional divisor $E$, so we have $i: E\rightarrow \widetilde{A\times A}  $. Since the normal bundle of $\Delta$ in $A\times A$ is trivial, we have:
+$$
+E \cong  \Delta\times \mathbb{P}^1.
+$$
+The action of $\mathfrak{S}_2$ on $A\times A$ lifts to an action on $\widetilde{A\times A}$. 
+We have the pushforward $i_*:H^*(E,\Z)\rightarrow H^*(\widetilde{A\times A} ,\Z) $.
+
+The quotient by the action of $\mathfrak{S}_2$ is 
+$$ \pi:\widetilde{A\times A} \rightarrow A\hilb{2}.$$ 
+Now, $A\hilb{2}$ is a compact complex manifold with torsion-free cohomology.
+By \cite{Menet}, we have an exact sequence
+$$
+0 \rightarrow \pi_*(H^k(\widetilde{A\times A,\Z})) \rightarrow H^k(A\hilb{2},\Z) \rightarrow \left(\frac{\Z}{2{Z}}\right)^{\alpha_k}\rightarrow 0.
+$$
+\begin{question}
+What is $\alpha_k$ for $k= 1,\ldots, 8$? 
+\end{question}
+I think, the pushforward of a class $a\otimes 1 \in H^{k}(E,\Z)$ is given by 
+$$
+\pi_* i_*(a\otimes 1) = \q_2(a)\vac \in H^{k+2}(A\hilb{n},\Z)
+$$
+We know, that $\q_2(1)\vac$ is divisible by 2.
+\begin{problem}
+Let $a\in H^1(A,\Z)$ and $b\in H^3(A,\Z)$ basis elements. We can interpret $\q_2(a)\vac\in H^3(A\hilb{2},\Z)$ and $\q_2(b)\vac\in H^5(A\hilb{2},\Z)$ as classes concentrated on the exceptional divisor, that is, as elements of $\pi_* i_*H^*(E,\Z)$. By Poincar\'e duality, the intersection matrix between $H^3(A\hilb{2},\Z)$ and $H^5(A\hilb{2},\Z)$ has determinant one. Now 
+$$
+ \int_{A\hilb{2}}\left(\q_2(a)\vac\cdot\q_2(b)\vac \right)= 2\int_A \left(a\cdot b\right).
+$$
+Moreover, $\q_2(a)\vac $ and $\q_2(b)\vac$ are orthogonal to any other element of the form $\q_1(x)\q_1(y)\vac$ under the intersection pairing. It follows, that one of $\q_2(a)\vac $ and $\q_2(b)\vac$ should be divisible by 2. But which one?
+\end{problem}
+Maybe  \cite{Totaro} is useful to answer this question, but I don't yet understand all of it.
+
+
+
+
+\bibliographystyle{amsplain}
+\begin{thebibliography}{10}
+
+\bibitem{Menet}
+G.~Menet, \emph{On the integral cohomology of quotients of complex manifolds}.
+\bibitem{Totaro}
+B.~Totaro, \emph{The integral cohomology of the Hilbert scheme of two points}.
+\end{thebibliography}
+\end{document}
