@@ -1,0 +1,30 @@
+\section{Complex abelian surfaces}
+Denote $A$ a complex abelian surface (a torus of dimension $2$). As such, it always can be written as a quotient
+$$
+A = \C^2/\Lambda,
+$$
+where $\Lambda\subset \C^2$ is a lattice of rank $4$, embedded in $\C^2$. 
+Depending on the imbedding, we get different complex manifolds, projective or not. Of course, all of them are equivalent by monodromy.
+A morphism between abelian varieties $A=\C^2/\Lambda\rightarrow A'=\C^2/\Lambda'$ means a holomorphic map that preserves the group structure. It is given by a complex linear map, that maps $\Lambda$ to $\Lambda'$. By an automorphism of $A$ we mean a biholomorphism preserving the group structure. This is the same as a $\C$-linear map $ M:\C^2 \rightarrow \C^2$ with $M\Lambda =\Lambda$. Have a look in the appendix of \cite{Ghys} for some reference.
+
+Let us now come to the very special case that $A=E\times E$ can be written as the square of an elliptic curve. Note that $A$ is projective, because every elliptic curve is. 
+Now write $E$ as $E=\C/Lambda_0$. We may assume that $\Lambda_0 $ is spanned by $1$ and a vector $\tau\in\C\backslash\R$. The automorphism group is given by (\cite{\Ghys})
+$\GL(2,\End(\Lambda_0))$, where
+$\End(\Lambda_0)$ is the set $\{z\in\C \;|\; z\Lambda_0\subset \Lambda_0\}$.
+\begin{proposition} There are two possibilities for $\End(\Lambda_0)$, depending on $\tau$:
+\begin{enumerate}
+ \item Both the real part and the square norm of $\tau$ are rational numbers, say $2\Re(\tau) = \frac{p}{r}$ and $\|\tau\|^2 = \frac{q}{r}$ with $r>0$ as small as possible. Then $\End(\Lambda_0)= \Z+ r\tau\Z$.
+ \item At least one of $\Re(\tau), \|\tau\|^2$ is irrational. Then $\End(\Lambda_0)=\Z$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+Given $z\in\End(\Lambda_0)$, we have $$z\cdot 1 = a + b\tau\text{ and }z\cdot \tau = c+ d\tau\text{ with }a,b,c,d\in \Z.$$ 
+We get the condition
+$$
+(a+b\tau)\tau = c+d\tau\quad \Leftrightarrow \quad b\tau^2 + (a-d)\tau -c =0.
+$$
+Up to scalar multiples, there is a unique real quadratic polynomial that annihilates $\tau$, namely $ (x -\tau )(x-\bar{\tau})=x^2 - 2\Re(\tau)x+ \|\tau\|^2$. 
+If all coefficients of that polynomial are rational numbers, then $z=a+b\tau$ gives a solution for arbitrary $a,b$. Otherwise, the condition must be the zero polynomial, so $b=0$.
+\end{proof}
+
+Let us consider a very special case: 
