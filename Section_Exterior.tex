@@ -30,3 +30,25 @@ $$
 (s\otimes e)\cdot (s'\otimes e') = (s\cdot s')\otimes (e\cdot e') \ \  \in \Sym^{p+p'}(V^{+}) \otimes \Lambda^{q+q'}(V^{-}).
 $$
 \end{definition}
+
+Let $U$ be a vector space over $\Q$ and look at the exterior algebra $H:= \Lambda^* U$. Since $H$ is a super vector space, we can construct the supersymmetric algebra $S:= \SSym^*(H)$. 
+We set $S^n:= \SSym^n H$.
+Since $H$ is generated as an algebra by $U=\Lambda^1(U)\subset H$, the inclusion $U\subset H = \SSym^1(H)\subset S$ induces an injective homomorphism of algebras:
+$$ s : H \longrightarrow S, $$
+so $S$ becomes an algebra over $H$.
+\begin{lemma}
+The morphism $s$ turns $S^n$ into a free module over $H$.
+\end{lemma}
+\begin{proof}
+We start with the tensor power $H^{\otimes n}$ and the morphism 
+$$
+\iota : H \longrightarrow H^{\otimes n},\quad h\longmapsto h\otimes 1\otimes\cdots\otimes 1
+$$
+that makes $H^{\otimes n}$ a free $H$-module.
+
+There is an action of the symmetric group $\mathfrak S_n$ on $H^{\otimes n}$ permuting the tensor factors, such that the quotient $H^{\otimes n}/\mathfrak S_n$ is isomorphic to $\SSym^n (H)$. Since we are working over $\Q$, the quotient by the action can be identified with the $\mathfrak S_n$-invariant tensors of $H^{\otimes n}$, so we have a projection:
+$$
+\pr : H^{\otimes n} \longrightarrow \SSym^n (H), \quad \pr = \frac{1}{n!}\sum_{\pi \in\mathfrak S_n} \pi.
+$$
+
+\end{proof}
