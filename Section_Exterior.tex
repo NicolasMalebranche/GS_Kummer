@@ -1,0 +1,32 @@
+\section{Super algebras}
+\begin{definition}
+ A super vector space $V$ over a field $k$ is a vector space with a $\Z/2\Z$-graduation, that is a decomposition
+$$
+ V = V^{+} \oplus V^{-},
+$$
+called the even and the odd part of $V$. Elements of $V^{+}$ are called homogeneous of even degree, elements of $V^{-}$ are called homogeneous of odd degree.
+Direct sum and tensor product of two super vector spaces $V$ and $W$ yield again super vector spaces:
+\begin{align*}
+ (V\oplus W)^{+} &= V^{+}\oplus W^{+}, & (V\oplus W)^{-} &= V^{-}\oplus W^{-}, \\
+ (V\otimes W)^{+} &= (V^{+}\otimes W^{+})\oplus (V^{-}\otimes W^{-}), & (V\otimes W)^{-} &=(V^{+}\otimes W^{-})\oplus (V^{-}\otimes W^{+}).
+\end{align*}
+\end{definition}
+\begin{definition}
+A superalgbra $R$ is a unital associative $k$-algebra which carries a super vector space structure. Define the supercommutator by setting for homogeneous elements $u,v \in R$:
+\begin{align*}
+[u,v] := uv - (-1)^{\deg(u)\deg(v)} v u.
+\end{align*}
+$R$ is called supercommutative, if $[u,v]=0$ for all $u,v\in R$. Note that a graded commutative algebra $R = \bigoplus\limits_n R^n$ is supercommutative in a natural way, by setting $R^{+}=\bigoplus\limits_{n\text{ even}} R^n$, $R^{-}=\bigoplus\limits_{n\text{ odd}} R^n$.
+\end{definition}
+\begin{definition}
+Let $V$ be a super vector space over $k$ and $n\geq 0$. Then the supersymmetric power $\SSym^n(V)$ of $V$ is a super vector space, given by
+\begin{align*}
+\SSym^n(V) &= \bigoplus_{p+q=n} \Sym^p(V^{+}) \otimes \Lambda^q(V^{-}), \\
+\SSym^n(V)^{+} &= \bigoplus_{\substack{p+q=n \\ q\text{ even} }} \Sym^p(V^{+}) \otimes \Lambda^q(V^{-}), &
+\SSym^n(V)^{-} &= \bigoplus_{\substack{p+q=n \\ q\text{ odd} }} \Sym^p(V^{+}) \otimes \Lambda^q(V^{-}).
+\end{align*}
+The supersymmetric algebra $\SSym^*(V):= \bigoplus\limits_n \SSym^n(V)$ on $V$ is a supercommutative algebra over $k$, where the product of two elements $s\otimes e \in \Sym^p(V^{+}) \otimes \Lambda^q(V^{-})$ and $s'\otimes e' \in \Sym^{p'}(V^{+}) \otimes \Lambda^{q'}(V^{-})$ is given by 
+$$
+(s\otimes e)\cdot (s'\otimes e') = (s\cdot s')\otimes (e\cdot e') \ \  \in \Sym^{p+p'}(V^{+}) \otimes \Lambda^{q+q'}(V^{-}).
+$$
+\end{definition}
