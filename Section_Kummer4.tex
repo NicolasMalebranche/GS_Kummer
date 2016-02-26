@@ -24,16 +24,30 @@ q(e,e)&= -6,
 \end{align*}
 and all other pairs of basis elements are orthogonal.
 \end{notation}
-By means of the morphism $\theta^*$, we may express part of the cohomology of $\kum{A}{2}$ in terms of Hilbert scheme cohomology. We have seen in Proposition \ref{H2Sur} that $\theta^*$ is surjective in integral cohomology of degree $2$ and (by duality) also in degree $6$. 
+By means of the morphism $\theta^*$, we may express part of the cohomology of $\kum{A}{2}$ in terms of Hilbert scheme cohomology. We have seen in Proposition \ref{H2Sur} that $\theta^*$ is surjective for degree $2$ and (by duality) also in degree $6$. 
 The next proposition shows that this also holds true for odd degrees.
 \begin{proposition}
-The morphism $\theta^* : H^k(A\hilb{3},\Z) \rightarrow H^k(\kum{A}{2},\Z)$ is surjective for $k=3,5$.
+A basis of $H^3(A\hilb{3},\Z)$ is given by:
+\begin{gather}
+\label{A3_1}
+\frac{1}{2}\theta^*\left( \q_1(1)^2\q_1(a^*_i)\vac \right), \\
+\label{A3_2}
+\theta^*\left(\q_2(a_i)\vac\right).
+\end{gather}
+and a basis of $H^5(A\hilb{3},\Z)$ is given by:
+\begin{gather}
+\label{A5_1}
+\frac{1}{2}\theta^*\left( \q_1(1)\q_2(a^*_i)\vac \right), \\
+\label{A5_2}
+\frac{2}{3} \theta^*\left( \G_2(a_i)1 \right).
+\end{gather}
 \end{proposition}
 \begin{proof}
-We claim that a basis of $H^3(A\hilb{3},\Z)$ is given by:
+We claim that
+The classes (\ref{A3_1}) are Poincar\'e dual to (\ref{A5_1}) and the classes (\ref{A3_2}) are Poincar\'e dual to (\ref{A5_2}), so it remains to show, that all of them are integral.
+By \cite{QinWang}, (\ref{A3_1}) and (\ref{A3_2}) are integral. By Proposition \ref{A2Basis}, $\frac{1}{2}\q_2(a^*_i)\vac$ is integral. If the operator $ \q_1(1)$ is applied, we get again an integral class, by \cite[Lemma 3.3]{QinWang}.
 
-and a basis of $H^5(A\hilb{3},\Z)$ is given by:
- 
+Further, $2\G_2(a_i)1$ is integral and $[\kum{A}{2}]\cdot \G_2(a_i)1$ is divisible by $3$. By Proposition \ref{IntegralityCheck}, $\frac{2}{3} \theta^*\left( \G_2(a_i)1 \right)$ is integral.
 \end{proof}
 
 

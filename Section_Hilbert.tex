@@ -1,4 +1,4 @@
-\section{Cohomology of Hilbert schemes of points on surfaces}
+\section{Nakajima operators for Hilbert schemes of points on surfaces}
 
 Let $A$ be a smooth projective complex surface. Set $H:=H^*(A,\Q)$. Let $A\hilb{n}$ the Hilbert scheme of $n$ points on the surface, \ie the moduli space of finite subschemes of $A$ of length $n$.
 %$$\Hilb^ n : S \mapsto \left\{ Z\subset S\times A\,|\,Z\text{ closed subscheme, } p_1 : Z\rightarrow S \text{ flat and finite of degree }n\right\}.$$
@@ -170,7 +170,7 @@ Next we have to show that the intersection matrix between these classes is in fa
 
 %The first $6$ classes give an injection $j : H^2(A,\Z)\rightarrow H^2(A\hilb{n},\Z)$. 
 
-\begin{proposition}
+\begin{proposition} \label{A2Basis}
  Let $A$ be a complex torus of dimension $2$. A basis of $H^*(A\hilb{2},\Z)$ is given by the classes 
  \begin{enumerate}\setcounter{enumi}{-1}
   \item $\frac{1}{2}\q_1(1)^2\vac$ ,
@@ -188,6 +188,19 @@ One computes the intersection matrix of these objects under the Poincar\'e duali
 So it remains to show that all these classes are integral. By the analysis in \cite{QinWang} this is clear for all classes except 
 those of the form $\frac{1}{2}\q_2(a^*_i)\vac \in H^5(A\hilb{2},\Z)$.
 
+Evaluating the Poincar\'e duality pairing between degrees 3 and 5 gives:
+\begin{gather*}
+ \int \q_2(a_i)\vac \cdot \q_2(a^*_i)\vac = 2, \\
+ \int \q_1(a_i)\q_1(u_j)\vac \cdot  \q_1(a^*_i)\q_1(u^*_j)\vac = 1, \\
+ \int \q_1(1)\q_1(a^*_i)\vac \cdot \q_1(x)\q_1(a_i)\vac = 1,
+\end{gather*}
+while the other pairings vanish. Therefore, one of $\q_2(a_i)\vac$ and $\q_2(a^*_i)\vac$ must be divisible by $2$. 
+We can interpret $\q_2(a_i)\vac\in H^3(A\hilb{2},\Z)$ and $\q_2(a^*_i)\vac\in H^5(A\hilb{2},\Z)$ as classes concentrated on the exceptional divisor, that is, as elements of $\pi_* i_*H^*(E,\Z)$. Indeed,
+the pushforward of a class $a\otimes 1 \in H^{k}(E,\Z)$ is given by 
+$$
+\pi_* i_*(a\otimes 1) = \q_2(a)\vac \in H^{k+2}(A\hilb{n},\Z).
+$$
+When pushing forward to the Hilbert scheme, the only possibility to get a factor $2$ is in degree $5$, by Proposition \ref{Alpha35}. 
 \end{proof}
 
 \end{proposition}

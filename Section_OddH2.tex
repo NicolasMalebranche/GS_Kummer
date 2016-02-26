@@ -1,10 +1,24 @@
 
-\section{Odd cohomology of $A^{[2]}$}
-With your notation, we consider the following exact sequence:
-$$\xymatrix{ 0\ar[r]&\pi_{*}(H^{k}(\widetilde{A\times A},\Z))\ar[r] & H^{k}(A^{[2]},\Z)/\tors\ar[r] & (\Z/2\Z)^{\alpha_{k}}\ar[r]& 0,}$$
+\section{Odd cohomology of the Hilbert scheme of two points}
+Let $A$ be a complex torus \textbf{TODO: Does it work if $A$ is a general (projective) surface?} of dimension $2$ and $A\hilb{2}$ the Hilbert scheme of 2 points. 
+It can be constructed as follows: Consider the direct product $A\times A$. Denote 
+$$b: \widetilde{A\times A} \rightarrow A\times A $$ 
+the blow-up along the diagonal $\Delta \cong A$ with exceptional divisor $E$, so we have $i: E\rightarrow \widetilde{A\times A}  $. Since the normal bundle of $\Delta$ in $A\times A$ is trivial, we have:
+$$
+E \cong  \Delta\times \mathbb{P}^1.
+$$
+The action of $\mathfrak{S}_2$ on $A\times A$ lifts to an action on $\widetilde{A\times A}$. 
+We have the pushforward $i_*:H^*(E,\Z)\rightarrow H^*(\widetilde{A\times A} ,\Z) $.
+
+The quotient by the action of $\mathfrak{S}_2$ is 
+$$ \pi:\widetilde{A\times A} \rightarrow A\hilb{2}.$$ 
+Now, $A\hilb{2}$ is a compact complex manifold with torsion-free cohomology.
+By \cite{Menet}, we have an exact sequence
+$$
+0 \rightarrow \pi_*(H^k(\widetilde{A\times A,\Z})) \rightarrow H^k(A\hilb{2},\Z) \rightarrow \left(\frac{\Z}{2{Z}}\right)^{\alpha_k}\rightarrow 0
+$$
 with $k\in \left\{1,...,8\right\}$.
-We want to prove the following proposition.
-\begin{proposition}
+\begin{proposition} \label{Alpha35}
 We have:
 $$\alpha_3=0\ \text{ and }\ \alpha_5=4.$$
 \end{proposition}
@@ -31,7 +45,9 @@ Hence the class of $\Delta$ in $H^{4}(A\times A,\Z)$ is not trivial and the map 
 %$$H^{4}(A\times A,\Z)=H^{0}(A,\
 It follows $$H^{3}(A\times A,\Z)=H^{3}(V,\Z).$$
 \end{proof}
-Now we will calculate the invariant $l_{1,-}^{2}(A\times A)$ and $l_{1,+}^{1}(A\times A)$ defined in Section 1.2 of \cite{Menet} (I also recall the definition in the redaction of the application).
+Now we will calculate the invariant $l_{1,-}^{2}(A\times A)$ and $l_{1,+}^{1}(A\times A)$ defined in Section 1.2 of \cite{Menet} 
+
+\textbf{TODO : recall the definition in the redaction of the application.}
 \begin{lemma}\label{2}
 We have: $l_{1,-}^{2}(A\times A)=l_{1,+}^{1}(A\times A)=0$.
 \end{lemma}
@@ -57,7 +73,7 @@ The group $H^{3}(U,\Z)$ is torsion free.
 \begin{proof}
 Using the spectral sequence of equivariant cohomology, it follows from Proposition 2.6 of \cite{Menet}, Lemma \ref{1} and \ref{2}.
 \end{proof}
-\subsection{Proof of $\alpha_3=0$}\label{=}
+\subsection{In degree 3}\label{=}
 %Now, we prove that $\alpha_3=0$.
 By Theorem 7.31 of Voisin, we have:
 \begin{equation}
@@ -99,7 +115,7 @@ It follows the exact sequence:
 $$\xymatrix{ 0\ar[r]&H^{3}(A^{[2]},U,\Z)\ar[r]^g&H^{3}(A^{[2]},\Z)\ar[r]&H^{3}(U,\Z)}.$$
 However, by lemma \ref{3}, $H^{3}(U,\Z)$ is torsion free; it follows that $\pi_{*}(H^{1}(\Delta,\Z))$ is primitive in $H^{3}(A^{[2]},\Z)$.
 \end{proof}
-\subsection{Proof of $\alpha_5=4$}
+\subsection{In degree 5}
 By Theorem 7.31 of Voisin, we have:
 \begin{equation}
 H^{5}(\widetilde{A\times A},\Z)=H^{5}(A\times A,\Z)\oplus H^{3}(\Delta,\Z).
