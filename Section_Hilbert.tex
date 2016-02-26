@@ -150,7 +150,8 @@ Their respective duals in $H^{2n-2}(A\hilb{n},\Z)$ are given by
 \end{itemize}
 \end{proposition}
 \begin{proof} It is clear from the above theorem that these classes are all integral.
-G\"ottsche's formula gives the Betti numbers of $A\hilb{n}$ in terms of the Betti numbers of $A$: $h^1(A\hilb{n}) = h^1(A)$, and $h^2(A\hilb{n}) = h^2(A)+ \frac{h^1(A)(h^1(A)-1)}{2} + 1$. It follows that we have not forgotten any classes. 
+G\"ottsche's formula \cite[p.~35]{Gottsche} gives the Betti numbers of $A\hilb{n}$ in terms of the Betti numbers of $A$: 
+$h^1(A\hilb{n}) = h^1(A)$, and $h^2(A\hilb{n}) = h^2(A)+ \frac{h^1(A)(h^1(A)-1)}{2} + 1$. It follows that we have not forgotten any classes. 
 
 Next we have to show that the intersection matrix between these classes is in fact the identity matrix. Most of the entries can be computed easily using (\ref{qSym}). For products involving $\delta$ (this is the action of $\mathfrak{d}$) or its dual, first observe that $\mathfrak{d}\q_1(x)^m\vac = 0 $ and $ \mathfrak{L}_1(a)\q_1(x)^m\vac =0$ for every class $a$ of degree at least 1. Then compute:
 \begin{gather*}
@@ -177,10 +178,16 @@ Next we have to show that the intersection matrix between these classes is in fa
   \item $\frac{1}{2}\q_2(1)\vac,\ \q_1(1)\q_1(u_i)\vac$ for a basis $(u_i)\subset H^2(A,\Z)$,
   \item $\q_2(a_i)\vac, \ \q_1(a_i)\q_1(u_j)\vac\ \q_1(1)\q_1(a^*_i)\vac$,
   \item $\q_2(u_i)\vac, \ \q_1(a_i)\q_1(a^*_j)\vac,\ \q_1(u_i)\q_1(u_k)\vac$ for $i\leq k$,
-  \item $\frac{1}{2}\q_2(a^*_i)\vac, \ \q_1(a^*_i)\q_1(u_j)\vac, \q_1(x)\q_1(a_i)\vac$,
+  \item $\frac{1}{2}\q_2(a^*_i)\vac, \ \q_1(a^*_i)\q_1(u_j)\vac,\ \q_1(x)\q_1(a_i)\vac$,
   \item $\q_2(x)\vac,\ \q_1(x)\q_1(u_i)\vac$,
   \item $\q_1(x)\q_1(a^*_i)\vac$, 
   \item $\q_1(x)^2\vac$.
  \end{enumerate}
+\begin{proof}
+One computes the intersection matrix of these objects under the Poincar\'e duality pairing and finds that the determinant is one. 
+So it remains to show that all these classes are integral. By the analysis in \cite{QinWang} this is clear for all classes except 
+those of the form $\frac{1}{2}\q_2(a^*_i)\vac \in H^5(A\hilb{2},\Z)$.
+
+\end{proof}
 
 \end{proposition}

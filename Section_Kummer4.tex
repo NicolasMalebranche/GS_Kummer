@@ -1,18 +1,42 @@
 \section{Cohomology of the Generalized Kummer fourfold}
 Now we come to the special case $n=3$, so we study $\kum{A}{2}$, the Generalized Kummer fourfolds.
+\begin{proposition}
+The Betti numbers of $\kum{A}{2}$ are:
+$
+1,\,0,\,7,\,8,\,108,\,8,\,7,\,0,\,1.
+$
+\end{proposition}
+\begin{proof}
+This follows from G\"ottsche's formula \cite[page 49]{Gottsche}.
+\end{proof}
+
+
 \begin{notation} We give the following names for classes in $H^2(\kum{A}{2},\Z)$:
 \begin{align*}
 u_1 &:= j(a_1 a_2), & v_1 &:= j(a_1 a_3), & w_1 &:= j(a_1 a_4), \\ 
 u_2 &:= j(a_3 a_4), & v_2 &:= j(a_4 a_2), & w_2 &:= j(a_2 a_3),
 \end{align*}
 Further, we set $e:=\theta^*(\delta)$.
-These elements form a basis of $H^2(\kum{A}{2},\Z)$ with the following orthogonality relations:
+These elements form a basis of $H^2(\kum{A}{2},\Z)$ with the following intersection relations under the Beauville-Bogomolov form:
 \begin{align*}
 q(u_1,u_2) &= 1, & q(v_1,v_2) &= 1, & q(w_1,w_2) &= 1,  &
 q(e,e)&= -6,
 \end{align*}
 and all other pairs of basis elements are orthogonal.
 \end{notation}
+By means of the morphism $\theta^*$, we may express part of the cohomology of $\kum{A}{2}$ in terms of Hilbert scheme cohomology. We have seen in Proposition \ref{H2Sur} that $\theta^*$ is surjective in integral cohomology of degree $2$ and (by duality) also in degree $6$. 
+The next proposition shows that this also holds true for odd degrees.
+\begin{proposition}
+The morphism $\theta^* : H^k(A\hilb{3},\Z) \rightarrow H^k(\kum{A}{2},\Z)$ is surjective for $k=3,5$.
+\end{proposition}
+\begin{proof}
+We claim that a basis of $H^3(A\hilb{3},\Z)$ is given by:
+
+and a basis of $H^5(A\hilb{3},\Z)$ is given by:
+ 
+\end{proof}
+
+
 
 Let us summarize our results on $\theta^*$:
 \begin{theorem}
