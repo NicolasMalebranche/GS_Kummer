@@ -1,6 +1,6 @@
 
 \section{Odd cohomology of the Hilbert scheme of two points}
-Let $A$ be a complex torus \textbf{TODO: Does it work if $A$ is a general (projective) surface?} of dimension $2$ and $A\hilb{2}$ the Hilbert scheme of 2 points. 
+Let $A$ be a complex torus \textbf{TODO: Does it work if $A$ is a general (projective) surface with torsion-free cohomology?} of dimension $2$ and $A\hilb{2}$ the Hilbert scheme of 2 points. 
 It can be constructed as follows: Consider the direct product $A\times A$. Denote 
 $$b: \widetilde{A\times A} \rightarrow A\times A $$ 
 the blow-up along the diagonal $\Delta \cong A$ with exceptional divisor $E$, so we have $i: E\rightarrow \widetilde{A\times A}  $. Since the normal bundle of $\Delta$ in $A\times A$ is trivial, we have:
@@ -12,10 +12,10 @@ We have the pushforward $i_*:H^*(E,\Z)\rightarrow H^*(\widetilde{A\times A} ,\Z)
 
 The quotient by the action of $\mathfrak{S}_2$ is 
 $$ \pi:\widetilde{A\times A} \rightarrow A\hilb{2}.$$ 
-Now, $A\hilb{2}$ is a compact complex manifold with torsion-free cohomology.
-By \cite{Menet}, we have an exact sequence
+Now, $A\hilb{2}$ is a compact complex manifold with torsion-free cohomology, \cite[Theorem~2.2]{Totaro}.
+By \cite[Proposition~0.1]{Menet}, there is an exact sequence
 $$
-0 \rightarrow \pi_*(H^k(\widetilde{A\times A,\Z})) \rightarrow H^k(A\hilb{2},\Z) \rightarrow \left(\frac{\Z}{2{Z}}\right)^{\alpha_k}\rightarrow 0
+0 \rightarrow \pi_*(H^k(\widetilde{A\times A,\Z})) \rightarrow H^k(A\hilb{2},\Z) \rightarrow \left(\frac{\Z}{2{\Z}}\right)^{\alpha_k}\rightarrow 0
 $$
 with $k\in \left\{1,...,8\right\}$.
 \begin{proposition} \label{Alpha35}
@@ -24,7 +24,7 @@ $$\alpha_3=0\ \text{ and }\ \alpha_5=4.$$
 \end{proposition}
 \subsection{Preliminary Lemmas}
 %Fist we need to calculate the following invariant:
-We denote $V=\widetilde{A\times A}\smallsetminus E$ and $U=V/\sigma_{2}$, where $\mathfrak{S}_{2}=\left\langle \sigma_{2}\right\rangle$. 
+We denote $V=\widetilde{A\times A}\smallsetminus E$ and $U=V/\mathfrak S_{2}$, where $\mathfrak{S}_{2}=\left\langle \sigma_{2}\right\rangle$. 
 \begin{lemma}\label{1}
 We have: $H^{k}(A\times A,\Z)=H^{k}(V,\Z)$
 for all $k\leq 3$.
@@ -33,7 +33,7 @@ for all $k\leq 3$.
 We have $V=A\times A\smallsetminus \Delta$.
 We have the following natural exact sequence:
 $$\xymatrix{ \cdots\ar[r]&H^{k}(A\times A,V,\Z)\ar[r] & H^{k}(A\times A,\Z)\ar[r] & H^{k}(V,\Z)\ar[r]& \cdots}$$
-Moreover by Thom isomorphism $H^{k}(A\times A,V,\Z)=H^{k-4}(\Delta,\Z)=H^{k-4}(A,\Z)$.
+Moreover, by Thom isomorphism $H^{k}(A\times A,V,\Z)=H^{k-4}(\Delta,\Z)=H^{k-4}(A,\Z)$.
 Hence $H^{k}(A\times A,V,\Z)=0$ for all $k\leq 3$.
 Hence $H^{k}(A\times A,\Z)=H^{k}(V,\Z)$
 for all $k\leq 2$. It remains to consider the following exact sequence:
@@ -75,13 +75,13 @@ Using the spectral sequence of equivariant cohomology, it follows from Propositi
 \end{proof}
 \subsection{In degree 3}\label{=}
 %Now, we prove that $\alpha_3=0$.
-By Theorem 7.31 of Voisin, we have:
+By Theorem 7.31 of \cite{Voisin}, we have:
 \begin{equation}
 H^{3}(\widetilde{A\times A},\Z)=H^{3}(A\times A,\Z)\oplus H^{1}(\Delta,\Z).
 \label{voisin1}
 \end{equation}
 It follows that $$H^{3}(A^{[2]},\Z)\supset \pi_{*}(H^{3}(A\times A,\Z))\oplus \pi_{*}(H^{1}(\Delta,\Z)).$$
-Moreover by Künneth formula, we have:
+Moreover, by Künneth formula, we have:
 \begin{align*}
 H^{3}(A\times A,\Z)&=H^{0}(A,\Z)\otimes H^{3}(A,\Z)\oplus H^{1}(A,\Z)\otimes H^{2}(A,\Z)\\
 &\oplus H^{2}(A,\Z)\otimes H^{1}(A\Z)\oplus H^{3}(A,\Z)\otimes H^{0}(A,\Z).
@@ -110,10 +110,10 @@ H^{3}(\mathscr{N}_{\widetilde{A\times A}/E},\mathscr{N}_{\widetilde{A\times A}/E
 }
 \label{ThomII}
 \end{equation}
-By proof of Theorem 7.31 of \cite{Voisin}, the map $h$ is injective and its image in $H^{3}(\widetilde{A\times A},\Z)$ is $H^{1}(\Delta,\Z)$. Hence Diagram \ref{ThomII} shows that $g$ is also injective and has image $\pi_{*}(H^{1}(\Delta,\Z))$ in $H^{3}(A^{[2]},\Z)$.
+By proof of Theorem 7.31 of \cite{Voisin}, the map $h$ is injective and its image in $H^{3}(\widetilde{A\times A},\Z)$ is $H^{1}(\Delta,\Z)$. Hence Diagram (\ref{ThomII}) shows that $g$ is also injective and has image $\pi_{*}(H^{1}(\Delta,\Z))$ in $H^{3}(A^{[2]},\Z)$.
 It follows the exact sequence:
 $$\xymatrix{ 0\ar[r]&H^{3}(A^{[2]},U,\Z)\ar[r]^g&H^{3}(A^{[2]},\Z)\ar[r]&H^{3}(U,\Z)}.$$
-However, by lemma \ref{3}, $H^{3}(U,\Z)$ is torsion free; it follows that $\pi_{*}(H^{1}(\Delta,\Z))$ is primitive in $H^{3}(A^{[2]},\Z)$.
+However, by Lemma \ref{3}, $H^{3}(U,\Z)$ is torsion free; it follows that $\pi_{*}(H^{1}(\Delta,\Z))$ is primitive in $H^{3}(A^{[2]},\Z)$.
 \end{proof}
 \subsection{In degree 5}
 By Theorem 7.31 of Voisin, we have:
@@ -122,7 +122,7 @@ H^{5}(\widetilde{A\times A},\Z)=H^{5}(A\times A,\Z)\oplus H^{3}(\Delta,\Z).
 \label{voisin2}
 \end{equation}
 It follows that $$H^{5}(A^{[2]},\Z)\supset \pi_{*}(H^{5}(A\times A,\Z))\oplus \pi_{*}(H^{3}(\Delta,\Z)).$$
-Moreover by Künneth formula, we have:
+Moreover, by Künneth formula, we have:
 \begin{align*}
 H^{5}(A\times A,\Z)&=H^{1}(A,\Z)\otimes H^{4}(A,\Z)\oplus H^{2}(A,\Z)\otimes H^{3}(A,\Z)\\
 &\oplus H^{3}(A,\Z)\otimes H^{2}(A,\Z)\oplus H^{4}(A,\Z)\otimes H^{1}(A,\Z).
@@ -159,6 +159,6 @@ $$\discr \pi_{*}(H^{3}(\widetilde{A\times A},\Z)\oplus H^{5}(\widetilde{A\times 
 \end{proof}
 The lattice $H^{3}(A^{[2]},\Z)\oplus H^{5}(A^{[2]},\Z)$ is unimodular. Hence:
 $$\frac{H^{3}(A^{[2]},\Z)\oplus H^{5}(A^{[2]},\Z)}{\pi_{*}(H^{3}(\widetilde{A\times A},\Z)\oplus H^{5}(\widetilde{A\times A},\Z))}=(\Z/2\Z)^{4}.$$
-However, by Section \ref{=}, we know that $\pi_{*}(H^{3}(\widetilde{A\times A},\Z))=H^{3}(A^{[2]},\Z)$.
-It follows 
+However, by Lemma \ref{1}, we know that $\pi_{*}(H^{3}(\widetilde{A\times A},\Z))=H^{3}(A^{[2]},\Z)$.
+It follows that
 $$\frac{H^{5}(A^{[2]},\Z)}{\pi_{*}(H^{5}(\widetilde{A\times A},\Z))}=(\Z/2\Z)^{4}.$$
