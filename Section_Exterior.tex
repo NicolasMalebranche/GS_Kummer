@@ -13,7 +13,7 @@ Direct sum and tensor product of two super vector spaces $V$ and $W$ yield again
 \end{align*}
 \end{definition}
 \begin{definition}
-A superalgbra $R$ is a unital associative $k$-algebra which carries a super vector space structure. Define the supercommutator by setting for homogeneous elements $u,v \in R$:
+A superalgebra $R$ is a unital associative $k$-algebra which carries a super vector space structure. Define the supercommutator by setting for homogeneous elements $u,v \in R$:
 \begin{align*}
 [u,v] := uv - (-1)^{|u||v|} v u.
 \end{align*}
@@ -22,7 +22,8 @@ $R$ is called supercommutative, if $[u,v]=0$ for all $u,v\in R$. Note that a gra
 For a supercommutative algebra $R$, the tensor power $R^{\otimes n}$ is again a supercommutative algebra, if we set for the product:
 $$
 (u_1\otimes\cdots\otimes u_n)\cdot(v_1\otimes\cdots\otimes v_n) 
-=  (-1)^k u_1v_1\otimes\cdots\otimes u_nv_n ,\quad \text{where } k= {\sum_{j<i}|u_i||v_j|}.
+=  (-1)^{\sum\limits_{i>j}|u_i||v_j|} u_1v_1\otimes\cdots\otimes u_nv_n.
+%,\quad \text{where } k= {\sum_{j<i}|u_i||v_j|}.
 $$
 \end{definition}
 \begin{definition}

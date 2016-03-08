@@ -43,9 +43,9 @@ $$
 $$
 If $X$ is a homogeneous linear operator of degree $d$ and weight $m$, acting on $\H$, define its adjont $X^\dagger$ by
 $$
-\int_{A\hilb{n+m}}X(\alpha)\cdot\beta = (-1)^{d\deg(\alpha)}\int_{A\hilb{n}} \alpha \cdot X^\dagger (\beta).
+\int_{A\hilb{n+m}}X(\alpha)\cdot\beta = (-1)^{d|\alpha|}\int_{A\hilb{n}} \alpha \cdot X^\dagger (\beta).
 $$
-We put $\q_0(a) :=0$ and for $m<0$, $\q_m(a) := (-1)^m \q_{-m}(a)^\dagger$. Then define
+We put $\q_0(a) :=0$ and for $m<0$, $\q_m(a) := (-1)^m \q_{-m}(a)^\dagger$. Note that, for all $m\in\Z$, the bidegree of $\q_m(a)$ is $(m,|a| + 2(|m|-1))$. Now define
 $$
 \mathfrak{L}_m(a) := \left\{ 
 \begin{array}{ll}
@@ -65,6 +65,7 @@ where $\sum_i a_{(1)}\otimes  a_{(2)}$ is the push-forward of $a$ along the diag
 [\G_i(a),\q_1(b)] &= \tfrac{1}{k!} \ad(\mathfrak{d})^k(\q_1(a b) ) 
 \end{align}
 \end{lemma}
+\begin{remark}\label{HRep}
 Note (cf.~\cite[Thm.~3.8]{LehnSorger}) that this implies that 
 \begin{equation}\label{NakaDel}
 \q_{m+1}(a) = \tfrac{(-1)^m}{m!}\ad^m([\mathfrak{d},\q_1(1)])(\q_1(a)),
@@ -80,7 +81,7 @@ Equations (\ref{DiffNaka}) and (\ref{NakaDel}) permit now to switch between the 
 \end{array}
 \right.\\
 \end{gather}
-
+\end{remark}
 \begin{example} 
 One calculates, using the above commutation relations:
 \begin{align}
@@ -98,7 +99,17 @@ $$
 $$
 \end{proposition}
 \begin{proof}
-\textbf{TODO:} Maybe we should omit this formula, since the proof is technical and I don't have it.
+\textbf{TODO:} Maybe we should omit this formula, since the proof is technical and I don't have it. In Section 4.9 of \cite{LehnSorger} other evaluations are developped, with ugly and incomplete proofs.
+Idea:
+\begin{gather*}
+\sum_{n,k}\G_k(a)\frac{\q_1(1)^n}{n!}\vac = \G(a)\exp(\q_1(1))\vac \\
+\stackrel{!}{=} \exp(\q_1(1)) \sum_{i,j}(-1)^{i+1} \frac{\mathfrak d^j}{j!}\frac{\q_i(1)}{i!i^j}\vac
+\end{gather*}
+But \cite[Equation (4.6)]{LehnSorger} evaluates 
+$$
+ \G(a)\exp(\q_1(1))\vac = \exp(\q_1(1)) \sum_{s,k} \frac{(-\ad \q_1(1))^{s-1}}{s!}\left(\frac{(\ad \mathfrak d)^k}{k!} (\q_1(1)) \right)\vac
+$$
+so relations between the $\mathfrak d$ and $\q_1(a)$ must be developped, using (\ref{NakaDel}). 
 \end{proof}
 
 
@@ -116,7 +127,7 @@ $\tau_{2*}(a)$& $-\Delta(a)$
 \end{tabular}
 \end{remark}
 
-By sending a subscheme in $A$ to is support, we define a morphism
+By sending a subscheme in $A$ to its support, we define a morphism
 $$
 \rho : A\hilb{n} \longrightarrow \Sym^n(A),
 $$
@@ -137,6 +148,10 @@ $$
 H^*(\Sym^n(A),\Q) \cong \SSym^n(H^*(A,\Q)).
 $$
 Under this isomorphism the ring structure of $\SSym^n(H^*(A,\Q))$ corresponds to the cup product and the action of the operator $\q_1(a)$ corresponds to the operation $a\,\diamond$.
+Note that these description implies that the unit in $H^*(A\hilb{n},\Q)$ is given by
+$$
+1_{A\hilb{n}} = \frac{1}{n!} \q_1(1)^n\vac.
+$$
 \end{remark}
 
 \subsection{On integral cohomology}

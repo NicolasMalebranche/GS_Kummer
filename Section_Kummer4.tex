@@ -1,4 +1,4 @@
-\section{Cohomology of the Generalized Kummer fourfold}
+\section{Odd Cohomology of the Generalized Kummer fourfold}
 Now we come to the special case $n=3$, so we study $\kum{A}{2}$, the Generalized Kummer fourfolds.
 \begin{proposition}
 The Betti numbers of $\kum{A}{2}$ are:
@@ -10,20 +10,6 @@ $
 This follows from G\"ottsche's formula \cite[page 49]{Gottsche}.
 \end{proof}
 
-
-\begin{notation} We give the following names for classes in $H^2(\kum{A}{2},\Z)$:
-\begin{align*}
-u_1 &:= j(a_1 a_2), & v_1 &:= j(a_1 a_3), & w_1 &:= j(a_1 a_4), \\ 
-u_2 &:= j(a_3 a_4), & v_2 &:= j(a_4 a_2), & w_2 &:= j(a_2 a_3),
-\end{align*}
-Further, we set $e:=\theta^*(\delta)$.
-These elements form a basis of $H^2(\kum{A}{2},\Z)$ with the following intersection relations under the Beauville-Bogomolov form:
-\begin{align*}
-q(u_1,u_2) &= 1, & q(v_1,v_2) &= 1, & q(w_1,w_2) &= 1,  &
-q(e,e)&= -6,
-\end{align*}
-and all other pairs of basis elements are orthogonal.
-\end{notation}
 By means of the morphism $\theta^*$, we may express part of the cohomology of $\kum{A}{2}$ in terms of Hilbert scheme cohomology. We have seen in Proposition \ref{H2Sur} that $\theta^*$ is surjective for degree $2$ and (by duality) also in degree $6$. 
 The next proposition shows that this also holds true for odd degrees.
 \begin{proposition}
@@ -43,7 +29,7 @@ and a basis of $H^5(\X,\Z)$ is given by:
 \end{gather}
 \end{proposition}
 \begin{proof}
-The classes (\ref{A3_1}) are Poincar\'e dual to (\ref{A5_1}) and the classes (\ref{A3_2}) are Poincar\'e dual to (\ref{A5_2}), so it remains to show that all of them are integral.
+The classes (\ref{A3_1}) are Poincar\'e dual to (\ref{A5_1}) and the classes (\ref{A3_2}) are Poincar\'e dual to (\ref{A5_2}) by computation, so it remains to show that all of them are integral.
 
 It is clear from Theorem \ref{IntegralOperators} that (\ref{A3_1}) and (\ref{A3_2}) are integral. By Proposition \ref{A2Basis}, $\frac{1}{2}\q_2(a^*_i)\vac$ is integral as well. If the operator $ \q_1(1)$ is applied, we get again an integral class.
 
