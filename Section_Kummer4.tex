@@ -12,7 +12,7 @@ This follows from G\"ottsche's formula \cite[page 49]{Gottsche}.
 
 By means of the morphism $\theta^*$, we may express part of the cohomology of $\kum{A}{2}$ in terms of Hilbert scheme cohomology. We have seen in Proposition \ref{H2Sur} that $\theta^*$ is surjective for degree $2$ and (by duality) also in degree $6$. 
 The next proposition shows that this also holds true for odd degrees.
-\begin{proposition}
+\begin{proposition}\label{oddcohomology}
 A basis of $H^3(\X,\Z)$ is given by:
 \begin{gather}
 \label{A3_1}
@@ -36,8 +36,18 @@ It is clear from Theorem \ref{IntegralOperators} that (\ref{A3_1}) and (\ref{A3_
 Further, $\frac{2}{3} \G_2(a_i)[\kum{A}{2}]$ is an integral class and $[\kum{A}{2}]\cdot\q_1(a^*_i)\q_1(1)^2\vac$ is non-divisible. 
 Because of $\int\limits_{A\hilb{3}} [\kum{A}{2}]\cdot \G_2(a_i)  \q_1(a^*_i)\q_1(1)^2\vac = 3$, one of $\frac{1}{2}\theta^*\left( \q_1(a^*_i)\q_1(1)^2\vac \right)$ and $ 2\theta^*\left( \G_2(a_i) \right)$ is divisible by three. In view of Lemma \ref{IntegralityCheck}, it must be the latter one.
 \end{proof}
-
-
+It follows the following corollary which will be used in Part \ref{quotient}.
+%\textcolor{green}{Corollary \ref{actionH3} to put after Proposition 3.18 \ref{} saying that it will be use in Part 2}
+\begin{cor}\label{actionH3}
+Let $A$ be an abelian surface and $g$ be an automorphisms on $A$. Let $g^{[[3]]}$ be the automorphisms induced by $g$ on $K_2(A)$.
+We have $H^3(K_2(A),\Z)\simeq H^1(A,\Z)\oplus H^3(A,\Z)$ and the action of $g^{[[3]]}$ on $H^3(K_2(A),\Z)$ is given by the action of $g$ on $H^1(A,\Z)\oplus H^3(A,\Z)$.
+\end{cor}
+\begin{proof}
+Let $g^{[3]}$ be the involution on $A^{[3]}$ induced by $g$.
+We have $g^{[3]*}(a_{i}^{(1)})=(g^{*}a_{i})^{(1)}$ and $g^{[3]*}(a_{\overline{i}}^{(0)})=(g^{*}a_{\overline{i}})^{(0)}$.
+Moreover, we have by definition, $g^{[[3]]*}\circ \theta^{*}=\theta^{*}\circ g^{[3]*}$.
+The result follows from Proposition \ref{oddcohomology}.
+\end{proof}
 
 Let us summarize our results on $\theta^*$:
 \begin{theorem}\label{thetaTheorem}
