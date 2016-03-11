@@ -68,7 +68,7 @@ where $\sum_i a_{(1)}\otimes  a_{(2)}$ is the push-forward of $a$ along the diag
 \begin{lemma}\cite[Thm.~2.16]{LiQinWang} Denote $K\in H^2(A,\Q)$ the class of the canonical divisor. We have:
 \begin{align}
 [\q_m(a), \q_l(b)] &= m\cdot \delta_{m+l} \cdot \int_A ab \\
-[\mathfrak{L}_m(a),\q_l(b)] &= -m\cdot \q_{m+l}(ab) \\
+[\mathfrak{L}_m(a),\q_l(b)] &= -l\cdot \q_{m+l}(ab) \\
 \label{DiffNaka}
 [\mathfrak{d},\q_m(a)] &= m \cdot \mathfrak{L}_m(a) + \tfrac{m(|m|-1)}{2} \q_m(K a) \\
 [\G(a),\q_1(b)] &= \exp(\ad(\mathfrak{d}))(\q_1(a b) ) \\
@@ -93,19 +93,24 @@ Equations (\ref{DiffNaka}) and (\ref{NakaDel}) permit now to switch between the 
 \end{gather}
 \end{remark}
 \begin{lemma}
-Suppose $K=0$.
-For all $k,m$, the following formula holds:
+We have for the normal order:
 \begin{equation}
-\ad \q' \frac{\q_m^{(k)}(a)}{m^k} = (k-m) \frac{\q_{m+1}^{(k)}(a)}{(m+1)^k}.
+: \mathfrak L_m(a) \q_n(b) :\ = \mathfrak L_m(a) \q_n(b) +\frac{n}{2} \q_{m+n}(a b e)
 \end{equation}
 \end{lemma}
-\begin{proposition}
-Suppose $K=0$.
+
+\begin{lemma}
+Suppose $K=0$ and $e=0$.
+For all $k,m$, the following formulas hold:
+\begin{gather}
+\ad \q  \frac{\q_m^{(k)}(a)}{m^k}  = (k+1)  \frac{\q_{m+1}^{(k-1)}(a)}{(m+1)^{k-1}} , \\
+\ad \q' \frac{\q_m^{(k)}(a)}{m^k} = (k-m) \frac{\q_{m+1}^{(k)}(a)}{(m+1)^k}.
+\end{gather}
 For all $s,t,k\geq 0$ the following formula holds:
 \begin{equation}
 \frac{\q_{s+t}^{(k)}}{(s+t)^kk!} = \ad(\q)^s \frac{\q_{t}^{(k+s)}(a)}{t^{k+s}(k+s)!}
 \end{equation}
-\end{proposition}
+\end{lemma}
 \begin{proof}
 We do induction over $k$. The case $k=0$ is established by Lemma 3.7 of \cite{LiQinWang}.
 \end{proof}
