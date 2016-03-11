@@ -3,7 +3,9 @@
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb,amsfonts,amscd,amsthm,mathrsfs}
 \usepackage[all]{xy}
-\usepackage{appendix,listings,hyperref}
+\usepackage{appendix,
+listings,
+hyperref}
 \usepackage{color}
 \usepackage[margin=3cm]{geometry}
 
@@ -29,6 +31,13 @@
 \DeclareMathOperator{\pr}{pr}
 \DeclareMathOperator{\supp}{supp}
 \DeclareMathOperator{\discr}{discr}
+\DeclareMathOperator{\Vect}{Vect}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\codim}{Codim}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\NS}{NS}
+\DeclareMathOperator{\sing}{Sing}
 
 
 \newcommand{\hilb}[1]{^{[#1]}}
@@ -39,6 +48,7 @@
 \newcommand{\odd}{{\rm{odd}}}
 \newcommand{\even}{{\rm{even}}}
 \newcommand{\tors}{{\rm{tors}}}
+\DeclareMathOperator{\ou}{or}
 
 \renewcommand{\d}{\mathfrak{d}}
 \newcommand{\p}{\mathfrak{p}}
@@ -59,7 +69,7 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\Z}{\mathbb{Z}}
-
+\newcommand{\F}{\mathbb{F}_{2}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -77,12 +87,19 @@
 
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem{thm}[theorem]{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{lemme}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{prop}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{cor}[theorem]{Corollary}
+\newtheorem{defipro}[theorem]{Definition-Proposition}
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
+\newtheorem{defi}[theorem]{Definition}
 \newtheorem{notation}[theorem]{Notation}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
+\newtheorem{rmk}[theorem]{Remark}
 \newtheorem{example}[theorem]{Example}
