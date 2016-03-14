@@ -92,27 +92,23 @@ Equations (\ref{DiffNaka}) and (\ref{NakaDel}) permit now to switch between the 
 \right.\\
 \end{gather}
 \end{remark}
-\begin{lemma}
-We have for the normal order:
-\begin{equation}
-: \mathfrak L_m(a) \q_n(b) :\ = \mathfrak L_m(a) \q_n(b) +\frac{n}{2} \q_{m+n}(a b e)
-\end{equation}
-\end{lemma}
 
 \begin{lemma}
-Suppose $K=0$ and $e=0$.
+Suppose $K=0$ and $ae=0$.
 For all $k,m$, the following formulas hold:
 \begin{gather}
-\ad \q  \frac{\q_m^{(k)}(a)}{m^k}  = (k+1)  \frac{\q_{m+1}^{(k-1)}(a)}{(m+1)^{k-1}} , \\
+\label{adq}
+\ad \q  \frac{\q_m^{(k+1)}(a)}{m^{k+1}}  = (k+1)  \frac{\q_{m+1}^{(k)}(a)}{(m+1)^{k}} , \\
+\label{adq'}
 \ad \q' \frac{\q_m^{(k)}(a)}{m^k} = (k-m) \frac{\q_{m+1}^{(k)}(a)}{(m+1)^k}.
 \end{gather}
-For all $s,t,k\geq 0$ the following formula holds:
-\begin{equation}
-\frac{\q_{s+t}^{(k)}}{(s+t)^kk!} = \ad(\q)^s \frac{\q_{t}^{(k+s)}(a)}{t^{k+s}(k+s)!}
-\end{equation}
+%For all $s,t,k\geq 0$ the following formula holds:
+%\begin{equation}
+%\frac{\q_{s+t}^{(k)}}{(s+t)^kk!} = \ad(\q)^s \frac{\q_{t}^{(k+s)}(a)}{t^{k+s}(k+s)!}
+%\end{equation}
 \end{lemma}
 \begin{proof}
-We do induction over $k$. The case $k=0$ is established by Lemma 3.7 of \cite{LiQinWang}.
+(\ref{adq'}) follows from (\ref{adq}) using the Jacobi identity: $\ad \q' = \ad [\mathfrak d,\q] = \ad \mathfrak d  \ad \q - \ad \q\ad \mathfrak d  $.
 \end{proof}
 \begin{example} 
 One calculates, using the above commutation relations:
