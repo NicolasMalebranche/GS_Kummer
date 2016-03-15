@@ -67,18 +67,20 @@ $$
 where $\sum_i a_{(1)}\otimes  a_{(2)}$ is the push-forward of $a$ along the diagonal $\tau_2 :A \rightarrow A\times A$ (in Sweedler notation).
 \begin{lemma}\cite[Thm.~2.16]{LiQinWang} Denote $K\in H^2(A,\Q)$ the class of the canonical divisor. We have:
 \begin{align}
-[\q_m(a), \q_l(b)] &= m\cdot \delta_{m+l} \cdot \int_A ab \\
-[\mathfrak{L}_m(a),\q_l(b)] &= -l\cdot \q_{m+l}(ab) \\
+[\q_m(a), \q_n(b)] &= m\cdot \delta_{m+n} \cdot \int_A ab \\
+\label{qLcommute}
+[\mathfrak{L}_m(a),\q_n(b)] &= -n\cdot \q_{m+l}(ab) \\
 \label{DiffNaka}
 [\mathfrak{d},\q_m(a)] &= m \cdot \mathfrak{L}_m(a) + \tfrac{m(|m|-1)}{2} \q_m(K a) \\
+[\mathfrak{L}_m(a),\mathfrak{L}_n(b)] &= (m-n) \mathfrak{L}_{m+n}(ab) - \frac{m^3-m}{12} \delta_{m+n}\int_A abe \\
 [\G(a),\q_1(b)] &= \exp(\ad(\mathfrak{d}))(\q_1(a b) ) \\
 [\G_i(a),\q_1(b)] &= \tfrac{1}{k!} \ad(\mathfrak{d})^k(\q_1(a b) ) 
 \end{align}
 \end{lemma}
 \begin{remark}\label{HRep}
-Note (cf.~\cite[Thm.~3.8]{LehnSorger}) that this implies that 
+Note (cf.~\cite[Thm.~3.8]{LehnSorger}) that (\ref{qLcommute}) together with (\ref{NakaDiff}) imply that 
 \begin{equation}\label{NakaDel}
-\q_{m+1}(a) = \tfrac{(-1)^m}{m!}\ad^m([\mathfrak{d},\q_1(1)])(\q_1(a)),
+\q_{m+1}(a) = \tfrac{(-1)^m}{m!}\ad^m\!\q'\left(\q_1(a)\right),
 \end{equation}
 so there are two ways of writing an element of $\H$: As a linear combination of products of creation operators $\q_m(a)$ or as a linear combination of products of the operators $\mathfrak{d}$ and $\q_1(a)$. While the first one is more intuitive, the second one is more suitable for computing cup-products. 
 Equations (\ref{DiffNaka}) and (\ref{NakaDel}) permit now to switch between the two representations, using that
@@ -94,22 +96,32 @@ Equations (\ref{DiffNaka}) and (\ref{NakaDel}) permit now to switch between the 
 \end{remark}
 
 \begin{lemma}
-Suppose $K=0$ and $ae=0$.
+Suppose $K=0$.
 For all $k,m$, the following formulas hold:
-\begin{gather}
+\begin{align}
 \label{adq}
-\ad \q  \frac{\q_m^{(k+1)}(a)}{m^{k+1}}  = (k+1)  \frac{\q_{m+1}^{(k)}(a)}{(m+1)^{k}} , \\
+\ad \q  \frac{\q_m^{(k+1)}(a)}{m^{k+1}} & = (k+1)  \frac{\q_{m+1}^{(k)}(a)}{(m+1)^{k}} + \frac{k^3-k}{24}\frac{\q_{m+1}^{(k-2)}(ae)}{(m+1)^{k-2}} , \\
 \label{adq'}
-\ad \q' \frac{\q_m^{(k)}(a)}{m^k} = (k-m) \frac{\q_{m+1}^{(k)}(a)}{(m+1)^k}.
-\end{gather}
+\ad \q' \frac{\q_m^{(k)}(a)}{m^k} & = (k-m) \frac{\q_{m+1}^{(k)}(a)}{(m+1)^k}+ \frac{k(k-1)(k-3m-2)}{24}\frac{\q_{m+1}^{(k-2)}(ae)}{(m+1)^{k-2}} .
+\end{align}
 %For all $s,t,k\geq 0$ the following formula holds:
-%\begin{equation}
-%\frac{\q_{s+t}^{(k)}}{(s+t)^kk!} = \ad(\q)^s \frac{\q_{t}^{(k+s)}(a)}{t^{k+s}(k+s)!}
-%\end{equation}
 \end{lemma}
 \begin{proof}
+Let us first do the computation in the case $ae=0$. We claim:
+$$
+%(-1)^k
+\q_m^{(k)}(a) = \frac{m^k}{k+1}\sum_{i_0+\ldots+i_k=m}\q_{i_0}\cdots \q_{i_k} (\Delta^k(a))
+$$
 (\ref{adq'}) follows from (\ref{adq}) using the Jacobi identity: $\ad \q' = \ad [\mathfrak d,\q] = \ad \mathfrak d  \ad \q - \ad \q\ad \mathfrak d  $.
 \end{proof}
+\begin{corollary} \label{adqCorollary}
+Suppose $ae=0$. Then
+iterated application of the above lemma gives
+ \begin{equation}
+\frac{\q_{m+s}^{(k)}(a)}{(m+s)^kk!} = \ad(\q)^s \frac{\q_{m}^{(k+s)}(a)}{m^{k+s}(k+s)!}
+\end{equation}
+\end{corollary}
+
 \begin{example} 
 One calculates, using the above commutation relations:
 \begin{align}
@@ -119,6 +131,7 @@ One calculates, using the above commutation relations:
 \end{align}
 \end{example}
 \begin{proposition}
+Assume $e=0$.
 The general formula is:
 $$
 \G_k(a)\q_1(1)^n\vac = 
@@ -127,20 +140,16 @@ $$
 $$
 \end{proposition}
 \begin{proof}
-\textbf{TODO:} Maybe we should omit this formula, since the proof is technical and I don't have it. In Section 4.9 of \cite{LehnSorger} other evaluations are developped, with ugly and incomplete proofs.
-Idea:
-\begin{gather*}
-\sum_{n,k}\G_k(a)\frac{\q_1(1)^n}{n!}\vac = \G(a)\exp(\q_1(1))\vac \\
-\stackrel{!}{=} \exp(\q_1(1)) \sum_{i,j}(-1)^{i+1} \frac{\mathfrak d^j}{j!}\frac{\q_i(1)}{i!i^j}\vac
-\end{gather*}
-But \cite[Equation (4.6)]{LehnSorger} evaluates 
-$$
- \G(a)\exp(\q_1(1))\vac = \exp(\q_1(1)) \sum_{s,k} \frac{(-\ad \q_1(1))^{s-1}}{s!}\left(\frac{(\ad \mathfrak d)^k}{k!} (\q_1(1)) \right)\vac
-$$
-so relations between the $\mathfrak d$ and $\q_1(a)$ must be developped, using (\ref{NakaDel}). It would suffice to prove the following formula:
-$$
-\frac{\q_{s+1}^{(k)}(a)}{k!} = (s+1)^k \ad(\q)^s  \frac{\q_1^{(k+s)}(a)}{(k+s)!}
-$$
+Equation (4.6) of \cite{LehnSorger} evaluates 
+\begin{align*}
+ \G(a)\exp(\q)\vac &= \exp(\q) \sum_{\substack{s\geq 1\\k\geq 0}} \frac{(-\ad \q)^{s-1}}{s!}\left(\frac{(\ad \mathfrak d)^k}{k!} (\q_1(a)) \right)\vac \\
+ &\stackrel{\text{Cor \ref{adqCorollary}}}{=} \exp(\q)  \sum_{\substack{s\geq 1\\k\geq s-1}}\frac{(-1)^{s-1}}{s!}\frac{\q_s^{(k-s+1)}(a)}{s^{k-s+1}(k-s+1)!}\vac \\
+  &=\exp(\q)  \sum_{\substack{s\geq 1\\k\geq 0}}\frac{(-1)^{s-1}}{s!}\frac{\q_s^{(k)}(a)}{s^{k}k!}\vac
+\end{align*}
+%\begin{gather*}
+%\sum_{n,k}\G_k(a)\frac{\q_1(1)^n}{n!}\vac = \G(a)\exp(\q_1(1))\vac \\
+%\stackrel{!}{=} \exp(\q_1(1)) \sum_{i,j}(-1)^{i+1} \frac{\mathfrak d^j}{j!}\frac{\q_i(1)}{i!i^j}\vac
+%\end{gather*}
 \end{proof}
 
 
