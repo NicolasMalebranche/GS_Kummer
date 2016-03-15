@@ -3,7 +3,6 @@
 Let $A$ be a smooth projective complex surface. Set $H:=H^*(A,\Q)$. Let $A\hilb{n}$ the Hilbert scheme of $n$ points on the surface, \ie the moduli space of finite subschemes of $A$ of length $n$.
 %$$\Hilb^ n : S \mapsto \left\{ Z\subset S\times A\,|\,Z\text{ closed subscheme, } p_1 : Z\rightarrow S \text{ flat and finite of degree }n\right\}.$$
 $A\hilb{n}$ is again smooth and projective of dimension $2n$, cf.~\cite{Fogarty}. 
-\subsection{The rational cohomology}
 Their rational cohomology can be described in terms of Nakajima's \cite{Nakajima} operators. First consider the direct sum
 $$
 \H := \bigoplus_{n=0}^{\infty} H^*(A\hilb{n},\Q)
@@ -188,40 +187,35 @@ $$
 H^*(\Sym^n(A),\Q) \cong \SSym^n(H^*(A,\Q)).
 $$
 Under this isomorphism the ring structure of $\SSym^n(H^*(A,\Q))$ corresponds to the cup product and the action of the operator $\q_1(a)$ corresponds to the operation $a\,\diamond$.
-Note that these description implies that the unit in $H^*(A\hilb{n},\Q)$ is given by
-$$
-1_{A\hilb{n}} = \frac{1}{n!} \q_1(1)^n\vac.
-$$
+%Note that these description implies that the unit in $H^*(A\hilb{n},\Q)$ is given by
+%$$
+%1_{A\hilb{n}} = \frac{1}{n!} \q_1(1)^n\vac.
+%$$
 \end{remark}
 
-\subsection{On integral cohomology}
+\section{On integral cohomology of Hilbert schemes}
 
-For the study of integral cohomology, first note that if $\alpha \in H^*(A,\Z)$ is an integral class, then $\q_{m}(\alpha) $ maps integral classes to integral classes. 
-Moreover, there is the following theorem:
-\begin{theorem} \cite{QinWang} \label{IntegralOperators}
-An operator is called integral if it maps integral classes in $\H$ to integral classes. The operator $\frac{1}{z_\lambda}\kq_{\lambda}(1)$ is integral. Let $\alpha \in H^2(A,\Z)$ be monodromy equivalent to a divisor. Then the operator $\mathfrak{m}_{\lambda}(\alpha)$ is integral.
-\end{theorem}
+For the study of integral cohomology, first note that if $\alpha \in H^*(A,\Z)$ is an integral class, then $\q_{m}(\alpha) $ maps integral classes to integral classes. Such operators are called integral. Qin and Wang studied them in \cite{QinWang}. We need the following results:
+
+\begin{lemma} \label{IntegralOperators}
+The operators $\frac{1}{n!}\q$ and $\frac{1}{2}\q_2(1) $ are integral.
+Let $a\in H^2(A,\Z)$ be monodromy equivalent to a divisor. Then the operator $\frac{1}{2}\q_1(a)^2 - \frac{1}{2}\q_2(a)$ is integral. 
+\end{lemma}
 
 
 \begin{remark}
 If $A$ is a projective torus, then the sublattice of divisors in $H^2(A,\Z)$ (the N\'eron--Severi group) is not trivial. By \cite[Thm.~II]{Shioda}, the group of monodromy actions spans the entire automorphism group of $H^2(A,\Z)$.
 Since the lattice is even and contains two copies of the hyperbolic lattice, a theorem of Eichler \cite[Prop.~3.7.3]{Scattone} states that the automorphism group of $H^2(A,\Z)$ acts transitively on classes of the same norm. So every class can be mapped to a divisor by the action of a monodromy.
 \end{remark}
-
-We set $a^{(k)} := \mathfrak{G}_k(a) (1) \in H^{\deg a + 2k}(A\hilb{n},\Q)$.
-
 \begin{remark}
-Qin and Wang \cite{QinWang} conjecture that the above theorem is valid even without any restriction on $\alpha \in H^2(A,\Z)$. The following proposition explicits this out for low degrees.
+Qin and Wang \cite{QinWang} conjecture that their theory works even without the restriction on $a\in H^2(A,\Z)$. 
 \end{remark}
 \begin{proposition} Assume that $H^*(A,\Z)$ is free of torsion.
-Let $(a_i) \subset H^1(A,\Z)$ and $(b_i)\subset H^2(A,\Z)$ be bases of integral cohomology. Denote $a_i^*\in H^3(A,\Z)$ resp.~$b_i^*\in H^2(A,\Z)$ the elements of the dual bases. Let $x$ be the generator of $H^4(A,\Z)$. Then the classes
-$\G_0(a_i)1 = \frac{1}{(n-1)!}\q_{1}(1)^{n-1}\q_{1}(a_{i})\vac$ form a basis of $H^1(A\hilb{n},\Z)$ with dual basis
-$\q_1(a_i^*)\q_1(x)^{n-1}\vac$.
-Moreover, the following classes form a basis of $H^2(A\hilb{n},\Z)$:
+Let $(a_i) \subset H^1(A,\Z)$ and $(b_i)\subset H^2(A,\Z)$ be bases of integral cohomology. Denote $a_i^*\in H^3(A,\Z)$ resp.~$b_i^*\in H^2(A,\Z)$ the elements of the dual bases. Let $x$ be the generator of $H^4(A,\Z)$. Modulo torsion, the following classes form a basis of $H^2(A\hilb{n},\Z)$:
 \begin{itemize}
- \item $\G_0(b_i)1=\frac{1}{(n-1)!}\q_{1}(1)^{n-1}\q_{1}(b_{i})\vac$,
- \item $\G_0(a_i)\G_0(a_j)1 = \frac{1}{(n-2)!}\q_{1}(1)^{n-2}\q_{1}(a_{i})\q_{1}(a_{j})\vac,\  i < j$,
- \item $\mathfrak{d} 1 =  \frac{1}{2(n-2)!}\q_{1}(1)^{n-2}\q_{2}(1) \vac$. We denote this class by $\delta$.
+ \item $\frac{1}{(n-1)!}\q_{1}(b_{i})\q_{1}(1)^{n-1}\vac = \G_0(b_i) 1$,
+ \item $ \frac{1}{(n-2)!}\q_{1}(a_{i})\q_{1}(a_{j})\q_{1}(1)^{n-2}\vac = \G_0(a_i) \G_0(a_j)1,\  i < j$, 
+ \item $ \frac{1}{2(n-2)!}\q_{2}(1) \q_{1}(1)^{n-2}\vac$. We denote this class by $\delta = \d 1$.
 \end{itemize}
 Their respective duals in $H^{2n-2}(A\hilb{n},\Z)$ are given by
 \begin{itemize}
@@ -230,9 +224,9 @@ Their respective duals in $H^{2n-2}(A\hilb{n},\Z)$ are given by
  \item $\q_2(x)\q_{1}(x)^{n-2} \vac$.
 \end{itemize}
 \end{proposition}
-\begin{proof} It is clear from the above theorem that these classes are all integral.
+\begin{proof} It is clear from the above lemma that these classes are all integral.
 G\"ottsche's formula \cite[p.~35]{Gottsche} gives the Betti numbers of $A\hilb{n}$ in terms of the Betti numbers of $A$: 
-$h^1(A\hilb{n}) = h^1(A)$, and $h^2(A\hilb{n}) = h^2(A)+ \frac{h^1(A)(h^1(A)-1)}{2} + 1$. It follows that we have not forgotten any classes. 
+$h^1(A\hilb{n}) = h^1(A)$, and $h^2(A\hilb{n}) = h^2(A)+ \frac{h^1(A)(h^1(A)-1)}{2} + 1$. It follows that the given classes span a lattice of full rank.
 
 Next we have to show that the intersection matrix between these classes is in fact the identity matrix. Most of the entries can be computed easily using (\ref{qSym}). For products involving $\delta$ (this is the action of $\mathfrak{d}$) or its dual, first observe that $\mathfrak{d}\q_1(x)^m\vac = 0 $ and $ \mathfrak{L}_1(a)\q_1(x)^m\vac =0$ for every class $a$ of degree at least 1. Then compute:
 \begin{gather*}
@@ -252,21 +246,32 @@ Next we have to show that the intersection matrix between these classes is in fa
 %The first $6$ classes give an injection $j : H^2(A,\Z)\rightarrow H^2(A\hilb{n},\Z)$. 
 
 \begin{proposition} \label{A2Basis}
- Let $A$ be a complex torus of dimension $2$. A basis of $H^*(A\hilb{2},\Z)$ is given by the classes 
- \begin{enumerate}\setcounter{enumi}{-1}
-  \item $\frac{1}{2}\q_1(1)^2\vac$ ,
-  \item $\q_1(1)\q_1(a_i)\vac$, for a basis $(a_i)\subset H^1(A,\Z)$,
-  \item $\frac{1}{2}\q_2(1)\vac,\ \q_1(1)\q_1(u_i)\vac$ for a basis $(u_i)\subset H^2(A,\Z)$,
-  \item $\q_2(a_i)\vac, \ \q_1(a_i)\q_1(u_j)\vac\ \q_1(1)\q_1(a^*_i)\vac$,
-  \item $\q_2(u_i)\vac, \ \q_1(a_i)\q_1(a^*_j)\vac,\ \q_1(u_i)\q_1(u_k)\vac$ for $i\leq k$,
-  \item $\frac{1}{2}\q_2(a^*_i)\vac, \ \q_1(a^*_i)\q_1(u_j)\vac,\ \q_1(x)\q_1(a_i)\vac$,
-  \item $\q_2(x)\vac,\ \q_1(x)\q_1(u_i)\vac$,
-  \item $\q_1(x)\q_1(a^*_i)\vac$, 
-  \item $\q_1(x)^2\vac$.
- \end{enumerate}
+ Let $A$ be a complex torus of dimension $2$. Let $(b_i)\subset H^2(A,\Z)$ be an integral basis. A basis of $H^*(A\hilb{2},\Z)$ is given by the following classes.
+ \begin{center}
+ \begin{tabular}{c|l|l}
+ degree & class & multiplication with class \\\hline
+ 0 & $\frac{1}{2}\q_1(1)^2\vac$ & $\id$ \\ \hline
+ 1 &  $\q_1(1)\q_1(a_i)\vac$ & $\G_0(a_i)$ \\ \hline
+ 2 &  $\frac{1}{2}\q_2(1)\vac$ & $\d$ \\ 
+   &  $\q_1(1)\q_1(b_i)\vac$ & $\G_0(b_i)$ \\\hline
+ 3 &  $\q_2(a_i)\vac$  & $-2\G_1(a_i) $ \\
+   &  $\q_1(a_i)\q_1(b_j)\vac$ & $\G_0(a_i)\G_0(b_j)$ \\ 
+   &  $\q_1(1)\q_1(a^*_i)\vac$ & $\G_0(a^*_i)$ \\\hline
+ 4 &  $\left(\frac{1}{2}\q_1(b_i)^2-\frac{1}{2}\q_2(b_i)\right)\vac$ & $\frac{1}{2} \G_0(b_i)^2 + \G_1(b_i) $ \\
+   &  $\q_1(a_i)\q_1(a^*_j)\vac$ & $\G_0(a_i)\G_0(a^*_j)$ \\
+   &  $ \q_1(b_i)\q_1(b_j)\vac$ for $i\leq j$ &  $\G_0(b_i)\G_0(b_j)$ \\\hline
+ 5 &  $\frac{1}{2}\q_2(a^*_i)\vac$ & $-\G_1(a^*_i)$ \\
+   &  $\q_1(a^*_i)\q_1(b_j)\vac$ & $ \G_0(a^*_i)\G_0(b_j)$ \\
+   &   $\q_1(a_i)\q_1(x)\vac$ & $\G_0(a_i)\G_0(x)$ \\\hline
+ 6 &  $\q_2(x)\vac$ & $-2\G_1(x)$ \\
+   &  $\q_1(b_i)\q_1(x)\vac$ & $ \G_0(b_i)\G_0(x)$ \\\hline
+ 7 &  $\q_1(a^*_i)\q_1(x)\vac$ & $\G_0(a^*_i)\G_0(x) $ \\\hline
+ 8 &  $\q_1(x)^2\vac$ & $\G_0(x)^2$ 
+\end{tabular}
+\end{center}
 \begin{proof}
 One computes the intersection matrix of these objects under the Poincar\'e duality pairing and finds that the determinant is one. 
-So it remains to show that all these classes are integral. By the analysis in \cite{QinWang} this is clear for all classes except 
+So it remains to show that all these classes are integral. By Proposition \ref{IntegralOperators} this is clear for all classes except 
 those of the form $\frac{1}{2}\q_2(a^*_i)\vac \in H^5(A\hilb{2},\Z)$.
 
 Evaluating the Poincar\'e duality pairing between degrees 3 and 5 gives:
