@@ -66,6 +66,17 @@ $$
 \right.
 $$
 where $\sum_i a_{(1)}\otimes  a_{(2)}$ is the push-forward of $a$ along the diagonal $\tau_2 :A \rightarrow A\times A$ (in Sweedler notation).
+\begin{remark}
+This can be expressed more elegantly using normal ordering: the operator $\q_m\q_n(a\otimes b)$ is defined in a way such that the annihilation operator act first. Then we may write $\mathfrak{L}_m(a) = \sum_k
+\nor \q_k \q_{m-k} \mal (\tau_{2*}(a))$.
+\end{remark}
+\begin{remark}
+In a similar manner as above, we can use the integral over $A$ to define a bilinear form on $H^*(A,\Q)$. The adjoint of the multiplication map gives a coassiocative comultiplication
+$$
+\Delta : H^*(A,\Q) \longrightarrow H^*(A,\Q)\otimes H^*(A,\Q)
+$$
+that corresponds to $\tau_{2*}$. The sign convention in \cite{LehnSorger} is such that $-\Delta =  \tau_{2*}$. We denote by $\Delta^k$ the $k$-fold composition of $\Delta$.
+\end{remark}
 \begin{lemma}\cite[Thm.~2.16]{LiQinWang} Denote $K\in H^2(A,\Q)$ the class of the canonical divisor. We have:
 \begin{align}
 [\q_m(a), \q_n(b)] &= m\cdot \delta_{m+n} \cdot \int_A ab \\
@@ -97,7 +108,8 @@ Equations (\ref{DiffNaka}) and (\ref{NakaDel}) permit now to switch between the 
 \end{remark}
 
 \begin{lemma}
-Suppose $Ka=0$.
+Suppose $Ka=0$. 
+Denote $e=\chi(A)x$ the Euler class of $A$.
 For all $k,m$, the following formulas hold:
 \begin{align}
 \label{adq}
@@ -111,18 +123,18 @@ For all $k,m$, the following formulas hold:
 Let us start with (\ref{adq}). This is a consequence of Theorem 4.2 of \cite{LiQinWang2} which states that 
 \begin{align*}
 \frac{\q_m^{(k)}(a)}{m^k}
-& = \frac{1}{k+1}\sum_{i_0+\ldots+i_k=m} \nor \q_{i_0}\cdots \q_{i_k} \mal  (\Delta^k(a)) \\
-& +  k \sum_{j_0+\ldots+j_{k-2}=m} \frac{j_0^2+\ldots+j_{k-2}^2-1}{24}\nor \q_{j_0}\cdots \q_{j_{k-2}} \mal  (\Delta^{k-2}(ae)) .
+& = \frac{1}{k+1}\sum_{i_0+\ldots+i_k=m} \nor \q_{i_0}\cdots \q_{i_k} \mal  (\tau_*(a)) \\
+& +  k \sum_{j_0+\ldots+j_{k-2}=m} \frac{j_0^2+\ldots+j_{k-2}^2-1}{24}\nor \q_{j_0}\cdots \q_{j_{k-2}} \mal  (\tau_*(ae)) .
 \end{align*}
 Using that 
-$[\q,\nor \q_{i_0}\cdots \q_{i_k} \mal  (\Delta^k(a)) ] = \sum_{r=0}^k \delta_{i_r+1} \nor\q_{i_0}\cdots \widehat{\q}_{i_r} \cdots \q_{i_k} \mal (\Delta^{k-1}(a))$, 
+$[\q,\nor \q_{i_0}\cdots \q_{i_k} \mal  (\Delta^k(a)) ] = \sum_{r=0}^k \delta_{i_r+1} \nor\q_{i_0}\cdots \widehat{\q}_{i_r} \cdots \q_{i_k} \mal (\tau_*(a))$, 
 we calculate:
 \begin{align*}
 \ad\q \frac{\q_m^{(k+1)}(a)}{m^{k+1}} 
-  =\, &\frac{1}{k+2}\sum_{i_0+\ldots+i_{k+1}=m} \left[\q,\nor \q_{i_0}\cdots \q_{i_{k+1}} \mal (\Delta^{k+1}(a))\right] \\
- & + (k+1) \sum_{j_0+\ldots+j_{k-1}=m} \frac{j_0^2+\ldots+j_{k-1}^2-1}{24}\left[\q,\nor \q_{j_0}\cdots \q_{j_{k-1}} \mal (\Delta^{k-1}(ae)) \right]\\
-  =\, & \sum_{i_0+\ldots+i_{k}=m+1} \nor \q_{i_0}\cdots \q_{i_{k}} \mal  (\Delta^{k}(a)) \\
- & + k(k+1) \sum_{j_0+\ldots+j_{k-2}=m+1} \frac{j_0^2+\ldots+j_{k-2}^2}{24}\nor \q_{j_0}\cdots \q_{j_{k-2}} \mal (\Delta^{k-2}(ae)) \\
+  =\, &\frac{1}{k+2}\sum_{i_0+\ldots+i_{k+1}=m} \left[\q,\nor \q_{i_0}\cdots \q_{i_{k+1}} \mal (\tau_*(a))\right] \\
+ & + (k+1) \sum_{j_0+\ldots+j_{k-1}=m} \frac{j_0^2+\ldots+j_{k-1}^2-1}{24}\left[\q,\nor \q_{j_0}\cdots \q_{j_{k-1}} \mal (\tau_*(ae)) \right]\\
+  =\, & \sum_{i_0+\ldots+i_{k}=m+1} \nor \q_{i_0}\cdots \q_{i_{k}} \mal  (\tau_*(a)) \\
+ & + k(k+1) \sum_{j_0+\ldots+j_{k-2}=m+1} \frac{j_0^2+\ldots+j_{k-2}^2}{24}\nor \q_{j_0}\cdots \q_{j_{k-2}} \mal (\tau_*(ae)) \\
   =\, & (k+1)  \frac{\q_{m+1}^{(k)}(a)}{(m+1)^{k}} + \frac{k^3-k}{24}\frac{\q_{m+1}^{(k-2)}(ae)}{(m+1)^{k-2}}.
 \end{align*}
 Equation (\ref{adq'}) follows from (\ref{adq}) using the Jacobi identity: $\ad \q' = \ad [\mathfrak d,\q] = \ad \mathfrak d  \ad \q - \ad \q\ad \mathfrak d  $.
