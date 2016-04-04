@@ -61,21 +61,68 @@ $\mathbb F_3$ & 30 & 50 & 31  \\
 $\mathbb F_5$ &121 &355 &270
 \end{tabular}
 \end{center}
+\begin{rmk}\label{c2}
+When $k=F_3$, we remark that $\sum_{i\in V}X_i\in D$.
+\end{rmk}
 Let us now consider some special orthogonal sums.
 Set $S:=\Sym^2 (\Lambda^2V)$. Take two vectors $v,w\in V$ with $\omega(v,w)=1$ and set $x:= (v\wedge w)^2\in S$. Denote $P$ the plane spanned by $v$ and $w$ and set $y:= \sum_{i\in P}X_i\in  k[V]$.
 We set $Y':=y\cdot \mathfrak{m} = \{\sum_{i\in P} X_{i+j}-X_i\,|\, j\in V \} $.
 
 We consider now the action of $\Sp V$ on $S\oplus k[V]$. 
-Denote $O_1$ the vector space spanned by the elements $\phi(x)\oplus \phi(z),$ for $\phi \in \Sp V,$ $z \in (y)$ and
-denote $O_2$ the vector space spanned by the elements $\phi(x)\oplus \phi(y'),$ for $\phi \in \Sp V,$ $y' \in Y'$.
+Denote $O_1$ the vector space spanned by the elements $\phi(x)\oplus \phi(z),$ for $\phi \in \Sp V,$ $z \in (y)$,
+denote $O_2$ the vector space spanned by the elements $\phi(x)\oplus \phi(y'),$ for $\phi \in \Sp V,$ $y' \in Y'$
+and $U$ the vector space spanned by the elements $\phi(x),$ for $\phi \in \Sp V$.
 Then we have:
 \vspace{2mm}
 \begin{center}
-\begin{tabular}{c||c|c}
- $k$ & $\dim_k O_1$ & $\dim_k O_2 $  \\
+\begin{tabular}{c||c|c|c}
+ $k$ & $\dim_k O_1$ & $\dim_k O_2 $  & $\dim_k U$\\
 \hline
-$\mathbb F_2$ & 11 & 10  \\
-$\mathbb F_3$ & 51 & 50  \\
-$\mathbb F_5$ & 375 & 289
+$\mathbb F_2$ & 11 & 10 &  \\
+$\mathbb F_3$ & 51 & 50 & 20 \\
+$\mathbb F_5$ & 375 & 289 & 
 \end{tabular}
 \end{center}
+Now, we prove the following lemma.
+\begin{lemme}\label{cleffinclassesdiv}
+We assume that $k=\mathbb F_3$. Let $\pr_1: S\oplus k[V]\rightarrow S$ and $\pr_2: S\oplus k[V]\rightarrow k[V]$ the projection. 
+We have: 
+%\begin{itemize}
+%\item[(i)]
+$\dim \Ker\pr_{2|O_1}=1$.
+%\item[(ii)]
+%$\dim \Ker\pr_{1|O_1}=31$.
+%or 32.
+%\end{itemize}
+\end{lemme}
+\begin{proof}
+%\begin{itemize}
+%\item[(i)]
+We have $\pr_{2}(O_1)=(N)$, so $\dim \pr_{2}(O_1)=50$.
+Since $\dim O_1=51$, it follows $\dim \Ker\pr_{2|O_1}=1$. 
+%\item[(ii)]
+%We have $D\subset O_1$.
+%Indeed, we have $x+\sum_{i\in P} X_i$ and $x+\sum_{i\in P} X_{i+j}$ in $O_1$, for all $j\in V$. 
+%Hence $\sum_{i\in P} X_{i+j}-X_i\in O_1$.
+%Moreover, $\Sp V$ acts transversally on the set of the non-isotropic plans, it follows $D\subset O_1$.
+%Hence:
+%\begin{equation}
+%\dim \Ker\pr_{1|O_{1}}\geq \dim D=31.
+%\label{pfff}
+%\end{equation}
+%Moreover, by definition, $\pr_2(O_2)=D$.
+%Since $\dim D=31$ and $\dim O_2=50$, we obtain
+%$\dim \Ker \pr_{2|O_2}=19$. 
+%Hence, necessarily, $$\dim \pr_{1}(O_2)\geq 19.$$
+%Since $\pr_{1}(O_2)=\pr_{1}(O_1)$,
+%we obtain:
+%$$\dim \pr_{1}(O_1)\geq 19.$$
+%It follows 
+%$$\dim \Ker\pr_{1|O_1}\leq 51-19=32.$$
+%We conclude with (\ref{pfff}).
+%%We have $\pr_{1}(O_1)=U.$
+%%So $$\dim \pr_{1}(O_1)=20.$$
+%%Since $\dim O_1=51$,
+%%it follows $\dim \Ker\pr_{1|O_1}=31$.
+%\end{itemize}
+\end{proof}
