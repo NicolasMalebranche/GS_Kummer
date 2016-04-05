@@ -33,31 +33,25 @@ The morphism $\theta$ induces a homomorphism of graded rings
 \begin{equation}
 \theta^* :H^*(A\hilb{n})\longrightarrow H^*(\kum{A}{n-1})
 \end{equation}
-and on the image of $\theta^*$, the integral over $\kum{A}{n-1}$ can be written as follows:
+and by the projection formula, we have
 \begin{equation}
-\int\limits_{\kum{A}{n-1}}\theta^*(\alpha)\; =\; \int\limits_{A\hilb{n}} [\kum{A}{n-1}]\cdot\alpha .
+\theta_*\theta^*(\alpha)  = [\kum{A}{n-1}]\cdot\alpha.
 \end{equation}
 \begin{lemma}\label{IntegralityCheck}
 Let $\alpha\in H^*(A\hilb{n},\Q)$ be such that $\theta^*(\alpha)\in  H^*(\kum{A}{n-1},\Z)$ is an integral class. Then $[\kum{A}{n-1}]\cdot\alpha \in H^*(A\hilb{n},\Z)$. 
 \end{lemma}
 \begin{proof}
-The integrality of $\theta^*(\alpha)$ implies that, for all $\beta \in H^*(A\hilb{n},\Z)$,
-$$
-\int\limits_{\kum{A}{n-1}} \theta^*(\alpha)\cdot\theta^*(\beta) = \int\limits_{A\hilb{n}} [\kum{A}{n-1}]\cdot\alpha\cdot\beta
-$$
-is integral. Since the Poincar\'e pairing on $A\hilb{n}$ is unimodular, $[\kum{A}{n-1}]\cdot\alpha$ must be integral.
+The integrality of $\theta^*(\alpha)$ implies that $\theta_*\theta^*(\alpha) = [\kum{A}{n-1}]\cdot\alpha$ is integral.
 \end{proof}
 
 \begin{proposition}
 The kernel of $\theta^*$ is equal to the annihilator of $[\kum{A}{n-1}]$.
 \end{proposition}
 \begin{proof}
-Assume $\alpha\in \ker(\theta^*)$. Then, for all $\beta \in H^*(A\hilb{n})$, we have
-$$
-\int\limits_{A\hilb{n}} [\kum{A}{n-1}]\cdot \alpha \cdot \beta = \int\limits_{\kum{A}{n-1}}\theta^*(\alpha)\cdot\theta^*(\beta) = 0.
-$$
-Since the Poincar\'e pairing on $A\hilb{n}$ is non-degenerate, this implies $ [\kum{A}{n-1}]\cdot \alpha=0$. 
-
+Assume $\alpha\in \ker(\theta^*)$. Then we have
+$
+[\kum{A}{n-1}]\cdot \alpha = \theta_*\theta^*(\alpha) = 0
+$. 
 Conversely, suppose that $ [\kum{A}{n-1}]\cdot \alpha=0$. Then, for all $\beta \in H^*(A\hilb{n})$, we have 
 $$
 \int\limits_{\kum{A}{n-1}}\theta^*(\alpha)\cdot\theta^*(\beta) = 0,
@@ -150,8 +144,8 @@ u_2 &:= j(a_3 a_4), & v_2 &:= j(a_4 a_2), & w_2 &:= j(a_2 a_3),
 \end{align*}
 These elements form a basis of $H^2(\kum{A}{n-1},\Z)$ with the following intersection relations under the Beauville-Bogomolov form:
 \begin{align*}
-q(u_1,u_2) &= 1, & q(v_1,v_2) &= 1, & q(w_1,w_2) &= 1,  &
-q(e,e)&= -2n,
+B(u_1,u_2) &= 1, & B(v_1,v_2) &= 1, & B(w_1,w_2) &= 1,  &
+B(e,e)&= -2n,
 \end{align*}
 and all other pairs of basis elements are orthogonal.
 \end{notation}
