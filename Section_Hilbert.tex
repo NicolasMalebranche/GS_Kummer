@@ -229,18 +229,27 @@ Under this isomorphism the ring structure of $\SSym^n(H^*(A,\Q))$ corresponds to
 For the study of integral cohomology, first note that if $a \in H^*(A,\Z)$ is an integral class, then $\q_{m}(a) $ maps integral classes to integral classes. Such operators are called integral. Qin and Wang studied them in \cite{QinWang}. We need the following results:
 
 \begin{lemma} \cite{QinWang}\label{IntegralOperators}
-The operators $\frac{1}{n!}\q^n$ and $\frac{1}{2}\q_2(1) $ are integral.
+The operators $\frac{1}{n!}\q_1(1)^n$ and $\frac{1}{2}\q_2(1) $ are integral.
 Let $a\in H^2(A,\Z)$ be monodromy equivalent to a divisor. Then the operator $\frac{1}{2}\q_1(a)^2 - \frac{1}{2}\q_2(a)$ is integral. 
 \end{lemma}
-
-
-\begin{remark}
-If $A$ is a projective torus, then the sublattice of divisors in $H^2(A,\Z)$ (the N\'eron--Severi group) is not trivial. By \cite[Thm.~II]{Shioda}, the group of monodromy actions spans the entire automorphism group of $H^2(A,\Z)$.
-Since the lattice is even and contains two copies of the hyperbolic lattice, a theorem of Eichler \cite[Prop.~3.7.3]{Scattone} states that the automorphism group of $H^2(A,\Z)$ acts transitively on classes of the same norm. So every class can be mapped to a divisor by the action of a monodromy.
-\end{remark}
 \begin{remark}
 Qin and Wang \cite[Thm 1.1 et seq.]{QinWang} conjecture that their theory works even without the restriction on $a\in H^2(A,\Z)$. 
 \end{remark}
+
+\begin{proposition}
+If $A$ is a torus, the operator $\frac{1}{2}\q_1(a)^2 - \frac{1}{2}\q_2(a)$ is integral for all $a\in H^2(A,\Z)$. 
+\end{proposition}
+\begin{proof}
+The Nakajima operators are preserved under deformations of $A$. 
+By \cite[Thm.~II]{Shioda}, the group of monodromy actions spans the entire automorphism group of $H^2(A,\Z)$.
+Since the lattice is even and contains two copies of the hyperbolic lattice, a theorem of Eichler \cite[Prop.~3.7.3]{Scattone} states that the automorphism group of $H^2(A,\Z)$ acts transitively on classes of the same norm. 
+
+Suppose now that the N\'eron-Severi group $\NS(A)$ contains a copy of the hyperbolic lattice $U$ (such $A$ exist).
+Since $U\subset \NS(A)$, there are divisors of arbitrary even norm,
+so every class can be mapped to a divisor by the action of a monodromy and Lemma \ref{IntegralOperators} establishes proposition for that particular $A$. 
+Now, since all tori are equivalent by deformation, a general torus can always be deformed to our special $A$. Since the integrality of an operator is a topolocial invariant, $\frac{1}{2}\q_1(a)^2 - \frac{1}{2}\q_2(a)$ remains integral for all $a$.
+\end{proof}
+
 \begin{proposition} Assume that $H^*(A,\Z)$ is free of torsion.
 Let $(a_i) \subset H^1(A,\Z)$ and $(b_i)\subset H^2(A,\Z)$ be bases of integral cohomology. Denote $a_i^*\in H^3(A,\Z)$ resp.~$b_i^*\in H^2(A,\Z)$ the elements of the dual bases. Let $x$ be the generator of $H^4(A,\Z)$. Modulo torsion, the following classes form a basis of $H^2(A\hilb{n},\Z)$:
 \begin{itemize}
@@ -259,7 +268,7 @@ Their respective duals in $H^{2n-2}(A\hilb{n},\Z)$ are given by
 G\"ottsche's formula \cite[p.~35]{Gottsche} gives the Betti numbers of $A\hilb{n}$ in terms of the Betti numbers of $A$: 
 $h^1(A\hilb{n}) = h^1(A)$, and $h^2(A\hilb{n}) = h^2(A)+ \frac{h^1(A)(h^1(A)-1)}{2} + 1$. It follows that the given classes span a lattice of full rank.
 
-Next we have to show that the intersection matrix between these classes is in fact the identity matrix. Most of the entries can be computed easily using (\ref{qSym}). For products involving $\delta$ (this is the action of $\mathfrak{d}$) or its dual, first observe that $\mathfrak{d}\q_1(x)^m\vac = 0 $ and $ \mathfrak{L}_1(a)\q_1(x)^m\vac =0$ for every class $a$ of degree at least 1. Then compute:
+Next we have to show that the intersection matrix between these classes is in fact the identity matrix. Most of the entries can be computed easily using the simplification from (\ref{qSym}). For products involving $\delta$ (this is the action of $\mathfrak{d}$) or its dual, first observe that $\mathfrak{d}\q_1(x)^m\vac = 0 $ and $ \mathfrak{L}_1(a)\q_1(x)^m\vac =0$ for every class $a$ of degree at least 1. Then compute:
 \begin{gather*}
 \delta \cdot\q_2(x)\q_{1}(x)^{n-2} \vac = \mathfrak{d}\q_2(x)\q_{1}(x)^{n-2} \vac = 2 \mathfrak{L}_2(x) \q_{1}(x)^{n-2} \vac = \q_{1}(x)^{n}\vac,
 \\
@@ -274,10 +283,12 @@ Next we have to show that the intersection matrix between these classes is in fa
 \end{gather*}
 \end{proof}
 
-%The first $6$ classes give an injection $j : H^2(A,\Z)\rightarrow H^2(A\hilb{n},\Z)$. 
+\begin{remark}
+If $A$ is a complex torus, a theorem of Markman \cite{Markman} ensures that $H^*(A\hilb{n},\Z)$ is free of torsion.
+\end{remark} 
 
 \begin{proposition} \label{A2Basis}
- Let $A$ be a complex torus of dimension $2$. Let $(b_i)\subset H^2(A,\Z)$ be an integral basis. By \cite{Totaro}, $H^*(A\hilb{2},\Z)$ is torsion-free and a basis is given by the following classes.
+Let $A$ be a complex abelian surface. Let $(b_i)\subset H^2(A,\Z)$ be an integral basis. Then a basis of $H^*(A\hilb{2},\Z)$ is given by the following classes.
 \begin{center}
 \begin{tabular}{c|c|l|l}
  degree & Betti number & class & multiplication with class \\\hline
@@ -305,7 +316,7 @@ Next we have to show that the intersection matrix between these classes is in fa
 \begin{proof}
 The Betti numbers come from G\"ottsche's formula \cite{Gottsche}.
 One computes the intersection matrix of all classes under the Poincar\'e duality pairing and finds that it is unimodular. 
-So it remains to show that all these classes are integral. By Proposition \ref{IntegralOperators} this is clear for all classes except 
+So it remains to show that all these classes are integral. By Lemma \ref{IntegralOperators} this is clear for all classes except 
 those of the form $\frac{1}{2}\q_2(a^*_i)\vac \in H^5(A\hilb{2},\Z)$.
 
 Evaluating the Poincar\'e duality pairing between degrees 3 and 5 gives:
@@ -315,10 +326,10 @@ Evaluating the Poincar\'e duality pairing between degrees 3 and 5 gives:
  \int \q_1(1)\q_1(a^*_i)\vac \cdot \q_1(x)\q_1(a_i)\vac = 1,
 \end{gather*}
 while the other pairings vanish. Therefore, one of $\q_2(a_i)\vac$ and $\q_2(a^*_i)\vac$ must be divisible by $2$. 
-We can interpret $\q_2(a_i)\vac\in H^3(A\hilb{2},\Z)$ and $\q_2(a^*_i)\vac\in H^5(A\hilb{2},\Z)$ as classes concentrated on the exceptional divisor, that is, as elements of $\pi_* i_*H^*(E,\Z)$. Indeed,
+We can interpret $\q_2(a_i)\vac\in H^3(A\hilb{2},\Z)$ and $\q_2(a^*_i)\vac\in H^5(A\hilb{2},\Z)$ as classes concentrated on the exceptional divisor, that is, as elements of $\pi_* j_*H^*(E,\Z)$. Indeed,
 the pushforward of a class $a\otimes 1 \in H^{k}(E,\Z)$ is given by 
 $$
-\pi_* i_*(a\otimes 1) = \q_2(a)\vac \in H^{k+2}(A\hilb{n},\Z).
+\pi_* j_*(a\otimes 1) = \q_2(a)\vac \in H^{k+2}(A\hilb{n},\Z).
 $$
 When pushing forward to the Hilbert scheme, the only possibility to get a factor $2$ is in degree $5$, by Proposition \ref{Alpha35}. 
 \end{proof}
