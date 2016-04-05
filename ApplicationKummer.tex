@@ -1,19 +1,19 @@
 \section{Symplectic involution on $K_{2}(A)$}\label{Involution} 
-Let $X$ be an irreducible symplectic manifold. Let $$\nu: \Aut (X)\rightarrow H^{2}(X,\Z)$$
+Let $X$ be an irreducible symplectic manifold. Let $$\nu: \Aut (X)\rightarrow \Aut H^{2}(X,\Z)$$
 the natural morphism. Hassett and Tschinkel (Theorem 2.1 in \cite{Hassett}) have shown that $\Ker \nu$ is a deformation invariant. 
 Let $X$ be an irreducible symplectic fourfold of Kummer type. Then Oguiso in \cite{Oguiso} has shown that $\Ker \nu =(\Z/3\Z)^3\rtimes\Z/2\Z$.
 
-Let $A$ be an abelian variety and $g$ an automorphism of $A$. Let denote by $T_{A[3]}$ the group of translation of $A$ by elements of $A[3]$. If $g\in  T_{A[3]}\rtimes\Aut_{\Z} (X)$ then $g$ induces a natural automorphism on $K_2(A)$. We denote the induced automorphism by $g^{[[3]]}$. If there is no ambiguity, we also denote the \emph{induced automorphism} by the same letter $g$.
+Let $A$ be an abelian variety and $g$ an automorphism of $A$. Let denote by $T_{A[3]}$ the group of translation of $A$ by elements of $A[3]$. If $g\in  T_{A[3]}\rtimes\Aut_{\Z} (A)$ then $g$ induces a natural automorphism on $K_2(A)$. We denote the induced automorphism by $g^{[[3]]}$. If there is no ambiguity, we also denote the \emph{induced automorphism} by the same letter $g$.
 
 When $X=K_2(A)$, we have more precisely, by Corollary 3.3 of \cite{BNS2}, $$\Ker \nu = T_{A[3]}\rtimes(-\id_A)^{[[3]]}.$$ 
 \subsection{Uniqueness and fixed locus}
 \begin{thm}\label{SymplecticInvo}
-Let $X$ be an irreducible symplectic fourfold of Kummer type and $\iota$ a symplectic involution on $X$ then:
+Let $X$ be an irreducible symplectic fourfold of Kummer type and $\iota$ a symplectic involution on $X$. Then:
 \begin{itemize}
 \item[(1)]
 We have $\iota\in \Ker \nu$.
 \item[(2)]
-Let $A$ be an abelian surface then 
+Let $A$ be an abelian surface. Then 
 the couple $(X,\iota)$ is deformation equivalent to $(K_2(A),t_\tau \circ (-\id_A)^{[[3]]})$,
 where $t_\tau$ is the morphism induced on $K_2(A)$ by the translation by $\tau\in A[3]$.
 \item[(3)]
@@ -23,39 +23,41 @@ The fixed locus of $\iota$ is given by a K3 surface and 36 isolated points.
 \begin{proof}
 \begin{itemize}
 \item[(1)]
-If $\iota\notin \Ker \nu$, by Section 5 of \cite{MongWanTari}, the unique possible action of $\iota$ on $H^{2}(X,\Z)$ is given by $H^{2}(X,\Z)^{\iota}=U\oplus A_1^2\oplus(-6)$. We will show that it is impossible. Let assume that $H^{2}(X,\Z)^{\iota}=U\oplus A_1^2\oplus(-6)$, we will find a contradiction.
+If $\iota\notin \Ker \nu$, by the classification of Section 5 of \cite{MongWanTari}, the unique possible action of $\iota$ on $H^{2}(X,\Z)$ is given by $H^{2}(X,\Z)^{\iota}=U\oplus (2)^2\oplus(-6)$. We will show that it is impossible. Let us assume that $H^{2}(X,\Z)^{\iota}=U\oplus (2)^2\oplus(-6)$, we will find a contradiction.
 
 As done in Section 3 of \cite{Mongardi}, consider a local universal deformation space of $X$:
 $$\Phi:\mathcal{X}\rightarrow \Delta,$$
-where $\Delta$ is a small polydisk and $\mathcal{X}_0=X$. By eventually restricting $\Delta$, we can assume that $\iota$ extends to an automorphisms
-$M$ on $\mathcal{X}$ and $m$ on $\Delta$ such that, we have the following commutative diagram: 
+where $\Delta$ is a small polydisk and $\mathcal{X}_0=X$. By restricting $\Delta$, we can assume that $\iota$ extends to an automorphism
+$M$ on $\mathcal{X}$ and $\mu$ on $\Delta$ such that, we have the following commutative diagram: 
 $$\xymatrix{
  \mathcal{X}\ar[d]\ar[r]^{M} & \mathcal{X}\ar[d]\\
-  \Delta \ar[r]^{m} & \Delta
+  \Delta \ar[r]^{\mu} & \Delta
    }$$
-Moreover, the differential of $m$ at 0 is given by the action of $\iota$ on $H^1(T_X)$ which is the same as the action on $H^{1,1}(X)$ since the symplectic holomorphic 2-form induces an isomorphism between those two and the symplectic holomorphic 2-form is preserved by the action of $\iota$. The morphism $m$ is linearizable, then $\Delta^m$ is smooth and $\dim \Delta^m=\rk H^{2}(X,\Z)^{\iota}-2=3$.  
-Moreover, by \cite{Markmanou} that we can find $x\in \Delta^m$ such that %$\NS (\mathcal{X}_x)=A_1(-1)^2\oplus(-6)$. 
+Moreover, the differential of $\mu$ at 0 is given by the action of $\iota$ on $H^1(T_X)$ which is the same as the action on $H^{1,1}(X)$, since the symplectic holomorphic 2-form induces an isomorphism between the two and the symplectic holomorphic 2-form is preserved by the action of $\iota$. We may assume that $\mu$ is a linear map. So $\Delta^\mu$ is smooth and $\dim \Delta^\mu=\rk H^{2}(X,\Z)^{\iota}-2=3$.  
+Moreover, by \cite{Markmanou} we can find $x\in \Delta^\mu$ such that %$\NS (\mathcal{X}_x)=A_1(-1)^2\oplus(-6)$. 
 $\mathcal{X}_x$ is bimeromorphic to a Kummer fourfold $K_2(A)$.
 %with $\NS(A)=A_1(-1)^2$ and 
-Since $H^{2}(X,\Z)^{\iota}=U\oplus A_1^2\oplus(-6)$, $\iota_x:= M_{\mathcal{X}_x}$ induces a bimeromorphic involution $i$ on $K_2(A)$ with $H^{2}(K_2(A),\Z)^{i}=U\oplus A_1^2\oplus(-6)$.
+Since $H^{2}(X,\Z)^{\iota}=U\oplus (2)^2\oplus(-6)$, $\iota_x:= M_{\mathcal{X}_x}$ induces a bimeromorphic involution $i$ on $K_2(A)$ with $H^{2}(K_2(A),\Z)^{i}=U\oplus (2)^2\oplus(-6)$.
 
-Necessary, we have $\NS(K_2(A))\supset  A_1(-1)^2\oplus(-6)$. It follows that $\NS(A)\supset A_1(-1)^2$.
-Let consider the involution $g$ defined by $-\id$ on $A_1(-1)^2$ and $\id$ on $(A_1(-1)^2)^{\bot}$. By Corollary 1.5.2 of \cite{Lattice}, $g$ can be extend to an involution on $H^{2}(A,\Z)$. Then by Theorem 1 of \cite{Shioda}, $g$ provides a symplectic automorphism on $A$ with: $H^{2}(A,\Z)^{g}=(A_1(-1)^2)^\bot=U\oplus A_1^2$.
-It follows from classification of Section 4 of \cite{MongWanTari0}, that $A=\C/\Lambda$ with $\Lambda=\left\langle (1,0),(0,1),(x,-y),(y,x)\right\rangle$, $(x,y)\in \C^2\smallsetminus \R^2$ and $g=\left(
+Since $i$ preserve the holomorphic 2-from, we have $\NS(K_2(A))\supset \left[H^{2}(K_2(A),\Z)^{i}\right]^{\bot}=(-2)^2$. The involution $i$ also induces a trivial involution on $A_{H^{2}(X,\Z)}$, so the half class of the diagonal $e$ is in $H^{2}(K_2(A),\Z)^{i}\cap\NS(K_2(A))$. It follows $\NS(K_2(A))\supset(-2)^2\oplus\Z e$. Moreover the morphism $j$ defined in Notation \ref{BasisH2KA} respects the Hodge structure so $\NS(K_2(A))=j(\NS(A))\oplus\Z e$. It follows that $\NS(A)\supset (-2)^2$.
+Now we construct an involution $g$ on $H^{2}(A,\Z)$ given by $-\id$ on $(-2)^2$ and $\id$ on $((-2)^2)^{\bot}$ and extended to an involution on $H^{2}(A,\Z)$ by Corollary 1.5.2 of \cite{Lattice}. Then by Theorem 1 of \cite{Shioda}, $g$ provides a symplectic automorphism on $A$ with: $H^{2}(A,\Z)^{g}=((-2)^2)^\bot=U\oplus (2)^2$.
+It follows from the classification of Section 4 of \cite{MongWanTari0}, that $A=\C/\Lambda$ with $\Lambda=\left\langle (1,0),(0,1),(x,-y),(y,x)\right\rangle$, $(x,y)\in \C^2\smallsetminus \R^2$ and $g=\left(
 \begin{array}{cc}
 0 & -1\\
 1 & 0 
 \end{array} \right)$. 
 
-Let also denote $g$ the automorphism on $K_2(A)$ induces by $g$. By construction, $g\circ i$ acts trivially on $H^{2}(K_2(A),\Z)$. Hence by Corollary 3.3 and Lemma 3.4 of \cite{FujikiK}, $g\circ \iota$ extends to an automorphism of $K_2(A)$. In particular, $i$ extends to a symplectic involution on $K_2(A)$. Then $g\circ i\in \Ker \nu$.
+Let also denote by $g$ the automorphism on $K_2(A)$ induced by $g$. By construction, $g\circ i$ acts trivially on $H^{2}(K_2(A),\Z)$. Hence by Corollary 3.3 and Lemma 3.4 of \cite{FujikiK}, $g\circ \iota$ extends to an automorphism of $K_2(A)$. In particular, $i$ extends to a symplectic involution on $K_2(A)$. Then $g\circ i\in \Ker \nu$.
 
-By Corollary \ref{actionH3}, $t_\tau$ acts trivially on $H^{3}(K_2(A),\Z)$. Hence by Corollary 3.3 of \cite{BNS2}, we have necessary:
+By Corollary \ref{actionH3}, $t_\tau$ acts trivially on $H^{3}(K_2(A),\Z)$. Hence by Corollary 3.3 of \cite{BNS2}, we have necessarily:
 $$g^{*}_{|H^{3}(K_2(A),\Z)}=i^{*}_{|H^{3}(K_2(A),\Z)}\circ (-\id_A)^{*}_{|H^{3}(K_2(A),\Z)}\ \ou\ g^{*}_{|H^{3}(K_2(A),\Z)}=i^{*}_{|H^{3}(K_2(A),\Z)}.$$
 But $g^{*}_{|H^{3}(K_2(A),\Z)}$ has order 4 and $i^{*}_{|H^{3}(K_2(A),\Z)}\circ (-\id_A)^{*}_{|H^{3}(K_2(A),\Z)}$ and $i^{*}_{|H^{3}(K_2(A),\Z)}$ have order 2, which is a contradiction.
 \item[(2)]
-It follows from (1), Theorem 2.1 of \cite{Hassett} and Corollary 3.3 of \cite{BNS2}.
+Let $X$ be a irreducible symplectic fourfold of Kummer type and $\iota$ a symplectic involution on $X$. By (1) of the above theorem, we have $\iota\in\Ker \nu$. Then by Theorem 2.1 of \cite{Hassett}, the couple $(X,\iota)$ deform to a couple $(K_2(A),\iota')$ with $A$ an abelian surface and $\iota'\in\Ker \nu$ a symplectic involution on $ K_2(A)$. Then we conclud with Corollary 3.3 of \cite{BNS2}.
 \item[(3)]
-It follows from (2) and Section 1.2.1 of \cite{Tari}.
+Let $A$ be an abelian surface, by Section 1.2.1 of \cite{Tari}, the fixed locus of $t_\tau \circ (-\id_A)^{[[3]]}$ on $K_2(A)$ is given by a K3 surface an 36 isolated points. 
+Now let $X$ be a irreducible symplectic fourfold of Kummer type and $\iota$ a symplectic involution on $X$. 
+By (2) of the above theorem, $\Fix\iota$ deforms to the disjoint union of a K3 surface and 36 isolated points. Moreover $\iota$ is a symplectic involution, so the holomorphic 2-form of $X$ restricts to a non-degenerated holomorphic 2-form on $\Fix\iota$. Then necessarily, $\Fix\iota$ consists of a K3 surface and 36 isolated points.
 \end{itemize}
 \end{proof}
 \begin{rmk}\label{RemarkSymplecticInv}
@@ -68,32 +70,32 @@ the set $$\mathcal{P}:=\left\{\left.\xi\in K_{2}(A)\right|\ \Supp \xi= \left\{a_
 \end{itemize}
 \end{rmk}
 \subsection{Action on the cohomology}\label{actioncoh}
-From Theorem \ref{SymplecticInvo}, we can assume that $X=K_2(A)$ and $\iota=-\id_A$. To consider $t_\tau \circ (-\id_A)$ instead of  $-\id_A$ will only has the effect to exchange the role of $[Z_0]$ and $[Z_\tau]$.
+From Theorem \ref{SymplecticInvo}, we can assume that $X=K_2(A)$ and $\iota=-\id_A$. To consider $t_\tau \circ (-\id_A)$ instead of  $-\id_A$ only has the effect of exchanging the role of $[Z_0]$ and $[Z_\tau]$.
 Hence we do not lose any generality assuming that $\iota=-\id_A$.
-\begin{prop}\label{invariants}
-\begin{itemize}
-\item[(1)]
-The involution $\iota$ acts trivially on $H^{2}(K_{2}(A),\Q)$.
-It follows $l_{2}^2(K_{2}(A))=l_{1,-}^2(K_{2}(A))=0$ and $l_{1,+}^2(K_{2}(A))=7$.
-\item[(2)]
-The involution $\iota$ acts as $-\id$ on $H^{3}(K_{2}(A),\Q)$.
+
+From Theorem \ref{SymplecticInvo} (1), the involution $\iota$ acts trivially on $H^{2}(K_{2}(A),\Z)$.
+It follows 
+\begin{equation}
+l_{2}^2(K_{2}(A))=l_{1,-}^2(K_{2}(A))=0 \text{ and } l_{1,+}^2(K_{2}(A))=7.
+\label{l2}
+\end{equation}
+From Corollary \ref{actionH3}, the involution $\iota$ acts as $-\id$ on $H^{3}(K_{2}(A),\Z)$.
 %We have $\rk H^{3}(K_{2}(A),\Z)^{\iota}= 2$.
-It follows $l_{2}^3(K_{2}(A))=l_{1,+}^3(K_{2}(A))=0$ and $l_{1,-}^3(K_{2}(A))=8$.
-\item[(3)]
-By Corollary \ref{Pi'}, we have:
+It follows 
+\begin{equation}
+l_{2}^3(K_{2}(A))=l_{1,+}^3(K_{2}(A))=0 \text{ and } l_{1,-}^3(K_{2}(A))=8.$$
+\label{l3}
+\end{equation}
+By Definition \ref{defiPi}, we have:
 $$H^{4}(K_{2}(A),\Q)=\Sym^{2} H^{2}(K_{2}(A),\Q)\oplus^{\bot} \Pi'\otimes\Q,$$
 where $\Pi'=\left\langle Z_{\tau}-Z_{0},\ \tau\in A[3]\smallsetminus \left\{0\right\}\right\rangle$. The involution
-$\iota^*$ fixes $\Sym^{2} H^{2}(K_{2}(A),\Z)$ and $\iota^*(Z_{\tau}-Z_{0})=Z_{-\tau}-Z_{0}$.
-It follows that $l_{1,-}^4(K_{2}(A))=0$, $l_{1,+}^4(K_{2}(A))=28$ and $l_{2}^4(K_{2}(A))=40$.
+$\iota^*$ fixes $\Sym^{2} H^{2}(K_{2}(A),\Z)$ and $\iota^*(Z_{\tau}-Z_{0})=Z_{-\tau}-Z_{0}$. It provides the following proposition.
+\begin{prop}\label{invariants}
+We have $l_{1,-}^4(K_{2}(A))=0$, $l_{1,+}^4(K_{2}(A))=28$ and $l_{2}^4(K_{2}(A))=40$.
 %We have $H^{4}(K_{2}(A),\Z)^{\iota}=\Sym^{2} H^{2}(K_{2}(A),\Q)\oplus \Pi'^{\iota}\otimes\Q$, with
 %$\rk \Pi'^{\iota}=40$.
-\end{itemize}
 \end{prop}
 \begin{proof}
-\begin{itemize}
-\item[(1)]
-It follows from Corollary 3.3 of \cite{BNS2}.
-\item[(2)]
 %We denote $\alpha=\tr \iota^{*}_{H^{1,1}(K_{2}(A))}$ and $\beta=\tr \iota^{*}_{H^{2,1}(K_{2}(A))}$.
 %We apply Holomorphic Lefschetz-Riemann-Roch formula Theorem 1 of \cite{Camere} to the bundle $\Omega_{K_{2}(A)}$ and we find the following formula:
 %$$\beta-2\alpha=-\frac{N}{4}-12K+\frac{1}{4}\sum_{\iota(S_{i})=S_{i}} c_{2}(K_{2}(A))\cdot S_{i},$$
@@ -110,16 +112,14 @@ It follows from Corollary 3.3 of \cite{BNS2}.
 %We have $\iota_{0}^{*}(a_{i}^{(1)})=-a_{i}^{(1)}$ and $\iota_{0}^{*}(a_{\overline{i}}^{(0)})=-a_{\overline{i}}^{(0)}$.
 %Moreover, we have by definition, $\iota^{*}\circ \theta^{*}=\theta^{*}\circ \iota_{0}^{*}$.
 %It follows by Proposition 3.18 \ref{} that the involution $\iota$ acts as $-\id$ on $H^{3}(K_{2}(A),\Q)$.
-It follows from Corollary \ref{actionH3}.
-\item[(3)]
 
 Let $\mathcal{S}$ be the over-lattice of $\Sym^{2} H^{2}(K_{2}(A),\Z)$ where we add all the classes divisible by 2 in $H^{4}(K_{2}(A),\Z)$.
-We can calculate that the discriminant of $\Pi'$ is not divisible by 2. Since $H^{4}(K_{2}(A),\Z)$ is unimodular, it follows that the discriminant of $\mathcal{S}$ is also not divisible by 2.
+By (\ref{discrPi}), the discriminant of $\Pi'$ is not divisible by 2. Since $H^{4}(K_{2}(A),\Z)$ is unimodular, it follows that the discriminant of $\mathcal{S}$ is also not divisible by 2.
 Hence, we have:
 $$H^{4}(K_{2}(A),\F)=\mathcal{S}\otimes\F\oplus \Pi'\otimes\F.$$
 Moreover, we have: $$\iota^{*}(Z_{\tau}-Z_{0})=Z_{-\tau}-Z_{0},$$
 for all $\tau\in A[3]\smallsetminus \left\{0\right\}$.
-Hence $\Vect_{\F}(Z_{\tau}-Z_{0},Z_{-\tau}-Z_{0})$ is isomorphic to $N_{2}$ as a $\F[G]$-module.
+Hence $\Vect_{\F}(Z_{\tau}-Z_{0},Z_{-\tau}-Z_{0})$ is isomorphic to $N_{2}$ as a $\F[G]$-module  (see the notation in Definition-Proposition \ref{defiprop}).
 Moreover $H^{2}(K_{2}(A),\Z)$ is invariant by the action of $\iota$, hence $\Sym^{2} H^{2}(K_{2}(A),\Z)$ and $\mathcal{S}$ is also invariant by the action of $\iota$. 
 It follows that $\mathcal{S}\otimes\F=\mathcal{N}_{1}$ and $\Pi'\otimes\F=\mathcal{N}_{2}$.
 Since $\rk \mathcal{S}=28$, we have $l_{1,+}^{4}+l_{1,-}^{4}=28$.
@@ -133,7 +133,6 @@ On the other hand $\rk \Pi'=80$, it follows that $l_{2}^{4}=40$.
 %\label{Pi'i}
 %\end{equation}
 %Hence, we have $\rk \Pi'^{\iota}=\frac{\# A[3] -1}{2}=40$.
-\end{itemize}
 \end{proof}
 \section{Application to Beauville--Bogomolov form}\label{BeauvilleForm}
 \subsection{Statement of the main theorem}\label{statement}
@@ -186,7 +185,7 @@ We first provide all the notation that we will need during the proof in Section 
 Then the proof is divided in the following steps:
 \begin{itemize}
 \item[(1)]
-First Proposition \ref{invariants} and Corollary \ref{utile'} will provide the $H^4$-normality in Section \ref{H4}.
+First (\ref{l2}), (\ref{l3}), Proposition \ref{invariants} and Corollary \ref{utile'} will provide the $H^4$-normality in Section \ref{H4}.
 \item[(2)]
 The knowledge of the element divisible by 2 in $\Sym^{2} H^{2}(K_2(A),\Z)$ from Section \ref{Middle} and the $H^4$-normality allow us to prove the $H^2$-normality in Section \ref{H2}. 
 \item[(3)]
@@ -232,16 +231,16 @@ By Theorem 2 of \cite{Spanier}, $H^{*}(K_{2}(A),\Z)$ is torsion-free.
 From Remark \ref{RemarkSymplecticInv} (1), we know that the connected component of dimension 2 of $\Fix \iota$  is given by $Z_{0}$. We know that $Z_{0}$ is a K3 surface, hence is simply connected. 
 Moreover by Proposition 4.3 of \cite{Hassett} $Z_{0}\cdot Z_{\tau}=1$ for all $\tau\in A[3]\smallsetminus \left\{0\right\}$. Hence the class of $Z_{0}$ in $H^{4}(K_{2}(A),\Z)$ is primitive. It follows that $\Fix \iota$ is almost negligible (Definition \ref{negligible}). 
 \item[iii)]
-By Proposition \ref{invariants}, we have $l_{1,-}^{2}(K_{2}(A))=l_{1,-}^{4}(K_{2}(A))=0.$
+By (\ref{l2}) and Proposition \ref{invariants}, we have $l_{1,-}^{2}(K_{2}(A))=l_{1,-}^{4}(K_{2}(A))=0.$
 \item[iv)]
-By Proposition \ref{invariants}, we have $l_{1,+}^{3}(K_{2}(A))=0.$ Moreover $H^{1}(K_{2}(A))=0$, so $l_{1,+}^{1}(K_{2}(A))=0.$
+By (\ref{l3}) and Proposition \ref{invariants}, we have $l_{1,+}^{3}(K_{2}(A))=0.$ Moreover $H^{1}(K_{2}(A))=0$, so $l_{1,+}^{1}(K_{2}(A))=0.$
 \item[v)]
 We have to check the following equality:
 \begin{align*}
 &l_{1,+}^{4}(K_{2}(A))+2\left[l_{1,-}^{1}(X)+l_{1,-}^{3}(X)+l_{1,+}^{0}(X)+l_{1,+}^{2}(X)\right]\\
 &= 36h^{0}(pt)+h^{0}(Z_{0},\Z)+h^{2}(Z_{0},\Z)+h^{4}(Z_{0},\Z).
 \end{align*}
-By Proposition \ref{invariants}:
+By (\ref{l2}), (\ref{l3}) and Proposition \ref{invariants}:
 $$l_{1,+}^{4}(K_{2}(A))+2\left[l_{1,-}^{1}(X)+l_{1,-}^{3}(X)+l_{1,+}^{0}(X)+l_{1,+}^{2}(X)\right]=28+2(8+1+7)=60.$$
 Moreover since $Z_{0}$ is a K3 surface, we have:
 $$36h^{0}(pt)+h^{0}(Z_{0},\Z)+h^{2}(Z_{0},\Z)+h^{4}(Z_{0},\Z)=36+2+22=60.$$
@@ -398,7 +397,7 @@ H^{4}(K_2(A),V,\Z)\ar[r]^{\rho} &H^{4}(K_2(A),\Z).}$$
 By Thom isomorphism, $H^{3}(K_2(A),V,\Z)=0$ and $H^{4}(K_2(A),V,\Z)=H^{0}(Z_0,\Z)$.
 Moreover $\rho$ is injective, so $H^{3}(V,\Z)=H^{3}(K_2(A),\Z)$. 
 
-Hence by Proposition \ref{invariants} (2) and Proposition 3.2.8 of \cite{Lol}, we find that $H^{3}(U,\Z)=0$.
+Hence by (\ref{l2}), (\ref{l3}) and Proposition 3.2.8 of \cite{Lol}, we find that $H^{3}(U,\Z)=0$.
 Since $H^{3}(K_2(A),\Z)^\iota=0$, $H^{3}(\widetilde{K},\Z)$ is a torsion group. 
 Hence the result follows from the exact sequence
 $$\xymatrix@C=10pt@R=0pt{H^{3}(\widetilde{K},U,\Z)\ar[r] &H^{3}(\widetilde{K},\Z)\ar[r] &H^{3}(U,\Z)}$$
@@ -652,6 +651,6 @@ We have:
 \end{prop}
 \begin{proof}
 It is the same proof as Proposition 4.7.2 of \cite{Lol}.
-From Theorem 7.31 of \cite{Voisin} and Proposition \ref{invariants}, we get the betti numbers.
+From Theorem 7.31 of \cite{Voisin}, (\ref{l2}), (\ref{l3}) and Proposition \ref{invariants}, we get the betti numbers.
 Then $\chi(K')=1-0+8-0+90-0+8-0+1=108$.
 \end{proof}
