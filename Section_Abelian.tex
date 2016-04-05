@@ -4,7 +4,7 @@ $$
 A = \C^2/\Lambda,
 $$
 where $\Lambda\subset \C^2$ is a lattice of rank $4$, embedded in $\C^2$. 
-Depending on the imbedding, we get different complex manifolds, projective or not. Of course, all of them are equivalent by monodromy.
+Depending on the imbedding, we get different complex manifolds, projective or not. Of course, all of them are equivalent by deformation.
 \subsection{Morphisms and special cases}
 \begin{definition}
 An isogeny between abelian surfaces $A=\C^2/\Lambda\rightarrow A'=\C^2/\Lambda'$ means a surjective holomorphic map that preserves the group structure. It is given by a complex linear map, that maps $\Lambda$ to a sublattice of $\Lambda'$. 
@@ -19,7 +19,8 @@ Let us now come to the very special case that $A=E\times E$ can be written as th
 Now write $E$ as $E=\C/\Lambda_0$. We may assume that $\Lambda_0 $ is spanned by $1$ and a vector $\tau\in\C\backslash\R$. The automorphism group, up to isogeny, is given by (\cite{Ghys})
 $\GL(2,\End(\Lambda_0))$, where
 $\End(\Lambda_0)$ is the set $\{z\in\C \;|\; z\Lambda_0\subset \Lambda_0\}$.
-\begin{proposition} There are two possibilities for $\End(\Lambda_0)$, depending on $\tau$:
+\begin{proposition} \label{EndLambda}
+There are two possibilities for $\End(\Lambda_0)$, depending on $\tau$:
 \begin{enumerate}
  \item Both the real part and the square norm of $\tau$ are rational numbers, say $2\Re(\tau) = \frac{p}{r}$ and $\|\tau\|^2 = \frac{q}{r}$ with $r>0$ as small as possible. Then $\End(\Lambda_0)= \Z+ r\tau\Z$.
  \item At least one of $\Re(\tau), \|\tau\|^2$ is irrational. Then $\End(\Lambda_0)=\Z$.
@@ -32,11 +33,11 @@ $$
 (a+b\tau)\tau = c+d\tau\quad \Leftrightarrow \quad b\tau^2 + (a-d)\tau -c =0.
 $$
 Up to scalar multiples, there is a unique real quadratic polynomial that annihilates $\tau$, namely $ (x -\tau )(x-\bar{\tau})=x^2 - 2\Re(\tau)x+ \|\tau\|^2$. 
-If all coefficients of that polynomial are rational numbers, then $z=a+b\tau$ gives a solution for arbitrary $a\in\Z$,$b\in r\Z$. Otherwise, the condition must be the zero polynomial, so $b=0$.
+If all coefficients of that polynomial are rational numbers, then $z=a+b\tau$ gives a solution for arbitrary $a\in\Z$, $b\in r\Z$. Otherwise, the condition must be the zero polynomial, so $b=0$.
 \end{proof}
-
+Now we study the action of automorphisms on torsion points in a very special case. This will be needed in the technical proof of Theorem \ref{fin}.
 \begin{definition}
-Denote $\xi\in\C$ a primitive sixth root of unity and $E_\xi$ the elliptic curve given by the choice $\Lambda_0 = \left<1,\xi\right>$, so $\End(\Lambda_0)=\Lambda_0$ is the ring of Eisenstein integers. Define a group $G_\xi$ of automorphisms of $E_\xi\times E_\xi$ by the following generators in $\GL(2,\End(\Lambda_0))$:
+Denote $\xi\in\C$ a primitive sixth root of unity and $E_\xi$ the elliptic curve given by the choice $\Lambda_0 = \left<1,\xi\right>$, so by Proposition \ref{EndLambda}, $\End(\Lambda_0)=\Lambda_0$ is the ring of Eisenstein integers. Define a group $G_\xi$ of automorphisms of $E_\xi\times E_\xi$ by the following generators in $\GL(2,\End(\Lambda_0))$:
 \begin{align*}
 g_1 &= \left( {\begin{array}{cc}
    \xi & 0 \\       0 & 1      
@@ -52,11 +53,12 @@ g_3 &= \left( {\begin{array}{cc}
 \end{align*}
 \end{definition}
 For $A=E_\xi\times E_\xi$, let $V =A[2]$ be the (fourdimensional) $\mathbb F_2$-vector space of $2$-torsion points on $A$ and let $\mathfrak T$ be the set of planes in $V$. Note that by Remark \ref{PlaneTriple} a plane in $V$ can be identified with an unordered triple $\{x,y,z\}$ with $0\neq x,y,z\in V$ and $x+y+z=0$. The action of $G_\xi$ on $A$ induces actions of $G_\xi$ on $A[2]$ and $\mathfrak T$. 
-\begin{proposition}\label{orbitesG}
+\begin{lemma}\label{orbitesG}
 There are two orbits of $G_\xi$ on $\mathfrak T$, of cardinalities $5$ and $30$.
-\end{proposition}
+\end{lemma}
 \begin{proof}
-Note that the action of the multiplication with $\xi$ induces a cyclic permutation on $E_\xi[2]$. The orbits can be explicitely computed.
+Note that the generators $g_2$ and $g_3$ exist because $A$ is of the form $E\times E$, while $g_1$ exists only in the special case $E=E_\xi$. Indeed, multiplication with $\xi$ induces a cyclic permutation on $E_\xi[2]$. 
+The orbits can be explicitely determined by a suitable computer program.
 Denote $x_1,x_2,x_3$ the non-zero points in $E_\xi[2]$. The orbit of cardinality five is then given by
 \begin{align*}
 \{(0,x_1),(0,x_2),(0,x_3)\} &,& \{(x_1,0),(x_2,0),(x_3,0)\} &,& \\
