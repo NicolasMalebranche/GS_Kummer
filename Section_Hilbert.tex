@@ -56,7 +56,7 @@ If $X$ is a homogeneous linear operator of degree $d$ and weight $m$, acting on 
 $$
 (X(\alpha),\beta)_{A\hilb{n+m}}  = (-1)^{d|\alpha|}( \alpha , X^\dagger (\beta))_{A\hilb{n}}.
 $$
-We put $\q_0(a) :=0$ and for $m<0$, $\q_m(a) := (-1)^m \q_{-m}(a)^\dagger$. Note that, for all $m\in\Z$, the bidegree of $\q_m(a)$ is $(m,|a| + 2(|m|-1))$. Now define
+We put $\q_0(a) :=0$ and for $m<0$, $\q_m(a) := (-1)^m \q_{-m}(a)^\dagger$. Note that, for all $m\in\Z$, the bidegree of $\q_m(a)$ is $(m,|a| + 2(|m|-1))$. If $m$ is positive, $\q_m$ is called a creation operator, otherwise it is called annihiliation operator. Now define
 $$
 \mathfrak{L}_m(a) := \left\{ 
 \begin{array}{ll}
@@ -110,6 +110,7 @@ Next we give some formulas involving higher derivatives of Nakajima operators th
 \begin{proposition}
 Suppose $K_Aa=0$. 
 Denote $e=-\chi(A)x$ the Euler class of $A$.
+Note that if $A$ is a torus, $e=0$. 
 For all $k,m$, the following formulas hold:
 \begin{align}
 \label{adq}
@@ -236,9 +237,9 @@ Let $a\in H^2(A,\Z)$ be monodromy equivalent to a divisor. Then the operator $\f
 Qin and Wang \cite[Thm 1.1 et seq.]{QinWang} conjecture that their theory works even without the restriction on $a\in H^2(A,\Z)$. 
 \end{remark}
 
-\begin{proposition}
+\begin{corollary}
 If $A$ is a torus, the operator $\frac{1}{2}\q_1(a)^2 - \frac{1}{2}\q_2(a)$ is integral for all $a\in H^2(A,\Z)$. 
-\end{proposition}
+\end{corollary}
 \begin{proof}
 The Nakajima operators are preserved under deformations of $A$. 
 By \cite[Thm.~II]{Shioda}, the group of monodromy actions spans the entire automorphism group of $H^2(A,\Z)$.
