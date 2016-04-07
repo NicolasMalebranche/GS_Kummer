@@ -78,6 +78,7 @@ $$
 that corresponds to $\tau_{2*}$. The sign convention in \cite{LehnSorger} is such that $-\Delta =  \tau_{2*}$. We denote by $\Delta^k$ the $k$-fold composition of $\Delta$.
 \end{remark}
 \begin{lemma}\cite[Thm.~2.16]{LiQinWang} Denote $K_A\in H^2(A,\Q)$ the class of the canonical divisor. We have:
+\label{commutators}
 \begin{align}
 [\q_m(a), \q_n(b)] &= m\cdot \delta_{m+n} \cdot \int_A ab \\
 \label{qLcommute}
@@ -224,6 +225,29 @@ Under this isomorphism the ring structure of $\SSym^n(H^*(A,\Q))$ corresponds to
 %1_{A\hilb{n}} = \frac{1}{n!} \q_1(1)^n\vac.
 %$$
 \end{remark}
+
+\begin{lemma}\label{maxPower}
+Assume $b\in H^2(A,\Q)$ and set $B_n:=\frac{1}{(n-1)!}\q_1(b)\q^{n-1}\vac =\G_0(b)1$. With the notion of double factorial $(2n-1)!! := \frac{(2n)!}{2^n n!}$ we have
+$$
+\left(B_n\right)^{2n} = (2n-1)!! \q_1(b^2)^n\vac.
+$$
+\end{lemma}
+\begin{proof}
+%Multiplication with the class $\frac{1}{(n-1)!}\q_1(b)\q^{n-1}\vac$ is given by the operator $\G_0(b)$. Set $\alpha_{i,j} := \q^i\q_1(b)^j\q_1(b^2)^{n-i-j}\vac$. Then we have with Lemma \ref{commutators}:
+%\begin{equation}
+%\G_0(b) \alpha_{i,j} = i\cdot\alpha_{i-1,j+1} + j\cdot \alpha_{i,j-1}.
+%\end{equation}
+%By an inductive argument one shows now that
+%$$
+%\G_0(b)^r \alpha_{n,0} = n! \sum_{\substack{i+j+k=n\\j+2k=r}}   Factor \cdot \alpha_{i,j}  
+%$$
+Looking at (\ref{q0primitive}) and (\ref{q1primitive}), observe that 
+$$
+(B_n)^k = \rho^*\left(\sum_{i_1+\ldots+i_n= k}b^{i_1}\otimes\cdots\otimes b^{i_n}\right).
+$$
+Since the case $k=2n$ implies that all the $i_r$ are equal to $2$, the number of non-zero summands equals the number of partitions of a set of cardinality $2n$ into pairs. By \cite[Prop.~2,4]{Kapfer}, this is $(2n-1)!!$.
+\end{proof}
+
 
 \section{On integral cohomology of Hilbert schemes}
 
