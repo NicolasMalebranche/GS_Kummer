@@ -51,16 +51,24 @@ Equation (\ref{sumZ}) and the non-divisibility are from \cite[Proposition 5.1]{H
 The image of $H^4(A\hilb{3},\Q)$ under the morphism $\theta^*$ is equal to $\Sym^2H^2(\X,\Q)$.
 \end{proposition}
 \begin{proof}
-We start by giving set of generators of $H^4(A\hilb{n},\Q)$. Theorem 5.30 of \cite{LiQinWang} ensures that it is possible to do this in terms of multiplication operators. To enumerate elements of $H^*(A)$, we follow Notation \ref{TorusClasses}. Elements of $H^2(A)$ will be denoted by $b_i$. Then our set of generators is given by:
+We start by giving set of generators of $H^4(A\hilb{n},\Q)$. Theorem 5.30 of \cite{LiQinWang} ensures that it is possible to do this in terms of multiplication operators. To enumerate elements of $H^*(A)$, we follow Notation \ref{TorusClasses}. Elements of $H^2(A)$ will be denoted by $b_i$ for $1\leq i\leq 6$. Then our set of generators is given by:
 \begin{center}
 \begin{tabular}{l|c}
 multiplication operator & number of classes \\ \hline
-$\G_0(a_1)\G_0(a_2)\G_0(a_3)\G_0(a_4) $  & 1 \\
-$\G_0(a_i)\G_0(a_j)\G_0(b,k)$ for $i<j$  & $\binom{4}{2}\cdot 6 = 36$ 
+$\G_0(a_1)\G_0(a_2)\G_0(a_3)\G_0(a_4) $  & $1$ \\
+$\G_0(a_i)\G_0(a_j)\G_0(b_k)$ for $i<j$  & $\binom{4}{2}\cdot 6 = 36$ \\
+$\G_0(a_i)\G_0(a_j^*)$ & $4\cdot 4 = 16$ \\
+$\G_0(b_i)\G_0(b_j)$ for $i\leq j$& $\binom{6+1}{2}= 21$ \\
+$\G_0(x)$ &  $1$  \\ \hline
+$\G_0(a_i)\G_0(a_j)\G_1(1)$ for $i<j$ & $\binom{4}{2} = 6$ \\
+$\G_0(a_i)\G_1(a_j)$ & $4\cdot 4=16$ \\
+$\G_0(b_i)\G_1(1)$ & $6$ \\
+$\G_1(b_i)$ & $6$ \\
+$\G_1(1)^2 $ & $1$ \\ \hline
+$\G_2(1) $ &$1$
 \end{tabular}
-
 \end{center}
-
+Any multiplication operator of degree $4$ can be written as a linear combination of these $111$ classes. Likewise, the dimension of $H^4(A\hilb{n},\Q)$ is $111$ for all $n\geq 4$, according to G\"ottsche's formula \cite{Gottsche}. However, for $n=3$, the $8$ classes $\G_0(x)$, $\G_1(b_i)$ and $\G_2(1) $ can be expressed as linear combinations of the others, so we are left with $103$ linearly independent classes that form a basis of $H^4(A\hilb{3},\Q)$. Multiplication with the class $[\X]$ is given by the operator $\G_0(a_1)\G_0(a_2)\G_0(a_3)\G_0(a_4) $ and annihilates every class that contains an operator of the form $\G_0(a_i)$. There are $75$ such classes, so by Proposition \ref{annihilator}, $\ker \theta^*\subset H^4(A\hilb{3},\Q)$ has dimension at least $75$ and $\im\theta^*$ has dimension at most $103-75=28$. However, since the image of $\theta^*$ must contain $\Sym^2H^2(\X,\Q)$, which is $28$-dimensional, equality follows.
 \end{proof}
 
 
@@ -72,7 +80,7 @@ We have:
 In particular, $\cc\in \Sym $.
 \end{proposition}
 \begin{proof}
-First note that the defining diagram (\ref{square}) of the Kummer manifold is the pullback of the inclusion of a point, so the normal bundle of $\X$ in $A\hilb{3}$ is trivial. The Chern class of the tangent bundle of $\X$ is therefore given by the pullback from $A\hilb{3}$: $c(\X) = \theta^*\left(c(A\hilb{3})\right)$. Theorem \ref{thetaTheorem} allows now to conclude that $\cc\in \Sym$.
+First note that the defining diagram (\ref{square}) of the Kummer manifold is the pullback of the inclusion of a point, so the normal bundle of $\X$ in $A\hilb{3}$ is trivial. The Chern class of the tangent bundle of $\X$ is therefore given by the pullback from $A\hilb{3}$: $c(\X) = \theta^*\left(c(A\hilb{3})\right)$. Proposition \ref{ImSym} allows now to conclude that $\cc\in \Sym$.
 
 To obtain the precise formula, we use a result of Boissi\`ere, \cite[Lemma 3.12]{Boissiere}, giving a commutation relation for the multiplication operator with the Chern class on the Hilbert scheme. We get:
 $$
