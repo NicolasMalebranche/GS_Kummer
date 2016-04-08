@@ -20,28 +20,26 @@ A basis of $H^3(\X,\Z)$ is given by:
 \label{A3_2}
 \theta^*\Big(\q_2(a_i)\q_1(1)\vac\Big).
 \end{gather}
-and a basis of $H^5(\X,\Z)$ is given by:
+and a dual basis of $H^5(\X,\Z)$ is given by:
 \begin{gather}
 \label{A5_1}
-\frac{2}{3} \theta^*\Big( \G_2(a_i)1 \Big) = \theta^*\Big( -\frac{1}{3}\q_3(a_i)\vac -\mathfrak{L}_2(a_i)\q_1(1) \vac \Big), \\
+ \theta^*\Big( \q_1(a_ia_j)\q_1(a_j^*)\q_1(1) \vac \Big) \ \text{for any } j\neq i, \\
 \label{A5_2}
 \frac{1}{2}\theta^*\Big( \q_2(a^*_i)\q_1(1)\vac \Big).
 \end{gather}
 \end{proposition}
 \begin{proof}
-The classes (\ref{A3_1}) are Poincar\'e dual to (\ref{A5_1}) and the classes (\ref{A3_2}) are Poincar\'e dual to (\ref{A5_2}) by computation, so it remains to show that all of them are integral.
-
-It is clear from Lemma \ref{IntegralOperators} that (\ref{A3_1}) and (\ref{A3_2}) are integral. By Proposition \ref{A2Basis}, $\frac{1}{2}\q_2(a^*_i)\vac$ is integral as well. If the operator $ \q_1(1)$ is applied, we get again an integral class.
-Further, with the formulas of Section \ref{Section_Hilbert} we calculate that 
-\begin{align*}
-\frac{2}{3} \G_2(a_i)[\kum{A}{2}] &= \q_1(1)\q_1(x)^2\vac + \sum_{i\neq j} \q_1(a_ia_j)\q_1(a_j^*)\q_1(x)\vac -2 \left( \prod_{\substack{i\neq j }} \q_1(a_j^*) \right)\vac
-\end{align*}
-is an integral class and $[\kum{A}{2}]\cdot\q_1(a^*_i)\q_1(1)^2\vac$ is a non-divisible class. 
-Because of 
-$$\theta^*\left( \G_2(a_i)  \q_1(a^*_i)\q_1(1)^2\vac\right) = 3,$$ 
-one of $\frac{1}{2}\theta^*\left( \q_1(a^*_i)\q_1(1)^2\vac \right)$ and $ 2\theta^*\left( \G_2(a_i) 1\right)$ is divisible by three. In view of Lemma \ref{IntegralityCheck}, it must be the latter one.
+The classes (\ref{A3_1}) are Poincar\'e dual to (\ref{A5_1}) and the classes (\ref{A3_2}) are Poincar\'e dual to (\ref{A5_2}) by direct computation:
+\begin{gather*}
+\frac{1}{2}\theta^*\Big( \q_1(a^*_i)\q_1(1)^2\vac \Big)\cdot \theta^*\Big( \q_1(a_ia_j)\q_1(a_j^*)\q_1(1) \vac \Big) = \frac{1}{2} \theta^*\Big(  \G_0(a^*_i) \q_1(a_ia_j)\q_1(a_j^*)\q_1(1) \vac \Big)\\
+ =  \frac{1}{2}[\X]\cdot \q_1(a_ia_j)\q_1(a_j^*)\q_1(a_i^*) = 1, \\
+ \frac{1}{2}\theta^*\Big(\q_2(a_i)\q_1(1)\vac\Big)\cdot \theta^*\Big( \q_2(a^*_i)\q_1(1)\vac \Big) =\theta^*\Big( \G_1(a_i)\q_2(a^*_i)\q_1(1)\vac  \Big) \\
+ = [\X]\cdot \left( 2\q_3(x) - \q_1(x)^2\q_1(1) \right) \vac = 0-1=-1.
+\end{gather*}
+It remains to show that all classes are integral.
+It is clear from Lemma \ref{IntegralOperators} that (\ref{A3_1}) is integral, while the integrality of (\ref{A3_2}) and (\ref{A5_1}) is obvious. By Proposition \ref{A2Basis}, $\frac{1}{2}\q_2(a^*_i)\vac$ is integral as well. If the operator $ \q_1(1)$ is applied, we get again an integral class.
 \end{proof}
-It follows the following corollary which will be used in Part \ref{quotient}.
+The following corollary will be used in Part \ref{quotient}.
 %\textcolor{green}{Corollary \ref{actionH3} to put after Proposition 3.18 \ref{} saying that it will be use in Part 2}
 \begin{cor}\label{actionH3}
 Let $A$ be an abelian surface and $g$ be an automorphisms on $A$. Let $g^{[[3]]}$ be the automorphisms induced by $g$ on $K_2(A)$.
