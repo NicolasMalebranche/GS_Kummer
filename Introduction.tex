@@ -1,19 +1,25 @@
 \section{Introduction}
 \subsection{Context and main results}
-In algebraic geometry compact hyperkähler manifolds became an important objects of study, these last years, after the fundamental results from Beauville \cite{Beauville} and Huybrechts \cite{Huybrechts2}. Among all the developments concerning this field, integral cohomology has an inescapable role. First of all due to the Beauville--Bogomolov form which is the unique non-degenerated symmetric integral and primitive bilinear pairing on the second cohomology group. This form endows the second cohomology group with a lattice structure enabling to use all lattice theory as a fundamental tool omnipresent in all the last developments. As examples, we can cite works on classifications of automorphisms \cite{Mongardi}, \cite{MongWanTari}, \cite{BCS} or the important survey of Markman \cite{Markmansurvey} with results on the Kähler cone and the monodromy. In a more modest term, the fourth integral cohomology group is also quite useful. As examples, we can underline Theorem 1.2 of \cite{BNS} providing formulas which apply for the classification of automorphism on hyperkähler manifolds of $K3^{[2]}$-type, in particularly used in \cite{BCS}; furthermore Theorem 1.10 of \cite{Markman2} provides a description of the monodromy group of the hyperkähler manifolds of $K3^{[n]}$-type; we can also cite \cite{Lol2}, where the second author provide the Beauville--Bogomolov lattice of the Markushevich--Tikhomirov varieties constructed in \cite{Markou}. Taking $X$ a hyperkähler manifolds of $K3^{[2]}$-type, in all these works a description of $\frac{H^{4}(X,\Z)}{\Sym^2(H^{2}(X,\Z))}$ was essential.
+In algebraic geometry compact hyperkähler manifolds became an important objects of study in recent years after the fundamental results by Beauville \cite{Beauville} and Huybrechts \cite{Huybrechts2}.
+Among all the developments concerning this field, integral cohomology has an inescapable role. 
+This is primarily due to the Beauville--Bogomolov form which is \textbf{the unique ?? Dans quel sens ??} non-degenerated symmetric integral and primitive bilinear pairing on the second cohomology group. 
+This form endows the second cohomology group with a lattice structure establishing lattice theory as a fundamental tool omnipresent in all the last developments. 
+As examples, we can cite works on classifications of automorphisms \cite{Mongardi}, \cite{MongWanTari}, \cite{BCS} or the important survey of Markman \cite{Markmansurvey} with results on the Kähler cone and the monodromy. 
+In a more modest term, the fourth integral cohomology group is also quite useful. As examples, we can underline Theorem 1.2 of \cite{BNS} providing formulas which apply for the classification of automorphism on hyperkähler manifolds of $K3^{[2]}$-type, in particularly used in \cite{BCS}; furthermore Theorem 1.10 of \cite{Markman2} provides a description of the monodromy group of the hyperkähler manifolds of $K3^{[n]}$-type; we can also cite \cite{Lol2}, where the second author provide the Beauville--Bogomolov lattice of the Markushevich--Tikhomirov varieties constructed in \cite{Markou}. 
+Taking $X$ a hyperkähler manifold of $K3^{[2]}$-type, in all these works a description of $\frac{H^{4}(X,\Z)}{\Sym^2(H^{2}(X,\Z))}$ was essential.
 
-Until now, no complete description of the integral cohomology of the generalized Kummer fourfold was existing. In particular the relation between the fourth cohomology group and the symmetric power of the second cohomology group was not know. For all reasons mentioned above, it appeared to us that it was an interesting lack to fill. It is the main result of this paper (Theorem \ref{basismain}):
-\begin{thm}\label{mainintro}
-A basis of $H^*(\kum{A}{2},\Z)$ is given by the following classes:
-TODO
-\end{thm}
-As an illustration of this result we propose one application which is a generalization of \cite{Lol2} related to irreducible symplectic V-manifolds. A V-manifold is an algebraic variety with at worst finite quotient singularities. A V-manifold will be called symplectic if its nonsingular locus is endowed with an everywhere nondegenerate holomorphic 2-form. A symplectic V-manifold will be called irreducible if it is complete, simply connected, and if the holomorphic 2-form is unique up to $\mathbb{C}^*$. Such varieties are good candidate to generalize the short list of compact hyperkähler manifolds, since some aspects of the theory was already generalized in \cite{Nanikawa} and \cite{Mat}, for instance the Beauville--Bogomolov form, the local Torelli theorem and the Fujiki formula. 
+Until now, no complete description of the integral cohomology of the generalized Kummer fourfold was existing. In particular the relation between the fourth cohomology group and the image of the symmetric power of the second cohomology group via cup-product was not known. For all reasons mentioned above, it appeared to us that it was an interesting gap to fill. It is the main result of this paper (Theorem \ref{thetaTheorem}):
+
+We give an application of this result which is a generalization of \cite{Lol2} related to irreducible symplectic V-manifolds. A V-manifold is an algebraic variety with at worst finite quotient singularities. A V-manifold will be called symplectic if its nonsingular locus is endowed with an everywhere non-degenerate holomorphic 2-form. 
+A symplectic V-manifold will be called irreducible if it is complete, simply connected, and if the holomorphic 2-form is unique up to $\mathbb{C}^*$. Such varieties are good candidates to generalize the short list of known compact hyperkähler manifolds, since some aspects of the theory were already generalized in \cite{Nanikawa} and \cite{Mat}, for instance the Beauville--Bogomolov form, the local Torelli theorem and the Fujiki formula. 
 
 Concretely, let $X$ be an irreducible symplectic fourfold of Kummer type and $\iota$ a symplectic involution on $X$. 
-By results of Mongardi, Tari and Wandel \cite{MongWanTari} and \cite{Tari}, it can be established 
+By results of Mongardi, Tari and Wandel \cite{MongWanTari} and \cite{Tari}, it can be proved 
 that the fixed locus of $\iota$ is the union of 36 points and a K3 surface $Z_0$. Then the singular locus of $K:=X/\iota$ is the union of a K3 surface and 36 points. A more interesting variety to consider is the partial resolution $K'$ of $K$ obtained by blowing up the image of $Z_0$.
-By Section 2.3 and Lemma 1.2 of \cite{Fujiki2}, this variety is again an irreducible symplectic V-manifold. Something interesting to note, is that the moduli space $\mathcal{M}_{K'}$ of irreducible symplectic V-manifolds deformation equivalent to $K'$ will be of dimension 6 (see Proposition \ref{b}).
-However, the space of the V-manifold in $\mathcal{M}_{K'}$ coming from a partial resolution of the quotient $X/\iota$ are of dimension 5. It means that $\mathcal{M}_{K'}$ mostly contains V-manifolds which are completely unknown, not related to a quotient of some smooth irreducible symplectic manifold. By the local Torelli theorem of \cite{Nanikawa}, the moduli space $\mathcal{M}_{K'}$ will be related to the Beauville--Bogomolov lattice that we provide in Theorem \ref{theorem}. 
+By Section 2.3 and Lemma 1.2 of \cite{Fujiki2}, this variety is again an irreducible symplectic V-manifold. 
+It is remarkable that the moduli space $\mathcal{M}_{K'}$ of irreducible symplectic V-manifolds deformation equivalent to $K'$ will be of dimension 6 (see Proposition \ref{b}).
+However, the space of V-manifolds in $\mathcal{M}_{K'}$ coming from a partial resolution of the quotient $X/\iota$ are of dimension 5. 
+This means that $\mathcal{M}_{K'}$ contains mostly V-manifolds which are completely unknown, not related to any quotient of some smooth irreducible symplectic manifold. By the local Torelli theorem of \cite{Nanikawa}, the moduli space $\mathcal{M}_{K'}$ will be related to the Beauville--Bogomolov lattice that we provide in Theorem \ref{theorem}. 
 % the moduli space of irreducible symplectic manifolds deformation equivalent to generalized Kummer fourfolds can be send into $\mathcal{M}_{K'}$ by the transformation explained above $X\rightarrow K'$.
 \begin{thm}\label{BeauvilleIntro}
 Let $X$ be an irreducible symplectic fourfold of Kummer type and $\iota$ a symplectic involution on $X$.
@@ -25,21 +31,24 @@ Then the Beauville--Bogomolov lattice $H^2(K',\Z)$ is isomorphic to $U(3)^{3}\op
 -4 & -5 
 \end{array} \right)$, and the Fujiki constant $c_{K'}$ is equal to $8$.
 \end{thm}
-We can remark that it is the first example of Beauville--Bogomolov form which is not even.
+We remark that it is the first example of a Beauville--Bogomolov form which is not even.
 
-Another illustration of Theorem \ref{mainintro} is Theorem \ref{SymplecticInvo} where the knowledge on the third integral cohomology group of a generalized Kummer fourfold $X$ (see Corollary \ref{actionH3}), allow us to end the classification of symplectic involutions on $X$ as a corollary of the lattice classification by Mongardi Tari and Wandel in \cite{MongWanTari}.
+Another illustration of Theorem \ref{thetaTheorem} is Theorem \ref{SymplecticInvo}, where the knowledge on the third integral cohomology group of a generalized Kummer fourfold $X$ (see Corollary \ref{actionH3}), allows us to end the classification of symplectic involutions on $X$ as a corollary of the lattice classification by Mongardi, Tari and Wandel in \cite{MongWanTari}.
 
 \subsection{Overview on the results}
 The article is divided in 3 parts. 
 \begin{itemize}
 \item[(I)]
-In the first part, we recall some basic tools which will be used in all the paper. There are recalls on basic lattices considerations (Section \ref{latticeSubsection}), on super algebra (Section \ref{SuperSection}), on abelian surface (Section \ref{AbelianSection}), on integral cohomology tools (Section \ref{IntegralTools}) and on Nakajima operators (Section \ref{Section_Hilbert}). We also provide two new results which will be used to prove Theorem \ref{mainintro}. Let $A$ be a smooth compact surface with torsion free cohomology, Proposition \ref{Alpha35} describes $H^{2*+1}(A^{[2]},\Z)$. Now, let $A$ be an abelian surface, Proposition \ref{A2Basis} provides an integral basis of $H^*(A^{[2]},\Z)$ in terms of Nakajima operators. 
+In the first part, we recall some basic tools which will be used in all the paper. There are recalls on basic lattices considerations (Section \ref{latticeSubsection}), on super algebras (Section \ref{SuperSection}), on abelian surface (Section \ref{AbelianSection}), on integral cohomology tools (Section \ref{IntegralTools}) and on Nakajima operators (Section \ref{Section_Hilbert}). 
+We also provide two new results which will be used to prove Theorem \ref{thetaTheorem}. Let $A$ be a smooth compact surface with torsion free cohomology, Proposition \ref{Alpha35} describes $H^{2*+1}(A^{[2]},\Z)$. Now, for $A$ an abelian surface, Proposition \ref{A2Basis} provides an integral basis of $H^*(A^{[2]},\Z)$ in terms of Nakajima operators. 
 \item[(II)]
-In part II, we prove Theorem \ref{mainintro}. Let $A$ be an abelian surface and $\theta: K_2(A)\rightarrow A^{[3]}$ the natural embedding, in Theorem \ref{thetaTheorem}, we also provide a description of $\theta^*:H^{*}(A^{[3]},\Z)\rightarrow H^{*}(K_2(A),\Z)$.
+In part II, we prove Theorem \ref{thetaTheorem}. Let $A$ be an abelian surface and $\theta: K_2(A)\rightarrow A^{[3]}$ the natural embedding. We provide a description of $\theta^*:H^{*}(A^{[3]},\Z)\rightarrow H^{*}(K_2(A),\Z)$.
 \item[(III)]
 In part III, Section \ref{Involution},
-we first recall and prove results about symplectic involution on $K_2(A)$ (Theorem \ref{SymplecticInvo}). Then Section \ref{BeauvilleForm} is devoted to prove Theorem \ref{BeauvilleIntro}.
+we first recall and prove results about symplectic involutions on $K_2(A)$ (Theorem \ref{SymplecticInvo}). Then Section \ref{BeauvilleForm} is devoted to prove Theorem \ref{BeauvilleIntro}.
 \end{itemize}
 
-\textbf{Acknowledgements}
-We thank Samuel Boissière, Brandon Hassett, Marc Nieper-Wisskirchen and Giovanni Mongardi for useful discussion. GM is supported by Fapesp grant 2014/05733-9. SK was partially supported by a DAAD grant. We also thank Daniel Huybrechts for hosting us in Bonn university in the end of the project.
+\textbf{Acknowledgements.} 
+We want to thank Samuel Boissi\`ere, Daniel Huybrechts and Marc Nieper-Wi\ss kirchen for their kind support during the development of the project.
+We also thank Brendan Hassett and Giovanni Mongardi for useful discussions.
+GM is supported by Fapesp grant 2014/05733-9. SK was partially supported by a DAAD grant.
