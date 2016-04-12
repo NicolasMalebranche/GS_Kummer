@@ -55,6 +55,9 @@
 \newcommand{\km}{\mathfrak{m}}
 \newcommand{\kq}{\mathfrak{q}}
 
+\newcommand{\vect}[1]{\left( \begin{smallmatrix} #1 \end{smallmatrix} \right)}
+\newcommand{\plan}[2]{\left< \vect{ #1 }, \vect{ #2 } \right>}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\lra}{\longrightarrow}
@@ -164,6 +167,36 @@ $\mathbb F_2$ & 10 & 11 &  5 & 10 & 10 & 10 \\
 $\mathbb F_3$ & 30 & 50 & 31 & ? & 45 & 25 \\
 $\mathbb F_5$ &121 &355 &270 & ? & ? & 91 
 \end{tabular}
+\begin{example}
+We give the 31 classes spanning $D_N$ over $\mathbb F_3$: 
+First, define for a plane $P\subset V$
+$$
+S_P := \sum_{\tau \in P} X_\tau.
+$$
+Then $D_N$ is spanned by the classes 
+$$S_{P+\tau} - S_P $$
+\begin{align}
+&\text{for } P=\plan{1\\0\\0\\0}{0\\1\\0\\0} \text{ and } 0\neq \tau\in P^\perp = \plan{0\\0\\1\\0}{0\\0\\0\\1} 
+\\
+&\text{for } P=\plan{0\\0\\1\\0}{0\\0\\0\\1}  \text{ and } 0\neq \tau \in P^\perp = \plan{1\\0\\0\\0}{0\\1\\0\\0} \setminus \vect{1\\0\\0\\0}
+\\
+&\text{for } P=\plan{1\\0\\0\\1}{0\\1\\2\\1} \text{ and } \tau \in \left\{ \vect{0\\1\\1\\2},\vect{1\\0\\0\\2},\vect{1\\1\\1\\1},\vect{2\\2\\2\\2} \right\}
+\\
+&\text{for } P=\plan{1\\0\\0\\0}{0\\1\\0\\1} \text{ and } \tau \in \left\{ \vect{0\\0\\0\\1},\vect{2\\0\\1\\2},\vect{1\\0\\2\\0},\vect{1\\0\\2\\1} \right\}
+\\
+&\text{for } P=\plan{1\\0\\0\\0}{0\\1\\1\\1} \text{ and } \tau \in \left\{ \vect{0\\0\\1\\0},\vect{1\\0\\0\\1} \right\}
+\\
+&\text{for } P=\plan{1\\0\\1\\1}{0\\1\\0\\1} \text{ and } \tau \in \left\{ \vect{0\\1\\0\\2},\vect{1\\0\\2\\2} \right\}
+\\
+&\text{for } P=\plan{1\\0\\1\\0}{0\\1\\0\\1} \text{ and } \tau \in \left\{ \vect{0\\1\\0\\2},\vect{1\\0\\2\\1} \right\}
+\\
+&\text{for } P=\plan{1\\0\\0\\0}{0\\1\\0\\2} \text{ and } \tau = \vect{1\\0\\1\\0}
+\\
+&\text{for } P=\plan{1\\0\\1\\1}{0\\1\\2\\2} \text{ and } \tau = \vect{1\\1\\0\\2}
+\end{align}
+So we get $8+7+4+4+2+2+2+1+1 = 31$ linear independent classes spanning $D_N$.
+\end{example}
+
 \begin{conjecture}
 For $F=\mathbb F_q$, $\dim_F D_I = \frac{(q+2)(q^2+1)}{2}$.
 \end{conjecture}
