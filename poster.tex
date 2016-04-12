@@ -1,0 +1,282 @@
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[final]{beamer}
+
+\usepackage[size=a1,scale=1.04]{beamerposter} % Use the beamerposter package for laying out the poster
+
+\usetheme{confposter} % Use the confposter theme supplied with this template
+
+\setbeamercolor{block title}{fg=ngreen,bg=white} % Colors of the block titles
+\setbeamercolor{block body}{fg=black,bg=white} % Colors of the body of blocks
+\setbeamercolor{block alerted title}{fg=white,bg=dblue!70} % Colors of the highlighted block titles
+\setbeamercolor{block alerted body}{fg=black,bg=dblue!10} % Colors of the body of highlighted blocks
+% Many more colors are available for use in beamerthemeconfposter.sty
+
+%-----------------------------------------------------------
+% Define the column widths and overall poster size
+% To set effective sepwid, onecolwid and twocolwid values, first choose how many columns you want and how much separation you want between columns
+% In this template, the separation width chosen is 0.024 of the paper width and a 4-column layout
+% onecolwid should therefore be (1-(# of columns+1)*sepwid)/# of columns e.g. (1-(4+1)*0.024)/4 = 0.22
+% Set twocolwid to be (2*onecolwid)+sepwid = 0.464
+% Set threecolwid to be (3*onecolwid)+2*sepwid = 0.708
+
+\newlength{\sepwid}
+\newlength{\onecolwid}
+\setlength{\paperwidth}{36in} % A0 width: 46.8in
+\setlength{\paperheight}{24in} % A0 height: 33.1in
+\setlength{\sepwid}{0.024\paperwidth} % Separation width (white space) between columns
+\setlength{\onecolwid}{0.3\paperwidth} % Width of one column
+\setlength{\topmargin}{-0.5in} % Reduce the top margin size
+%-----------------------------------------------------------
+
+\usepackage{graphicx}  % Required for including images
+
+\usepackage{booktabs} % Top and bottom rules for tables
+
+\DeclareMathOperator{\rank}{rk}
+\DeclareMathOperator{\trace}{tr}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Hilb}{Hilb}
+\DeclareMathOperator{\len}{len}
+\DeclareMathOperator{\discr}{discr}
+
+\newcommand{\hilb}[1]{^{[#1]}}
+\newcommand{\ie}{{\it i.e. }}
+\newcommand{\eg}{{\it e.g. }}
+\newcommand{\loccit}{{\it loc. cit. }}
+\newcommand{\vac}{|0\rangle}
+\newcommand{\odd}{{\rm{odd}}}
+\newcommand{\even}{{\rm{even}}}
+\newcommand{\tors}{{\rm{tors}}}
+
+\newcommand{\p}[2]{p_{#1}^{#2}\;\!\!}
+\renewcommand{\L}{\mathcal{L}}
+
+\newcommand{\coloneqq}{:=}
+\newcommand{\bra}{\left<\!\!\!\:\left<}
+\newcommand{\ket}{\right>\!\!\!\:\right>}
+\newcommand{\myeq}[1]{\mathrel{\overset{\makebox[0pt]{\text{\tiny #1}}}{=}}}
+\newcommand{\stareq}{\myeq{*}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\S}{\mathbb{S}}
+\renewcommand{\H}{\mathbb{H}}
+
+\newcommand{\kum}[2]{K_{ #2 }( #1 )}
+\newcommand{\X}{\kum{A}{2}}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION 
+%----------------------------------------------------------------------------------------
+
+\title{Integral cohomology of IHS varieties} % Poster title
+
+\author{Simon Kapfer} % Author(s)
+
+\institute{Augsburg University} % Institution(s)
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\addtobeamertemplate{block end}{}{\vspace*{2ex}} % White space under blocks
+\addtobeamertemplate{block alerted end}{}{\vspace*{2ex}} % White space under highlighted (alert) blocks
+
+\setlength{\belowcaptionskip}{2ex} % White space under figures
+\setlength\belowdisplayshortskip{2ex} % White space under equations
+
+\begin{frame}[t] % The whole poster is enclosed in one beamer frame
+
+\begin{columns}[t] % The whole poster consists of three major columns, the second of which is split into two columns twice - the [t] option aligns each column's content to the top
+
+\begin{column}{\sepwid}\end{column} % Empty spacer column
+
+\begin{column}{\onecolwid} % The first column
+
+\setbeamercolor{block alerted title}{fg=black,bg=norange} % Change the alert block title colors
+\setbeamercolor{block alerted body}{fg=black,bg=white} % Change the alert block body colors
+\begin{alertblock}{Summary}
+We give a description of integral cohomology of the generalised Kummer fourfold. 
+As an application, we describe a new example of a IHS variety with singularities. 
+It is the first example of a Beauville--Bogomolov form which is odd.
+
+This is joint work with Gr\'egoire Menet.
+\end{alertblock}
+
+\setbeamercolor{block alerted title}{fg=white,bg=dblue!70} % Colors of the highlighted block titles
+\setbeamercolor{block alerted body}{fg=black,bg=dblue!10} % Colors of the body of highlighted blocks
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+
+\begin{block}{Integral cohomology of the generalised Kummer fourfold}
+For $A$ an abelian surface, the generalised Kummer fourfold $\X$ is realised
+as a subspace of $A\hilb{3}$, the Hilbert scheme of three points.
+$$
+\theta^* : \X  \hookrightarrow A\hilb{3}
+$$
+\begin{alertblock}{Theorem}
+The pullback homomorphism $\theta^* : H^*(A\hilb{3},\Z)\rightarrow H^*(\X,\Z)$ of graded rings is surjective in every degree except $4$. 
+Moreover, the image of $H^4(A\hilb{3},\Z)$ is the primitive overlattice of $\Sym^2(H^2(\X,\Z))$ (of discriminant $3^{22}$).
+The kernel of $\theta^*$ is the ideal generated by $H^1(A\hilb{3})$.
+\end{alertblock}
+This is proved using the Nakajima operator algebra to compute the cohomology of the Hilbert scheme, together with an explicit description of $\theta^*$.
+We get the quotient
+$$
+\frac{H^4(\X,\Z)}{\Sym^2(H^2(\X,\Z))} \cong \left(\frac{\Z}{2\Z}\right)^7 \oplus \left(\frac{\Z}{3\Z}\right)^8 \oplus \Z^{80}.
+$$
+
+To obtain the remaining $80$ classes in $H^4(\X,\Z)$, we use an approach of Hassett and Tschinkel:
+For $\tau \in A[3] $ a point of three-torsion, the Brian\c con subscheme of $A\hilb{3}$ supported at $\tau$ yields a class in $H^4(\X,\Z)$. 
+These classes give a complementary space to $\Sym^2(H^2(\X,\Z))$.
+Summing up such classes for $\tau$ in an affine plane contained in $A[3]$, one gets a class divisible by three.
+The orbit of this class under the action of the monodromy group contains enough classes divisible by $3$ to obtain an integral basis of middle cohomology.
+\end{block}
+
+%------------------------------------------------
+
+
+
+%\begin{figure}
+%\includegraphics[width=0.8\linewidth]{placeholder.jpg}
+%\caption{Figure caption}
+%\end{figure}
+
+%----------------------------------------------------------------------------------------
+
+\end{column} % End of the first column
+
+
+\begin{column}{\sepwid}\end{column} % Empty spacer column
+
+\begin{column}{\onecolwid} % Begin a column which is two columns wide (column 2)
+
+\begin{block}{Involutions on fourfolds of Kummer type}
+Let $\iota: \X\rightarrow\X$ be the natural involution induced by $-\id$ on $A$. 
+Then the fixed locus of $\iota$ consists of a $K3$ surface and $36$ isolated points. 
+
+Moreover, for any symplectic involution $\iota'$ on a complex fourfold of Kummer type $X'$ we can show:
+\begin{alertblock}{Theorem}
+\begin{itemize}
+ \item The induced morphism on $H^2(X,\Z)$ acts trivially.
+ \item The couple $(X',\iota ')$ is deformation equivalent to $(\X,\tau\circ\iota)$, where $\tau$ denotes the automorphism induced by a translation by a three-torsion point in $A$.
+\end{itemize}
+\end{alertblock}
+This is based on a lattice-theoretic classification of automorphisms, done by Mongardi, Tari and Wandel. Then we conclude from a result by Hassett and Tschinkel, stating that automorphisms which are fixing $H^2$ are deformation invariant.
+\end{block}
+
+\begin{block}{A quotient}
+The fixed locus of $\iota$ consists of a $K3$ surface and $36$ isolated points, by an observation of Tari.
+Denote 
+$$
+K' \rightarrow \X/\iota
+$$ 
+the partial resolution of singularities obtained by blowing up the K3 surface.
+We get an irreducible symplectic variety with singularities of codimension $4$.
+
+%We can show that any symplectic involution of a manifold in the deformation equivalent to $\X$ can be deformed to give the above
+
+\begin{alertblock}{Theorem}
+The Beauville--Bogomolov lattice $H^2(K',\Z)$ is isomorphic to 
+$$U(3)^{3}\oplus\left(
+\begin{array}{cc}
+-5 & -4\\
+-4 & -5 
+\end{array} \right)
+$$ 
+and the Fujiki constant $c_{K'}$ is equal to $8$.
+The Betti numbers are $b_2=8$, $b_3=0$, $b_4=90$. The Euler characteristic is $\chi(K') =108$.
+\end{alertblock}
+\end{block}
+
+\end{column} % End of the second column
+
+\begin{column}{\sepwid}\end{column} % Empty spacer column
+
+\begin{column}{\onecolwid} % The third column
+
+
+\begin{block}{A general result on the Fujiki relation}
+Let $X$ be a IHS variety of dimension $2n$ (with singularities or not) with a Beauville--Bogomolov form such that the Fujiki relation holds.
+Seen as a lattice, $\Sym^n\!H^2(X,\Z)$ is embedded in the unimodular Poincar\'e lattice $H^{2n}(X,\Z)$. 
+
+\begin{alertblock}{Theorem}
+Denote $d+1$ the rank of $H^2(X,\Z)$ and denote $c_X$ the Fujiki constant.
+The discriminant of $\Sym^n\!H^2(X,\Z)$ is given by
+\begin{gather*}
+\left(\discr \left(H^2(X,\Z)\right)\right)^{\binom{d+n}{d+1}}\cdot c_X^{\binom{d+n}{d}} \cdot \prod_{i=1}^n i^{\binom{n-i+d}{d}d} 
+\cdot C, \\
+\qquad \text{with } \ 
+C=
+\left\{
+ \begin{array}{*2{l}p{5cm}}
+ \displaystyle\prod_{\substack{i=1 \\ i\ \text{odd}\\\ }}^{2n+d-1}i^{\binom{n-i+d}{d}} &\text{if }d\!+\! 1\text{ is odd}, \\
+ \displaystyle\prod_{i=1}^{n+\frac{d-1}{2}} i^{\binom{n-i+d}{d} - \binom{n-2i+d}{d}} &\text{if }d\! +\! 1\text{ is even}.
+\end{array}
+\right.
+\end{gather*}
+\end{alertblock}
+\end{block}
+%----------------------------------------------------------------------------------------
+%	ADDITIONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+\begin{block}{References}
+
+\begin{itemize}
+\small
+\item B.~Hassett, Y.~Tschinkel, \emph{ Hodge theory and Lagrangian planes on 
+  generalized Kummer fourfolds}, Moscow Math. Journal, 13, no. 1, 2013.
+\item S.~Kapfer, G.~Menet, \emph{Integral cohomology of the Generalized Kummer fourfold}, preprint 2016.
+\item S.~Kapfer, \emph{Symmetric Powers of Symmetric Bilinear Forms, Homogeneous Orthogonal Polynomials on the sphere and an application in Compact Hyperk\"ahler Manifolds}, Commun. Contemp. Math.,~2016.
+\end{itemize}
+%\vspace{-1cm}
+\end{block}
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+\setbeamercolor{block title}{fg=red,bg=white} % Change the block title color
+%----------------------------------------------------------------------------------------
+%	CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\setbeamercolor{block title}{fg=red,bg=white} 
+\begin{block}{Contact information}
+Email: \href{mailto:simon.kapfer@math.uni-augsburg.de}{simon.kapfer@math.uni-augsburg.de}
+\end{block}
+
+\begin{center}
+\begin{tabular}{ccc}
+\includegraphics[height=50mm]{LogoInstitut.png} & \hspace{4cm} & \includegraphics[height=50mm]{UniSiegel.png}
+\end{tabular}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\end{column} % End of the third column
+
+\end{columns} % End of all the columns in the poster
+\end{frame} % End of the enclosing frame
+
+\end{document}
