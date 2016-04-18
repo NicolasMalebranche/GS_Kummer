@@ -1,0 +1,108 @@
+\documentclass[landscape]{amsart}
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amscd}
+\usepackage[all]{xy}
+\usepackage{appendix,listings,hyperref}
+
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\trace}{tr}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Sp}{Sp}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Hilb}{Hilb}
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\td}{td}
+\DeclareMathOperator{\supp}{supp}
+
+
+\newcommand{\hilb}[1]{^{[#1]}}
+\newcommand{\ie}{{\it i.e. }}
+\newcommand{\eg}{{\it e.g. }}
+\newcommand{\loccit}{{\it loc. cit. }}
+\newcommand{\vac}{|0\rangle}
+\newcommand{\odd}{{\rm{odd}}}
+\newcommand{\even}{{\rm{even}}}
+\newcommand{\tors}{{\rm{tors}}}
+
+
+\newcommand{\coloneqq}{:=}
+\newcommand{\kum}[2]{K_{ #2 }( #1 )}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{{\mathbb{ F }_3}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\kS}{\mathfrak{S}}
+
+\newcommand{\km}{\mathfrak{m}}
+\newcommand{\kq}{\mathfrak{q}}
+
+\newcommand{\vect}[1]{\left( \begin{smallmatrix} #1 \end{smallmatrix} \right)}
+\newcommand{\plan}[2]{\left< \vect{ #1 }, \vect{ #2 } \right>}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\ra}{\rightarrow}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\title{19 classes}
+
+\author{Simon Kapfer}
+
+\date{\today}
+
+%\keywords{}
+
+\maketitle
+
+We denote by $u_1,u_2,v_1,v_2,w_1,w_2$ the basis of $U^{\oplus 3} \subset H^2(\kum{A}{2},\Z)$. Look at the following classes:
+
+\begin{align}
+u_2^2  &\ +\ \sum_{\tau\in P_1} Z_\tau, & P_1 &= \plan{0\\0\\1\\0}{0\\0\\0\\1}, \\
+v_2^2-v_2u_2  &\ +\ \sum_{\tau\in P_2} Z_\tau-\sum_{\tau\in P_1} Z_\tau, & P_2 &= \plan{0\\1\\2\\0}{0\\0\\0\\1}, \\
+v_2u_2 &\ +\ \sum_{\tau\in P_1} Z_{\tau+\tau_1} - \sum_{\tau\in P_2} Z_{\tau+\tau_1} - \sum_{\tau\in P_3} Z_{\tau+\tau_2},& P_3 &= \plan{0\\1\\0\\0}{0\\0\\0\\1},\ \tau_1 = \vect{-1\\-1\\0\\0}, \tau_2 =\vect{0\\0\\-1\\0}, \\
+w_2^2+w_2u_2 &\ +\ \sum_{\tau\in P_4} Z_\tau -\sum_{\tau\in P_1} Z_\tau , & P_4 &= \plan{0\\1\\0\\1}{0\\0\\1\\1}, \\
+w_2u_2 &\ +\ \sum_{\tau\in P_5} Z_{\tau+\tau_3} - \sum_{\tau\in P_1} Z_{\tau+\tau_4} - \sum_{\tau\in P_6} Z_{\tau+\tau_5},& P_5 &=\plan{0\\0\\1\\0}{0\\1\\0\\1},P_6=\plan{0\\1\\0\\0}{0\\0\\1\\0}, \tau_3 =\vect{2\\0\\0\\2},\tau_4=\vect{2\\1\\0\\0},\tau_5= \vect{0\\0\\0\\2} ,\\
+w_2v_2 &\ +\ \sum_{\tau\in P_7} Z_\tau-\sum_{\tau\in P_8} Z_\tau,&P_7 &=\plan{0\\1\\0\\0}{0\\0\\1\\2},P_8=\plan{0\\1\\0\\0}{0\\0\\1\\1}, 
+\end{align}
+
+
+\end{document}
