@@ -3,7 +3,8 @@ Let $X$ be an irreducible symplectic manifold. Let $$\nu: \Aut (X)\rightarrow \A
 the natural morphism. Hassett and Tschinkel (Theorem 2.1 in \cite{Hassett}) have shown that $\Ker \nu$ is a deformation invariant. 
 Let $X$ be an irreducible symplectic fourfold of Kummer type. Then Oguiso in \cite{Oguiso} has shown that $\Ker \nu =(\Z/3\Z)^3\rtimes\Z/2\Z$.
 
-Let $A$ be an abelian variety and $g$ an automorphism of $A$. Let denote by $T_{A[3]}$ the group of translation of $A$ by elements of $A[3]$. If $g\in  T_{A[3]}\rtimes\Aut_{\Z} (A)$ then $g$ induces a natural automorphism on $K_2(A)$. We denote the induced automorphism by $g^{[[3]]}$. If there is no ambiguity, we also denote the \emph{induced automorphism} by the same letter $g$.
+Let $A$ be an abelian variety and $g$ an automorphism of $A$. Let denote by $T_{A[3]}$ the group of translation of $A$ by elements of $A[3]$. If $g\in  T_{A[3]}\rtimes\Aut_{\Z} (A)$ then $g$ induces a natural automorphism on $K_2(A)$. We denote the induced automorphism by $g^{[[3]]}$. If there is no ambiguity, we also denote the \emph{induced automorphism} by the same letter $g$
+to avoid too complicated formulas.
 
 When $X=K_2(A)$, we have more precisely, by Corollary 3.3 of \cite{BNS2}, $$\Ker \nu = T_{A[3]}\rtimes(-\id_A)^{[[3]]}.$$ 
 \subsection{Uniqueness and fixed locus}
@@ -51,7 +52,7 @@ Let also denote by $g$ the automorphism on $K_2(A)$ induced by $g$. By construct
 
 By Corollary \ref{actionH3}, $t_\tau$ acts trivially on $H^{3}(K_2(A),\Z)$. Hence by Corollary 3.3 of \cite{BNS2}, we have necessarily:
 $$g^{*}_{|H^{3}(K_2(A),\Z)}=i^{*}_{|H^{3}(K_2(A),\Z)}\circ (-\id_A)^{*}_{|H^{3}(K_2(A),\Z)}\ \ou\ g^{*}_{|H^{3}(K_2(A),\Z)}=i^{*}_{|H^{3}(K_2(A),\Z)}.$$
-But $g^{*}_{|H^{3}(K_2(A),\Z)}$ has order 4 and $i^{*}_{|H^{3}(K_2(A),\Z)}\circ (-\id_A)^{*}_{|H^{3}(K_2(A),\Z)}$ and $i^{*}_{|H^{3}(K_2(A),\Z)}$ have order 2, which is a contradiction.
+But by Corollary \ref{actionH3}, $g^{*}_{|H^{3}(K_2(A),\Z)}$ has order 4 and $i^{*}_{|H^{3}(K_2(A),\Z)}\circ (-\id_A)^{*}_{|H^{3}(K_2(A),\Z)}$ and $i^{*}_{|H^{3}(K_2(A),\Z)}$ have order 2, which is a contradiction.
 \item[(2)]
 Let $X$ be a irreducible symplectic fourfold of Kummer type and $\iota$ a symplectic involution on $X$. By (1) of the above theorem, we have $\iota\in\Ker \nu$. Then by Theorem 2.1 of \cite{Hassett}, the couple $(X,\iota)$ deform to a couple $(K_2(A),\iota')$ with $A$ an abelian surface and $\iota'\in\Ker \nu$ a symplectic involution on $ K_2(A)$. Then we conclud with Corollary 3.3 of \cite{BNS2}.
 \item[(3)]
@@ -70,8 +71,8 @@ the set $$\mathcal{P}:=\left\{\left.\xi\in K_{2}(A)\right|\ \Supp \xi= \left\{a_
 \end{itemize}
 \end{rmk}
 \subsection{Action on the cohomology}\label{actioncoh}
-From Theorem \ref{SymplecticInvo}, we can assume that $X=K_2(A)$ and $\iota=-\id_A$. To consider $t_\tau \circ (-\id_A)$ instead of  $-\id_A$ only has the effect of exchanging the role of $[Z_0]$ and $[Z_\tau]$.
-Hence we do not lose any generality assuming that $\iota=-\id_A$.
+From Theorem \ref{SymplecticInvo}, we can assume that $X=K_2(A)$ and $\iota=-\id_A$. To consider $t_\tau \circ (-\id_A)$ instead of  $-\id_A$ only has the effect of exchanging the role of $[Z_0]$ and $[Z_{-\tau}]$.
+Hence we do not lose any generality assuming that $\iota=-\id_A$. Now, we calculate the invariants $l_i^j(K_{2}(A))$ define in Definition-Proposition \ref{defiprop}. It will used in Section \ref{BeauvilleForm}.
 
 From Theorem \ref{SymplecticInvo} (1), the involution $\iota$ acts trivially on $H^{2}(K_{2}(A),\Z)$.
 It follows 
@@ -114,7 +115,9 @@ We have $l_{1,-}^4(K_{2}(A))=0$, $l_{1,+}^4(K_{2}(A))=28$ and $l_{2}^4(K_{2}(A))
 %It follows by Proposition 3.18 \ref{} that the involution $\iota$ acts as $-\id$ on $H^{3}(K_{2}(A),\Q)$.
 
 Let $\mathcal{S}$ be the over-lattice of $\Sym^{2} H^{2}(K_{2}(A),\Z)$ where we add all the classes divisible by 2 in $H^{4}(K_{2}(A),\Z)$.
-By (\ref{discrPi}), the discriminant of $\Pi'$ is not divisible by 2. Since $H^{4}(K_{2}(A),\Z)$ is unimodular, it follows that the discriminant of $\mathcal{S}$ is also not divisible by 2.
+%By (\ref{discrPi}), the discriminant of $\Pi'$ is not divisible by 2. 
+%Since $H^{4}(K_{2}(A),\Z)$ is unimodular, it follows that the discriminant of $\mathcal{S}$ is also not divisible by 2.
+From Section \ref{Middle}, we know that the discriminant of $\mathcal{S}$ is not divisible by 2.
 Hence, we have:
 $$H^{4}(K_{2}(A),\F)=\mathcal{S}\otimes\F\oplus \Pi'\otimes\F.$$
 Moreover, we have: $$\iota^{*}(Z_{\tau}-Z_{0})=Z_{-\tau}-Z_{0},$$
@@ -155,7 +158,7 @@ Moreover, the signature of $B_{X}$ is $(3,h^{2}(X,\mathbb{C})-3)$.
 The form $B_{X}$ is called the Beauville--Bogomolov form of $X$.
 \end{thm}
 \begin{proof}
-The statement of the theorem in \cite{Mat} does not say that the form is integral. However, let $Z_{s}$ be a fiber of the Kuranishi family of $Z$, with the same idea as Matsushita's proof, we can see that $q_{Z}$ and $q_{Z_{s}}$ are proportional. Then, it follows using the proof of Theorem 5 a), c) of \cite{Beauville}.
+The statement of the theorem in \cite{Mat} does not say that the form is integral. However, let $X_{s}$ be a fiber of the Kuranishi family of $X$, with the same idea as Matsushita's proof, we can see that $B_{X}$ and $B_{X_{s}}$ are proportional. Then, it follows using the proof of Theorem 5 a), c) of \cite{Beauville}.
 \end{proof}
 We can also consider its polarized form.
 \begin{prop}\label{beauville}
@@ -165,7 +168,7 @@ $$\alpha_{1}\cdot...\cdot\alpha_{2n}=\frac{c_{X}}{(2n)!}\sum_{\sigma\in S_{2n}}B
 for all $\alpha_{i}\in H^{2}(X,\Z)$.
 \end{prop}
 These results were then generalized by Kirschner for symplectic complex spaces in \cite{Tim}. 
-In \cite[Theorem 2.5]{Lol2} was appeared the first concrete example of Beauville-Bogomolov lattice for a singular irreducible symplectic variety. The variety studied in \cite{Lol2} is a partial resolution of the Hilbert scheme of 2 points on a K3 surface quotiented by a symplectic involution. The objective of this section is to provide a new example of a Beauville-Bogomolov lattice replacing Hilbert schemes of 2 points on a K3 surface by generalized Kummer fourfolds. Knowing the integral basis of the cohomology group of the generalized Kummer provided in Part \ref{integralcohomology}, this calculation becomes possible. Moreover the calculation will be much simpler as in \cite{Lol2} because of the general techniques for calculating integral cohomology of quotients developed in \cite{Lol} and the new technique using monodromy developed in Lemma \ref{Ddelta}. 
+In \cite[Theorem 2.5]{Lol2} was appeared the first concrete example of Beauville-Bogomolov lattice for a singular irreducible symplectic variety. The variety studied in \cite{Lol2} is a partial resolution of an irreducible symplectic manifold of $K3^{[2]}$-type quotiented by a symplectic involution. The objective of this section is to provide a new example of a Beauville-Bogomolov lattice replacing the manifold of $K3^{[2]}$-type by a fourfold of Kummer type. Knowing the integral basis of the cohomology group of the generalized Kummer provided in Part \ref{integralcohomology}, this calculation becomes possible. Moreover the calculation will be much simpler as in \cite{Lol2} because of the general techniques for calculating integral cohomology of quotients developed in \cite{Lol} and the new technique using monodromy developed in Lemma \ref{Ddelta}. 
 The other techniques developed in \cite{Lol2} are also in \cite{Lol}, so to simplify the reading, we will only cite \cite{Lol2} in the rest of the section.
 
 
@@ -191,9 +194,9 @@ We first provide all the notation that we will need during the proof in Section 
 Then the proof is divided into the following steps:
 \begin{itemize}
 \item[(1)]
-First (\ref{l22}), (\ref{l3}), Proposition \ref{invariants} and Corollary \ref{utile'} will provide the $H^4$-normality in Section \ref{H4}.
+First (\ref{l22}), (\ref{l3}), Proposition \ref{invariants} and Corollary \ref{utile'} will provide the $H^4$-normality of $(K_2(A),\iota)$ in Section \ref{H4}.
 \item[(2)]
-The knowledge of the elements divisible by 2 in $\Sym^{2} H^{2}(K_2(A),\Z)$ from Section \ref{Middle} and the $H^4$-normality allow us to prove the $H^2$-normality in Section \ref{H2}. 
+The knowledge of the elements divisible by 2 in $\Sym^{2} H^{2}(K_2(A),\Z)$ from Section \ref{Middle} and the $H^4$-normality allow us to prove the $H^2$-normality of $(K_2(A),\iota)$ in Section \ref{H2}. 
 \item[(3)]
 An adaptation of the $H^2$-normality (Lemma \ref{primitive2}) and several lemmas in Section \ref{basisinteK'} will provide an integral basis of $H^{2}(K',\Z)$ (Theorem \ref{fin}).
 \item[(4)]
@@ -211,7 +214,7 @@ We also denote by $s_{1}:N_{1}\rightarrow K_{2}(A)$ the blowup of $K_{2}(A)$ in 
 
 Consider the blowup $s_{2}:N_{2}\rightarrow N_{1}$ of $N_{1}$ in the 36 points $p_1,...,p_{36}$ fixed by $\iota_{1}$ and the blowup $\widetilde{r}:\widetilde{K}\rightarrow K'$ of $K'$ in its 36 singulars points. We denote the exceptional divisors by $E_{1},...,E_{36}$ and $D_{1},...,D_{36}$ respectively. We also denote $\widetilde{\overline{Z_{0}}}=\widetilde{r}^{*}(\overline{Z_{0}}')$ and $\widetilde{Z_{0}}=s_{2}^{*}(Z_{0}')$.
 Denote $\iota_{2}$ the involution induced by $\iota$ on $N_{2}$ and $\pi_{2}:N_{2}\rightarrow N_{2}/\iota_{2}$ the quotient map. 
-We have $N_{2}/\iota_{2}\simeq \widetilde{K}$. We collect this notation in a commutative diagram
+We have $N_{2}/\iota_{2}\simeq \widetilde{K}$. To finish, we denote $V=K_{2}(A)\smallsetminus \Fix \iota$ and $U=V/\iota$. We collect this notation in a commutative diagram
 \begin{equation}
 \xymatrix{
  \widetilde{K}\ar[r]^{\widetilde{r}} & K' \ar[r]^{r'}&  K_{2}(A)/\iota&U\ar@{_{(}->}[l]\\
@@ -219,7 +222,7 @@ We have $N_{2}/\iota_{2}\simeq \widetilde{K}$. We collect this notation in a com
    }
    \label{commutativediagram}
 \end{equation} 
-To finish, we denote $V=K_{2}(A)\smallsetminus \Fix \iota$ and $U=V/\iota$. Also, we set $s=s_2\circ s_1$ and $r=\widetilde{r}\circ r'$. We denote also $e$ the half of the class of the diagonal in $H^{2}(K_2(A),\Z)$ as states in Notation \ref{BasisH2KA}.
+Also, we set $s=s_2\circ s_1$ and $r=\widetilde{r}\circ r'$. We denote also $e$ the half of the class of the diagonal in $H^{2}(K_2(A),\Z)$ as states in Notation \ref{BasisH2KA}.
 
 \begin{rmk}\label{commut2}
 We can commute the push-forward maps and the blow-up maps as proved in Lemma 3.3.21 of \cite{Lol}.
@@ -238,7 +241,7 @@ We apply Theorem \ref{utile'}.
 \item[i)]
 By Theorem \ref{torsion}, $H^{*}(K_{2}(A),\Z)$ is torsion-free. 
 \item[ii)]
-From Remark \ref{RemarkSymplecticInv} (1), we know that the connected component of dimension 2 of $\Fix \iota$  is given by $Z_{0}$. We know that $Z_{0}$ is a K3 surface, hence is simply connected. 
+From Remark \ref{RemarkSymplecticInv} (1), we know that the connected component of dimension 2 of $\Fix \iota$  is given by $Z_{0}$ which is a K3 surface, hence is simply connected. 
 Moreover by Proposition 4.3 of \cite{Hassett} $Z_{0}\cdot Z_{\tau}=1$ for all $\tau\in A[3]\smallsetminus \left\{0\right\}$. Hence the class of $Z_{0}$ in $H^{4}(K_{2}(A),\Z)$ is primitive. It follows that $\Fix \iota$ is almost negligible (Definition \ref{negligible}). 
 \item[iii)]
 By (\ref{l22}) and Proposition \ref{invariants}, we have $l_{1,-}^{2}(K_{2}(A))=l_{1,-}^{4}(K_{2}(A))=0.$
@@ -276,7 +279,7 @@ By Remark \ref{Hnormal}, it is equivalent to prove that for all $x\in H^{2}(K_{2
 $\pi_{*}(x)$ is divisible by 2 if and only if there exists $y\in H^{2}(K_{2}(A),\Z)$ such that $x=y+\iota^{*}(y)$. 
 
 Let $x\in H^{2}(K_{2}(A),\Z)^{\iota}=H^{2}(K_{2}(A),\Z)$ such that $\pi_{*}(x)$ is divisible by 2, we will show that there exists $y\in H^{2}(K_{2}(A),\Z)$ such that $x=y+\iota^{*}(y)$.
-Then, by Proposition \ref{commut}, $\pi_{*}(x^2)$ is divisible by 2.
+By Proposition \ref{commut}, $\pi_{*}(x^2)$ is divisible by 2.
 However, $x^2\in H^{4}(K_{2}(A),\Z)^{\iota}$; since $(K_{2}(A),\iota)$ is $H^{4}$-normal by Proposition \ref{H4norm}, it means that there is $z\in H^{4}(K_{2}(A),\Z)$ such that
 $x^2=z+\iota^{*}(z)$.
 
@@ -477,7 +480,12 @@ We have:
 $$D_e=D_1+...+D_{36}.$$
 \end{lemme}
 \begin{proof}
-The know that the monodromy acts on $A[2]$ as the symplectic group $\Sp A[2]$. Hence the monodromy action extends naturally to an action on the divisors $D_1,...,D_{35}$. Also this monodromy action represented by $\Sp A[2]$ acts trivially on $D_{36}$ and on $\pi_{2*}(s^{*}(e))$. 
+We know from Remark \ref{SPA2} that the monodromy representation on $A[2]$ contains the symplectic group $\Sp A[2]$. 
+We recall from Remark \ref{RemarkSymplecticInv} (2), that the $D_1,...,D_{35}$ are given by $\pi_2(s^{-1}(\mathcal{P})$.
+It follows that the monodromy representation on $H^2(\widetilde{K},\Z)$ contains the isometries which act on $D_1,...,D_{35}$
+as the elements $f$ of $A[2]$:
+$$f\cdot \pi_2(s^{-1}(\{a_1,a_2,a_3\})=\pi_2(s^{-1}(\{f(a_1),f(a_2),f(a_3)\}),$$
+and act trivially on $D_{36}$ and $\pi_{2*}(s^{*}(e))$. 
 As explained in Remark \ref{PlaneTriple} the 2 orbits of the action of $\Sp A[2]$ on the set $\mathfrak{D}:=\left\{D_1,...,D_{35}\right\}$ correspond to the two sets of isotropic and non-isotropic planes in $A[2]$. Hence by Proposition \ref{OrbitesSp} (3), (4)  the action of $\Sp A[2]$ on the set $\mathfrak{D}$ has 2 orbits: one of 15 elements and another of 20 elements. 
 
 On the other hand, as we mentioned in the end of Section \ref{statement}, we can assume that $A=E_\xi\times E_\xi$ where $E_\xi$ is the elliptic curve introduced in Definition \ref{elliptic6}. Hence there is the following automorphism group acting on $A$:
@@ -501,7 +509,7 @@ $$G:=\left\langle \left(
 The group $G$ extends naturally to an automorphism group of $N_2$ which we denote also $G$.  Moreover, the action of $G$ restricts to the set $\mathfrak{D}$. Then by Lemma \ref{orbitesG} the action of $G$ on $\mathfrak{D}$ has 2 orbits: one of 5 elements and one of 30 elements. Also the group $G$ acts trivially on $D_{36}$ and on $\pi_{2*}(s^{*}(e))$. 
 
 Hence the combined action of $G$ and $\Sp A[2]$ acts transitively on $\mathfrak{D}$.
-Since $\pi_{2*}(s^{*}(e))$ is fixed by the action of $G$ and $\Sp A[2]$, $D_e$ has also to be fixed by the action of $G$ and $\Sp A[2]$ or it will contradict Lemma \ref{Fulton} (iv).
+Since $\pi_{2*}(s^{*}(e))$ is fixed by the action of $G$ and $\Sp A[2]$, $D_e$ has also to be fixed by the action of $G$ and $\Sp A[2]$ else it will contradict Lemma \ref{Fulton} (iv).
 It follows that there are only 3 possibilities for $D_e$: 
 \begin{itemize}
 \item[(1)]
