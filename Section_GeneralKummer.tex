@@ -42,24 +42,32 @@ and by the projection formula, we have
 \end{equation}
 
 \begin{lemma}\label{petitlemmeenplus}
- Let $\beta\in H^*(K_{n-1}(A),\Z)$. There exists a class $B\in H^{*}(A\hilb{n}),\Z)$ such that 
- $$\theta_*(\beta)=\frac{1}{81}B\cdot [\kum{A}{n-1}].$$
+ Let $\beta\in H^*(K_{n-1}(A),\Z)$. Then there is a class $B\in H^{*}(A\hilb{n},\Z)$ such that 
+ $$\theta_*(\beta)=\frac{1}{n^4}B\cdot [\kum{A}{n-1}].$$
 \end{lemma}
 \begin{proof}
-Let $a\in A$, we denote by $t_a$ the morphism on $A\hilb{n}$ induced by the translation by $a$.
-Then we consider the natural map $f:A\hilb{n}\times A \longrightarrow A\hilb{n}$ defined by $f(\xi,a)=t_a(\xi)$.
-Let $\beta\in H^*(K_{n-1}(A),\Z)$. We state:
-$$B:=f_*\circ(\theta\times\id)_*(\beta\otimes 1).$$
-By projection formula, we have:
-$$B\cdot [K_{n-1}(A)]= f_*\circ(\theta\times\id)_*\left(\beta\otimes 1\cdot (\theta\times\id)^*\circ f^*([K_{n-1}(A)])\right).$$
-Hence:
+For a point $a\in A$, we denote by $t_a$ the morphism on $A\hilb{n}$ induced by the translation by $a$.
+Then we consider the morphism $\Theta :\kum{A}{n-1}\times A \longrightarrow A\hilb{n}$ defined by $\Theta(\xi,a)=t_a(\theta(\xi))$. It fits in a pullback diagram
+\begin{equation}
+\begin{CD}
+\kum{A}{n-1}\times A @>\Theta >> A\hilb{n}\\
+@VV\pr_2V @VV\Sigma V\\
+A @> n\cdot >> A
+\end{CD}
+\end{equation}
+that realizes $\kum{A}{n-1}\times A$ as a $n^4$-fold covering of $A\hilb{n}$ over $A$.
+Now, for $\beta\in H^*(K_{n-1}(A),\Z)$ set
+$$
+B:=\Theta_*(\beta\otimes 1).
+$$
+Then the projection formula gives
 \begin{align*}
-B\cdot [K_{n-1}(A)] &=f_*\circ(\theta\times\id)_*\left(\beta\otimes 1\cdot 81 (1\otimes x)\right)\\
-&=81 f_*\circ(\theta\times\id)_*(\beta \otimes x)\\
-&=81\theta_*(\beta).
+B\cdot [K_{n-1}(A)]&= \Theta_*\left(\beta\otimes 1\cdot \Theta^*[\kum{A}{n-1}]\right) \\
+&=n^4 \Theta_*\left((\beta\otimes 1)\cdot  (1\otimes x)\right)\\
+&=n^4 \Theta_*(\beta \otimes x)\\
+&=n^4\theta_*(\beta).
 \end{align*}
 \end{proof}
-
 
 \begin{proposition}\label{annihilator}
 The kernel of $\theta^*$ is equal to the annihilator of $[\kum{A}{n-1}]$.
@@ -69,19 +77,16 @@ Assume $\alpha\in \ker(\theta^*)$. Then we have
 $
 [\kum{A}{n-1}]\cdot \alpha = \theta_*\theta^*(\alpha) = 0
 $. 
-Consersely, suppose that $\theta^*(\alpha)\neq 0$.
-Let $\beta\in H^*(\kum{A}{n-1},\Z)$ be the Poincar\'e dual of $\theta^*(\alpha)$.
-We have $\beta\cdot \theta^*(\alpha)\neq 0$.
+Consersely, if $\theta^*(\alpha)\neq 0$,
+let $\beta\in H^*(\kum{A}{n-1})$ be the Poincar\'e dual of $\theta^*(\alpha)$, so $\beta\cdot \theta^*(\alpha)\neq 0$.
 Then by projection formula:
-$$\theta_*(\beta)\cdot \alpha\neq 0.$$
-Then by Lemma \ref{petitlemmeenplus}, there exists $B\in H^*(A\hilb{n},\Z)$ such that 
-$B\cdot [\kum{A}{n-1}]\cdot \alpha\neq 0$. It follows $\cdot [\kum{A}{n-1}]\cdot \alpha\neq 0$.
-%Conversely, suppose that $ [\kum{A}{n-1}]\cdot \alpha=0$. Then, for all $\beta \in H^*(A\hilb{n})$, we have 
-%$$
-%\int\limits_{\kum{A}{n-1}}\theta^*(\alpha)\cdot\theta^*(\beta) = 0,
-%$$
-%so $\theta^*(\alpha) \in \im(\theta^*)\cap\im(\theta^*)^\perp$. The Poincar\'e pairing on $\kum{A}{n-1}$ is non-degenerate when restricted to $\im(\theta^*)$. To see this, observe that the dual element of $\theta^*(\alpha)$ in $\im(\theta^*)$ is given by $\theta^*(\alpha^*)$, where $\alpha^* $ is the Poincar\'e dual of $[\kum{A}{n-1}]\cdot \alpha$. So it follows that $\im(\theta^*)\cap\im(\theta^*)^\perp=0$.
+$
+\theta_*(\beta)\cdot \alpha\neq 0.
+$
+By Lemma \ref{petitlemmeenplus}, there exists $B\in H^*(A\hilb{n},\Z)$ such that 
+$B\cdot [\kum{A}{n-1}]\cdot \alpha\neq 0$. It follows that $ [\kum{A}{n-1}]\cdot \alpha\neq 0$.
 \end{proof}
+
 \begin{corollary} \label{KummerEquality}
 $\theta^*(\alpha) = \theta^*(\beta)$ if and only if $[\kum{A}{n-1}]\cdot \alpha = [\kum{A}{n-1}]\cdot \beta$. 
 \qed
