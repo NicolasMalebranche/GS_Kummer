@@ -122,40 +122,17 @@ We assume that $k=\mathbb F_3$. Let $\pr_1: S\oplus k[V]\rightarrow S$ and $\pr_
 We have: 
 \begin{itemize}
 \item[(i)]
-$\dim \Ker\pr_{2|O}=1$.
+$\dim \ker\pr_{2|O}=1$.
 \item[(ii)]
-$\dim \Ker\pr_{1|O}=31$.
-%or 32.
+$\dim \ker\pr_{1|O}=31$.
+%and $\ker\pr_{1|O} = D$.
 \end{itemize}
 \end{lemme}
 \begin{proof}
-\begin{itemize}
-\item[(i)]
-We have $\pr_{2}(O)=(N)$, so $\dim \pr_{2}(O)=50$.
-Since $\dim O=51$, it follows $\dim \Ker\pr_{2|O}=1$. 
-\item[(ii)]
-%We have $D\subset O_1$.
-%Indeed, we have $x+\sum_{i\in P} X_i$ and $x+\sum_{i\in P} X_{i+j}$ in $O_1$, for all $j\in V$. 
-%Hence $\sum_{i\in P} X_{i+j}-X_i\in O_1$.
-%Moreover, by Proposition \ref{transitively}, $\Sp V$ acts transversally on the set of the non-isotropic plans, it follows $D\subset O_1$.
-%Hence:
-%\begin{equation}
-%\dim \Ker\pr_{1|O_{1}}\geq \dim D=31.
-%\label{pfff}
-%\end{equation}
-%Moreover, by definition, $\pr_2(O_2)=D$.
-%Since $\dim D=31$ and $\dim O_2=50$, we obtain
-%$\dim \Ker \pr_{2|O_2}=19$. 
-%Hence, necessarily, $$\dim \pr_{1}(O_2)\geq 19.$$
-%Since $\pr_{1}(O_2)=\pr_{1}(O_1)$,
-%we obtain:
-%$$\dim \pr_{1}(O_1)\geq 19.$$
-%It follows 
-%$$\dim \Ker\pr_{1|O_1}\leq 51-19=32.$$
-%We conclude with (\ref{pfff}).
-We have $\pr_{1}(O)=U.$
-So $$\dim \pr_{1}(O)=20.$$
-Since $\dim O=51$,
-it follows $\dim \Ker\pr_{1|O}=31$.
-\end{itemize}
+We have $\pr_{1}(O)=U$ and $\pr_{2}(O)=(N)$. Using the dimension tables from Propositions \label{CombinedSymplectic} and \ref{cleffinclassesdiv}, we get
+\begin{gather*}
+\dim \ker\pr_{1|O} = \dim O - \dim U  = 31,\\
+\dim \ker\pr_{2|O} = \dim O - \dim (N) = 1.
+\end{gather*}
+
 \end{proof}

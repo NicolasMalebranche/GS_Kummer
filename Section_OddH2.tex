@@ -66,13 +66,12 @@ We have: $l_{1,-}^{2}(A\times A)=l_{1,+}^{1}(A\times A)=0$.
 By Künneth formula we have:
 $$H^{1}(A\times A,\Z)=H^{0}(A,\Z)\otimes H^{1}(A,\Z)\oplus H^{1}(A,\Z)\otimes H^{0}(A,\Z).$$
 The elements of $H^{0}(A,\Z)\otimes H^{1}(A,\Z)$ and $H^{1}(A,\Z)\otimes H^{0}(A,\Z)$ are exchanged under the action of $\sigma_2$. It follows that $l_{2}^{1}(A\times A)=4$ and necessary $l_{1,-}^{1}(A\times A)=l_{1,+}^{1}(A\times A)=0$.
-
-By Künneth formula we also have:
+Using Künneth again, we get: 
 \begin{align*}
 H^{2}(A\times A,\Z)&=H^{0}(A,\Z)\otimes H^{2}(A,\Z)\oplus H^{1}(A,\Z)\otimes H^{1}(A,\Z)\\
 &\oplus H^{2}(A,\Z)\otimes H^{0}(A,\Z).
 \end{align*}
-As before every elements $x\otimes y\in H^{2}(A\times A,\Z)$ are sent to $y\otimes x$ by the action of $\sigma_2$. Such an element is fixed by the action of $\sigma_2$ if $x=y$. It follows:
+As before, elements $x\otimes y\in H^{2}(A\times A,\Z)$ are sent to $y\otimes x$ by the action of $\sigma_2$. Such an element is fixed by the action of $\sigma_2$ if $x=y$. It follows:
 $$l_{2}^{2}(A\times A)=6+6=12,$$
 $$l_{1,+}^{2}(A\times A)=4,$$
 and thus:
@@ -92,7 +91,7 @@ H^{3}(\widetilde{A\times A},\Z)=b^{*}(H^{3}(A\times A,\Z))\oplus j_*b_{|E}^{*}(H
 \label{voisin1}
 \end{equation}
 It follows that $$H^{3}(A^{[2]},\Z)\supset \pi_{*}b^{*}(H^{3}(A\times A,\Z))\oplus \pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z)).$$
-We want to show that this inclusion is an equality. We will proceed as follow, we first prove that $\pi_{*}b^{*}(H^{3}(A\times A,\Z))$ is primitive. Then, in Lemma \ref{primitive3}, it is shown that $\pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ is primitive and finally we remark that this implies that the sum $\pi_*b^{*}(H^{3}(A\times A,\Z))\oplus \pi_*j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ is primitive.  
+We want to show that this inclusion is an equality. We will proceed as follows: We first prove that $\pi_{*}b^{*}(H^{3}(A\times A,\Z))$ is primitive. Then, in Lemma \ref{primitive3}, we show that $\pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ is primitive and finally we remark that this implies that the direct sum $\pi_*b^{*}(H^{3}(A\times A,\Z))\oplus \pi_*j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ is primitive.  
 
 Now, by Künneth formula, we have:
 \begin{align*}
@@ -129,11 +128,11 @@ We obtain:
 \end{equation}
 However, by Lemma \ref{3}, $H^{3}(U,\Z)$ is torsion free; it follows that $\pi_{*}(j_*(b_{|E}^{*}(H^{1}(\Delta,\Z))))$ is primitive in $H^{3}(A^{[2]},\Z)$.
 \end{proof}
-Now it is remaining to prove that $\pi_{*}b^{*}(H^{3}(A\times A,\Z))\oplus \pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ is primitive in $H^{3}(A^{[2]},\Z)$.
+Now it remains to prove that $\pi_{*}b^{*}(H^{3}(A\times A,\Z))\oplus \pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ is primitive in $H^{3}(A^{[2]},\Z)$.
 This comes from the fact that all elements in $\pi_{*}b^{*}(H^{3}(A\times A,\Z)^{\mathfrak{S}_2})$ are divisible by 2, then the relations (\ref{pietpi}) on $\pi_*$ and $\pi^*$ impose the above sum to be primitive.  
 
 In more details, let $x\in \pi_*b^{*}(H^{3}(A\times A,\Z))$ and $y\in \pi_*j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$. It is enough to show that if $\frac{x+y}{2}\in H^{3}(A^{[2]},\Z)$, then $\frac{x}{2}\in H^{3}(A^{[2]},\Z)$ and $\frac{y}{2}\in H^{3}(A^{[2]},\Z)$.
-As we have seen, we can write $x=\frac{1}{2}\pi_*(z+\sigma_{2}^{*}(z))$, with $z\in b^{*}(H^{3}(A\times A,\Z))$ and $y=\pi_*(y')$, with $y'\in j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$. If $$\frac{\frac{1}{2}\pi_*(z+\sigma_{2}^{*}(z))+\pi_*(y)}{2}\in H^{3}(A^{[2]},\Z)$$ then taking the image by $\pi^{*}$ of this element, we obtain $$\frac{z+\sigma_{2}^{*}(z)}{2}+y'\in H^{3}(\widetilde{A\times A},\Z).$$ Hence the class $\frac{z+\sigma_{2}^{*}(z)}{2}\in b^{*}(H^{3}(A\times A,\Z))^{\mathfrak{S}_2}$. Hence there is $z'\in b^{*}(H^{3}(A\times A,\Z))$ such that 
+As we have seen, we can write $x=\frac{1}{2}\pi_*(z+\sigma_{2}^{*}(z))$, with $z\in b^{*}(H^{3}(A\times A,\Z))$ and $y=\pi_*(y')$, with $y'\in j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$. If $$\frac{\frac{1}{2}\pi_*(z+\sigma_{2}^{*}(z))+\pi_*(y)}{2}\in H^{3}(A^{[2]},\Z)$$ then taking the image by $\pi^{*}$ of this element, we obtain $$\frac{z+\sigma_{2}^{*}(z)}{2}+y'\in H^{3}(\widetilde{A\times A},\Z).$$ Hence $\frac{z+\sigma_{2}^{*}(z)}{2}\in b^{*}(H^{3}(A\times A,\Z))^{\mathfrak{S}_2}$. Hence there is $z'\in b^{*}(H^{3}(A\times A,\Z))$ such that 
 $$\frac{z+\sigma_{2}^{*}(z)}{2}=z'+\sigma_{2}^{*}(z').$$
 So $x$ is divisible by 2 and then also $y$.  
 

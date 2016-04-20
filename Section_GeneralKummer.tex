@@ -1,7 +1,7 @@
 \section{Generalized Kummer varieties and the morphism to the Hilbert scheme}
 \label{Section_GeneralKummer}
 \begin{definition}
-Let $A$ be a complex projective torus of dimension $2$ and $A\hilb{n}$, $n\geq 1$, the corresponding Hilbert scheme of points. Denote $\Sigma : A\hilb{n} \rightarrow A$ the summation morphism, a smooth submersion that factorizes via the Hilbert--Chow morphism $: A\hilb{n}\stackrel{\rho}{\rightarrow}\Sym^n(A)\stackrel{\sigma}{\rightarrow} A$. Then the generalized Kummer variety $\kum{A}{n-1}$ is defined as the fiber over $0$:
+Let $A$ be a complex projective torus of dimension $2$ and $A\hilb{n}$, $n\geq 1$, the corresponding Hilbert scheme of points. Denote $\Sigma : A\hilb{n} \rightarrow A$ the summation morphism, a smooth submersion that factorizes via (\ref{HilbertChow}) the Hilbert--Chow morphism $: A\hilb{n}\stackrel{\rho}{\rightarrow}\Sym^n(A)\stackrel{\sigma}{\rightarrow} A$. Then the generalized Kummer variety $\kum{A}{n-1}$ is defined as the fiber over $0$:
 \begin{equation}\label{square}
 \begin{CD}
 \kum{A}{n-1} @>\theta >> A\hilb{n}\\
@@ -77,7 +77,7 @@ Assume $\alpha\in \ker(\theta^*)$. Then we have
 $
 [\kum{A}{n-1}]\cdot \alpha = \theta_*\theta^*(\alpha) = 0
 $. 
-Consersely, if $\theta^*(\alpha)\neq 0$,
+Consersely, if $\alpha\notin \ker(\theta^*)$,
 let $\beta\in H^*(\kum{A}{n-1},\Q)$ be the Poincar\'e dual of $\theta^*(\alpha)$, so $\beta\cdot \theta^*(\alpha)\neq 0$.
 Then by projection formula:
 $
@@ -131,9 +131,8 @@ Since $\rho^*$ is injective, $\tilde y$ is in the annihilator of $\sigma^*(x)$, 
 \begin{theorem}\cite[Th\'eor\`eme 4]{Beauville}
 $\kum{A}{n-1}$ is a irreducible holomorphically symplectic manifold. In particular, it is simply connected and the canonical bundle is trivial.
 \end{theorem}
-This implies that $H^2(\kum{A}{n-1},\Z)$ admits an integer-valued nondegenerated quadratic form (called Beauville--Bogomolov form) $q$ which gives $H^2(\kum{A}{n-1},\Z)$ the structure of a lattice. Looking for instance, the useful table in the introduction of \cite{Rapagnetta}, we know that this lattice is
+This implies that $H^2(\kum{A}{n-1},\Z)$ admits an integer-valued nondegenerated symmetric bilinear form (called Beauville--Bogomolov form) $B$ which gives $H^2(\kum{A}{n-1},\Z)$ the structure of a lattice. Looking for instance, the useful table in the introduction of \cite{Rapagnetta}, we know that this lattice is
 isomorphic to $U^{\oplus 3}\oplus \left< -2n \right>$, for $n\geq 3$. 
-%\textbf{TODO:} find a reference for Beauville-Bogomolov form
 We have the Fujiki formula for $\alpha\in H^2(\kum{A}{n-1},\Z)$:
 \begin{equation} \label{fujiki}
 %\int_{\kum{A}{n-1}} \alpha^{2n-2} = n\frac{(2n-2)!}{2^{n-1}(n\! - \! 1)!} q(a)^{n-1}
