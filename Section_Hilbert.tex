@@ -258,24 +258,29 @@ For the study of integral cohomology, first note that if $a \in H^*(A,\Z)$ is an
 
 \begin{lemma} \cite{QinWang}\label{IntegralOperators}
 The operators $\frac{1}{n!}\q_1(1)^n$ and $\frac{1}{2}\q_2(1) $ are integral.
-Let $a\in H^2(A,\Z)$ be monodromy equivalent to a divisor. Then the operator $\frac{1}{2}\q_1(a)^2 - \frac{1}{2}\q_2(a)$ is integral. 
+Let $b\in H^2(A,\Z)$ be monodromy equivalent to a divisor. Then the operator $\frac{1}{2}\q_1(b)^2 - \frac{1}{2}\q_2(b)$ is integral. 
 \end{lemma}
 \begin{remark}
-Qin and Wang \cite[Thm 1.1 et seq.]{QinWang} conjecture that their theory works even without the restriction on $a\in H^2(A,\Z)$. 
+Qin and Wang \cite[Thm 1.1 et seq.]{QinWang} conjecture that their theory works even without the restriction on $b\in H^2(A,\Z)$. 
 \end{remark}
 
 \begin{corollary} \label{IntegralOperatorsTorus}
-If $A$ is a torus, the operator $\frac{1}{2}\q_1(a)^2 - \frac{1}{2}\q_2(a)$ is integral for all $a\in H^2(A,\Z)$. 
+If $A$ is a torus, the operator $\frac{1}{2}\q_1(b)^2 - \frac{1}{2}\q_2(b)$ is integral for all $b\in H^2(A,\Z)$. 
 \end{corollary}
 \begin{proof}
 The Nakajima operators are preserved under deformations of $A$. 
-By \cite[Thm.~II]{Shioda}, the group of monodromy actions spans the entire automorphism group of $H^2(A,\Z)$.
-Since the lattice is even and contains two copies of the hyperbolic lattice, a theorem of Eichler \cite[Prop.~3.7.3]{Scattone} states that the automorphism group of $H^2(A,\Z)$ acts transitively on classes of the same norm. 
-
-Suppose now that the N\'eron-Severi group $\NS(A)$ contains a copy of the hyperbolic lattice $U$ (such $A$ exist).
-Since $U\subset \NS(A)$, there are divisors of arbitrary even norm,
-so every class can be mapped to a divisor by the action of a monodromy and Lemma \ref{IntegralOperators} establishes proposition for that particular $A$. 
-Now, since all tori are equivalent by deformation, a general torus can always be deformed to our special $A$. Since the integrality of an operator is a topolocial invariant, $\frac{1}{2}\q_1(a)^2 - \frac{1}{2}\q_2(a)$ remains integral for all $a$.
+The monodromy operators induce the entire automorphism group $SL(4,\Z)$ on $H^1(A,\Z)$.
+Since $H^2(A,\Z)= \Lambda^2H^1(A,\Z)$, we see with a similar argument as in Remark \ref{simplePlanes} that the monodromy operators act transitively on the simple tensors of $\Lambda^2H^1(A,\Z)$ with fixed norm.
+Suppose that the N\'eron-Severi group $\NS(A)$ contains a basis element of $H^2(A,\Z)$ which can be written as a simple tensor (such $A$ exist).
+Then, by action of monodromy operators, we see that the claim holds for all simple tensors.
+An arbitrary element in $H^2(A,\Z)$ is linear combination of simple tensors. Since the integrality of our operator is preserved under linear combinations, the corollary is proved for that particular torus $A$.
+%By \cite[Thm.~II]{Shioda}, the group of monodromy actions spans the entire automorphism group of $H^2(A,\Z)$.
+%Since the lattice is even and contains two copies of the hyperbolic lattice, a theorem of Eichler \cite[Prop.~3.7.3]{Scattone} states that the automorphism group of $H^2(A,\Z)$ acts transitively on classes of the same norm. 
+%
+%Suppose now that the N\'eron-Severi group $\NS(A)$ contains a copy of the hyperbolic lattice $U$ (such $A$ exist).
+%Since $U\subset \NS(A)$, there are divisors of arbitrary even norm,
+%so every class can be mapped to a divisor by the action of a monodromy and Lemma \ref{IntegralOperators} establishes proposition for that particular $A$. 
+Now, since all tori are equivalent by deformation, a general torus can always be deformed to our special $A$. Since the integrality of an operator is a topolocial invariant, $\frac{1}{2}\q_1(b)^2 - \frac{1}{2}\q_2(b)$ remains integral for all $b$.
 \end{proof}
 
 \begin{proposition} Assume that $H^*(A,\Z)$ is free of torsion.
