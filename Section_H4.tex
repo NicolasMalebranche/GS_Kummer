@@ -2,9 +2,10 @@
  \section{Middle cohomology}\label{Middle}
 The middle cohomology $H^4(\X,\Z)$ has been studied by Hassett and Tschinkel in \cite{Hassett}. We first recall some of their results,
 then we proceed by using $\theta^*$ to give a partial description of $H^4(\X,\Z)$ in terms of the well-understood cohomology of $A\hilb{3}$. 
-Finally, we find a basis of $H^4(\X,\Z)$ using the action of the monodromy group.
-\begin{notation}
-For each $\tau \in A$, denote $W_\tau$ the Brian\c con subscheme of $A\hilb{3}$ supported enitrely at the point $\tau$. If $\tau\in A[3]$ is a point of three-torsion, $W_\tau$ is actually a subscheme of $\X$. We will also use the symbol $W_\tau$ for the corresponding class in $H^4(\X,\Z)$. Further, set 
+Finally, we find a basis of $H^4(\X,\Z)$ using the action of the image of monodromy representation.
+\subsection{Notation and Hassett--Tschinkel's formulas}
+\begin{notation}\label{TheZs}
+For each $\tau \in A$, denote $W_\tau$ the Brian\c con subscheme of $A\hilb{3}$ consisting of the elements supported entirely at the point $\tau$. If $\tau\in A[3]$ is a point of three-torsion, $W_\tau$ is actually a subscheme of $\X$. We will also use the symbol $W_\tau$ for the corresponding class in $H^4(\X,\Z)$. Further, set 
 $$
 W := \sum_{\tau\in A[3]} W_\tau.
 $$
@@ -63,7 +64,7 @@ Y_p = \frac{1}{72}\Big(3\cc + e^2\Big),
 from which we deduce (\ref{WFormula}) and (\ref{ChernY}).
 Equation (\ref{sumZ}) and the non-divisibility are from \cite[Proposition 5.1]{Hassett}.
 \end{proof}
-
+\subsection{Properties of $\Sym^2H^2(K_2(A),\Z)$ in $H^4(K_2(A),\Z)$}
 \begin{proposition}\label{ImSym}
 The image of $H^4(A\hilb{3},\Q)$ under the morphism $\theta^*$ is equal to $\Sym^2H^2(\X,\Q)$.
 \end{proposition}
@@ -131,32 +132,19 @@ By Proposition \ref{ChernSym} and (\ref{sumZ}), $3\cc\in \Sym\cap \Pi$. Since th
 Y_p =  \frac{1}{6}\Big(u_1u_2 + v_1v_2 +  w_1 w_2 \Big).
 \end{equation}
 \end{corollary}
-\begin{remark}
+\begin{remark}\label{afterClassuvw}
 Using Nakajima operators, we may write
 \begin{gather}
 Y_p = \frac{1}{9} \theta^*\Big( \q_1(1)\mathfrak L_2(1) \vac \Big) =  \frac{1}{2}\theta^*\Big(\q_1(x)\q_1(1)^2\vac\Big).
 \end{gather}
 \end{remark}
-
-From the intersection properties $Z_\tau \cdot Z_{\tau'} = 1$ for $\tau\neq \tau'$ and $Z_\tau^2 = 4$ from Section 4 of \cite{Hassett}, we compute
-\begin{equation}
- \discr \Pi' = 3^{84}.
- \label{discrPi}
-\end{equation}
-On the other hand, a formula developed in \cite{Kapfer} evaluates
-\begin{equation} \label{DiscrSym}
-\discr \Sym \ = 2^{14}\cdot 3^{38},
-\end{equation}
-so the lattices $\Sym$ and $\Pi'$ cannot be primitive. Denote $\Sym^{sat}$ and $\Pi'^{sat}$ the respective primitive overlattices. $\Sym \oplus\Pi'$ is a sublattice of $H^4(\X,\Z)$ of index $2^{7}\cdot 3^{61}$ and we claim that $\Sym^{sat}\oplus \Pi'^{sat}$ has index $3^{22}$. To obtain a basis of $H^4(\X,\Z)$, we are now going to find
-\begin{itemize}
- \item $7$ classes in $\Sym$ divisible by $2$,
- \item $8$ classes in $\Sym$ divisible by $3$,
- \item $31$ classes in $\Pi'$ divisible by $3$ and
- \item $20$ classes in $\Sym^{sat}\oplus \Pi'^{sat}$, one divisible by $3^3$ and $19$ divisible by $3$.
-\end{itemize}
-
+Now, we can summary all the divisible classes found in $\Sym$ in the following proposition. 
 \begin{proposition}\label{classedivisibleSym}
-For $y\in\{u_1,u_2,v_1,v_2,w_1,w_2\}$, the class
+\begin{itemize}
+\item[(i)]
+The class $e^2$ is divisible by $3$ and the class $u_1u_2 + v_1v_2+w_1w_2$ is divisible by 6.
+\item[(ii)]
+For $y\in\{u_1,u_2,v_1,v_2,w_1,w_2\}$, the class 
 $
 e \cdot y
 $
@@ -165,8 +153,15 @@ $
  y^2 - \frac{1}{3} e\cdot y
 $
 is divisible by $2$.
+\end{itemize}
 \end{proposition}
 \begin{proof}
+\begin{itemize}
+\item[(i)]
+From Proposition \ref{ChernSym} we see that
+$e^2$ is divisible by $3$ and by Corollary \ref{Classuvw}
+the class $u_1u_2 + v_1v_2+w_1w_2$ is divisible by 6.
+\item[(ii)]
 We have $y= \theta^*\left(\q_1(a)\q_1(1)^2\vac\right)$ for some $a\in H^2(A,\Z)$. A computation yields:
 $$
 e\cdot y = 3\cdot \theta^*\Big( \q_2(a)\q_1(1)\vac \Big)
@@ -182,48 +177,201 @@ $
  \frac{1}{2}y^2 - \frac{1}{6} e\cdot y
 $
 is an integral class, too.
+\end{itemize}
 \end{proof}
-From Proposition \ref{ChernSym} we see that
-$e^2$ is divisible by $3$ and by Corollary \ref{Classuvw}
-the class $u_1u_2 + v_1v_2+w_1w_2$ is divisible by 6.
-\begin{corollary}\label{SymSatImage}
-The image of $H^4(A\hilb{3},\Z)$ under $\theta^*$ is equal to $\Sym^{sat}$. \qed
-\end{corollary}
-Now we come to $\Pi'$. 
-The first thing to note is that $\Pi'$ is defined topologically for all deformations of $\X$ and the primitive overlattice of $\Pi'$ is a topological invariant, too.  
-By applying a suitable deformation, we may therefore assume without loss of generality that $A$ is the product of two elliptic curves $A=E_1\times E_2$. After \cite[Eq.~(12)]{Hassett}, for a non-isotropic plane $\Lambda \subset A[3]$ and any $\tau_0\in A[3]$, the classes 
-\begin{equation}
- \frac{1}{3}\sum_{\tau\in\Lambda} \Big(Z_{\tau} - Z_{\tau+\tau_0}\Big)
-\end{equation}
-are integral. The monodromy representation acts on the $Z_\tau$ via the symplectic group $\Sp(4,\mathbb F_3)$. Modulo $\Pi'$, the orbit of these classes is a $\mathbb F_3$-vector space naturally isomorphic to $D$ as introduced in Definition \ref{SymplecticIdeal}, so by Proposition \ref{SymplecticIdealsDimension}, we get a subspace of $\Pi'$ of rank $31$ of classes divisible by $3$.
+\subsection{Integral basis of $H^4(K_2(A),\Z)$}
 
+From the intersection properties $Z_\tau \cdot Z_{\tau'} = 1$ for $\tau\neq \tau'$ and $Z_\tau^2 = 4$ from Section 4 of \cite{Hassett}, we compute
+\begin{equation}
+ \discr \Pi' = 3^{84}.
+ \label{discrPi}
+\end{equation}
+On the other hand, a formula developed in \cite{Kapfer} evaluates
+\begin{equation} \label{DiscrSym}
+\discr \Sym \ = 2^{14}\cdot 3^{38},
+\end{equation}
+so the lattices $\Pi'$ cannot be primitive. Denote $\Sym^{sat}$ and $\Pi'^{sat}$ the respective primitive overlattices of $\Sym$ and $\Pi'$. $\Sym \oplus\Pi'$ is a sublattice of $H^4(\X,\Z)$ of index $2^{7}\cdot 3^{61}$ and we claim that $\Sym^{sat}\oplus \Pi'^{sat}$ has index $3^{22}$. 
+We have already found
+\begin{itemize}
+ \item $7$ independent classes in $\Sym$ divisible by $2$,
+ \item $8$ independent classes in $\Sym$ divisible by $3$,
+\end{itemize}
+To obtain a basis of $H^4(\X,\Z)$, 
+we are going to found
+\begin{itemize}
+ \item $31$ independent classes in $\Pi'$ divisible by $3$ and
+ \item $20$ independent classes in $\Sym^{sat}\oplus \Pi'^{sat}$, one divisible by $3^3$ and $19$ divisible by $3$.
+\end{itemize}
+
+
+%Now we come to $\Pi'$. 
+The first thing to note is that $\Pi'$ is defined topologically for all deformations of $\X$ and the primitive overlattice of $\Pi'$ is a topological invariant, too.  
+By applying a suitable deformation, we may therefore assume without loss of generality that $A$ is the product of two elliptic curves $A=E_1\times E_2$. 
+
+Hassett and Tschinkel in Proposition 7.1 of \cite{Hassett} provide the class of a Lagrangian plane $P\subset K_2(A)$, which can be expressed as follows:
+\begin{equation}
+\left[P\right]=\frac{1}{216}(6u_1-3e)^2+\frac{1}{8}\cc-\frac{1}{3}\sum_{\tau\in \Lambda'} Z_{\tau},
+\label{LagrangianPlaneClass}
+\end{equation}
+where $\Lambda'=E_1[3]\times 0\subset A[3]$.
+Hence by translating this plane by an element $\tau'\in A[3]$, we obtain another plane $P'$ that can be written:
+$$\left[P'\right]=\frac{1}{216}(6u_1-3e)^2+\frac{1}{8}\cc-\frac{1}{3}\sum_{\tau\in \Lambda'+\tau'} Z_{\tau}.$$
+By substracting these two expressions, we obtain a first class divisible by 3 in $\Pi'$:
+\begin{equation}
+ \frac{1}{3}\sum_{\tau\in\Lambda'} \Big(Z_{\tau} - Z_{\tau+\tau'}\Big)
+ \label{first31}
+\end{equation}
+
+%After \cite[Eq.~(12)]{Hassett}, for a non-isotropic plane $\Lambda \subset A[3]$ and any $\tau_0\in A[3]$, the classes 
+%\begin{equation}
+% \frac{1}{3}\sum_{\tau\in\Lambda} \Big(Z_{\tau} - Z_{\tau+\tau_0}\Big)
+%\end{equation}
+%are integral. 
+By Proposition \ref{Hassettmonodromy}, the image of the monodromy representation on the $Z_\tau$ contains the symplectic group $\Sp(4,\mathbb F_3)$. We know by Proposition \ref{transitively} that $\Sp(4,\mathbb F_3)$ acts transitively on the non-isotropic planes of $A[3]$. Hence, modulo $\Pi'$, the orbit by $\Sp(4,\mathbb F_3)$ of the classes (\ref{first31}) is a $\mathbb F_3$-vector space naturally isomorphic to $D$ as introduced in Definition \ref{SymplecticIdeal}, so by Proposition \ref{SymplecticIdealsDimension}, we get a subspace of $\Pi'$ of rank $31$ of classes divisible by $3$.
+These classes can be completely enumerated using a computer.
+\begin{prop}\label{XXXI}
+The 31 following classes of $\Pi'$ are divisible by 3 in $H^{4}(K_2(A),\Z)$ and their thirds provide a sub-vector space of dimension 31 of $\frac{\Pi'^{sat}}{\Pi'}$.
+$$\sum_{\tau\in\Lambda} \Big(Z_{\tau} - Z_{\tau+\tau'}\Big), \text{ with }$$
+\begin{itemize}
+\item[(i)]
+$\Lambda=\plan{1\\0\\0\\0}{0\\1\\0\\0} \text{ and } 0\neq \tau'\in P^\perp = \plan{0\\0\\1\\0}{0\\0\\0\\1} $,
+
+\item[(ii)] 
+$\Lambda=\plan{0\\0\\1\\0}{0\\0\\0\\1}  \text{ and } 0\neq \tau' \in P^\perp = \plan{1\\0\\0\\0}{0\\1\\0\\0} \setminus \vect{1\\0\\0\\0}$,
+
+\item[(iii)] 
+$\Lambda=\plan{1\\0\\0\\1}{0\\1\\2\\1} \text{ and } \tau' \in \left\{ \vect{0\\1\\1\\2},\vect{1\\0\\0\\2},\vect{1\\1\\1\\1},\vect{2\\2\\2\\2} \right\}$,
+
+\item[(iv)] 
+$\Lambda=\plan{1\\0\\0\\0}{0\\1\\0\\1} \text{ and } \tau' \in \left\{ \vect{0\\0\\0\\1},\vect{2\\0\\1\\2},\vect{1\\0\\2\\0},\vect{1\\0\\2\\1} \right\}$,
+\item[(v)]
+$\Lambda=\plan{1\\0\\0\\0}{0\\1\\1\\1} \text{ and } \tau' \in \left\{ \vect{0\\0\\1\\1},\vect{1\\0\\0\\1} \right\}$,
+
+\item[(vi)] 
+$\Lambda=\plan{1\\0\\1\\1}{0\\1\\0\\1} \text{ and } \tau' \in \left\{ \vect{0\\1\\0\\2},\vect{1\\0\\2\\2} \right\}$,
+
+\item[(vii)]
+$\Lambda=\plan{1\\0\\1\\0}{0\\1\\0\\1} \text{ and } \tau' \in \left\{ \vect{0\\1\\0\\2},\vect{1\\0\\2\\0} \right\}$,
+
+\item[(viii)]
+$\Lambda=\plan{1\\0\\0\\0}{0\\1\\0\\2} \text{ and } \tau' = \vect{1\\0\\1\\0}$,
+
+\item[(ix)]
+$\Lambda=\plan{1\\0\\1\\1}{0\\1\\2\\2} \text{ and } \tau' = \vect{1\\1\\0\\2}$.
+\end{itemize}
+\end{prop}
+
+Now, we are going to find the classes divisible by 3 in $\Sym^{sat}\oplus \Pi'^{sat}$.
 The class $Z_0$ is not contained in $\Sym$ nor in $\Pi'$.
 It can be written as follows:
 $$
 Z_0=\frac{\sum_{\tau\in A[3]}Z_\tau-\sum_{\tau\in A[3]}(Z_\tau-Z_0)}{81}
 \stackrel{(\ref{sumZ})}{=} \frac{c_2(K_2(A))-\frac{1}{3}\sum_{\tau\in A[3]}(Z_\tau-Z_0)}{27},
 $$
-This is the class in $\Sym^{sat}\oplus \Pi'^{sat}$ divisible by $27$. Let us now find the remaining $19$ classes divisible by $3$.
+where $\frac{1}{3}\sum_{\tau\in A[3]}(Z_\tau-Z_0)$ can be expressed as a linear combination of the 31 classes of Proposition \ref{XXXI} by Remark \ref{c2}.
+Hence $Z_0$ provide the class in $\Sym^{sat}\oplus \Pi'^{sat}$ divisible by $27$. 
+Let us now find the remaining $19$ classes divisible by $3$.
 
 
-Hassett and Tschinkel in Proposition 7.1 of \cite{Hassett} provide the class of a Lagrangian plane $P\subset K_2(A)$, which can be expressed as follows:
-$$\left[P\right]=\frac{1}{216}(6u_1-3e)^2+\frac{1}{8}\cc-\frac{1}{3}\sum_{\tau\in \Lambda'} Z_{\tau},$$
-where $\Lambda'=E_1[3]\times 0\subset A[3]$. We rearrange this expression a bit using (\ref{WW}):
+%Hassett and Tschinkel in Proposition 7.1 of \cite{Hassett} provide the class of a Lagrangian plane $P\subset K_2(A)$, which can be expressed as follows:
+%$$\left[P\right]=\frac{1}{216}(6u_1-3e)^2+\frac{1}{8}\cc-\frac{1}{3}\sum_{\tau\in \Lambda'} Z_{\tau},$$
+%where $\Lambda'=E_1[3]\times 0\subset A[3]$. 
+We rearrange (\ref{LagrangianPlaneClass}) a bit using (\ref{WW}):
 \begin{align*}
 \left[P\right]&=\frac{1}{216}(6u_1-3e)^2+\frac{1}{8}\cc-\frac{1}{3}\sum_{\tau\in \Lambda'} Z_{\tau}\\
 &=\frac{36u_1^2+9e^2-36u_1\cdot e}{216} +\frac{W}{3}-\frac{3}{8}e^2-\frac{1}{3}\sum_{\tau\in \Lambda'} Z_{\tau}\\
 %&=\frac{36u_1^2-72e^2-36u_1\cdot e}{216} +\frac{W}{3}-\frac{1}{3}\sum_{\tau\in \Lambda'} Z_{\tau}\\
 &=\frac{u_1^2-2e^2-u_1\cdot e}{6} +\frac{W}{3}-\frac{1}{3}\sum_{\tau\in \Lambda'} Z_{\tau}.
 \end{align*}
-The classes $e^2$ and $u_1\cdot e$ are both divisible by 3 and by (\ref{WW}), $W$ is divisible by 3, so the following class is integral:
+By Proposition \ref{classedivisibleSym}, the classes $e^2$ and $u_1\cdot e$ are both divisible by 3 and by (\ref{WW}), $W$ is divisible by 3, so the following class is integral:
 $$
 \mathfrak{N}:=\frac{u_1^2+\sum_{\tau\in \Lambda'} (Z_{\tau}-Z_0)}{3}
 .
 $$
-Now we will conclude using the action of the monodromy group $\Sp(A[3])\ltimes A[3]$ on the element $\mathfrak{N}$ and the considerations from Section \ref{Section_Symplectic}. 
+From consideration in Section \ref{monodromyexplication}, we know that the group $\Sp(A[3])\ltimes A[3]\subset \Mon(\Pi)$ is a natural extension of 
+$\Sp(H_1(A,\Z))\ltimes A[3]\subset \Mon(H_1(A,\Z))$. Isometries of the image of the monodromy representation on $H_1(A,\Z)$ extend naturally to isometries of the image of the monodromy representation of $H^4(K_2(A),\Z)$ acting on $\Pi$ as describe in Proposition \ref{Hassettmonodromy} and acting on $\Sym$ by commuting with the map $j$ defined in Notation \ref{BasisH2KA}.
+Hence the group $\Sp(H_1(A,\Z))\ltimes A[3]$ can be seen as a subgroup of $\Mon(H^4(K_2(A),\Z))$. 
+
+Now we will conclude using this monodromy action of $\Sp(H_1(A,\Z))\ltimes A[3]$ on the element $\mathfrak{N}$ and the considerations from Section \ref{Section_Symplectic}. 
 %Before, we have to introduce some notation.
 %Let denote by $O_1$ the $\Ft$ vector space generated by the elements of the orbit of $u_1^2+\sum_{\tau\in \Lambda'} Z_{\tau}$ under the action of $\Sp(A[3])\ltimes A[3]$. We denote by $O_2$ the $\Ft$ vector space generated by the orbit, under the action of $\Sp(A[3])$, of the elements $u_1^2+\sum_{\tau\in\Lambda'} (Z_{\tau} - Z_{\tau+\tau_0})$, with $\tau_0\in A[3]$.
 %We denote by $\Sym^{o}=\Sym\cap c_2(K_2(A))^{\bot}\otimes $ and the projection $\Pr_1:\Sym^{o} $
 Proposition \ref{CombinedSymplectic} states now that
-the orbit of $\mathfrak{N}$ under the action of $\Sp(A[3])\ltimes A[3]$ is spanning a space of rank $51$ modulo $\Sym\oplus\Pi'$. However, by Lemma \ref{cleffinclassesdiv}, the intersection of that space with $\Sym^{sat}$ is one-dimensional and the intersection with $\Pi'^{sat}$ has dimension $31$, so we are left with $19$ linearly independent elements of the form:
-$\frac{x+y}{3}$ with $x\in \Sym\smallsetminus \left\{0\right\}$, and $y\in \Pi'\smallsetminus \left\{0\right\}$. These are the 19 classes which were missing. 
+the orbit of $\mathfrak{N}$ under the action of $\Sp(A[3])\ltimes A[3]$ is spanning a space of rank $51$ modulo $\Sym\oplus\Pi'$. However, by Lemma \ref{cleffinclassesdiv}, the intersection of that space with $\Sym^{sat}$ is one-dimensional and the intersection with $\Pi'^{sat}$ has dimension $31$, so we are left with $19$ linearly independent elements which provide 19 elements in $\frac{H^4(K_2(A),\Z)}{\Sym^{sat}\oplus\Pi'^{sat}}$.
+These 19 independent classes can be enumerated using a computer.
+\begin{prop}\label{XIX}
+We use Notation \ref{BasisH2KA}.
+The 19 following classes are divisible by 3 in $H^{4}(K_2(A),\Z)$ and their thirds provide a sub-vector space of dimension 19 of $\frac{H^4(K_2(A),\Z)}{\Sym^{sat}\oplus\Pi'^{sat}}$.
+\begin{itemize}
+\item[(i)]
+$u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda = \plan{0\\0\\0\\1}{0\\0\\1\\0}$,
+\item[(ii)]
+$v_2^2+v_2u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda= \plan{0\\0\\0\\1}{0\\1\\1\\0}$,
+\item[(iii)]
+$w_2^2+w_2u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda= \plan{0\\0\\1\\0}{0\\1\\0\\1}$,
+\item[(iv)]
+$w_2^2-w_2u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for  $\Lambda= \plan{0\\0\\1\\0}{0\\1\\0\\2}$,
+\item[(v)]
+$w_2^2-w_2v_2+w_2u_2+v_2^2+v_2u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda= \plan{0\\0\\1\\2}{0\\1\\0\\1}$,
+\item[(vi)]
+$w_1^2+w_1u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for  $\Lambda= \plan{0\\0\\0\\1}{1\\0\\2\\0}$,
+\item[(vii)]
+$w_1^2-w_1u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda= \plan{0\\0\\0\\1}{1\\0\\1\\0}$,
+\item[(viii)]
+$v_1^2+v_1u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda= \plan{0\\0\\1\\0}{1\\0\\0\\1}$,
+\item[(ix)]
+$v_1^2-v_1u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda= \plan{0\\0\\1\\0}{1\\0\\0\\2}$,
+\item[(x)]
+$v_1^2+v_1w_1-v_1u_2+w_1^2+w_1u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda = \plan{0\\0\\1\\2}{1\\0\\0\\2}$,
+\item[(xi)]
+$v_1^2+v_1w_1-v_1w_2-v_1v_2+v_1u_2+w_1^2+w_1w_2+w_1v_2-w_1u_2+w_2^2-w_2v_2+w_2u_2+v_2^2+v_2u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda = \plan{0\\0\\1\\2}{1\\1\\0\\1}$,
+\item[(xii)]
+$v_1^2-v_1w_1+v_1w_2-v_1v_2+v_1u_2+w_1^2+w_1w_2-w_1v_2+w_1u_2+w_2^2+w_2v_2-w_2u_2+v_2^2+v_2u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda = \plan{0\\0\\1\\1}{1\\2\\0\\1}$,
+\item[(xiii)]
+$u_1^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for  $\Lambda = \plan{0\\1\\0\\0}{1\\0\\0\\0}$,
+\item[(xiv)]
+$u_1^2-u_1v_2+v_2^2+ \sum_{\tau\in \Lambda} Z_\tau-Z_0$, for  $\Lambda = \plan{0\\1\\0\\0}{1\\0\\0\\1}$,
+\item[(xv)]
+$u_1^2+u_1v_2+v_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda= \plan{0\\1\\0\\0}{1\\0\\0\\2}$,
+\item[(xvi)]
+$u_1^2+u_1w_1+w_1^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda = \plan{0\\1\\0\\2}{1\\0\\0\\0}$,
+\item[(xvii)]
+$u_1^2+u_1w_1-u_1v_2+w_1^2+w_1v_2+v_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda = \plan{0\\1\\0\\2}{1\\0\\0\\1}$,
+\item[(xviii)]
+$u_1^2-u_1w_1+u_1w_2-u_1u_2+w_1^2+w_1w_2-w_1u_2+w_2^2+w_2u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for  $\Lambda = \plan{0\\1\\0\\1}{1\\0\\1\\0}$,
+\item[(xix)]
+$u_1^2+u_1v_1-u_1w_1+v_1^2+v_1w_1+w_1^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda = \plan{0\\1\\2\\1}{1\\0\\0\\0}$.
+\end{itemize}
+\end{prop}
+Now, it is only reaming to check that all the classes founding above generated $H^4(K_2(A),\Z)$.
+Let $\Sym^{over}$ be the over lattice of $\Sym$ obtained by adding all the classes from Proposition \ref{classedivisibleSym}. Hence by (\ref{DiscrSym}) and Proposition \ref{squareDiscr}, the lattice $\Sym^{over}$ has discriminant $3^{22}$. Let $\Pi'^{over}$ be the over lattice of $\Pi'$ obtained by adding all the thirds of the classes of Proposition \ref{XXXI}. Then, by (\ref{discrPi}) and Proposition \ref{squareDiscr}, the lattice $\Pi'^{over}$ has discriminant $3^{22}$. Therefore, the lattice $\Sym^{over}\oplus \Pi'^{over}$ has discriminant $3^{44}$. Finally, let $F$ be the over lattice of $\Sym^{over}\oplus \Pi'^{over}$ obtained by adding $Z_0$ and the thirds of all classes of Proposition \ref{XIX}. Using one more time Proposition \ref{squareDiscr}, we find that $\discr F=1$. Hence necessary $F=H^4(K_2(A),\Z)$. Moreover, from Proposition \ref{XIX}, we necessary have: $$\Sym^{over}=\Sym^{sat} \text{ and } \Pi'^{over}=\Pi'^{sat}.$$ We summarize the description of the integral basis of $H^{4}(K_2(A),\Z)$ in the following theorem.
+%\begin{proposition}
+%Using Notation \ref{BasisH2KA},
+%\item[(i)]
+%The following lattice is primitive:
+%\item[(ii)]
+%\end{proposition}
+%These are the 19 classes which were missing. 
+\begin{thm}\label{integralbasistheorem}
+Let $A$ be an abelian variety. We use Notation \ref{BasisH2KA} and \ref{TheZs}. 
+\begin{itemize}
+\item[(i)]
+Let $\Sym^{sat}$ be the primitive over lattice of $\Sym^2\left(H^2\left(\X,\Z\right)\right)$ in $H^4(K_2(A),\Z)$.
+The group $\frac{\Sym^{sat}}{\Sym^2\left(H^2\left(\X,\Z\right)\right)}=(\Z/2\Z)^{7}\oplus(\Z/3\Z)^{8}$ is generated by the elements:
+$$\frac{e \cdot y}{3},\ \frac{y^2 - \frac{1}{3} e\cdot y}{2} \text{ for } y\in\{u_1,u_2,v_1,v_2,w_1,w_2\},\ 
+\frac{e^2}{3} \text{ and } \frac{u_{1}\cdot u_{2}+v_{1}\cdot v_{2}+w_{1}\cdot w_{2}}{6}.$$
+\item[(ii)]
+Let $\Pi'$ be the lattice defined in Definition \ref{defiPi} and let $\Pi'^{sat}$ be the primitive over lattice of $\Pi'$ in $H^4(K_2(A),\Z)$.
+The group $\frac{\Pi'^{sat}}{\Pi'\ \ \ }=(\Z/3\Z)^{31}$ is generated by the classes:
+$$\frac{1}{3}\sum_{\tau\in\Lambda} \Big(Z_{\tau} - Z_{\tau+\tau'}\Big),
+$$
+with $\Lambda$ a non-isotropic group and $\tau'\in A[3]$. Moreover a basis of $\frac{\Pi'^{sat}}{\Pi'\ \ \ }$ is provided by the 31 classes described in Proposition \ref{XXXI}. 
+\item[(iii)]
+We have $$\frac{H^4(K_2(A),\Z)}{\Sym^{sat}\oplus\Pi'^{sat}}=(\Z/27\Z)\oplus(\Z/3\Z)^{19}.$$
+Moreover this group is generated by the class $Z_0$ and the 19 classes described in Proposition \ref{XIX}.
+\end{itemize}
+\end{thm}
+Moreover since $\Sym^{over}=\Sym^{sat}$, from the proofs of Proposition \ref{ChernSym}, \ref{classedivisibleSym} and Remark \ref{afterClassuvw}, we obtain the following corollary.
+\begin{corollary}\label{SymSatImage}
+The image of $H^4(A\hilb{3},\Z)$ under $\theta^*$ is equal to $\Sym^{sat}$. \qed
+\end{corollary}
