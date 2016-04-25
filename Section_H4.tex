@@ -69,7 +69,7 @@ Equation (\ref{sumZ}) and the non-divisibility are from \cite[Proposition 5.1]{H
 The image of $H^4(A\hilb{3},\Q)$ under the morphism $\theta^*$ is equal to $\Sym^2H^2(\X,\Q)$.
 \end{proposition}
 \begin{proof}
-We start by giving a set of generators of $H^4(A\hilb{n},\Q)$. Theorem 5.30 of \cite{LiQinWang} ensures that it is possible to do this in terms of multiplication operators. To enumerate elements of $H^*(A,\Q)$, we follow Notation \ref{TorusClasses}. Bais elements of $H^2(A,\Q)$ will be denoted by $b_i$ for $1\leq i\leq 6$. Then our set of generators is given by:
+We start by giving a set of generators of $H^4(A\hilb{n},\Q)$. Theorem 5.30 of \cite{LiQinWang} ensures that it is possible to do this in terms of multiplication operators. To enumerate elements of $H^*(A,\Q)$, we follow Notation \ref{TorusClasses}. Basis elements of $H^2(A,\Q)$ will be denoted by $b_i$ for $1\leq i\leq 6$. Then our set of generators is given by:
 \begin{center}
 \begin{tabular}{l|c}
 multiplication operator & number of classes \\ \hline
@@ -193,14 +193,14 @@ On the other hand, a formula developed in \cite{Kapfer} evaluates
 so the lattices $\Pi'$ cannot be primitive. Denote $\Sym^{sat}$ and $\Pi'^{sat}$ the respective primitive overlattices of $\Sym$ and $\Pi'$. $\Sym \oplus\Pi'$ is a sublattice of $H^4(\X,\Z)$ of index $2^{7}\cdot 3^{61}$ and we claim that $\Sym^{sat}\oplus \Pi'^{sat}$ has index $3^{22}$. 
 We have already found
 \begin{itemize}
- \item $7$ independent classes in $\Sym$ divisible by $2$,
- \item $8$ independent classes in $\Sym$ divisible by $3$,
+ \item $7$ linearly independent classes in $\Sym$ divisible by $2$,
+ \item $8$ linearly independent classes in $\Sym$ divisible by $3$,
 \end{itemize}
 To obtain a basis of $H^4(\X,\Z)$, 
-we are going to found
+we are now going to find
 \begin{itemize}
- \item $31$ independent classes in $\Pi'$ divisible by $3$ and
- \item $20$ independent classes in $\Sym^{sat}\oplus \Pi'^{sat}$, one divisible by $3^3$ and $19$ divisible by $3$.
+ \item $31$ linearly independent classes in $\Pi'$ divisible by $3$ and
+ \item $20$ linearly independent classes in $\Sym^{sat}\oplus \Pi'^{sat}$, one divisible by $3^3$ and $19$ divisible by $3$.
 \end{itemize}
 
 
@@ -228,9 +228,9 @@ By substracting these two expressions, we obtain a first class divisible by 3 in
 %\end{equation}
 %are integral. 
 By Proposition \ref{Hassettmonodromy}, the image of the monodromy representation on the $Z_\tau$ contains the symplectic group $\Sp(4,\mathbb F_3)$. We know by Proposition \ref{transitively} that $\Sp(4,\mathbb F_3)$ acts transitively on the non-isotropic planes of $A[3]$. Hence, modulo $\Pi'$, the orbit by $\Sp(4,\mathbb F_3)$ of the classes (\ref{first31}) is a $\mathbb F_3$-vector space naturally isomorphic to $D$ as introduced in Definition \ref{SymplecticIdeal}, so by Proposition \ref{SymplecticIdealsDimension}, we get a subspace of $\Pi'$ of rank $31$ of classes divisible by $3$.
-These classes can be completely enumerated using a computer.
+This subspace can be determined by a computer.
 \begin{prop}\label{XXXI}
-The 31 following classes of $\Pi'$ are divisible by 3 in $H^{4}(K_2(A),\Z)$ and their thirds provide a sub-vector space of dimension 31 of $\frac{\Pi'^{sat}}{\Pi'}$.
+The 31 following classes of $\Pi'$ are divisible by 3 in $H^{4}(K_2(A),\Z)$ and their thirds span a $\mathbb F_3$-vector space of dimension 31 in $\frac{\Pi'^{sat}}{\Pi'}$.
 $$\sum_{\tau\in\Lambda} \Big(Z_{\tau} - Z_{\tau+\tau'}\Big), \text{ with }$$
 \begin{itemize}
 \item[(i)]
@@ -261,7 +261,7 @@ $\Lambda=\plan{1\\0\\1\\1}{0\\1\\2\\2} \text{ and } \tau' = \vect{1\\1\\0\\2}$.
 \end{itemize}
 \end{prop}
 
-Now, we are going to find the classes divisible by 3 in $\Sym^{sat}\oplus \Pi'^{sat}$.
+Now we are going to find the classes divisible by 3 in $\Sym^{sat}\oplus \Pi'^{sat}$.
 The class $Z_0$ is not contained in $\Sym$ nor in $\Pi'$.
 It can be written as follows:
 $$
@@ -269,7 +269,7 @@ Z_0=\frac{\sum_{\tau\in A[3]}Z_\tau-\sum_{\tau\in A[3]}(Z_\tau-Z_0)}{81}
 \stackrel{(\ref{sumZ})}{=} \frac{c_2(K_2(A))-\frac{1}{3}\sum_{\tau\in A[3]}(Z_\tau-Z_0)}{27},
 $$
 where $\frac{1}{3}\sum_{\tau\in A[3]}(Z_\tau-Z_0)$ can be expressed as a linear combination of the 31 classes of Proposition \ref{XXXI} by Remark \ref{c2}.
-Hence $Z_0$ provide the class in $\Sym^{sat}\oplus \Pi'^{sat}$ divisible by $27$. 
+Hence $Z_0$ is the class in $\Sym^{sat}\oplus \Pi'^{sat}$ divisible by $27$. 
 Let us now find the remaining $19$ classes divisible by $3$.
 
 
@@ -288,7 +288,7 @@ $$
 \mathfrak{N}:=\frac{u_1^2+\sum_{\tau\in \Lambda'} (Z_{\tau}-Z_0)}{3}
 .
 $$
-From consideration in Section \ref{monodromyexplication}, we know that the group $\Sp(A[3])\ltimes A[3]\subset \Mon(\Pi)$ is a natural extension of 
+From the considerations in Section \ref{monodromyexplication}, we know that the group $\Sp(A[3])\ltimes A[3]\subset \Mon(\Pi)$ is a natural extension of 
 $\Sp(H_1(A,\Z))\ltimes A[3]\subset \Mon(H_1(A,\Z))$. Isometries of the image of the monodromy representation on $H_1(A,\Z)$ extend naturally to isometries of the image of the monodromy representation of $H^4(K_2(A),\Z)$ acting on $\Pi$ as describe in Proposition \ref{Hassettmonodromy} and acting on $\Sym$ by commuting with the map $j$ defined in Notation \ref{BasisH2KA}.
 Hence the group $\Sp(H_1(A,\Z))\ltimes A[3]$ can be seen as a subgroup of $\Mon(H^4(K_2(A),\Z))$. 
 
@@ -343,8 +343,8 @@ $u_1^2-u_1w_1+u_1w_2-u_1u_2+w_1^2+w_1w_2-w_1u_2+w_2^2+w_2u_2+u_2^2+\sum_{\tau\in
 $u_1^2+u_1v_1-u_1w_1+v_1^2+v_1w_1+w_1^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda = \plan{0\\1\\2\\1}{1\\0\\0\\0}$.
 \end{itemize}
 \end{prop}
-Now, it is only reaming to check that all the classes founding above generated $H^4(K_2(A),\Z)$.
-Let $\Sym^{over}$ be the over lattice of $\Sym$ obtained by adding all the classes from Proposition \ref{classedivisibleSym}. Hence by (\ref{DiscrSym}) and Proposition \ref{squareDiscr}, the lattice $\Sym^{over}$ has discriminant $3^{22}$. Let $\Pi'^{over}$ be the over lattice of $\Pi'$ obtained by adding all the thirds of the classes of Proposition \ref{XXXI}. Then, by (\ref{discrPi}) and Proposition \ref{squareDiscr}, the lattice $\Pi'^{over}$ has discriminant $3^{22}$. Therefore, the lattice $\Sym^{over}\oplus \Pi'^{over}$ has discriminant $3^{44}$. Finally, let $F$ be the over lattice of $\Sym^{over}\oplus \Pi'^{over}$ obtained by adding $Z_0$ and the thirds of all classes of Proposition \ref{XIX}. Using one more time Proposition \ref{squareDiscr}, we find that $\discr F=1$. Hence necessary $F=H^4(K_2(A),\Z)$. Moreover, from Proposition \ref{XIX}, we necessary have: $$\Sym^{over}=\Sym^{sat} \text{ and } \Pi'^{over}=\Pi'^{sat}.$$ We summarize the description of the integral basis of $H^{4}(K_2(A),\Z)$ in the following theorem.
+It only remains to check that all the classes above generate $H^4(K_2(A),\Z)$.
+Let $\Sym^{over}$ be the overlattice of $\Sym$ obtained by adding all the classes from Proposition \ref{classedivisibleSym}. Hence by (\ref{DiscrSym}) and Proposition \ref{squareDiscr}, the lattice $\Sym^{over}$ has discriminant $3^{22}$. Let $\Pi'^{over}$ be the overlattice of $\Pi'$ obtained by adding all the thirds of the classes of Proposition \ref{XXXI}. Then, by (\ref{discrPi}) and Proposition \ref{squareDiscr}, the lattice $\Pi'^{over}$ has discriminant $3^{22}$. Therefore, the lattice $\Sym^{over}\oplus \Pi'^{over}$ has discriminant $3^{44}$. Finally, let $F$ be the overlattice of $\Sym^{over}\oplus \Pi'^{over}$ obtained by adding $Z_0$ and the thirds of all classes of Proposition \ref{XIX}. Using one more time Proposition \ref{squareDiscr}, we find that $\discr F=1$. Hence necessarily $F=H^4(K_2(A),\Z)$. Moreover, from Proposition \ref{XIX}, we obtain: $$\Sym^{over}=\Sym^{sat} \text{ and } \Pi'^{over}=\Pi'^{sat}.$$ We summarize the description of the integral basis of $H^{4}(K_2(A),\Z)$ in the following theorem.
 %\begin{proposition}
 %Using Notation \ref{BasisH2KA},
 %\item[(i)]
@@ -356,18 +356,18 @@ Let $\Sym^{over}$ be the over lattice of $\Sym$ obtained by adding all the class
 Let $A$ be an abelian variety. We use Notation \ref{BasisH2KA} and \ref{TheZs}. 
 \begin{itemize}
 \item[(i)]
-Let $\Sym^{sat}$ be the primitive over lattice of $\Sym^2\left(H^2\left(\X,\Z\right)\right)$ in $H^4(K_2(A),\Z)$.
+Let $\Sym^{sat}$ be the primitive overlattice of $\Sym^2\left(H^2\left(\X,\Z\right)\right)$ in $H^4(K_2(A),\Z)$.
 The group $\frac{\Sym^{sat}}{\Sym^2\left(H^2\left(\X,\Z\right)\right)}=(\Z/2\Z)^{7}\oplus(\Z/3\Z)^{8}$ is generated by the elements:
 $$\frac{e \cdot y}{3},\ \frac{y^2 - \frac{1}{3} e\cdot y}{2} \text{ for } y\in\{u_1,u_2,v_1,v_2,w_1,w_2\},\ 
 \frac{e^2}{3} \text{ and } \frac{u_{1}\cdot u_{2}+v_{1}\cdot v_{2}+w_{1}\cdot w_{2}}{6}.$$
 \item[(ii)]
-Let $\Pi'$ be the lattice defined in Definition \ref{defiPi} and let $\Pi'^{sat}$ be the primitive over lattice of $\Pi'$ in $H^4(K_2(A),\Z)$.
+Let $\Pi'$ be the lattice from Definition \ref{defiPi} and let $\Pi'^{sat}$ be the primitive over lattice of $\Pi'$ in $H^4(K_2(A),\Z)$.
 The group $\frac{\Pi'^{sat}}{\Pi'\ \ \ }=(\Z/3\Z)^{31}$ is generated by the classes:
 $$\frac{1}{3}\sum_{\tau\in\Lambda} \Big(Z_{\tau} - Z_{\tau+\tau'}\Big),
 $$
 with $\Lambda$ a non-isotropic group and $\tau'\in A[3]$. Moreover a basis of $\frac{\Pi'^{sat}}{\Pi'\ \ \ }$ is provided by the 31 classes described in Proposition \ref{XXXI}. 
 \item[(iii)]
-We have $$\frac{H^4(K_2(A),\Z)}{\Sym^{sat}\oplus\Pi'^{sat}}=(\Z/27\Z)\oplus(\Z/3\Z)^{19}.$$
+We have $$\frac{H^4(K_2(A),\Z)}{\Sym^{sat}\oplus\Pi'^{sat}}=(\frac{\Z}{27\Z})\oplus(\frac{\Z}{3\Z})^{19}.$$
 Moreover this group is generated by the class $Z_0$ and the 19 classes described in Proposition \ref{XIX}.
 \end{itemize}
 \end{thm}
