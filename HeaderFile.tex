@@ -1,7 +1,8 @@
 
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{amsmath,amssymb,amsfonts,amscd,amsthm,mathrsfs}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amssymb,amsfonts,amscd,amsthm,mathrsfs,mathtools}
 \usepackage[all]{xy}
 \usepackage{appendix,
 listings,
@@ -58,7 +59,8 @@ hyperref}
 \newcommand{\q}{\mathfrak{q}}
 \newcommand{\pone}{ \mathfrak{p}_{ - 1} }
 
-\newcommand{\coloneqq}{:=}
+\newcommand{\coloneqq}{\vcentcolon=}
+\newcommand{\defIs}{\vcentcolon=}
 \newcommand{\kum}[2]{K_{ #2 }( #1 )}
 \newcommand{\X}{\kum{A}{2}}
 \newcommand{\cc}{c_2(\X)}
