@@ -139,61 +139,16 @@ On the other hand $\rk \Pi'=80$, it follows that $l_{2}^{4}=40$.
 %\end{equation}
 %Hence, we have $\rk \Pi'^{\iota}=\frac{\# A[3] -1}{2}=40$.
 \end{proof}
-\section{Application to singular irreducible symplectic varieties}\label{BeauvilleForm}
-\subsection{Statement of the main theorem}\label{statement}
+\section{Proof of Theorem \ref{theorem}}\label{BeauvilleForm}
+%\subsection{Statement of the main theorem}\label{statement}
 
-In \cite{Nanikawa}, Namikawa proposes a definition of the Beauville-Bogomolov form for some singular irreducible symplectic varieties. He assumes that the singularities are only $\mathbb{Q}$-factorial with a singular locus of codimension $\geq 4$. Under these assumptions, he proves a local Torelli theorem. This result was completed by a generalization of the Fujiki formula by Matsushita in \cite{Mat}. 
-\begin{thm}\label{Form}
-Let $X$ be a projective irreducible symplectic variety of dimension $2n$ with only $\mathbb{Q}$-factorial singularities, and $\codim\sing X\geq 4$.
-There exists a unique indivisible integral symmetric non-degenerated bilinear form $B_{X}$ on $H^2(X,\Z)$ and a unique positive constant $c_{X}\in \mathbb{Q}$, such that for any $\alpha\in H^2(X,\mathbb{C})$,
-\begin{equation}
-\alpha^{2n}=c_{X}B_{X}(\alpha,\alpha)^n
-\label{Fujiki}
-\end{equation}
-and such that for $0\neq \omega\in H^{0}(\Omega_{U}^{2})$ a holomorphic 2-from on the smooth locus $U$ of $X$:
-\begin{equation}
-B_{X}(\omega+\overline{\omega},\omega+\overline{\omega})>0.
-\label{Fujikiposi}
-\end{equation}
-Moreover, the signature of $B_{X}$ is $(3,h^{2}(X,\mathbb{C})-3)$.
-
-The form $B_{X}$ is called the Beauville--Bogomolov form of $X$.
-\end{thm}
-\begin{proof}
-The statement of the theorem in \cite{Mat} does not say that the form is integral. However, let $X_{s}$ be a fiber of the Kuranishi family of $X$, with the same idea as Matsushita's proof, we can see that $B_{X}$ and $B_{X_{s}}$ are proportional. Then, it follows using the proof of Theorem 5 a), c) of \cite{Beauville}.
-\end{proof}
-We can also consider its polarized form.
-\begin{prop}\label{beauville}
-Let $X$ be a projective irreducible symplectic variety of dimension $2n$ with $\codim\sing X\geq 4$.
-The equality (\ref{Fujiki}) of Theorem \ref{Form} implies that
-$$\alpha_{1}\cdot...\cdot\alpha_{2n}=\frac{c_{X}}{(2n)!}\sum_{\sigma\in S_{2n}}B_{X}(\alpha_{\sigma(1)},\alpha_{\sigma(2)})...B_{X}(\alpha_{\sigma(2n-1)},\alpha_{\sigma(2n)}).$$
-for all $\alpha_{i}\in H^{2}(X,\Z)$.
-\end{prop}
-These results were then generalized by Kirschner for symplectic complex spaces in \cite{Tim}. 
-In \cite[Theorem 2.5]{Lol2} was appeared the first concrete example of Beauville-Bogomolov lattice for a singular irreducible symplectic variety. The variety studied in \cite{Lol2} is a partial resolution of an irreducible symplectic manifold of $K3^{[2]}$-type quotiented by a symplectic involution. The objective of this section is to provide a new example of a Beauville-Bogomolov lattice replacing the manifold of $K3^{[2]}$-type by a fourfold of Kummer type. Knowing the integral basis of the cohomology group of the generalized Kummer provided in Part \ref{integralcohomology}, this calculation becomes possible. Moreover the calculation will be much simpler as in \cite{Lol2} because of the general techniques for calculating integral cohomology of quotients developed in \cite{Lol} and the new technique using monodromy developed in Lemma \ref{Ddelta}. 
-The other techniques developed in \cite{Lol2} are also in \cite{Lol}, so to simplify the reading, we will only cite \cite{Lol2} in the rest of the section.
-
-
-
-Concretely, let $X$ be an irreducible symplectic fourfold of Kummer type and $\iota$ a symplectic involution on $X$. By Theorem \ref{SymplecticInvo} the fixed locus of $\iota$ is the union of 36 points and a K3 surface $Z_0$. Then the singular locus of $K:=X/\iota$ is the union of a K3 surface and 36 points. The singular locus is not of codimension four. We will lift to a partial resolution of singularities,
-$K'$ of $K$, obtained by blowing up the image of $Z_0$. By Section 2.3 and Lemma 1.2 of \cite{Fujiki2}, the variety $K'$ is an irreducible symplectic V-manifold which has singular locus of codimension four.
-
-
-All Section \ref{BeauvilleForm} is devoted to prove the following theorem.
-\begin{thm}\label{theorem}
-Let $X$ be an irreducible symplectic fourfold of Kummer type and $\iota$ a symplectic involution on $X$.
-Let $Z_0$ be the K3 surface which is in the fixed locus of $\iota$.
-We denote $K=X/\iota$ and $K'$ the partial resolution of singularities of $K$ obtained by blowing up the image of $Z_0$.
-Then the Beauville--Bogomolov lattice $H^2(K',\Z)$ is isomorphic to $U(3)^{3}\oplus\left(
-\begin{array}{cc}
--5 & -4\\
--4 & -5 
-\end{array} \right)$, and the Fujiki constant $c_{K'}$ is equal to $8$.
-\end{thm}
-The Beauville-Bogomolov form is a topological invariant, hence from Theorem \ref{SymplecticInvo} we can assume that $X$ is a generalized Kummer fourfold and $\iota=-\id_A$. As it will be useful to prove Lemma \ref{Ddelta}, we can assume even more. All generalized Kummer fourfolds are deformation equivalent, hence we can assume that $A=E_\xi\times E_\xi$, where $$E_\xi:=\frac{\C}{\left\langle 1,e^{\frac{2i\pi}{6}}\right\rangle}.$$
-This abelian has the interest to carry more automorphisms.
+We can first remark that the Beauville-Bogomolov form is a topological invariant, hence from Theorem \ref{SymplecticInvo} we can assume that $X$ is a generalized Kummer fourfold and $\iota=-\id_A$. As it will be useful to prove Lemma \ref{Ddelta}, we can assume even more. All generalized Kummer fourfolds are deformation equivalent, hence we can assume that $A=E_\xi\times E_\xi$, where 
+$$E_\xi:=\frac{\C}{\Lambda_0},$$
+with $\Lambda_0 = \left<1,\xi\right>$.
+This abelian has the interest to carry enough automorphisms.
 \begin{definition}\label{elliptic6}
-Denote $\xi\in\C$ a primitive sixth root of unity and $E_\xi$ the elliptic curve given by the choice $\Lambda_0 = \left<1,\xi\right>$, so by Proposition~\ref{EndLambda}, $\End(\Lambda_0)=\Lambda_0$ is the ring of Eisenstein integers. Define a group $G_\xi$ of automorphisms of $E_\xi\times E_\xi$ by the following generators in $\GL(2,\End(\Lambda_0))$:
+%Denote $\xi\in\C$ a primitive sixth root of unity and $E_\xi$ the elliptic curve given by the choice $\Lambda_0 = \left<1,\xi\right>$, so by Proposition~\ref{EndLambda}, $\End(\Lambda_0)=\Lambda_0$ is the ring of Eisenstein integers. 
+Define a group $G_\xi$ of automorphisms of $E_\xi\times E_\xi$ by the following generators in $\GL(2,\End(\Lambda_0))$:
 \begin{align*}
 g_1 &= \left( {\begin{array}{cc}
    \xi & 0 \\       0 & 1      
@@ -222,9 +177,9 @@ Denote $x_1,x_2,x_3$ the non-zero points in $E_\xi[2]$. The orbit of cardinality
  \{(x_1,x_2),(x_2,x_3),(x_3,x_1)\}, \quad  \{(x_1,x_3),(x_2,x_1),(x_3,x_2)\}. \qedhere
 \end{gather*}
 \end{proof}
-\subsection{Overview on the proof of Theorem \ref{theorem}}
-We first provide all the notation that we will need during the proof in Section \ref{nota}.
-Then the proof is divided into the following steps:
+\subsection{Overview on the proof of Theorem \ref{theorem} and notation}\label{nota}
+%We first provide all the notation that we will need during the proof in Section \ref{nota}.
+The proof is divided into the following steps:
 \begin{itemize}
 \item[(1)]
 First (\ref{l22}), (\ref{l3}), Proposition \ref{invariants} and Corollary \ref{utile'} will provide the $H^4$-normality of $(K_2(A),\iota)$ in Section \ref{H4}.
@@ -235,7 +190,9 @@ An adaptation of the $H^2$-normality (Lemma \ref{primitive2}) and several lemmas
 \item[(4)]
 Knowing an integral basis of $H^{2}(K',\Z)$, we end the calculation of the Beauville--Bogomolov form in Section \ref{beauK'} using intersection theory and the generalized Fujiki formula (Theorem \ref{Form}).
 \end{itemize}
-\subsection{Notation}\label{nota}
+%\subsection{Notation}\label{nota}
+
+Now we provide some notation that we will be used during the proof.
 Let $K_{2}(A)$ be a generalized Kummer fourfold endowed with the symplectic involution $\iota$ induced by $-\id_A$.
 We denote by $\pi$ the quotient map $K_{2}(A)\rightarrow K_{2}(A)/\iota$.
 From Theorem \ref{SymplecticInvo}, we know that the singular locus of the quotient $K_{2}(A)/\iota$ is the K3 surface, image by $\pi$ of $Z_{0}$, and 36 isolated points. We denote $\overline{Z_{0}}:=\pi(Z_{0})$. 
@@ -594,7 +551,7 @@ $$f\cdot \pi_2(s^{-1}(\{a_1,a_2,a_3\})=\pi_2(s^{-1}(\{f(a_1),f(a_2),f(a_3)\}),$$
 and act trivially on $D_{36}$ and $\pi_{2*}(s^{*}(e))$. 
 As explained in Remark \ref{PlaneTriple} the 2 orbits of the action of $\Sp A[2]$ on the set $\mathfrak{D}:=\left\{D_1,...,D_{35}\right\}$ correspond to the two sets of isotropic and non-isotropic planes in $A[2]$. Hence by Proposition \ref{OrbitesSp} (3), (4)  the action of $\Sp A[2]$ on the set $\mathfrak{D}$ has 2 orbits: one of 15 elements and another of 20 elements. 
 
-On the other hand, as we mentioned in the end of Section \ref{statement}, we can assume that $A=E_\xi\times E_\xi$ where $E_\xi$ is the elliptic curve introduced in Definition \ref{elliptic6}. Hence there is the following automorphism group acting on $A$:
+On the other hand, as we have mentioned, we can assume that $A=E_\xi\times E_\xi$ where $E_\xi$ is the elliptic curve introduced in Definition \ref{elliptic6}. Hence there is the following automorphism group acting on $A$:
 $$G:=\left\langle \left(
 \begin{array}{cc}
 \rho & 0\\
@@ -647,6 +604,13 @@ Then this Cartier divisor induces a Cartier divisor on $K'$ which necessarily co
 \end{proof}
 \subsection{Calculation of $B_{K'}$}\label{beauK'}
 We finish the proof of Theorem \ref{theorem}, calculating $B_{K'}$. We continue using the notation provided in Section \ref{nota}. 
+We will need a polarized form of the Fujiki formula.
+\begin{prop}\label{beauville}
+Let $X$ be a projective irreducible symplectic variety of dimension $2n$ with $\codim\sing X\geq 4$.
+The equality (\ref{Fujiki}) of Theorem \ref{Form} implies that
+$$\alpha_{1}\cdot...\cdot\alpha_{2n}=\frac{c_{X}}{(2n)!}\sum_{\sigma\in S_{2n}}B_{X}(\alpha_{\sigma(1)},\alpha_{\sigma(2)})...B_{X}(\alpha_{\sigma(2n-1)},\alpha_{\sigma(2n)}).$$
+for all $\alpha_{i}\in H^{2}(X,\Z)$.
+\end{prop}
 \begin{lemme}\label{Zinter}
 We have $$\overline{Z_{0}}'^{2}=-2r^{*}(\overline{Z_{0}}).$$
 %We have $$\hat{Z_{0}}^{2}=-s_{1}^{*}(Z_{0}).$$
