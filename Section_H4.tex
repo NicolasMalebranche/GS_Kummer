@@ -1,9 +1,13 @@
 
  \section{Middle cohomology}\label{Middle}
-The middle cohomology $H^4(\X,\Z)$ has been studied by Hassett and Tschinkel in \cite{Hassett}. We first recall some of their results,
-then we proceed by using $\theta^*$ to give a partial description of $H^4(\X,\Z)$ in terms of the well-understood cohomology of $A\hilb{3}$. 
-Finally, we find a basis of $H^4(\X,\Z)$ using the action of the image of monodromy representation.
-\subsection{Notation and Hassett--Tschinkel's formulas}
+The middle cohomology $H^4(\X,\Z)$ has been studied by Hassett and Tschinkel in \cite{Hassett}. We recall some of their results in Section \ref{HassetTschinkelSection},
+then we proceed by using $\theta^*$ to give a partial description of $H^4(\X,\Z)$ in terms of the well-understood cohomology of $A\hilb{3}$ in Section \ref{SyminH4}. 
+Finally in Section \ref{integralbasisH4}, we find a basis of $H^4(\X,\Z)$ using the action of the image of monodromy representation.
+In order to use monodromy representation, we start by recalling notion of monodromy on abelian surfaces in Section \ref{monodromyexplication}. We will also need some technical calculation related the the action of the symplectic group over finite fields (Section \ref{Section_Symplectic}).
+\subsection{A monodromy representation on Abelian surfaces and Generalized Kummer four-fold}\label{monodromyexplication}
+\input{Section_Abelian.tex}
+\input{Section_Symplectic.tex}
+\subsection{Notation and Hassett--Tschinkel's formulas}\label{HassetTschinkelSection}
 \begin{notation}\label{TheZs}
 For each $\tau \in A$, denote $W_\tau$ the Brian\c con subscheme of $A\hilb{3}$ consisting of the elements supported entirely at the point $\tau$. If $\tau\in A[3]$ is a point of three-torsion, $W_\tau$ is actually a subscheme of $\X$. We will also use the symbol $W_\tau$ for the corresponding class in $H^4(\X,\Z)$. Further, set 
 $$
@@ -64,7 +68,7 @@ Y_p = \frac{1}{72}\Big(3\cc + e^2\Big),
 from which we deduce (\ref{WFormula}) and (\ref{ChernY}).
 Equation (\ref{sumZ}) and the non-divisibility are from \cite[Proposition 5.1]{Hassett}.
 \end{proof}
-\subsection{Properties of $\Sym^2H^2(K_2(A),\Z)$ in $H^4(K_2(A),\Z)$}
+\subsection{Properties of $\Sym^2H^2(K_2(A),\Z)$ in $H^4(K_2(A),\Z)$}\label{SyminH4}
 \begin{proposition}\label{ImSym}
 The image of $H^4(A\hilb{3},\Q)$ under the morphism $\theta^*$ is equal to $\Sym^2H^2(\X,\Q)$.
 \end{proposition}
@@ -179,7 +183,7 @@ $
 is an integral class, too.
 \end{itemize}
 \end{proof}
-\subsection{Integral basis of $H^4(K_2(A),\Z)$}
+\subsection{Integral basis of $H^4(K_2(A),\Z)$}\label{integralbasisH4}
 
 From the intersection properties $Z_\tau \cdot Z_{\tau'} = 1$ for $\tau\neq \tau'$ and $Z_\tau^2 = 4$ from Section 4 of \cite{Hassett}, we compute
 \begin{equation}
@@ -344,7 +348,7 @@ $u_1^2+u_1v_1-u_1w_1+v_1^2+v_1w_1+w_1^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for 
 \end{itemize}
 \end{prop}
 It only remains to check that all the classes above generate $H^4(K_2(A),\Z)$.
-Let $\Sym^{over}$ be the overlattice of $\Sym$ obtained by adding all the classes from Proposition \ref{classedivisibleSym}. Hence by (\ref{DiscrSym}) and Proposition \ref{squareDiscr}, the lattice $\Sym^{over}$ has discriminant $3^{22}$. Let $\Pi'^{over}$ be the overlattice of $\Pi'$ obtained by adding all the thirds of the classes of Proposition \ref{XXXI}. Then, by (\ref{discrPi}) and Proposition \ref{squareDiscr}, the lattice $\Pi'^{over}$ has discriminant $3^{22}$. Therefore, the lattice $\Sym^{over}\oplus \Pi'^{over}$ has discriminant $3^{44}$. Finally, let $F$ be the overlattice of $\Sym^{over}\oplus \Pi'^{over}$ obtained by adding $Z_0$ and the thirds of all classes of Proposition \ref{XIX}. Using one more time Proposition \ref{squareDiscr}, we find that $\discr F=1$. Hence necessarily $F=H^4(K_2(A),\Z)$. Moreover, from Proposition \ref{XIX}, we obtain: $$\Sym^{over}=\Sym^{sat} \text{ and } \Pi'^{over}=\Pi'^{sat}.$$ We summarize the description of the integral basis of $H^{4}(K_2(A),\Z)$ in the following theorem.
+Let $\Sym^{over}$ be the overlattice of $\Sym$ obtained by adding all the classes from Proposition \ref{classedivisibleSym}. Hence by (\ref{DiscrSym}) and (\ref{squareDiscr}), the lattice $\Sym^{over}$ has discriminant $3^{22}$. Let $\Pi'^{over}$ be the overlattice of $\Pi'$ obtained by adding all the thirds of the classes of Proposition \ref{XXXI}. Then, by (\ref{discrPi}) and Proposition \ref{squareDiscr}, the lattice $\Pi'^{over}$ has discriminant $3^{22}$. Therefore, the lattice $\Sym^{over}\oplus \Pi'^{over}$ has discriminant $3^{44}$. Finally, let $F$ be the overlattice of $\Sym^{over}\oplus \Pi'^{over}$ obtained by adding $Z_0$ and the thirds of all classes of Proposition \ref{XIX}. Using one more time (\ref{squareDiscr}), we find that $\discr F=1$. Hence necessarily $F=H^4(K_2(A),\Z)$. Moreover, from Proposition \ref{XIX}, we obtain: $$\Sym^{over}=\Sym^{sat} \text{ and } \Pi'^{over}=\Pi'^{sat}.$$ We summarize the description of the integral basis of $H^{4}(K_2(A),\Z)$ in the following theorem.
 %\begin{proposition}
 %Using Notation \ref{BasisH2KA},
 %\item[(i)]

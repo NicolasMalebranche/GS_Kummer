@@ -190,7 +190,38 @@ Then the Beauville--Bogomolov lattice $H^2(K',\Z)$ is isomorphic to $U(3)^{3}\op
 -4 & -5 
 \end{array} \right)$, and the Fujiki constant $c_{K'}$ is equal to $8$.
 \end{thm}
-The Beauville-Bogomolov form is a topological invariant, hence from Theorem \ref{SymplecticInvo} we can assume that $X$ is a generalized Kummer fourfold and $\iota=-\id_A$. As it will be useful to prove Lemma \ref{Ddelta}, we can assume even more. All generalized Kummer fourfolds are deformation equivalent, hence we can assume that $A=E_\xi\times E_\xi$, where $E_\xi$ is the elliptic curve provided in Definition \ref{elliptic6}: $$E_\xi:=\frac{\C}{\left\langle 1,e^{\frac{2i\pi}{6}}\right\rangle}.$$
+The Beauville-Bogomolov form is a topological invariant, hence from Theorem \ref{SymplecticInvo} we can assume that $X$ is a generalized Kummer fourfold and $\iota=-\id_A$. As it will be useful to prove Lemma \ref{Ddelta}, we can assume even more. All generalized Kummer fourfolds are deformation equivalent, hence we can assume that $A=E_\xi\times E_\xi$, where $$E_\xi:=\frac{\C}{\left\langle 1,e^{\frac{2i\pi}{6}}\right\rangle}.$$
+This abelian has the interest to carry more automorphisms.
+\begin{definition}\label{elliptic6}
+Denote $\xi\in\C$ a primitive sixth root of unity and $E_\xi$ the elliptic curve given by the choice $\Lambda_0 = \left<1,\xi\right>$, so by Proposition~\ref{EndLambda}, $\End(\Lambda_0)=\Lambda_0$ is the ring of Eisenstein integers. Define a group $G_\xi$ of automorphisms of $E_\xi\times E_\xi$ by the following generators in $\GL(2,\End(\Lambda_0))$:
+\begin{align*}
+g_1 &= \left( {\begin{array}{cc}
+   \xi & 0 \\       0 & 1      
+   \end{array} } \right),
+ &
+g_2 &= \left( {\begin{array}{cc}
+   0 & 1 \\       1 & 0      
+   \end{array} } \right),
+ &
+g_3 &= \left( {\begin{array}{cc}
+   1 & 1 \\       0 & 1     
+   \end{array} } \right).
+\end{align*}
+\end{definition}
+For $A=E_\xi\times E_\xi$, let $V =A[2]$ be the (fourdimensional) $\mathbb F_2$-vector space of $2$-torsion points on $A$ and let $\mathfrak T$ be the set of planes in $V$. Note that by Remark~\ref{PlaneTriple} a plane in $V$ can be identified with an unordered triple $\{x,y,z\}$ with $0\neq x,y,z\in V$ and $x+y+z=0$. The action of $G_\xi$ on $A$ induces actions of $G_\xi$ on $A[2]$ and $\mathfrak T$. 
+The following lemma will be used to prove Theorem \ref{fin}.
+\begin{lemma}\label{orbitesG}
+There are two orbits of $G_\xi$ on $\mathfrak T$, of cardinalities $5$ and $30$.
+\end{lemma}
+\begin{proof}
+Note that the generators $g_2$ and $g_3$ exist because $A$ is of the form $E\times E$, while $g_1$ exists only in the special case $E=E_\xi$. Indeed, multiplication with $\xi$ induces a cyclic permutation on $E_\xi[2]$. 
+The orbits can be explicitely determined by a suitable computer program. For verification, we give one of the orbits explicitely.
+Denote $x_1,x_2,x_3$ the non-zero points in $E_\xi[2]$. The orbit of cardinality five is then given by
+\begin{gather*}
+\{(0,x_1),(0,x_2),(0,x_3)\} , \quad  \{(x_1,0),(x_2,0),(x_3,0)\},\quad  \{(x_1,x_1),(x_2,x_2),(x_3,x_3)\}  \\
+ \{(x_1,x_2),(x_2,x_3),(x_3,x_1)\}, \quad  \{(x_1,x_3),(x_2,x_1),(x_3,x_2)\}. \qedhere
+\end{gather*}
+\end{proof}
 \subsection{Overview on the proof of Theorem \ref{theorem}}
 We first provide all the notation that we will need during the proof in Section \ref{nota}.
 Then the proof is divided into the following steps:
@@ -234,6 +265,66 @@ $$\pi_{1*}(s_1^{*}(y))=r'^{*}(\pi_{*}(y)),$$
 \end{rmk}
 Moreover, we will also use the notation provided in Notation \ref{BasisH2KA} and in Section \ref{Middle}.
 \subsection{The couple $(K_{2}(A),\iota)$ is $H^{4}$-normal}\label{H4}
+We will use the notion of $H^k$-normality from Definition 3.3.4 of \cite{Lol} that we recall here.
+\begin{defi}
+Let $X$ be a compact complex manifold and $\iota$ be an involution. 
+Let $0\leq k\leq 2n$, and assume that $H^{k}(X,\Z)$ is torsion free. 
+Then if the map $\pi_{*}:H^{k}(X,\Z)\rightarrow H^{k}(X/G,\Z)/\tors$ is surjective, we say that $(X,\iota)$ is \emph{$H^{k}$-normal}.
+\end{defi}
+\begin{rmk}\label{Hnormal}
+The $H^{k}$-normal property is equivalent to the following property.
+
+For $x\in H^{k}(X,\Z)^{\iota}$, $\pi_{*}(x)$ is divisible by 2 if and only if there exists $y\in H^{k}(X,\Z)$ such that 
+$x=y+\iota^{*}(y)$.
+\end{rmk}
+We will use the following theorem (Corollary ?? of \cite{Lol}) to prove the $H^4$-normality of $(K_{2}(A),\iota)$.
+%We also need to recall Definition 3.5.1 of \cite{Lol} about fixed loci.
+\begin{defi}\label{negligible}
+Let $X$ be a compact complex manifold of dimension $n$ and $G$ an automorphism group of prime order $p$. 
+\begin{itemize}
+\item[1)]
+We will say that $\Fix G$ is negligible if the following conditions are verified:
+\begin{itemize}
+\item[$\bullet$]
+$H^{*}(\Fix G,\Z)$ is torsion-free.
+\item[$\bullet$]
+$\codim \Fix G\geq \frac{n}{2}+1$.
+\end{itemize}
+\item[2)]
+We will say that $\Fix G$ is almost negligible if the following conditions are verified:
+\begin{itemize}
+\item[$\bullet$]
+$H^{*}(\Fix G,\Z)$ is torsion-free.
+\item[$\bullet$]
+$n$ is even and $n\geq 4$.
+\item[$\bullet$]
+$\codim \Fix G =\frac{n}{2}$, and the purely $\frac{n}{2}$-dimensional part of $\Fix G$ is connected and simply connected. We denote the $\frac{n}{2}$-dimensional component by $Z$.
+\item[$\bullet$]
+The cocycle $\left[Z\right]$ associated to $Z$ is primitive in $H^{n}(X,\Z)$.
+\end{itemize}
+\end{itemize}
+\end{defi}
+%Now, we are ready to provide Theorem ?? of \cite{Lol} which we will be one of the main tools in Part \ref{quotient}.
+\begin{thm}\label{utile'}
+Let $G=\left\langle \varphi\right\rangle$ be a group of prime order $p=2$ acting by automorphisms on a Kähler manifold $X$ of dimension $2n$. 
+We assume:
+\begin{itemize}
+\item[i)]
+$H^{*}(X,\Z)$ is torsion-free,
+\item[ii)]
+$\Fix G$ is negligible or almost negligible,
+\item[iii)]
+$l_{1,-}^{2k}(X)=0$ for all $1\leq k \leq n$, and
+\item[iv)]
+$l_{1,+}^{2k+1}(X)=0$ for all $0\leq k \leq n-1$, when $n>1$.
+\item[v)]
+
+$l_{1,+}^{2n}(X)+2\left[\sum_{i=0}^{n-1}l_{1,-}^{2i+1}(X)+\sum_{i=0}^{n-1}l_{1,+}^{2i}(X)\right]
+= \sum_{k=0}^{\dim \Fix G}h^{2k}(\Fix G,\Z).$
+
+\end{itemize}
+Then $(X,G)$ is $H^{2n}$-normal.
+\end{thm}
 \begin{prop}\label{H4norm}
 The couple $(K_{2}(A),\iota)$ is $H^{4}$-normal.
 \end{prop}
@@ -417,6 +508,19 @@ Hence the result follows from the exact sequence
 $$\xymatrix@C=10pt@R=0pt{H^{3}(\widetilde{K},U,\Z)\ar[r] &H^{3}(\widetilde{K},\Z)\ar[r] &H^{3}(U,\Z)}$$
 and from the fact that $H^{3}(\widetilde{K},U,\Z)=0$ by Thom isomorphism.
 \end{proof}
+To prove the next lemma, 
+we will need a proposition from Section 7 of \cite{BNS} about Smith theory. Let $X$ be a topological space and let $G=\left\langle \iota\right\rangle$ be an involution acting on $X$. 
+Let $\sigma:=1+\iota\in \mathbb{F}_{2}[G]$. We consider the chain complex $C_{*}(X)$ of $X$ with coefficients in $\mathbb{F}_{2}$ and its subcomplex $\sigma C_{*}(X)$. We denote by $X^{G}$ the fixed locus of the action of $G$ on $X$. 
+\begin{prop}\label{SmithProp}
+\begin{itemize}
+\item[(1)] (\cite{Bredon}, Theorem 3.1). There is an exact sequence of complexes:
+$$\xymatrix@C=20pt{0\ar[r] &\sigma C_{*}(X)\oplus C_{*}(X^{G})\ar[r]^{\ \ \ \ \ \ f}&C_{*}(X) \ar[r]^{\sigma}&\sigma C_{*}(X) \ar[r]&0
+},$$ where $f$ denotes the sum of the inclusions.
+\item[(2)] (\cite{Bredon}, (3.4) p.124). There is an isomorphism of complexes:
+$$\sigma C_{*}(X)\simeq C_{*}(X/G,X^{G}),$$
+where $X^{G}$ is identified with its image in $X/G$.
+\end{itemize}
+\end{prop}
 \begin{lemme}\label{exist}
 There exists $D_e$ which is a linear combination of the $D_i$ with coefficient 0 or 1 such that $\pi_{2*}(s^{*}(e))+D_e$ is divisible by 2.
 \end{lemme}
