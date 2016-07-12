@@ -232,38 +232,7 @@ By substracting these two expressions, we obtain a first class divisible by 3 in
 %\end{equation}
 %are integral. 
 By Proposition \ref{Hassettmonodromy}, the image of the monodromy representation on the $Z_\tau$ contains the symplectic group $\Sp(4,\mathbb F_3)$. We know by Proposition \ref{transitively} that $\Sp(4,\mathbb F_3)$ acts transitively on the non-isotropic planes of $A[3]$. Hence, modulo $\Pi'$, the orbit by $\Sp(4,\mathbb F_3)$ of the classes (\ref{first31}) is a $\mathbb F_3$-vector space naturally isomorphic to $D$ as introduced in Definition \ref{SymplecticIdeal}, so by Proposition \ref{SymplecticIdealsDimension}, we get a subspace of $\Pi'$ of rank $31$ of classes divisible by $3$.
-This subspace can be determined by a computer.
-\begin{prop}\label{XXXI}
-The 31 following classes of $\Pi'$ are divisible by 3 in $H^{4}(K_2(A),\Z)$ and their thirds span a $\mathbb F_3$-vector space of dimension 31 in $\frac{\Pi'^{sat}}{\Pi'}$.
-$$\sum_{\tau\in\Lambda} \Big(Z_{\tau} - Z_{\tau+\tau'}\Big), \text{ with }$$
-\begin{itemize}
-\item[(i)]
-$\Lambda=\plan{1\\0\\0\\0}{0\\1\\0\\0} \text{ and } 0\neq \tau'\in P^\perp = \plan{0\\0\\1\\0}{0\\0\\0\\1} $,
-
-\item[(ii)] 
-$\Lambda=\plan{0\\0\\1\\0}{0\\0\\0\\1}  \text{ and } 0\neq \tau' \in P^\perp = \plan{1\\0\\0\\0}{0\\1\\0\\0} \setminus \vect{1\\0\\0\\0}$,
-
-\item[(iii)] 
-$\Lambda=\plan{1\\0\\0\\1}{0\\1\\2\\1} \text{ and } \tau' \in \left\{ \vect{0\\1\\1\\2},\vect{1\\0\\0\\2},\vect{1\\1\\1\\1},\vect{2\\2\\2\\2} \right\}$,
-
-\item[(iv)] 
-$\Lambda=\plan{1\\0\\0\\0}{0\\1\\0\\1} \text{ and } \tau' \in \left\{ \vect{0\\0\\0\\1},\vect{2\\0\\1\\2},\vect{1\\0\\2\\0},\vect{1\\0\\2\\1} \right\}$,
-\item[(v)]
-$\Lambda=\plan{1\\0\\0\\0}{0\\1\\1\\1} \text{ and } \tau' \in \left\{ \vect{0\\0\\1\\1},\vect{1\\0\\0\\1} \right\}$,
-
-\item[(vi)] 
-$\Lambda=\plan{1\\0\\1\\1}{0\\1\\0\\1} \text{ and } \tau' \in \left\{ \vect{0\\1\\0\\2},\vect{1\\0\\2\\2} \right\}$,
-
-\item[(vii)]
-$\Lambda=\plan{1\\0\\1\\0}{0\\1\\0\\1} \text{ and } \tau' \in \left\{ \vect{0\\1\\0\\2},\vect{1\\0\\2\\0} \right\}$,
-
-\item[(viii)]
-$\Lambda=\plan{1\\0\\0\\0}{0\\1\\0\\2} \text{ and } \tau' = \vect{1\\0\\1\\0}$,
-
-\item[(ix)]
-$\Lambda=\plan{1\\0\\1\\1}{0\\1\\2\\2} \text{ and } \tau' = \vect{1\\1\\0\\2}$.
-\end{itemize}
-\end{prop}
+This subspace can be determined by a computer. We describe it in Proposition~\ref{XXXI}.
 
 Now we are going to find the classes divisible by 3 in $\Sym^{sat}\oplus \Pi'^{sat}$.
 The class $Z_0$ is not contained in $\Sym$ nor in $\Pi'$.
@@ -302,52 +271,8 @@ Now we will conclude using this monodromy action of $\Sp(H_1(A,\Z))\ltimes A[3]$
 %We denote by $\Sym^{o}=\Sym\cap c_2(K_2(A))^{\bot}\otimes $ and the projection $\Pr_1:\Sym^{o} $
 Proposition \ref{CombinedSymplectic} states now that
 the orbit of $\mathfrak{N}$ under the action of $\Sp(A[3])\ltimes A[3]$ is spanning a space of rank $51$ modulo $\Sym\oplus\Pi'$. However, by Lemma \ref{cleffinclassesdiv}, the intersection of that space with $\Sym^{sat}$ is one-dimensional and the intersection with $\Pi'^{sat}$ has dimension $31$, so we are left with $19$ linearly independent elements which provide 19 elements in $\frac{H^4(K_2(A),\Z)}{\Sym^{sat}\oplus\Pi'^{sat}}$.
-These 19 independent classes can be enumerated using a computer.
-\begin{prop}\label{XIX}
-We use Notation \ref{BasisH2KA}.
-The 19 following classes are divisible by 3 in $H^{4}(K_2(A),\Z)$ and their thirds provide a sub-vector space of dimension 19 of $\frac{H^4(K_2(A),\Z)}{\Sym^{sat}\oplus\Pi'^{sat}}$.
-\begin{itemize}
-\item[(i)]
-$u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda = \plan{0\\0\\0\\1}{0\\0\\1\\0}$,
-\item[(ii)]
-$v_2^2+v_2u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda= \plan{0\\0\\0\\1}{0\\1\\1\\0}$,
-\item[(iii)]
-$w_2^2+w_2u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda= \plan{0\\0\\1\\0}{0\\1\\0\\1}$,
-\item[(iv)]
-$w_2^2-w_2u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for  $\Lambda= \plan{0\\0\\1\\0}{0\\1\\0\\2}$,
-\item[(v)]
-$w_2^2-w_2v_2+w_2u_2+v_2^2+v_2u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda= \plan{0\\0\\1\\2}{0\\1\\0\\1}$,
-\item[(vi)]
-$w_1^2+w_1u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for  $\Lambda= \plan{0\\0\\0\\1}{1\\0\\2\\0}$,
-\item[(vii)]
-$w_1^2-w_1u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda= \plan{0\\0\\0\\1}{1\\0\\1\\0}$,
-\item[(viii)]
-$v_1^2+v_1u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda= \plan{0\\0\\1\\0}{1\\0\\0\\1}$,
-\item[(ix)]
-$v_1^2-v_1u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda= \plan{0\\0\\1\\0}{1\\0\\0\\2}$,
-\item[(x)]
-$v_1^2+v_1w_1-v_1u_2+w_1^2+w_1u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda = \plan{0\\0\\1\\2}{1\\0\\0\\2}$,
-\item[(xi)]
-$v_1^2+v_1w_1-v_1w_2-v_1v_2+v_1u_2+w_1^2+w_1w_2+w_1v_2-w_1u_2+w_2^2-w_2v_2+w_2u_2+v_2^2+v_2u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda = \plan{0\\0\\1\\2}{1\\1\\0\\1}$,
-\item[(xii)]
-$v_1^2-v_1w_1+v_1w_2-v_1v_2+v_1u_2+w_1^2+w_1w_2-w_1v_2+w_1u_2+w_2^2+w_2v_2-w_2u_2+v_2^2+v_2u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda = \plan{0\\0\\1\\1}{1\\2\\0\\1}$,
-\item[(xiii)]
-$u_1^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for  $\Lambda = \plan{0\\1\\0\\0}{1\\0\\0\\0}$,
-\item[(xiv)]
-$u_1^2-u_1v_2+v_2^2+ \sum_{\tau\in \Lambda} Z_\tau-Z_0$, for  $\Lambda = \plan{0\\1\\0\\0}{1\\0\\0\\1}$,
-\item[(xv)]
-$u_1^2+u_1v_2+v_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda= \plan{0\\1\\0\\0}{1\\0\\0\\2}$,
-\item[(xvi)]
-$u_1^2+u_1w_1+w_1^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda = \plan{0\\1\\0\\2}{1\\0\\0\\0}$,
-\item[(xvii)]
-$u_1^2+u_1w_1-u_1v_2+w_1^2+w_1v_2+v_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda = \plan{0\\1\\0\\2}{1\\0\\0\\1}$,
-\item[(xviii)]
-$u_1^2-u_1w_1+u_1w_2-u_1u_2+w_1^2+w_1w_2-w_1u_2+w_2^2+w_2u_2+u_2^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for  $\Lambda = \plan{0\\1\\0\\1}{1\\0\\1\\0}$,
-\item[(xix)]
-$u_1^2+u_1v_1-u_1w_1+v_1^2+v_1w_1+w_1^2+\sum_{\tau\in \Lambda} Z_\tau-Z_0$, for $\Lambda = \plan{0\\1\\2\\1}{1\\0\\0\\0}$.
-\end{itemize}
-\end{prop}
-It only remains to check that all the classes above generate $H^4(K_2(A),\Z)$.
+These 19 independent classes can be enumerated using a computer, see Proposition~\ref{XIX}.
+%It only remains to check that all the classes above generate $H^4(K_2(A),\Z)$.
 Let $\Sym^{over}$ be the overlattice of $\Sym$ obtained by adding all the classes from Proposition \ref{classedivisibleSym}. Hence by (\ref{DiscrSym}) and (\ref{squareDiscr}), the lattice $\Sym^{over}$ has discriminant $3^{22}$. Let $\Pi'^{over}$ be the overlattice of $\Pi'$ obtained by adding all the thirds of the classes of Proposition \ref{XXXI}. Then, by (\ref{discrPi}) and Proposition \ref{squareDiscr}, the lattice $\Pi'^{over}$ has discriminant $3^{22}$. Therefore, the lattice $\Sym^{over}\oplus \Pi'^{over}$ has discriminant $3^{44}$. Finally, let $F$ be the overlattice of $\Sym^{over}\oplus \Pi'^{over}$ obtained by adding $Z_0$ and the thirds of all classes of Proposition \ref{XIX}. Using one more time (\ref{squareDiscr}), we find that $\discr F=1$. Hence necessarily $F=H^4(K_2(A),\Z)$. Moreover, from Proposition \ref{XIX}, we obtain: $$\Sym^{over}=\Sym^{sat} \text{ and } \Pi'^{over}=\Pi'^{sat}.$$ We summarize the description of the integral basis of $H^{4}(K_2(A),\Z)$ in the following theorem.
 %\begin{proposition}
 %Using Notation \ref{BasisH2KA},
