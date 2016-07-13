@@ -11,12 +11,14 @@ $
 This follows from G\"ottsche's formula~\cite[page 49]{Gottsche}.
 \end{proof}
 
-\input{Section_Kummer4.tex}
-
+First, we deduce a describtion of the integral odd cohomology groups of $\X$ from Proposition \ref{A2Basis} and Section \ref{Section_GeneralKummer}.
 The middle cohomology $H^4(\X,\Z)$ has been studied by Hassett and Tschinkel in \cite{Hassett}. We recall some of their results in Section \ref{HassetTschinkelSection},
 then we proceed by using $\theta^*$ to give a partial description of $H^4(\X,\Z)$ in terms of the well-understood cohomology of $A\hilb{3}$ in Section \ref{SyminH4}. 
 Finally in Section \ref{integralbasisH4}, we find a basis of $H^4(\X,\Z)$ using the action of the image of monodromy representation.
-In order to use monodromy representation, we start by recalling notion of monodromy on abelian surfaces in Section \ref{monodromyexplication}. We will also need some technical calculation related the the action of the symplectic group over finite fields (Section \ref{Section_Symplectic}).
+In order to use monodromy representation, we start by recalling some notions of monodromy on abelian surfaces in Section \ref{monodromyexplication}. 
+We will also need some technical calculation related the the action of the symplectic group over finite fields (Section \ref{Section_Symplectic}).
+
+\input{Section_Kummer4.tex}
 \subsection{A monodromy representation on abelian surfaces and generalized Kummer fourfolds}\label{monodromyexplication}
 \input{Section_Abelian.tex}
 \input{Section_Symplectic.tex}
@@ -225,7 +227,7 @@ we are now going to find
 The first thing to note is that $\Pi'$ is defined topologically for all deformations of $\X$ and the primitive overlattice of $\Pi'$ is a topological invariant, too.  
 By applying a suitable deformation, we may therefore assume without loss of generality that $A$ is the product of two elliptic curves $A=E_1\times E_2$. 
 
-Hassett and Tschinkel in Proposition 7.1 of \cite{Hassett} provide the class of a Lagrangian plane $P\subset K_2(A)$, which can be expressed as follows:
+Hassett and Tschinkel in Proposition 7.1 of \cite{Hassett} provide the class of a Lagrangian plane (i.e. a sub-varieties Lagrangian with respect to the holomorphic 2-form and isomorphic to the projective plane $\mathbb{P}^2$) $P\subset K_2(A)$, which can be expressed as follows:
 \begin{equation}
 \left[P\right]=\frac{1}{216}(6u_1-3e)^2+\frac{1}{8}\cc-\frac{1}{3}\sum_{\tau\in \Lambda'} Z_{\tau},
 \label{LagrangianPlaneClass}
@@ -244,8 +246,14 @@ By substracting these two expressions, we obtain a first class divisible by 3 in
 % \frac{1}{3}\sum_{\tau\in\Lambda} \Big(Z_{\tau} - Z_{\tau+\tau_0}\Big)
 %\end{equation}
 %are integral. 
-By Proposition \ref{Hassettmonodromy}, the image of the monodromy representation on the $Z_\tau$ contains the symplectic group $\Sp(4,\mathbb F_3)$. We know by Proposition \ref{transitively} that $\Sp(4,\mathbb F_3)$ acts transitively on the non-isotropic planes of $A[3]$. Hence, modulo $\Pi'$, the orbit by $\Sp(4,\mathbb F_3)$ of the classes (\ref{first31}) is a $\mathbb F_3$-vector space naturally isomorphic to $D$ as introduced in Definition \ref{SymplecticIdeal}, so by Proposition \ref{SymplecticIdealsDimension}, we get a subspace of $\Pi'$ of rank $31$ of classes divisible by $3$.
-This subspace can be determined by a computer. We describe it in Proposition~\ref{XXXI}.
+By Proposition \ref{Hassettmonodromy}, the image of the monodromy representation on the $Z_\tau$ contains the symplectic group $\Sp(4,\mathbb F_3)$. 
+We know by Proposition \ref{transitively} that $\Sp(4,\mathbb F_3)$ acts transitively on the non-isotropic planes of $A[3]$. Hence, modulo $\Pi'$, the orbit by $\Sp(4,\mathbb F_3)$ of the classes (\ref{first31}) is a $\mathbb F_3$-vector space naturally isomorphic to $D$ as introduced in Definition \ref{SymplecticIdeal}, so by Proposition \ref{SymplecticIdealsDimension}, we get a subspace of $\Pi'$ of rank $31$ of classes divisible by $3$.
+We add the thirds of these classes to $\Pi'$ and we get an over-lattice $\Pi'^{over}$ of $\Pi'$ such that:
+\begin{equation}
+ \frac{\Pi'^{over}}{\Pi'}=(\Z/3\Z)^{31}.
+ \label{Piover}
+\end{equation}
+This subspace can be determined by a computer. We describe it in Proposition~\ref{XXXI} (we will see later in this section that $\Pi'^{over}=\Pi'^{sat}$).  
 
 Now we are going to find the classes divisible by 3 in $\Sym^{sat}\oplus \Pi'^{sat}$.
 The class $Z_0$ is not contained in $\Sym$ nor in $\Pi'$.
@@ -284,9 +292,39 @@ Now we will conclude using this monodromy action of $\Sp(H_1(A,\Z))\ltimes A[3]$
 %We denote by $\Sym^{o}=\Sym\cap c_2(K_2(A))^{\bot}\otimes $ and the projection $\Pr_1:\Sym^{o} $
 Proposition \ref{CombinedSymplectic} states now that
 the orbit of $\mathfrak{N}$ under the action of $\Sp(A[3])\ltimes A[3]$ is spanning a space of rank $51$ modulo $\Sym\oplus\Pi'$. However, by Lemma \ref{cleffinclassesdiv}, the intersection of that space with $\Sym^{sat}$ is one-dimensional and the intersection with $\Pi'^{sat}$ has dimension $31$, so we are left with $19$ linearly independent elements which provide 19 elements in $\frac{H^4(K_2(A),\Z)}{\Sym^{sat}\oplus\Pi'^{sat}}$.
-These 19 independent classes can be enumerated using a computer, see Proposition~\ref{XIX}.
+These 19 independent classes can be enumerated using a computer, see Proposition~\ref{XIX}. 
 %It only remains to check that all the classes above generate $H^4(K_2(A),\Z)$.
-Let $\Sym^{over}$ be the overlattice of $\Sym$ obtained by adding all the classes from Proposition \ref{classedivisibleSym}. Hence by (\ref{DiscrSym}) and (\ref{squareDiscr}), the lattice $\Sym^{over}$ has discriminant $3^{22}$. Let $\Pi'^{over}$ be the overlattice of $\Pi'$ obtained by adding all the thirds of the classes of Proposition \ref{XXXI}. Then, by (\ref{discrPi}) and Proposition \ref{squareDiscr}, the lattice $\Pi'^{over}$ has discriminant $3^{22}$. Therefore, the lattice $\Sym^{over}\oplus \Pi'^{over}$ has discriminant $3^{44}$. Finally, let $F$ be the overlattice of $\Sym^{over}\oplus \Pi'^{over}$ obtained by adding $Z_0$ and the thirds of all classes of Proposition \ref{XIX}. Using one more time (\ref{squareDiscr}), we find that $\discr F=1$. Hence necessarily $F=H^4(K_2(A),\Z)$. Moreover, from Proposition \ref{XIX}, we obtain: $$\Sym^{over}=\Sym^{sat} \text{ and } \Pi'^{over}=\Pi'^{sat}.$$ 
+
+Now, we will check that we found all the classes in $H^4(\X,\Z)$.
+Let $\Sym^{over}$ be the overlattice of $\Sym$ obtained by adding all the classes from Proposition \ref{classedivisibleSym}:
+\begin{equation}
+\frac{\Sym}{\Sym^{over}}=(\Z/2\Z)^7\oplus(\Z/3\Z)^8. 
+\label{symover} 
+\end{equation}
+Let denote by $F$ the over-lattice of $\Sym^{sat}\oplus \Pi'^{sat}$ obtained by adding $Z_0$ and the thirds of all classes of Proposition \ref{XIX}:
+\begin{equation}
+\frac{F}{\Sym^{sat}\oplus \Pi'^{sat}}=(\Z/27\Z)\oplus(\Z/3\Z)^{19}.
+\label{Fpietsym}
+\end{equation}
+We have to show that 
+\begin{equation}
+\Sym^{over}=\Sym^{sat},\ \Pi'^{over}=\Pi'^{sat}
+\label{PietSym}
+\end{equation}
+and $F=H^4(\X,\Z)$.
+It can be seen calculating the descriminents. 
+We have $\Sym^{over}\subset \Sym^{sat}$ and $\Pi'^{over}\subset\Pi'^{sat}$, hence to prove (\ref{PietSym}), we only have to show that 
+$\discr \Sym^{over}=\discr \Sym^{sat}$ and $\discr \Pi'^{over}=\discr\Pi'^{sat}$.
+By (\ref{DiscrSym}), (\ref{symover}) and (\ref{squareDiscr}), the lattice $\Sym^{over}$ has discriminant $3^{22}$. Moreover by (\ref{discrPi}), (\ref{Piover}) and (\ref{squareDiscr}), 
+the lattice $\Pi'^{over}$ has discriminant $3^{22}$. Therefore:
+\begin{equation}
+\discr\Sym^{over}\oplus \Pi'^{over}=3^{44}.
+\label{discrover}
+\end{equation}
+It follows that $\discr \Sym^{sat}\oplus \Pi'^{sat}\leq 3^{44}$
+Hence, by (\ref{squareDiscr}) and \ref{Fpietsym}, $\discr F\leq 1$, so necessarily $\discr F=1$. Hence necessarily $F=H^4(K_2(A),\Z)$. Moreover, $\discr \Sym^{sat}\oplus \Pi'^{sat}=3^{44}$ 
+which show by (\ref{discrover}) that $\Sym^{over}=\Sym^{sat} \text{ and } \Pi'^{over}=\Pi'^{sat}.$ 
+
 We summarize the description of the integral basis of $H^{4}(K_2(A),\Z)$ in the following theorem.
 \begin{thm}\label{integralbasistheorem}
 Let $A$ be an abelian variety. We use Notation \ref{BasisH2KA} and \ref{TheZs}. 
