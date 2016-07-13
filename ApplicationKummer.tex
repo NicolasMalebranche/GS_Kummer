@@ -188,7 +188,7 @@ The knowledge of the elements divisible by 2 in $\Sym^{2} H^{2}(K_2(A),\Z)$ from
 \item[(3)]
 An adaptation of the $H^2$-normality (Lemma \ref{primitive2}) and several lemmas in Section \ref{basisinteK'} will provide an integral basis of $H^{2}(K',\Z)$ (Theorem \ref{fin}).
 \item[(4)]
-Knowing an integral basis of $H^{2}(K',\Z)$, we end the calculation of the Beauville--Bogomolov form in Section \ref{beauK'} using intersection theory and the generalized Fujiki formula (Theorem \ref{Form}).
+Knowing an integral basis of $H^{2}(K',\Z)$, we end the calculation of the Beauville--Bogomolov form in Section \ref{beauK'} using intersection theory and the Fujiki formula.
 \end{itemize}
 %\subsection{Notation}\label{nota}
 
@@ -604,13 +604,26 @@ Then this Cartier divisor induces a Cartier divisor on $K'$ which necessarily co
 \end{proof}
 \subsection{Calculation of $B_{K'}$}\label{beauK'}
 We finish the proof of Theorem \ref{theorem}, calculating $B_{K'}$. We continue using the notation provided in Section \ref{nota}. 
-We will need a polarized form of the Fujiki formula.
-\begin{prop}\label{beauville}
-Let $X$ be a projective irreducible symplectic variety of dimension $2n$ with $\codim\sing X\geq 4$.
-The equality (\ref{Fujiki}) of Theorem \ref{Form} implies that
-$$\alpha_{1}\cdot...\cdot\alpha_{2n}=\frac{c_{X}}{(2n)!}\sum_{\sigma\in S_{2n}}B_{X}(\alpha_{\sigma(1)},\alpha_{\sigma(2)})...B_{X}(\alpha_{\sigma(2n-1)},\alpha_{\sigma(2n)}).$$
+One of the main ingredient will be the Fujiki formula (see Section 1.2.2 of \cite{Lol}).
+If $X=K'$ or $K_2(A)$, we have for all $\alpha\in H^2(X,\Z)$:
+\begin{equation}
+\alpha^{4}=c_{X}B_{X}(\alpha,\alpha)^2,
+\label{Fujiki}
+\end{equation}
+$c_X\in \mathbb{Q}$ is the Fujiki constant. 
+Moreover if 
+$0\neq \omega$ a holomorphic 2-from on $X$, the convension is 
+\begin{equation}
+B_{X}(\omega+\overline{\omega},\omega+\overline{\omega})>0.
+\label{Fujikiposi}
+\end{equation}
+There also exists a polarized version of the Fujiki formula.
+\begin{equation}
+\alpha_{1}\cdot \alpha_{2}\cdot\alpha_{3}\cdot\alpha_{4}=\frac{c_{X}}{24}\sum_{\sigma\in \mathfrak{S}_{4}}B_{X}(\alpha_{\sigma(1)},\alpha_{\sigma(2)})\cdot B_{X}(\alpha_{\sigma(3)},\alpha_{\sigma(4)}).
+\label{beauville}
+\end{equation}
 for all $\alpha_{i}\in H^{2}(X,\Z)$.
-\end{prop}
+
 \begin{lemme}\label{Zinter}
 We have $$\overline{Z_{0}}'^{2}=-2r^{*}(\overline{Z_{0}}).$$
 %We have $$\hat{Z_{0}}^{2}=-s_{1}^{*}(Z_{0}).$$
@@ -640,10 +653,10 @@ where $c_{K'}$ is the Fujiki constant of $K'$ and $\alpha$, $\beta$ are in $H^{2
 \begin{proof}
 The ingredient for the proof is the Fujiki formula.
 
-By (\ref{Fujiki}) of Theorem \ref{Form}, we have $$(\pi_{1*}(s_{1}^{*}(\alpha)))^{4}=c_{K'}B_{K'}(\pi_{1*}(s_{1}^{*}(\alpha),\pi_{1*}(s_{1}^{*}(\alpha)))^{2}.$$
+By (\ref{Fujiki}), we have $$(\pi_{1*}(s_{1}^{*}(\alpha)))^{4}=c_{K'}B_{K'}(\pi_{1*}(s_{1}^{*}(\alpha),\pi_{1*}(s_{1}^{*}(\alpha)))^{2}.$$
 $$\alpha^{4}=9B_{K_2(A)}(\alpha,\alpha)^{2}.$$
 Moreover, by Proposition \ref{commut}, $$(\pi_{1*}(s^{*}(\alpha)))^{4}=8s^{*}(\alpha)^{4}=8\alpha^{4}.$$
-By statement (\ref{Fujikiposi}) of Theorem \ref{Form}, we get the result.
+By statement (\ref{Fujikiposi}), we get the result.
 \end{proof}
 In particular, it follows:
 \begin{equation}
