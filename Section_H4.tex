@@ -1,14 +1,26 @@
 
- \section{Integral cohomology of the generalized Kummer fourfold}\label{Middle}
- \input{Section_Kummer4.tex}
+\section{Integral cohomology of the generalized Kummer fourfold}
+Now we come to the special case $n=3$, so we study $\kum{A}{2}$, the generalized Kummer fourfolds.
+\begin{proposition}
+The Betti numbers of $\kum{A}{2}$ are:
+$
+1,\,0,\,7,\,8,\,108,\,8,\,7,\,0,\,1.
+$
+\end{proposition}
+\begin{proof}
+This follows from G\"ottsche's formula~\cite[page 49]{Gottsche}.
+\end{proof}
+
+\input{Section_Kummer4.tex}
+
 The middle cohomology $H^4(\X,\Z)$ has been studied by Hassett and Tschinkel in \cite{Hassett}. We recall some of their results in Section \ref{HassetTschinkelSection},
 then we proceed by using $\theta^*$ to give a partial description of $H^4(\X,\Z)$ in terms of the well-understood cohomology of $A\hilb{3}$ in Section \ref{SyminH4}. 
 Finally in Section \ref{integralbasisH4}, we find a basis of $H^4(\X,\Z)$ using the action of the image of monodromy representation.
 In order to use monodromy representation, we start by recalling notion of monodromy on abelian surfaces in Section \ref{monodromyexplication}. We will also need some technical calculation related the the action of the symplectic group over finite fields (Section \ref{Section_Symplectic}).
-\subsection{A monodromy representation on Abelian surfaces and Generalized Kummer four-fold}\label{monodromyexplication}
+\subsection{A monodromy representation on abelian surfaces and generalized Kummer fourfolds}\label{monodromyexplication}
 \input{Section_Abelian.tex}
 \input{Section_Symplectic.tex}
-\subsection{Notation and Hassett--Tschinkel's formulas}\label{HassetTschinkelSection}
+\subsection{Recall of Hassett and Tschinkel's results}\label{HassetTschinkelSection} \label{Middle}
 \begin{notation}\label{TheZs}
 For each $\tau \in A$, denote $W_\tau$ the Brian\c con subscheme of $A\hilb{3}$ consisting of the elements supported entirely at the point $\tau$. If $\tau\in A[3]$ is a point of three-torsion, $W_\tau$ is actually a subscheme of $\X$. We will also use the symbol $W_\tau$ for the corresponding class in $H^4(\X,\Z)$. Further, set 
 $$
@@ -143,12 +155,12 @@ Using Nakajima operators, we may write
 Y_p = \frac{1}{9} \theta^*\Big( \q_1(1)\mathfrak L_2(1) \vac \Big) =  \frac{1}{2}\theta^*\Big(\q_1(x)\q_1(1)^2\vac\Big).
 \end{gather}
 \end{remark}
-Now, we can summary all the divisible classes found in $\Sym$ in the following proposition. 
+Now, we can summarize all the divisible classes found in $\Sym$ in the following proposition. 
 \begin{proposition}\label{classedivisibleSym}
-\begin{itemize}
-\item[(i)]
+\begin{enumerate}
+\item
 The class $e^2$ is divisible by $3$ and the class $u_1u_2 + v_1v_2+w_1w_2$ is divisible by 6.
-\item[(ii)]
+\item
 For $y\in\{u_1,u_2,v_1,v_2,w_1,w_2\}$, the class 
 $
 e \cdot y
@@ -158,15 +170,15 @@ $
  y^2 - \frac{1}{3} e\cdot y
 $
 is divisible by $2$.
-\end{itemize}
+\end{enumerate}
 \end{proposition}
 \begin{proof}
-\begin{itemize}
-\item[(i)]
+\begin{enumerate}
+\item
 From Proposition \ref{ChernSym} we see that
 $e^2$ is divisible by $3$ and by Corollary \ref{Classuvw}
 the class $u_1u_2 + v_1v_2+w_1w_2$ is divisible by 6.
-\item[(ii)]
+\item
 We have $y= \theta^*\left(\q_1(a)\q_1(1)^2\vac\right)$ for some $a\in H^2(A,\Z)$. A computation yields:
 $$
 e\cdot y = 3\cdot \theta^*\Big( \q_2(a)\q_1(1)\vac \Big)
@@ -182,7 +194,7 @@ $
  \frac{1}{2}y^2 - \frac{1}{6} e\cdot y
 $
 is an integral class, too.
-\end{itemize}
+\end{enumerate}
 \end{proof}
 \subsection{Integral basis of $H^4(K_2(A),\Z)$}\label{integralbasisH4}
 
@@ -195,8 +207,8 @@ On the other hand, a formula developed in \cite{Kapfer} evaluates
 \begin{equation} \label{DiscrSym}
 \discr \Sym \ = 2^{14}\cdot 3^{38},
 \end{equation}
-so the lattices $\Pi'$ cannot be primitive. Denote $\Sym^{sat}$ and $\Pi'^{sat}$ the respective primitive overlattices of $\Sym$ and $\Pi'$. $\Sym \oplus\Pi'$ is a sublattice of $H^4(\X,\Z)$ of index $2^{7}\cdot 3^{61}$ and we claim that $\Sym^{sat}\oplus \Pi'^{sat}$ has index $3^{22}$. 
-We have already found
+so the lattices cannot be primitive. Denote $\Sym^{sat}$ and $\Pi'^{sat}$ the respective primitive overlattices of $\Sym$ and $\Pi'$. $\Sym \oplus\Pi'$ is a sublattice of $H^4(\X,\Z)$ of index $2^{7}\cdot 3^{61}$ and we claim that $\Sym^{sat}\oplus \Pi'^{sat}$ has index $3^{22}$. 
+We have already found in Proposition~\ref{classedivisibleSym}
 \begin{itemize}
  \item $7$ linearly independent classes in $\Sym$ divisible by $2$,
  \item $8$ linearly independent classes in $\Sym$ divisible by $3$,
@@ -274,32 +286,27 @@ Proposition \ref{CombinedSymplectic} states now that
 the orbit of $\mathfrak{N}$ under the action of $\Sp(A[3])\ltimes A[3]$ is spanning a space of rank $51$ modulo $\Sym\oplus\Pi'$. However, by Lemma \ref{cleffinclassesdiv}, the intersection of that space with $\Sym^{sat}$ is one-dimensional and the intersection with $\Pi'^{sat}$ has dimension $31$, so we are left with $19$ linearly independent elements which provide 19 elements in $\frac{H^4(K_2(A),\Z)}{\Sym^{sat}\oplus\Pi'^{sat}}$.
 These 19 independent classes can be enumerated using a computer, see Proposition~\ref{XIX}.
 %It only remains to check that all the classes above generate $H^4(K_2(A),\Z)$.
-Let $\Sym^{over}$ be the overlattice of $\Sym$ obtained by adding all the classes from Proposition \ref{classedivisibleSym}. Hence by (\ref{DiscrSym}) and (\ref{squareDiscr}), the lattice $\Sym^{over}$ has discriminant $3^{22}$. Let $\Pi'^{over}$ be the overlattice of $\Pi'$ obtained by adding all the thirds of the classes of Proposition \ref{XXXI}. Then, by (\ref{discrPi}) and Proposition \ref{squareDiscr}, the lattice $\Pi'^{over}$ has discriminant $3^{22}$. Therefore, the lattice $\Sym^{over}\oplus \Pi'^{over}$ has discriminant $3^{44}$. Finally, let $F$ be the overlattice of $\Sym^{over}\oplus \Pi'^{over}$ obtained by adding $Z_0$ and the thirds of all classes of Proposition \ref{XIX}. Using one more time (\ref{squareDiscr}), we find that $\discr F=1$. Hence necessarily $F=H^4(K_2(A),\Z)$. Moreover, from Proposition \ref{XIX}, we obtain: $$\Sym^{over}=\Sym^{sat} \text{ and } \Pi'^{over}=\Pi'^{sat}.$$ We summarize the description of the integral basis of $H^{4}(K_2(A),\Z)$ in the following theorem.
-%\begin{proposition}
-%Using Notation \ref{BasisH2KA},
-%\item[(i)]
-%The following lattice is primitive:
-%\item[(ii)]
-%\end{proposition}
-%These are the 19 classes which were missing. 
+Let $\Sym^{over}$ be the overlattice of $\Sym$ obtained by adding all the classes from Proposition \ref{classedivisibleSym}. Hence by (\ref{DiscrSym}) and (\ref{squareDiscr}), the lattice $\Sym^{over}$ has discriminant $3^{22}$. Let $\Pi'^{over}$ be the overlattice of $\Pi'$ obtained by adding all the thirds of the classes of Proposition \ref{XXXI}. Then, by (\ref{discrPi}) and Proposition \ref{squareDiscr}, the lattice $\Pi'^{over}$ has discriminant $3^{22}$. Therefore, the lattice $\Sym^{over}\oplus \Pi'^{over}$ has discriminant $3^{44}$. Finally, let $F$ be the overlattice of $\Sym^{over}\oplus \Pi'^{over}$ obtained by adding $Z_0$ and the thirds of all classes of Proposition \ref{XIX}. Using one more time (\ref{squareDiscr}), we find that $\discr F=1$. Hence necessarily $F=H^4(K_2(A),\Z)$. Moreover, from Proposition \ref{XIX}, we obtain: $$\Sym^{over}=\Sym^{sat} \text{ and } \Pi'^{over}=\Pi'^{sat}.$$ 
+We summarize the description of the integral basis of $H^{4}(K_2(A),\Z)$ in the following theorem.
 \begin{thm}\label{integralbasistheorem}
 Let $A$ be an abelian variety. We use Notation \ref{BasisH2KA} and \ref{TheZs}. 
-\begin{itemize}
-\item[(i)]
+\begin{enumerate}
+\item 
 Let $\Sym^{sat}$ be the primitive overlattice of $\Sym^2\left(H^2\left(\X,\Z\right)\right)$ in $H^4(K_2(A),\Z)$.
 The group $\frac{\Sym^{sat}}{\Sym^2\left(H^2\left(\X,\Z\right)\right)}=(\Z/2\Z)^{7}\oplus(\Z/3\Z)^{8}$ is generated by the elements:
 $$\frac{e \cdot y}{3},\ \frac{y^2 - \frac{1}{3} e\cdot y}{2} \text{ for } y\in\{u_1,u_2,v_1,v_2,w_1,w_2\},\ 
 \frac{e^2}{3} \text{ and } \frac{u_{1}\cdot u_{2}+v_{1}\cdot v_{2}+w_{1}\cdot w_{2}}{6}.$$
-\item[(ii)]
+\item
 Let $\Pi'$ be the lattice from Definition \ref{defiPi} and let $\Pi'^{sat}$ be the primitive over lattice of $\Pi'$ in $H^4(K_2(A),\Z)$.
 The group $\frac{\Pi'^{sat}}{\Pi'\ \ \ }=(\Z/3\Z)^{31}$ is generated by the classes:
 $$\frac{1}{3}\sum_{\tau\in\Lambda} \Big(Z_{\tau} - Z_{\tau+\tau'}\Big),
 $$
 with $\Lambda$ a non-isotropic group and $\tau'\in A[3]$. Moreover a basis of $\frac{\Pi'^{sat}}{\Pi'\ \ \ }$ is provided by the 31 classes described in Proposition \ref{XXXI}. 
-\item[(iii)]
-We have $$\frac{H^4(K_2(A),\Z)}{\Sym^{sat}\oplus\Pi'^{sat}}=(\frac{\Z}{27\Z})\oplus(\frac{\Z}{3\Z})^{19}.$$
-Moreover this group is generated by the class $Z_0$ and the 19 classes described in Proposition \ref{XIX}.
-\end{itemize}
+\item
+We have 
+$$\frac{H^4(K_2(A),\Z)}{\Sym^{sat}\oplus\Pi'^{sat}}=\left(\frac{\Z}{27\Z}\right)\oplus\left(\frac{\Z}{3\Z}\right)^{\oplus 19}.$$
+Moreover, this group is generated by the class $Z_0$ and the 19 classes described in Proposition \ref{XIX}.
+\end{enumerate}
 \end{thm}
 Moreover since $\Sym^{over}=\Sym^{sat}$, from the proofs of Proposition \ref{ChernSym}, \ref{classedivisibleSym} and Remark \ref{afterClassuvw}, we obtain the following corollary.
 \begin{corollary}\label{SymSatImage}
