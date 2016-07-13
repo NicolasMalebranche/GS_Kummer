@@ -19,7 +19,7 @@ Our first objective is to collect some information about the pullback diagram~(\
 We make use of Notation~\ref{TorusClasses}.
 
 \begin{proposition}\label{KummerClass}
-Set $\alpha_i \defIs  \frac{1}{(n-1)!}\kq_{1}(1)^{n-1}\kq_1(a_i)\vac = \G_0(a_i)1$. The class of %the Poincar\'e dual of 
+Set $\alpha_i \defIs  \frac{1}{(n-1)!}\kq_{1}(1)^{n-1}\kq_1(a_i)\vac = \G_0(a_i)1$. Then the corresponding class of %the Poincar\'e dual of 
 $\kum{A}{n-1}$ in $H^4(A\hilb{n},\Z)$ is given by
 $$
 %\prod_{i=1}^4 \left(\tfrac{1}{2}\pone(1)^2\pone(\alpha_i)\vac\right).
@@ -100,7 +100,7 @@ The annihilator of $[\kum{A}{n-1}]$ in $H^*(A\hilb{n},\Q)$ is the ideal generate
 \end{proposition}
 First, we need to recall some material on super algebras (see for instance \cite{DeligneMorgan}).
 \begin{definition}
-Let $V$ be a super vector space and $n\geq 0$. Then the supersymmetric power $\SSym^n(V)$ of $V$ is a super vector space, given by
+Let $V=V^{+}\oplus V^{-}$ be a super vector space and $n\geq 0$. Then the supersymmetric power $\SSym^n(V)$ of $V$ is a super vector space, given by
 \begin{gather*}
 \SSym^n(V) = \bigoplus_{p+q=n} \Sym^p(V^{+}) \!\otimes\! \Lambda^q(V^{-}), \\
 \SSym^n(V)^{+}\! =\! \bigoplus_{\substack{p+q=n \\ q\text{ even} }} \Sym^p(V^{+}) \!\otimes\! \Lambda^q(V^{-}), \ \ 
@@ -113,19 +113,19 @@ $(-1)^{|v_i||v_j|+(|v_i|+|v_j|)\sum_{i<k<j} |v_k|}$.
 \end{remark}
 
 Now let $U$ be a vector space over $\Q$ and look at the exterior algebra $H\defIs  \Lambda^* U$. 
-Since $H$ is a super vector space, we can construct the supersymmetric power $S^n\defIs  \SSym^n( H)$.
-We may identify $S^n$ with the space of $\mathfrak S_n$-invariants in $H^{\otimes n}$ by means of the linear projection operator
+Since $H$ is a super vector space, we can construct the supersymmetric power $ \SSym^n( H)$.
+We may identify $\SSym^n( H)$ with the space of $\mathfrak S_n$-invariants in $H^{\otimes n}$ by means of the linear projection operator
 $$
-\pr : H^{\otimes n} \longrightarrow S^n , \quad \pr = \frac{1}{n!}\sum_{\pi \in\mathfrak S_n} \pi.
+\pr : H^{\otimes n} \longrightarrow \SSym^n( H) , \quad \pr = \frac{1}{n!}\sum_{\pi \in\mathfrak S_n} \pi.
 $$
-The multiplication in $H^{\otimes n}$ induces a multiplication on the subspace of invariants, which makes $S^n$ a supercommutative algebra.
+The multiplication in $H^{\otimes n}$ induces a multiplication on the subspace of invariants, which makes $\SSym^n( H)$ a supercommutative algebra.
 
 Since $H$ is generated as an algebra by $U=\Lambda^1(U)\subset H$, we may define a homomorphism of algebras:
-$$ s : H \longrightarrow S^n, \quad s(u) = \pr( u \otimes 1\otimes\cdots\otimes 1)\text{ for }u\in U, $$
-so $S^n$ becomes an algebra over $H$.
+$$ s : H \longrightarrow \SSym^n( H), \quad s(u) = \pr( u \otimes 1\otimes\cdots\otimes 1)\text{ for }u\in U, $$
+so $\SSym^n( H)$ becomes an algebra over $H$.
 \begin{lemma}
 \label{SuperFree}
-The morphism $s$ turns $S^n$ into a free module over $H$, for $n\geq 1$.
+The morphism $s$ turns $\SSym^n( H)$ into a free module over $H$, for $n\geq 1$.
 \end{lemma}
 \begin{proof}
 We start with the tensor power $H^{\otimes n}$ and the ring homomorphism 
@@ -133,7 +133,7 @@ $$
 \iota : H \longrightarrow H^{\otimes n},\quad h\longmapsto h\otimes 1\otimes\cdots\otimes 1
 $$
 that makes $H^{\otimes n}$ a free $H$-module. Note that $\pr \iota \neq s$, since $\pr$ is not a ring homomorphism.
-(For example, $\pr\iota(h)\neq s(h)$ for any nonzero $h\in\Lambda^2(U)$.)
+(For example, $\pr(\iota(h))\neq s(h)$ for any nonzero $h\in\Lambda^2(U)$.)
 We therefore modify the $H$-module structure of $H^{\otimes n}$:
 
 For some $u\in U$, denote $u^{(i)} \defIs  1^{\otimes i-1}\otimes u\otimes 1^{\otimes n-i+1} \in H^{\otimes n}$. Then $H^{\otimes n}$ is generated as a $k$-algebra by the elements $\{u^{(i)}\,,\,u\in U\}$. Now consider the ring automorphism
@@ -141,8 +141,8 @@ $$
 \sigma : H^{\otimes n} \longrightarrow H^{\otimes n}, \quad u^{(1)} \longmapsto u^{(1)} +u^{(2)} + \ldots + u^{(n)}, \quad
 u^{(i)} \longmapsto u^{(i)} \text{ for } i>1.
 $$
-Then we have $\sigma\iota = s$ on $S^n$. On the other hand, if $\{b_i\}$ is a $k$-basis of $V$, then $\{b_i^{(j)},\,j>1\} $ is a $\iota$-basis for $H^{\otimes n}$, and $\{\sigma(b_i^{(j)})\}$ is a $\sigma\iota$-basis for $H^{\otimes n}$.
-Now if we project the basis elements, we get a set $\{\pr(\sigma(b_i^{(j)}))\}$ that spans $S^n$. Eliminating linear dependent vectors (this is possible over the rationals), we get a $s$-basis of $S^n$.
+Then we have $\sigma\iota = s$ on $\SSym^n( H)$. On the other hand, if $\{b_i\}$ is a $k$-basis of $V$, then $\{b_i^{(j)},\,j>1\} $ is a $\iota$-basis for $H^{\otimes n}$, and $\{\sigma(b_i^{(j)})\}$ is a $\sigma\iota$-basis for $H^{\otimes n}$.
+Now if we project the basis elements, we get a set $\{\pr(\sigma(b_i^{(j)}))\}$ that spans $\SSym^n( H)$. Eliminating linear dependent vectors (this is possible over the rationals), we get a $s$-basis of $\SSym^n( H)$.
 \end{proof}
 
 
