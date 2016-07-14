@@ -46,7 +46,7 @@ We recall Definition-Proposition 2.2.2 of \cite{Lol}.
 \begin{defipro}\label{defiprop}
 Assume that $H^{*}(X,\Z)$ is torsion-free. Then for all $0\leq k \leq 2\dim X$, we have an isomorphism of $\Z[G]$-modules:
 $$H^{k}(X,\Z)\simeq \bigoplus_{i=1}^{r}(\mathcal{O}_{K},a_{i})\oplus \mathcal{O}_{K}^{\oplus s}\oplus\Z^{\oplus t},$$
-for some $a_{i}\notin 2\Z$ and $(r,s,t)\in\mathbb{N}^3$.
+for some odd numbers $a_{i}$ and $(r,s,t)\in\mathbb{N}^3$.
 We get the following isomorphism of $\mathbb{F}_{2}[G]$-modules:
 $$H^{k}(X,\mathbb{F}_{2})\simeq N_{2}^{\oplus r}\oplus\mathbb{F}_{2}^{\oplus (s+t)}.$$
 We denote $l_{2}^k(X):=r$, $l_{1,-}^k(X):=s$, $l_{1,+}^k(X):=t$, $\mathcal{N}_{2}:=N_{2}^{\oplus r}$ and $\mathcal{N}_{1}:=\mathbb{F}_{2}^{\oplus s+t}$.
@@ -54,8 +54,8 @@ We denote $l_{2}^k(X):=r$, $l_{1,-}^k(X):=s$, $l_{1,+}^k(X):=t$, $\mathcal{N}_{2
 \begin{rmk}
 These invariants are uniquely determined by $G$, $X$ and $k$.
 \end{rmk}
-We recall an adaptation of Proposition 5.1 and Corollary 5.8 of \cite{BNS} that can be found in Section 2.2 of \cite{Lol}.
-\begin{prop}\label{sarti}
+%We recall an adaptation of Proposition 5.1 and Corollary 5.8 of \cite{BNS} that can be found in Section 2.2 of \cite{Lol}.
+\begin{prop}\cite[Sect.2~2]{Lol}\label{sarti}
 Let $X$ be a compact complex manifold of dimension $n$ and $\iota$ an involution. Assume that $H^{*}(X,\Z)$ is torsion free.
 We have:
 \begin{itemize}
@@ -64,7 +64,7 @@ $\rk H^{k}(X,\Z)^{\iota}=l_{2}^k(X)+l_{1,+}^k(X).$
 \item[(ii)]
 We denote $\sigma:=\id+\iota^*$ and $S^k_\iota:= \Ker \sigma \cap H^{k}(X,\Z)$. 
 We have $H^{k}(X,\Z)^{\iota}\cap S^k_\iota=0$ and
-$$\frac{H^{k}(X,\Z)}{H^{k}(X,\Z)^{\iota}\oplus S^k_\iota}=(\Z/2\Z)^{l_2^k(X)}.$$
+$$\frac{H^{k}(X,\Z)}{H^{k}(X,\Z)^{\iota}\oplus S^k_\iota}=\left(\frac{\Z}{2\Z}\right)^{\oplus l_2^k(X)}.$$
 \end{itemize}
 \end{prop}
 \begin{rmk}\label{x+ix}
@@ -96,7 +96,7 @@ We have: $H^{k}(A\times A,\Z)=H^{k}(V,\Z)$
 for all $k\leq 3$.
 \end{lemma}
 \begin{proof}
-We have $V=A\times A\smallsetminus \Delta$,
+We have $V\cong A\times A\smallsetminus \Delta$,
 so we get the following natural exact sequence:
 $$\xymatrix{ \cdots\ar[r]&H^{k}(A\times A,V,\Z)\ar[r] & H^{k}(A\times A,\Z)\ar[r] & H^{k}(V,\Z)\ar[r]& \cdots}$$
 Moreover, by Thom isomorphism $H^{k}(A\times A,V,\Z)=H^{k-4}(\Delta,\Z)=H^{k-4}(A,\Z)$.
@@ -154,12 +154,8 @@ H^{3}(\widetilde{A\times A},\Z)=b^{*}(H^{3}(A\times A,\Z))\oplus j_*b_{|E}^{*}(H
 It follows that $$H^{3}(A^{[2]},\Z)\supset \pi_{*}b^{*}(H^{3}(A\times A,\Z))\oplus \pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z)).$$
 We want to show that this inclusion is an equality. We will proceed as follows: We first prove that $\pi_{*}b^{*}(H^{3}(A\times A,\Z))$ is primitive. Then, in Lemma~\ref{primitive3}, we show that $\pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ is primitive and finally we remark that this implies that the direct sum $\pi_*b^{*}(H^{3}(A\times A,\Z))\oplus \pi_*j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ is primitive.  
 
-By Künneth formula, we have:
-\begin{align*}
-H^{3}(A\times A,\Z)&=H^{0}(A,\Z)\otimes H^{3}(A,\Z)\oplus H^{1}(A,\Z)\otimes H^{2}(A,\Z)\\
-&\oplus H^{2}(A,\Z)\otimes H^{1}(A,\Z)\oplus H^{3}(A,\Z)\otimes H^{0}(A,\Z).
-\end{align*}
-Hence all elements in $H^{3}(A\times A,\Z)^{\mathfrak{S}_2}$ are written as $x+\sigma_{2}^{*}(x)$ with $x\in H^{3}(A\times A,\Z)$.
+It follows from the K\"unneth formula that
+all elements in $H^{3}(A\times A,\Z)^{\mathfrak{S}_2}$ are written as $x+\sigma_{2}^{*}(x)$ with $x\in H^{3}(A\times A,\Z)$.
 Since $\frac{1}{2}\pi_{*}(x+\sigma_{2}^{*}(x))=\pi_{*}(x)$, it follows that $\pi_{*}(b^*(H^{3}(A\times A,\Z)))$ is primitive in $H^{3}(A^{[2]},\Z)$.
 Moreover by (\ref{voisin1}), we have the following values which will be used in Section~\ref{d5}:
 \begin{equation}
@@ -183,7 +179,7 @@ H^{3}(\mathscr{N}_{\widetilde{A\times A}/E},\mathscr{N}_{\widetilde{A\times A}/E
 }
 \label{ThomII}
 \end{equation}
-where $\mathscr{N}_{A^{[2]}/E}$ and $\mathscr{N}_{\widetilde{A\times A}/E}$ are respectively the normal bundles of $\pi(E)$ in $A^{[2]}$ and of $E$ in $\widetilde{A\times A}$.
+where $\mathscr{N}_{A^{[2]}/E}$ and $\mathscr{N}_{\widetilde{A\times A}/E}$ are the normal bundles of $\pi(E)$ in $A^{[2]}$ and of $E$ in $\widetilde{A\times A}$, respectively.
 By the proof of Theorem 7.31 of~\cite{Voisin}, the map $h$ is injective with image in $H^{3}(\widetilde{A\times A},\Z)$ given by $j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$. Hence Diagram (\ref{ThomII}) shows that $g$ is also injective and has image $\pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ in $H^{3}(A^{[2]},\Z)$.
 We obtain:
 \begin{equation}
@@ -195,7 +191,7 @@ However, by Lemma~\ref{3}, $H^{3}(U,\Z)$ is torsion free; it follows that $\pi_{
 Now it remains to prove that $\pi_{*}b^{*}(H^{3}(A\times A,\Z))\oplus \pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ is primitive in $H^{3}(A^{[2]},\Z)$.
 This comes from the fact that all elements in $\pi_{*}b^{*}(H^{3}(A\times A,\Z)^{\mathfrak{S}_2})$ are divisible by 2, so the relations (\ref{pietpi}) on $\pi_*$ and $\pi^*$ impose the above sum to be primitive.  
 
-In more details, let $x\in \pi_*b^{*}(H^{3}(A\times A,\Z))$ and $y\in \pi_*j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$. It is enough to show that if $\frac{x+y}{2}\in H^{3}(A^{[2]},\Z)$, then $\frac{x}{2}\in H^{3}(A^{[2]},\Z)$ and $\frac{y}{2}\in H^{3}(A^{[2]},\Z)$.
+More detailed, let $x\in \pi_*b^{*}(H^{3}(A\times A,\Z))$ and $y\in \pi_*j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$. It is enough to show that if $\frac{x+y}{2}\in H^{3}(A^{[2]},\Z)$, then $\frac{x}{2}\in H^{3}(A^{[2]},\Z)$ and $\frac{y}{2}\in H^{3}(A^{[2]},\Z)$.
 As we have seen, we can write $x=\frac{1}{2}\pi_*(z+\sigma_{2}^{*}(z))$, with $z\in b^{*}(H^{3}(A\times A,\Z))$ and $y=\pi_*(y')$, with $y'\in j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$. If $$\frac{\frac{1}{2}\pi_*(z+\sigma_{2}^{*}(z))+\pi_*(y)}{2}\in H^{3}(A^{[2]},\Z)$$ then taking the image by $\pi^{*}$ of this element, we obtain $$\frac{z+\sigma_{2}^{*}(z)}{2}+y'\in H^{3}(\widetilde{A\times A},\Z).$$ Hence $\frac{z+\sigma_{2}^{*}(z)}{2}\in b^{*}(H^{3}(A\times A,\Z))^{\mathfrak{S}_2}$. Hence there is $z'\in b^{*}(H^{3}(A\times A,\Z))$ such that 
 $$\frac{z+\sigma_{2}^{*}(z)}{2}=z'+\sigma_{2}^{*}(z').$$
 So $x$ is divisible by 2 and then also $y$.  
@@ -212,8 +208,7 @@ Then
 |M\DP L|=\sqrt{\frac{\discr L}{\discr M}}.
 \label{squareDiscr}
 \end{equation}
-Let $M$ be unimodular. Let $L\subset M$ be a primitive embedding. 
-Then 
+If $M$ is unimodular and $L\subset M$ is a primitive embedding, then 
 \begin{equation}
 \discr L = \discr L^\perp.
 \label{discrOrthPrim}
@@ -225,13 +220,8 @@ H^{5}(\widetilde{A\times A},\Z)=b^*(H^{5}(A\times A,\Z))\oplus j_*b_{|E}^{*}(H^{
 \label{voisin2}
 \end{equation}
 It follows that $$H^{5}(A^{[2]},\Z)\supset \pi_{*}(b^*(H^{5}(A\times A,\Z)))\oplus \pi_{*}j_*b_{|E}^{*}(H^{3}(\Delta,\Z)).$$
-Moreover, by Künneth formula, we have:
-\begin{align*}
-H^{5}(A\times A,\Z)&=H^{1}(A,\Z)\otimes H^{4}(A,\Z)\oplus H^{2}(A,\Z)\otimes H^{3}(A,\Z)\\
-&\oplus H^{3}(A,\Z)\otimes H^{2}(A,\Z)\oplus H^{4}(A,\Z)\otimes H^{1}(A,\Z).
-\end{align*}
-As before, $\pi_{*}(b^*(H^{5}(A\times A,\Z)))$ is primitive in $H^{5}(A^{[2]},\Z)$.
-Moreover by (\ref{voisin2}):
+As before, by looking at the Künneth formula, $\pi_{*}(b^*(H^{5}(A\times A,\Z)))$ is primitive in $H^{5}(A^{[2]},\Z)$.
+Moreover, by (\ref{voisin2}):
 \begin{equation}
 l_2^5(\widetilde{A\times A})=\rk H^{5}(A\times A,\Z)^{\mathfrak{S}_2}=28,
 \label{l2}
@@ -258,13 +248,15 @@ Then by Proposition~\ref{commut},
 \hspace{62pt}=2^{l_2^3(\widetilde{A\times A})+l_2^5(\widetilde{A\times A})+\rk \left[H^{3}(\widetilde{A\times A},\Z)^{\mathfrak{S}_2}\oplus H^{5}(\widetilde{A\times A},\Z)^{\mathfrak{S}_2}\right]}.
 \end{gather*}
 Then by Proposition~\ref{sarti} (i):
-\begin{gather*}
-\discr \pi_{*}(H^{3}(\widetilde{A\times A},\Z)^{\mathfrak{S}_2}\oplus H^{5}(\widetilde{A\times A},\Z)^{\mathfrak{S}_2})\hspace{55pt}\\
-\hspace{70pt} =2^{2\left( l_2^3(\widetilde{A\times A})+ l_2^5(\widetilde{A\times A})\right)+l_{1,+}^3(\widetilde{A\times A})+l_{1,+}^5(\widetilde{A\times A})}.
-\end{gather*}
+\begin{equation}\label{odddiscr}
+\begin{array}{rl}
+\discr \pi_{*}(H^{3}(\widetilde{A\times A},\Z)^{\mathfrak{S}_2}\!\!\!\!&\oplus\; H^{5}(\widetilde{A\times A},\Z)^{\mathfrak{S}_2})\hspace{55pt}\\
+\hspace{70pt} =\!\! & 2^{2\left( l_2^3(\widetilde{A\times A})+ l_2^5(\widetilde{A\times A})\right)+l_{1,+}^3(\widetilde{A\times A})+l_{1,+}^5(\widetilde{A\times A})}.
+\end{array}
+\end{equation}
 By Remark~\ref{x+ix} and since $\pi_*(x+\iota^*(x))=2\pi_*(x)$, we have:
 $$\frac{\pi_*(H^3(\widetilde{A\times A},\Z)\oplus H^5(\widetilde{A\times A},\Z))}{\pi_*(H^3(\widetilde{A\times A},\Z)^{\mathfrak{S}_2}\oplus H^5(\widetilde{A\times A},\Z)^{\mathfrak{S}_2}}=\left(\frac{\Z}{2\Z}\right)^{\oplus l_2^3(\widetilde{A\times A})+l_2^5(\widetilde{A\times A})}.$$
-Then:
+Then by (\ref{odddiscr}):
 \begin{equation*}
 \discr \pi_{*}(H^{3}(\widetilde{A\times A},\Z)\oplus H^{5}(\widetilde{A\times A},\Z))=2^{l_{1,+}^3(\widetilde{A\times A})+l_{1,+}^5(\widetilde{A\times A})}=2^8.
 \qedhere
