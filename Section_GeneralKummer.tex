@@ -182,12 +182,12 @@ Since $\rho^*$ is injective, $\tilde y$ is in the annihilator of $\sigma^*(x)$, 
 \begin{theorem}\cite[Th\'eor\`eme 4]{Beauville}
 $\kum{A}{n-1}$ is a irreducible holomorphically symplectic manifold. In particular, it is simply connected and the canonical bundle is trivial.
 \end{theorem}
-This implies that $H^2(\kum{A}{n-1},\Z)$ admits an integer-valued nondegenerated symmetric bilinear form (the Beauville--Bogomolov form) $B$ which gives $H^2(\kum{A}{n-1},\Z)$ the structure of a lattice. Looking, for instance, in the useful table from the introduction of~\cite{Rapagnetta}, we know that this lattice is
+This implies that $H^2(\kum{A}{n-1},\Z)$ admits an integer-valued nondegenerated symmetric bilinear form (the Beauville--Bogomolov form) $B_{\kum{A}{n-1}}$ which gives $H^2(\kum{A}{n-1},\Z)$ the structure of a lattice. Looking, for instance, in the useful table from the introduction of~\cite{Rapagnetta}, we know that this lattice is
 isomorphic to $U^{\oplus 3}\oplus \left< -2n \right>$, for $n\geq 3$. 
 We have the Fujiki formula for $\alpha\in H^2(\kum{A}{n-1},\Z)$:
 \begin{equation} \label{fujiki}
 %\int_{\kum{A}{n-1}} \alpha^{2n-2} = n\frac{(2n-2)!}{2^{n-1}(n\! - \! 1)!} q(a)^{n-1}
-\int_{\kum{A}{n-1}} \alpha^{2n-2} = n\cdot(2n-3)!!\cdot B(\alpha,\alpha)^{n-1}
+\int_{\kum{A}{n-1}} \alpha^{2n-2} = n\cdot(2n-3)!!\cdot B_{\kum{A}{n-1}}(\alpha,\alpha)^{n-1}
 \end{equation}
 
 \begin{proposition}\label{H2Sur} Assume $n\geq 3$. Then
@@ -217,5 +217,8 @@ B(u_1,u_2) &= 1, & B(v_1,v_2) &= 1, & B(w_1,w_2) &= 1,  &
 B(e,e)&= -2n,
 \end{align*}
 and all other pairs of basis elements are orthogonal.
+
+If $A=E_1\times E_2$ is the product of two elliptic curves, we choose the $a_i$ in a way such that $\{a_1,a_2\}$ 
+and $\{a_3,a_4\}$ give bases of $H^1(E_1,\Z)$ and $H^1(E_2,\Z)$ in the decomposition $H^1(A) = H^1(E_1)\oplus H^1(E_2)$, respectively.
 \end{notation}
 

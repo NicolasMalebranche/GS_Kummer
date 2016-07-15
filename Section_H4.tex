@@ -18,6 +18,7 @@ Finally in Section \ref{integralbasisH4}, we find a basis of $H^4(\X,\Z)$ using 
 In order to use monodromy representation, we start by recalling some notions of monodromy on abelian surfaces in Section \ref{monodromyexplication}. 
 We will also need some technical calculation related the the action of the symplectic group over finite fields (Section \ref{Section_Symplectic}).
 
+In all the section, we use Notation \ref{TorusClasses} and \ref{BasisH2KA}.
 \input{Section_Kummer4.tex}
 \subsection{A monodromy representation on abelian surfaces and generalized Kummer fourfolds}\label{monodromyexplication}
 \input{Section_Abelian.tex}
@@ -44,10 +45,10 @@ This follows from \cite[Proposition 4.3]{Hassett}.
 
 In Section 4 of \cite{Hassett}, one finds the following formula:
 \begin{equation}
-Z_{\tau}\cdot D_{1}\cdot D_{2}=2\cdot B(D_{1},D_{2}),
+Z_{\tau}\cdot D_{1}\cdot D_{2}=2\cdot B_{\X}(D_{1},D_{2}),
 \label{ZT}
 \end{equation}
-for all $D_{1}$, $D_{2}$ in $H^{2}(\X,\Z)$, $\tau\in A[3]$ and $B$ the Beauville-Bogomolov form on $\X$.
+for all $D_{1}$, $D_{2}$ in $H^{2}(\X,\Z)$, $\tau\in A[3]$ and $B_{\X}$ the Beauville-Bogomolov form on $\X$.
 
 \begin{definition}\label{defiPi}
 We define $\Pi' := \Pi \cap \Sym^{\perp}$. It follows from (\ref{ZT}) that $\Pi'$ can be described as the span of all classes of the form $Z_\tau -Z_0$ or alternatively as the set of all
@@ -130,7 +131,7 @@ With Corollary \ref{KummerEquality} one shows now, that $\cc$ is given as stated
 \begin{proof}[Proof 2]
 It follows from (\ref{sumZ}) that $\cc\in \Pi'^\perp$, so $\cc \in \Sym\otimes\Q$. Moreover, together with (\ref{ZT}) we get that
 \begin{equation*}
-\cc\cdot D_{1}\cdot D_{2}=54\cdot B(D_{1},D_{2})
+\cc\cdot D_{1}\cdot D_{2}=54\cdot B_{\X}(D_{1},D_{2})
 \end{equation*}
 for all $D_{1}$, $D_{2}$ in $H^{2}(\X,\Z)$. Using the non-degeneracy of the Poincar\'e pairing and our knowledge about the Beauville--Bogomolov form on $\X$, we can calculate that
 \[
@@ -225,9 +226,9 @@ we are now going to find
 
 %Now we come to $\Pi'$. 
 The first thing to note is that $\Pi'$ is defined topologically for all deformations of $\X$ and the primitive overlattice of $\Pi'$ is a topological invariant, too.  
-By applying a suitable deformation, we may therefore assume without loss of generality that $A$ is the product of two elliptic curves $A=E_1\times E_2$. 
+By applying a suitable deformation, we may therefore assume without loss of generality that $A$ is the product of two elliptic curves $A=E_1\times E_2$. Here according to Notation \ref{BasisH2KA}, $u_1:=j(a_1 a_2)$ where $\{a_1,a_2\}$ can be seen as a basis of $H^1(E_1)$ (it is necessary to obtain the following expression (\ref{LagrangianPlaneClass})).
 
-Hassett and Tschinkel in Proposition 7.1 of \cite{Hassett} provide the class of a Lagrangian plane (i.e. a sub-varieties Lagrangian with respect to the holomorphic 2-form and isomorphic to the projective plane $\mathbb{P}^2$) $P\subset K_2(A)$, which can be expressed as follows:
+Hassett and Tschinkel in Proposition 7.1 of \cite{Hassett} provide the class of a Lagrangian plane (i.e. a sub-varieties Lagrangian with respect to the holomorphic 2-form of $\X$ and isomorphic to the projective plane $\mathbb{P}^2$) $P\subset K_2(A)$, which can be expressed as follows:
 \begin{equation}
 \left[P\right]=\frac{1}{216}(6u_1-3e)^2+\frac{1}{8}\cc-\frac{1}{3}\sum_{\tau\in \Lambda'} Z_{\tau},
 \label{LagrangianPlaneClass}
@@ -318,11 +319,11 @@ $\discr \Sym^{over}=\discr \Sym^{sat}$ and $\discr \Pi'^{over}=\discr\Pi'^{sat}$
 By (\ref{DiscrSym}), (\ref{symover}) and (\ref{squareDiscr}), the lattice $\Sym^{over}$ has discriminant $3^{22}$. Moreover by (\ref{discrPi}), (\ref{Piover}) and (\ref{squareDiscr}), 
 the lattice $\Pi'^{over}$ has discriminant $3^{22}$. Therefore:
 \begin{equation}
-\discr\Sym^{over}\oplus \Pi'^{over}=3^{44}.
+\discr\left(\Sym^{over}\oplus \Pi'^{over}\right)=3^{44}.
 \label{discrover}
 \end{equation}
-It follows that $\discr \Sym^{sat}\oplus \Pi'^{sat}\leq 3^{44}$
-Hence, by (\ref{squareDiscr}) and \ref{Fpietsym}, $\discr F\leq 1$, so necessarily $\discr F=1$. Hence necessarily $F=H^4(K_2(A),\Z)$. Moreover, $\discr \Sym^{sat}\oplus \Pi'^{sat}=3^{44}$ 
+It follows that $\discr \left(\Sym^{sat}\oplus \Pi'^{sat}\right)\leq 3^{44}$ (here the symbol "$\leq$" can be seen as the divisibility relation).
+Hence, by (\ref{squareDiscr}) and \ref{Fpietsym}, $\discr F\leq 1$, so necessarily $\discr F=1$. Hence necessarily $F=H^4(K_2(A),\Z)$. Moreover, $\discr \left(\Sym^{sat}\oplus \Pi'^{sat}\right)=3^{44}$ 
 which show by (\ref{discrover}) that $\Sym^{over}=\Sym^{sat} \text{ and } \Pi'^{over}=\Pi'^{sat}.$ 
 
 We summarize the description of the integral basis of $H^{4}(K_2(A),\Z)$ in the following theorem.
