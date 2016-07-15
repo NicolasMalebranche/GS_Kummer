@@ -1,5 +1,6 @@
-\section{Symplectic involution on $K_{2}(A)$}\label{Involution} 
-From Section \ref{oddcohoK2} and \cite{MongWanTari}, it is now possible to classified the symplectic involutions on $K_{2}(A)$. It is the aim of this section.
+\section{Symplectic involutions on $K_{2}(A)$}\label{Involution} 
+By Section \ref{oddcohoK2} and \cite{MongWanTari}, it is now possible to classify the symplectic involutions on $K_{2}(A)$.
+%It is the aim of this section.
 
 Let $X$ be an irreducible symplectic manifold. Denote $$\nu: \Aut (X)\rightarrow \Aut H^{2}(X,\Z)$$
 the natural morphism. Hassett and Tschinkel (Theorem 2.1 in \cite{Hassett}) have shown that $\Ker \nu$ is a deformation invariant. 
@@ -14,20 +15,19 @@ When $X=K_2(A)$, we have more precisely, by Corollary 3.3 of \cite{BNS2}, $$\Ker
 \subsection{Uniqueness and fixed locus}
 \begin{thm}\label{SymplecticInvo}
 Let $X$ be an irreducible symplectic fourfold of Kummer type and $\iota$ a symplectic involution on $X$. Then:
-\begin{itemize}
-\item[(1)]
+\begin{enumerate}
+\item
 We have $\iota\in \Ker \nu$.
-\item[(2)]
+\item
 Let $A$ be an abelian surface. Then 
 the couple $(X,\iota)$ is deformation equivalent to $(K_2(A),t_\tau \circ (-\id_A)^{[[3]]})$,
 where $t_\tau$ is the morphism induced on $K_2(A)$ by the translation by $\tau\in A[3]$.
-\item[(3)]
+\item
 The fixed locus of $\iota$ is given by a K3 surface and 36 isolated points.
-\end{itemize}
+\end{enumerate}
 \end{thm}
-\begin{proof}
-\begin{itemize}
-\item[(1)]
+\begin{proof}[Proof of (i)]
+
 If $\iota\notin \Ker \nu$, by the classification of Section 5 of \cite{MongWanTari}, the unique possible action of $\iota$ on $H^{2}(X,\Z)$ is given by $H^{2}(X,\Z)^{\iota}=U\oplus (2)^2\oplus(-6)$. We will show that it is impossible. Let us assume that $H^{2}(X,\Z)^{\iota}=U\oplus (2)^2\oplus(-6)$, we will find a contradiction.
 
 As done in Section 3 of \cite{Mongardi}, consider a local universal deformation space of $X$:
@@ -52,18 +52,19 @@ It follows from the classification of Section 4 of \cite{MongWanTari0}, that $A=
 1 & 0 
 \end{array} \right)$. 
 
-Let also denote by $g$ the automorphism on $K_2(A)$ induced by $g$. By construction, $g\circ i$ acts trivially on $H^{2}(K_2(A),\Z)$. Hence by Corollary 3.3 and Lemma 3.4 of \cite{FujikiK}, $g\circ \iota$ extends to an automorphism of $K_2(A)$. In particular, $i$ extends to a symplectic involution on $K_2(A)$. Then $g\circ i\in \Ker \nu$.
+Let us also denote by $g$ the automorphism on $K_2(A)$ induced by $g$. By construction, $g\circ i$ acts trivially on $H^{2}(K_2(A),\Z)$. Hence by Corollary 3.3 and Lemma 3.4 of \cite{FujikiK}, $g\circ \iota$ extends to an automorphism of $K_2(A)$. In particular, $i$ extends to a symplectic involution on $K_2(A)$. Then $g\circ i\in \Ker \nu$.
 
 By Corollary \ref{actionH3}, $t_\tau$ acts trivially on $H^{3}(K_2(A),\Z)$. Hence by Corollary 3.3 of \cite{BNS2}, we have necessarily:
 $$g^{*}_{|H^{3}(K_2(A),\Z)}=i^{*}_{|H^{3}(K_2(A),\Z)}\circ (-\id_A)^{*}_{|H^{3}(K_2(A),\Z)}\ \ou\ g^{*}_{|H^{3}(K_2(A),\Z)}=i^{*}_{|H^{3}(K_2(A),\Z)}.$$
 But by Corollary \ref{actionH3}, $g^{*}_{|H^{3}(K_2(A),\Z)}$ has order 4 and $i^{*}_{|H^{3}(K_2(A),\Z)}\circ (-\id_A)^{*}_{|H^{3}(K_2(A),\Z)}$ and $i^{*}_{|H^{3}(K_2(A),\Z)}$ have order 2, which is a contradiction.
-\item[(2)]
-Let $X$ be a irreducible symplectic fourfold of Kummer type and $\iota$ a symplectic involution on $X$. By (1) of the above theorem, we have $\iota\in\Ker \nu$. Then by Theorem 2.1 of \cite{Hassett}, the couple $(X,\iota)$ deform to a couple $(K_2(A),\iota')$ with $A$ an abelian surface and $\iota'\in\Ker \nu$ a symplectic involution on $ K_2(A)$. Then we conclude with Corollary 3.3 of \cite{BNS2}.
-\item[(3)]
-Let $A$ be an abelian surface. By Section 1.2.1 of \cite{Tari}, the fixed locus of $t_\tau \circ (-\id_A)^{[[3]]}$ on $K_2(A)$ is given by a K3 surface an 36 isolated points. 
+\vspace{3pt}\\
+\emph{Proof of (ii).} 
+Let $X$ be a irreducible symplectic fourfold of Kummer type and $\iota$ a symplectic involution on $X$. By (i) of the above theorem, we have $\iota\in\Ker \nu$. Then by Theorem 2.1 of \cite{Hassett}, the couple $(X,\iota)$ deforms to a couple $(K_2(A),\iota')$ with $A$ an abelian surface and $\iota'\in\Ker \nu$ a symplectic involution on $ K_2(A)$. Then we conclude with Corollary 3.3 of \cite{BNS2}.
+\vspace{3pt}\\
+\emph{Proof of (iii).} 
+Let $A$ be an abelian surface. By Section 1.2.1 of \cite{Tari}, the fixed locus of $t_\tau \circ (-\id_A)^{[[3]]}$ on $K_2(A)$ is consists of a K3 surface an 36 isolated points. 
 Now let $X$ be a irreducible symplectic fourfold of Kummer type and $\iota$ a symplectic involution on $X$. 
-By (2) of the above theorem, $\Fix\iota$ deforms to the disjoint union of a K3 surface and 36 isolated points. Moreover, $\iota$ is a symplectic involution, so the holomorphic 2-form of $X$ restricts to a non-degenerated holomorphic 2-form on $\Fix\iota$. Then necessarily, $\Fix\iota$ consists of a K3 surface and 36 isolated points.
-\end{itemize}
+By (ii) of the above theorem, $\Fix\iota$ deforms to the disjoint union of a K3 surface and 36 isolated points. Moreover, $\iota$ is a symplectic involution, so the holomorphic 2-form of $X$ restricts to a non-degenerated holomorphic 2-form on $\Fix\iota$. Then necessarily, $\Fix\iota$ consists of a K3 surface and 36 isolated points.
 \end{proof}
 \begin{rmk}\label{RemarkSymplecticInv}
 \begin{itemize}
@@ -75,18 +76,18 @@ the set $$\mathcal{P}:=\left\{\left.\xi\in K_{2}(A)\right|\ \Supp \xi= \left\{a_
 \end{itemize}
 \end{rmk}
 \subsection{Action on the cohomology}\label{actioncoh}
-From Theorem \ref{SymplecticInvo}, we can assume that $X=K_2(A)$ and $\iota=-\id_A$. To consider $t_\tau \circ (-\id_A)$ instead of  $-\id_A$ only has the effect of exchanging the role of $[Z_0]$ and $[Z_{-\tau}]$.
-Hence we do not lose any generality assuming that $\iota=-\id_A$. Now, we calculate the invariants $l_i^j(K_{2}(A))$ defined in Definition-Proposition \ref{defiprop}. It will be used in Section \ref{BeauvilleForm}.
+By Theorem \ref{SymplecticInvo}, we can assume that $X=K_2(A)$ and $\iota=-\id_A$. To consider $t_\tau \circ (-\id_A)$ instead of  $-\id_A$ only has the effect of exchanging the role of $[Z_0]$ and $[Z_{-\tau}]$.
+Hence we do not lose any generality assuming that $\iota=-\id_A$. Now we calculate the invariants $l_i^j(K_{2}(A))$ defined in Definition-Proposition \ref{defiprop}. It will be used in Section \ref{BeauvilleForm}.
 
 From Theorem \ref{SymplecticInvo} (1), the involution $\iota$ acts trivially on $H^{2}(K_{2}(A),\Z)$.
-It follows 
+It follows that
 \begin{equation}
 l_{2}^2(K_{2}(A))=l_{1,-}^2(K_{2}(A))=0 \text{ and } l_{1,+}^2(K_{2}(A))=7.
 \label{l22}
 \end{equation}
 From Corollary \ref{actionH3}, the involution $\iota$ acts as $-\id$ on $H^{3}(K_{2}(A),\Z)$.
 %We have $\rk H^{3}(K_{2}(A),\Z)^{\iota}= 2$.
-It follows 
+It follows that
 \begin{equation}
 l_{2}^3(K_{2}(A))=l_{1,+}^3(K_{2}(A))=0 \text{ and } l_{1,-}^3(K_{2}(A))=8.
 \label{l3}
@@ -143,13 +144,13 @@ On the other hand $\rk \Pi'=80$, it follows that $l_{2}^{4}=40$.
 \end{proof}
 \section{Proof of Theorem \ref{theorem}}\label{BeauvilleForm}
 %\subsection{Statement of the main theorem}\label{statement}
-Since all generalised Kummer fourfolds are deformation equivalent, by Theorem \ref{SymplecticInvo} all the couples $(X,\iota)$, where $X$ is a fourfold of Kummer type and $\iota$ a symplectic involution, are deformation equivalent.
+Since all generalized Kummer fourfolds are deformation equivalent, by Theorem \ref{SymplecticInvo} all the couples $(X,\iota)$, where $X$ is a fourfold of Kummer type and $\iota$ a symplectic involution, are deformation equivalent.
 Moreover, the Beauville--Bogomolov form is a topological invariant, 
-hence without lost of generality it is enough to prove Theorem \ref{theorem} for a particular couple $(X,\iota)$.
-We can assume that $X$ is a generalized Kummer fourfold and $\iota=-\id_A$. As it will be useful to prove Lemma \ref{Ddelta}, we can assume even more that $A=E_\xi\times E_\xi$, where 
+hence without loss of generality it is enough to prove Theorem \ref{theorem} for a particular couple $(X,\iota)$.
+We can assume that $X$ is a generalized Kummer fourfold and $\iota=-\id_A$. As it will be useful in proving Lemma \ref{Ddelta}, we can assume moreover that $A=E_\xi\times E_\xi$, where 
 $$E_\xi:=\frac{\C}{\Lambda_0},$$
 with $\Lambda_0 = \left<1,\xi\right>$.
-This abelian has the interest to carry enough automorphisms.
+This abelian surface has the interest to carry enough automorphisms.
 \begin{definition}\label{elliptic6}
 %Denote $\xi\in\C$ a primitive sixth root of unity and $E_\xi$ the elliptic curve given by the choice $\Lambda_0 = \left<1,\xi\right>$, so by Proposition~\ref{EndLambda}, $\End(\Lambda_0)=\Lambda_0$ is the ring of Eisenstein integers. 
 Define a group $G_\xi$ of automorphisms of $E_\xi\times E_\xi$ by the following generators in $\GL(2,\End(\Lambda_0))$:
@@ -349,7 +350,7 @@ It follows:
 \end{equation}
 %$$x^2=\frac{2z_{s}}{5\cdot3^\alpha}.$$
 %Moreover, since $H^{4}(K_{2}(A),\Z)$ is torsion-free, $z':=\frac{z_{s}}{5\cdot3^\alpha}\in H^{4}(K_{2}(A),\Z)$. 
-let $(u_{1},u_{2},v_{1},v_{2},w_{1},w_{2},e)$ be the integral basis of $H^{2}(K_{2}(A),\Z)$ introduced in Notation\ref{BasisH2KA}.
+let $(u_{1},u_{2},v_{1},v_{2},w_{1},w_{2},e)$ be the integral basis of $H^{2}(K_{2}(A),\Z)$ introduced in Notation~\ref{BasisH2KA}.
 We can write:
 $$x=\alpha_{1}u_{1}+\alpha_{2}u_{2}+\beta_{1}v_{1}+\beta_{2}v_{2}+\gamma_{1}w_{1}+\gamma_{2}w_{2}+de.$$
 Then $$3^\alpha\cdot x^{2}=\alpha_{1}^{2}u_{1}^{2}+\alpha_{2}^{2}u_{2}^{2}+\beta_{1}^{2}v_{1}^{2}+\beta_{2}^{2}v_{2}^{2}+\gamma_{1}^{2}w_{1}^{2}+\gamma_{2}^{2}w_{2}^{2}+d^{2}e^{2}\mod 2H^{4}(K_{2}(A),\Z).$$
@@ -357,7 +358,7 @@ Then $$3^\alpha\cdot x^{2}=\alpha_{1}^{2}u_{1}^{2}+\alpha_{2}^{2}u_{2}^{2}+\beta
 %$$5\cdot3^\alpha\cdot x^{2}=\alpha_{1}^{2}u_{1}^{2}+\alpha_{2}^{2}u_{2}^{2}+\beta_{1}^{2}v_{1}^{2}+\beta_{2}^{2}v_{2}^{2}+\gamma_{1}^{2}w_{1}^{2}+\gamma_{2}^{2}w_{2}^{2}+d^{2}e^{2}\mod 2H^{4}(K_{2}(A),\Z).$$
 It follows by (\ref{haha}) that 
 $\alpha_{1}^{2}u_{1}^{2}+\alpha_{2}^{2}u_{2}^{2}+\beta_{1}^{2}v_{1}^{2}+\beta_{2}^{2}v_{2}^{2}+\gamma_{1}^{2}w_{1}^{2}+\gamma_{2}^{2}w_{2}^{2}+d^{2}e^{2}$ is divisible by 2.
-However by Theorem \ref{integralbasistheorem} (i), we have:
+However, by Theorem \ref{integralbasistheorem} (i), we have:
 \begin{equation}
 \mathcal{S}=\left\langle \Sym^2 H^{2}(K_{2}(A),\Z); \frac{u_{1}\cdot u_{2}+v_{1}\cdot v_{2}+w_{1}\cdot w_{2}}{2};\frac{u_{i}^{2}-\frac{1}{3}u_{i}\cdot e}{2};\frac{v_{i}^{2}-\frac{1}{3}v_{i}\cdot e}{2};\frac{w_{i}^{2}-\frac{1}{3}w_{i}\cdot e}{2},i\in\left\{1,2\right\}\right\rangle.
 \label{generatorsS}
@@ -742,13 +743,13 @@ $$=U^{3}\left(6\sqrt{\frac{2}{c_{K'}}}\right) \oplus -\sqrt{\frac{2}{c_{K'}}}\le
 Then it follows from the integrality and the indivisibility of the Beauville--Bogomolov form that $c_{K'}=8$, and we get Theorem \ref{theorem}.
 \subsection{Betti numbers and Euler characteristic of $K'$}
 \begin{prop}\label{b}
-We have:
-\begin{itemize}
-\item $b_2(K')=8$,
-\item $b_{3}(K')=0,$
-\item $b_{4}(K')=90,$
-\item $\chi(K')=108.$
-\end{itemize}
+The Betti numbers and the Euler characteristic are
+\begin{align*}
+ b_2(K')&=8,&
+b_{3}(K')&=0,&
+b_{4}(K')&=90,&
+\chi(K')&=108.
+\end{align*}
 \end{prop}
 \begin{proof}
 It is the same proof as Proposition 4.7.2 of \cite{Lol}.
