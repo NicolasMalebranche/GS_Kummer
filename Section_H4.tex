@@ -117,8 +117,8 @@ We have:
 \end{equation}
 In particular, $\cc\in \Sym \otimes\Q $.
 \end{proposition}
-We shall give two different proofs. The first one uses Nakajima operators, the second one is based on results of \cite{Hassett}.
-\begin{proof}[Proof 1]
+%We shall give two different proofs. The first one uses Nakajima operators, the second one is based on results of \cite{Hassett}.
+\begin{proof}
 First note that the defining diagram (\ref{square}) of the Kummer manifold is the pullback of the inclusion of a point, so the normal bundle of $\X$ in $A\hilb{3}$ is trivial. The Chern class of the tangent bundle of $\X$ is therefore given by the pullback from $A\hilb{3}$: $c(\X) = \theta^*\left(c(A\hilb{3})\right)$. Proposition \ref{ImSym} allows now to conclude that $\cc\in \Sym \otimes \Q$.
 
 To obtain the precise formula, we use a result of Boissi\`ere, \cite[Lemma 3.12]{Boissiere}, giving a commutation relation for the Chern character multiplication operator on the Hilbert scheme. We get:
@@ -128,16 +128,19 @@ c_2(A\hilb{3}) & = 3\q_1(1)\mathfrak L_2(1)\vac - \frac{1}{3} \q_3(1)\vac \\
 \end{align*}
 With Corollary \ref{KummerEquality} one shows now, that $\cc$ is given as stated.
 \end{proof}
-\begin{proof}[Proof 2]
-It follows from (\ref{sumZ}) that $\cc\in \Pi'^\perp$, so $\cc \in \Sym\otimes\Q$. Moreover, together with (\ref{ZT}) we get that
-\begin{equation*}
-\cc\cdot D_{1}\cdot D_{2}=54\cdot B_{\X}(D_{1},D_{2})
-\end{equation*}
-for all $D_{1}$, $D_{2}$ in $H^{2}(\X,\Z)$. Using the non-degeneracy of the Poincar\'e pairing and our knowledge about the Beauville--Bogomolov form on $\X$, we can calculate that
-\[
-\cc= 4 u_1u_2 + 4v_1v_2 + 4 w_1 w_2 - \frac{1}{3} e^2.  \qedhere
-\]
-\end{proof}
+%\begin{proof}[Proof 2]
+%It follows from (\ref{sumZ}) that $\cc\in \Pi'^\perp$, so $\cc \in \Sym\otimes\Q$. Moreover, together with (\ref{ZT}) we get that
+%\begin{equation*}
+%\cc\cdot D_{1}\cdot D_{2}=54\cdot B_{\X}(D_{1},D_{2})
+%\end{equation*}
+%for all $D_{1}$, $D_{2}$ in $H^{2}(\X,\Z)$. Using the non-degeneracy of the Poincar\'e pairing and our knowledge about the Beauville--Bogomolov form on $\X$, we can calculate that
+%\[
+%\cc= 4 u_1u_2 + 4v_1v_2 + 4 w_1 w_2 - \frac{1}{3} e^2.  \qedhere
+%\]
+%\end{proof}
+\begin{rmk}
+Proposition \ref{ChernSym} can also be proven using (\ref{sumZ}) and (\ref{ZT}).
+\end{rmk}
 
 
 \begin{corollary}\label{Pi'}
@@ -160,11 +163,15 @@ Y_p = \frac{1}{9} \theta^*\Big( \q_1(1)\mathfrak L_2(1) \vac \Big) =  \frac{1}{2
 \end{remark}
 Now, we can summarize all the divisible classes found in $\Sym$ in the following proposition. 
 \begin{proposition}\label{classedivisibleSym}
+Let $\{e,u_1,u_2,v_1,v_2,w_1,w_2\}$ be the integral basis of $H^2(\X,\Z)$ as defined in Notation \ref{BasisH2KA}. 
+We have:
 \begin{enumerate}
 \item
-The class $e^2$ is divisible by $3$ and the class $u_1u_2 + v_1v_2+w_1w_2$ is divisible by 6.
+the class $e^2$ is divisible by $3$, 
 \item
-For $y\in\{u_1,u_2,v_1,v_2,w_1,w_2\}$, the class 
+the class $u_1u_2 + v_1v_2+w_1w_2$ is divisible by 6,
+\item
+for $y\in\{u_1,u_2,v_1,v_2,w_1,w_2\}$, the class 
 $
 e \cdot y
 $
@@ -210,7 +217,7 @@ On the other hand, a formula developed in \cite{Kapfer} evaluates
 \begin{equation} \label{DiscrSym}
 \discr \Sym \ = 2^{14}\cdot 3^{38},
 \end{equation}
-so the lattices cannot be primitive. Denote $\Sym^{sat}$ and $\Pi'^{sat}$ the respective primitive overlattices of $\Sym$ and $\Pi'$. $\Sym \oplus\Pi'$ is a sublattice of $H^4(\X,\Z)$ of index $2^{7}\cdot 3^{61}$ and we claim that $\Sym^{sat}\oplus \Pi'^{sat}$ has index $3^{22}$. 
+so the lattices cannot be primitive. Denote $\Sym^{sat}$ and $\Pi'^{sat}$ the respective primitive overlattices of $\Sym$ and $\Pi'$ in $H^4(\X,\Z)$. $\Sym \oplus\Pi'$ is a sublattice of $H^4(\X,\Z)$ of index $2^{7}\cdot 3^{61}$ and we claim that $\Sym^{sat}\oplus \Pi'^{sat}$ has index $3^{22}$. 
 We have already found in Proposition~\ref{classedivisibleSym}
 \begin{itemize}
  \item $7$ linearly independent classes in $\Sym$ divisible by $2$,
@@ -271,7 +278,7 @@ Let us now find the remaining $19$ classes divisible by $3$.
 %Hassett and Tschinkel in Proposition 7.1 of \cite{Hassett} provide the class of a Lagrangian plane $P\subset K_2(A)$, which can be expressed as follows:
 %$$\left[P\right]=\frac{1}{216}(6u_1-3e)^2+\frac{1}{8}\cc-\frac{1}{3}\sum_{\tau\in \Lambda'} Z_{\tau},$$
 %where $\Lambda'=E_1[3]\times 0\subset A[3]$. 
-We rearrange (\ref{LagrangianPlaneClass}) a bit using (\ref{WW}):
+We rearrange (\ref{LagrangianPlaneClass}) using (\ref{WW}):
 \begin{align*}
 \left[P\right]&=\frac{1}{216}(6u_1-3e)^2+\frac{1}{8}\cc-\frac{1}{3}\sum_{\tau\in \Lambda'} Z_{\tau}\\
 &=\frac{36u_1^2+9e^2-36u_1\cdot e}{216} +\frac{W}{3}-\frac{3}{8}e^2-\frac{1}{3}\sum_{\tau\in \Lambda'} Z_{\tau}\\
@@ -322,8 +329,8 @@ the lattice $\Pi'^{over}$ has discriminant $3^{22}$. Therefore:
 \discr\left(\Sym^{over}\oplus \Pi'^{over}\right)=3^{44}.
 \label{discrover}
 \end{equation}
-It follows that $\discr \left(\Sym^{sat}\oplus \Pi'^{sat}\right)\leq 3^{44}$ (here the symbol "$\leq$" can be seen as the divisibility relation).
-Hence, by (\ref{squareDiscr}) and \ref{Fpietsym}, $\discr F\leq 1$, so necessarily $\discr F=1$. Hence necessarily $F=H^4(K_2(A),\Z)$. Moreover, $\discr \left(\Sym^{sat}\oplus \Pi'^{sat}\right)=3^{44}$ 
+It follows that $\discr \left(\Sym^{sat}\oplus \Pi'^{sat}\right) | 3^{44}$ (here the symbol "$|$" is the divisibility relation).
+Hence, by (\ref{squareDiscr}) and \ref{Fpietsym}, $\discr F | 1$, so necessarily $\discr F=1$. Hence necessarily $F=H^4(K_2(A),\Z)$. Moreover, $\discr \left(\Sym^{sat}\oplus \Pi'^{sat}\right)=3^{44}$ 
 which show by (\ref{discrover}) that $\Sym^{over}=\Sym^{sat} \text{ and } \Pi'^{over}=\Pi'^{sat}.$ 
 
 We summarize the description of the integral basis of $H^{4}(K_2(A),\Z)$ in the following theorem.

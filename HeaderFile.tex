@@ -9,7 +9,7 @@ listings}
 \usepackage[bookmarks=false]{hyperref}
 \usepackage{color}
 %\usepackage[margin=3cm]{geometry}
-\usepackage{fullpage}
+%\usepackage{fullpage}
 \renewcommand{\labelenumi}{(\roman{enumi})}
 
 \DeclareMathOperator{\rank}{rank}
@@ -101,6 +101,11 @@ listings}
 \newcommand{\incl}[1][r]
   {\ar@<-0.2pc>@{^(-}[#1] \ar@<+0.2pc>@{-}[#1]}
  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand*{\code}[1]{{\mdseries\texttt{#1}}}
+\newcommand*{\pkg}[1]{{\mdseries\textsf{#1}}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \theoremstyle{plain}
