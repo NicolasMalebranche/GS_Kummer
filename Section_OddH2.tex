@@ -27,9 +27,9 @@ Let $A$ be a smooth compact surface with torsion free cohomology.
 Then
 \begin{itemize}
 \item[(i)]
-$H^{3}(A\hilb{2},\Z)=\pi_*(b^{*}(H^{3}(A\times A,\Z)))\oplus \pi_*j_*b_{|E}^{*}(H^1(\Delta,\Z))$,
+$H^{3}(A\hilb{2},\Z)=\pi_*(b^{*}(H^{3}(A\times A,\Z)))\oplus \frac{1}{2}\pi_*j_*b_{|E}^{*}(H^1(\Delta,\Z))$,
 \item[(ii)]
-$H^{5}(A\hilb{2},\Z)=\pi_*(b^{*}(H^{5}(A\times A,\Z)))\oplus \frac{1}{2}\pi_*j_*b_{|E}^{*}(H^3(\Delta,\Z))$.
+$H^{5}(A\hilb{2},\Z)=\pi_*(b^{*}(H^{5}(A\times A,\Z)))\oplus \pi_*j_*b_{|E}^{*}(H^3(\Delta,\Z))$.
 \end{itemize}
 %We have:
 %$$\alpha_3=0\ \text{ and }\ \alpha_5=4.$$
@@ -43,7 +43,7 @@ A basis of $H^2(A,\Z)$ will be denoted by $(b_i)$.
 The rest of this section is dedicated to the proof of this proposition. 
 This proposition is proved using techniques developed in \cite{Lol}, for another approach see \cite{Totaro}.
 The proof is organized as follows. First we recall some notions on integral cohomology endowed with the action of an involution in Section \ref{IntegralTools}. 
-Then Section \ref{Prelemma} is devoted to calculate the torsion of $H^{3}(A\hilb{2}\smallsetminus E,\Z)$ (Lemma~\ref{3}) using equivariant cohomology techniques. Then this knowledge allow us to deduce $\alpha_3=0$ using the exact sequence (\ref{exactutile}) of Section \ref{=} and $\alpha_5=4$ using the unimodularity of the lattice $H^{3}\left(\Bl_\Delta(A\! \times\! A),\Z\right)\oplus H^{5}\left(\Bl_\Delta(A\! \times\! A),\Z\right)$.
+Then Section \ref{Prelemma} is devoted to calculate the torsion of $H^{3}(A\hilb{2}\smallsetminus E,\Z)$ (Lemma~\ref{3}) using equivariant cohomology techniques. Then this knowledge allow us to deduce $\alpha_3=4$ using the exact sequence (\ref{exactutile}) of Section \ref{=} and $\alpha_5=0$ using the unimodularity of the lattice $H^{3}\left(\Bl_\Delta(A\! \times\! A),\Z\right)\oplus H^{5}\left(\Bl_\Delta(A\! \times\! A),\Z\right)$.
 \subsection{Integral cohomology under the action of an involution}\label{IntegralTools}
 The main references of this subsection are \cite{Lol} and \cite{BNS}.
 
@@ -126,28 +126,28 @@ H^{3}(A\times A,\Z)=H^{3}(V,\Z).
 Now we will calculate the invariant $l_{1,-}^{2}(A\times A)$ and $l_{1,+}^{1}(A\times A)$ from Definition-Proposition~\ref{defiprop}.
 
 \begin{lemma}\label{2}
-We have: $l_{1,-}^{2}(A\times A)=l_{1,+}^{1}(A\times A)=0$.
+We have: $l_{1,+}^{1}(A\times A)=0$ and $l_{1,-}^{2}(A\times A)=b_1(A)$.
 \end{lemma}
 \begin{proof}
 By Künneth formula we have:
 $$H^{1}(A\times A,\Z)=H^{0}(A,\Z)\otimes H^{1}(A,\Z)\oplus H^{1}(A,\Z)\otimes H^{0}(A,\Z).$$
-The elements of $H^{0}(A,\Z)\otimes H^{1}(A,\Z)$ and $H^{1}(A,\Z)\otimes H^{0}(A,\Z)$ are exchanged under the action of $\sigma_2$. It follows that $l_{2}^{1}(A\times A)=4$ and necessary $l_{1,-}^{1}(A\times A)=l_{1,+}^{1}(A\times A)=0$.
+The elements of $H^{0}(A,\Z)\otimes H^{1}(A,\Z)$ and $H^{1}(A,\Z)\otimes H^{0}(A,\Z)$ are exchanged under the action of $\sigma_2$. It follows that $l_{2}^{1}(A\times A)=b_1(A)$ and necessary $l_{1,-}^{1}(A\times A)=l_{1,+}^{1}(A\times A)=0$.
 Using Künneth again, we get: 
 \begin{align*}
 H^{2}(A\times A,\Z)&=H^{0}(A,\Z)\otimes H^{2}(A,\Z)\oplus H^{1}(A,\Z)\otimes H^{1}(A,\Z)\\
 &\oplus H^{2}(A,\Z)\otimes H^{0}(A,\Z).
 \end{align*}
-As before, elements $z\otimes y\in H^{2}(A\times A,\Z)$ are sent to $y\otimes z$ by the action of $\sigma_2$. Such an element is fixed by the action of $\sigma_2$ if $z=y$. It follows:
-$$l_{2}^{2}(A\times A)=6+6=12,$$
-$$l_{1,+}^{2}(A\times A)=4,$$
+As before, elements $z\otimes y\in H^{2}(A\times A,\Z)$ are sent to $-y\otimes z$ by the action of $\sigma_2$. Such an element is anti-invariant by the action of $\sigma_2$ if $z=y$. It follows:
+$$l_{2}^{2}(A\times A)=b_2(A)+\frac{b_1(A)(b_1(A)-1)}{2},$$
+$$l_{1,-}^{2}(A\times A)=b_1(A),$$
 and thus:
 \begin{equation*}
-l_{1,-}^{2}(A\times A)=0.
+l_{1,+}^{2}(A\times A)=0.
 \qedhere
 \end{equation*}
 \end{proof}
 \begin{lemma}\label{3}
-The group $H^{3}(U,\Z)$ is torsion free.
+The torsion part of the group $H^{3}(U,\Z)$ is isomorphic to $(\Z/2\Z)^{\oplus b_1(A)}$.
 \end{lemma}
 \begin{proof}
 Using the spectral sequence of equivariant cohomology, it follows from Proposition 3.2.5 of~\cite{Lol}, Lemma~\ref{1} and~\ref{2}.
@@ -160,20 +160,20 @@ H^{3}(\Bl_\Delta(A\! \times\! A),\Z)=b^{*}(H^{3}(A\times A,\Z))\oplus j_*b_{|E}^
 \label{voisin1}
 \end{equation}
 It follows that $$H^{3}(A^{[2]},\Z)\supset \pi_{*}b^{*}(H^{3}(A\times A,\Z))\oplus \pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z)).$$
-We want to show that this inclusion is an equality. We will proceed as follows: We first prove that $\pi_{*}b^{*}(H^{3}(A\times A,\Z))$ is primitive. Then, in Lemma~\ref{primitive3}, we show that $\pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ is primitive and finally we remark that this implies that the direct sum $\pi_*b^{*}(H^{3}(A\times A,\Z))\oplus \pi_*j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ is primitive.  
+We want to find an equality. We will proceed as follows: We first prove that $\pi_{*}b^{*}(H^{3}(A\times A,\Z))$ is primitive. Then, in Lemma~\ref{primitive3}, we show that all the elements of $\pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ are divisible by 2 and finally we remark that this implies that the direct sum $\pi_*b^{*}(H^{3}(A\times A,\Z))\oplus \frac{1}{2}\pi_*j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ is primitive.  
 
 It follows from the K\"unneth formula that
 all elements in $H^{3}(A\times A,\Z)^{\mathfrak{S}_2}$ are written as $x+\sigma_{2}^{*}(x)$ with $x\in H^{3}(A\times A,\Z)$.
 Since $\frac{1}{2}\pi_{*}(x+\sigma_{2}^{*}(x))=\pi_{*}(x)$, it follows that $\pi_{*}(b^*(H^{3}(A\times A,\Z)))$ is primitive in $H^{3}(A^{[2]},\Z)$.
 Moreover by (\ref{voisin1}), we have the following values which will be used in Section~\ref{d5}:
 \begin{equation}
-l_2^3(\Bl_\Delta(A\! \times\! A))=\rk H^{3}(A\times A,\Z)^{\mathfrak{S}_2}=28.
+l_2^3(\Bl_\Delta(A\! \times\! A))=\rk H^{3}(A\times A,\Z)^{\mathfrak{S}_2}=b_1(A)(b_2(A)+1).
 \label{l1}
 \end{equation}
 and
-$$l_{1,+}^3(\Bl_\Delta(A\! \times\! A))=\rk H^{1}(\Delta,\Z)^{\mathfrak{S}_2}=4,\ \text{ and }\ l_{1,-}^3(\Bl_\Delta(A\! \times\! A))=0.$$
+$$l_{1,+}^3(\Bl_\Delta(A\! \times\! A))=\rk H^{1}(\Delta,\Z)^{\mathfrak{S}_2}=b_1(A),\ \text{ and }\ l_{1,-}^3(\Bl_\Delta(A\! \times\! A))=0.$$
 \begin{lemma}\label{primitive3}
-The group $\pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ is primitive in $H^{3}(A^{[2]},\Z)$.
+All the elements of the group $\pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ are divisible by 2 in $H^{3}(A^{[2]},\Z)$.
 \end{lemma}
 \begin{proof}
 We consider the following commutative diagram:
@@ -190,19 +190,24 @@ H^{3}(\mathscr{N}_{\Bl_\Delta(A\! \times\! A)/E},\mathscr{N}_{\Bl_\Delta(A\! \ti
 where $\mathscr{N}_{A^{[2]}/E}$ and $\mathscr{N}_{\Bl_\Delta(A\! \times\! A)/E}$ are the normal bundles of $\pi(E)$ in $A^{[2]}$ and of $E$ in $\Bl_\Delta(A\! \times\! A)$, respectively.
 By the proof of Theorem 7.31 of~\cite{Voisin}, the map $h$ is injective with image in $H^{3}(\Bl_\Delta(A\! \times\! A),\Z)$ given by $j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$. Hence Diagram (\ref{ThomII}) shows that $g$ is also injective and has image $\pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ in $H^{3}(A^{[2]},\Z)$.
 We obtain:
+$$\xymatrix{ 0\ar[r]&H^{3}(A^{[2]},U,\Z)\ar[r]^g&H^{3}(A^{[2]},\Z)\ar[r]&H^{3}(U,\Z)}.$$
+From Thom's isomorphism, we know that $H^{4}(A^{[2]},U,\Z)$ is torsion free, hence by Lemma~\ref{3}:
 \begin{equation}
-\xymatrix{ 0\ar[r]&H^{3}(A^{[2]},U,\Z)\ar[r]^g&H^{3}(A^{[2]},\Z)\ar[r]&H^{3}(U,\Z)}.
+\xymatrix{ 0\ar[r]&H^{3}(A^{[2]},U,\Z)\ar[r]^g&H^{3}(A^{[2]},\Z)\ar[r]&(\Z/2\Z)^{\oplus b_1(A)}\ar[r]&0}.
 \label{exactutile}
 \end{equation}
-However, by Lemma~\ref{3}, $H^{3}(U,\Z)$ is torsion free; it follows that $\pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ is primitive in $H^{3}(A^{[2]},\Z)$.
+Since $\rk\pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z))=b_1(A)$ it follows that all the elements of $\pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ are divisible by 2 in $H^{3}(A^{[2]},\Z)$.
 \end{proof}
-Now it remains to prove that $\pi_{*}b^{*}(H^{3}(A\times A,\Z))\oplus \pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ is primitive in $H^{3}(A^{[2]},\Z)$.
+Now it remains to prove that $\pi_{*}b^{*}(H^{3}(A\times A,\Z))\oplus \frac{1}{2}\pi_{*}j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$ is primitive in $H^{3}(A^{[2]},\Z)$.
 This comes from the fact that all elements in $\pi_{*}b^{*}(H^{3}(A\times A,\Z)^{\mathfrak{S}_2})$ are divisible by 2, so the relations (\ref{pietpi}) on $\pi_*$ and $\pi^*$ impose the above sum to be primitive.  
 
 More detailed, let $x\in \pi_*b^{*}(H^{3}(A\times A,\Z))$ and $y\in \pi_*j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$. It is enough to show that if $\frac{x+y}{2}\in H^{3}(A^{[2]},\Z)$, then $\frac{x}{2}\in H^{3}(A^{[2]},\Z)$ and $\frac{y}{2}\in H^{3}(A^{[2]},\Z)$.
-As we have seen, we can write $x=\frac{1}{2}\pi_*(z+\sigma_{2}^{*}(z))$, with $z\in b^{*}(H^{3}(A\times A,\Z))$ and $y=\pi_*(y')$, with $y'\in j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$. If $$\frac{\frac{1}{2}\pi_*(z+\sigma_{2}^{*}(z))+\pi_*(y)}{2}\in H^{3}(A^{[2]},\Z)$$ then taking the image by $\pi^{*}$ of this element, we obtain $$\frac{z+\sigma_{2}^{*}(z)}{2}+y'\in H^{3}(\Bl_\Delta(A\! \times\! A),\Z).$$ Hence $\frac{z+\sigma_{2}^{*}(z)}{2}\in b^{*}(H^{3}(A\times A,\Z))^{\mathfrak{S}_2}$. Hence there is $z'\in b^{*}(H^{3}(A\times A,\Z))$ such that 
-$$\frac{z+\sigma_{2}^{*}(z)}{2}=z'+\sigma_{2}^{*}(z').$$
-So $x$ is divisible by 2 and then also $y$.  
+As we have seen, we can write $x=\frac{1}{2}\pi_*(z+\sigma_{2}^{*}(z))$, with $z\in b^{*}(H^{3}(A\times A,\Z))$ and $y=\frac{1}{2}\pi_*(y')$, with $y'\in j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$. If $$\frac{\frac{1}{2}\pi_*(z+\sigma_{2}^{*}(z))+\frac{1}{2}\pi_*(y')}{2}\in H^{3}(A^{[2]},\Z)$$ then taking the image by $\pi^{*}$ of this element, we obtain $$\frac{z+\sigma_{2}^{*}(z)+y'}{2}\in H^{3}(\Bl_\Delta(A\! \times\! A),\Z).$$ 
+Hence from (\ref{voisin1}), necessarely $y'$ is divisible by 2. It follows that $y$ is divisible by 2 and so $x$.
+%$\frac{z+\sigma_{2}^{*}(z)}{2}\in b^{*}(H^{3}(A\times A,\Z))^{\mathfrak{S}_2}$. 
+%Hence there is $z'\in b^{*}(H^{3}(A\times A,\Z))$ such that 
+%$$\frac{z+\sigma_{2}^{*}(z)}{2}=z'+\sigma_{2}^{*}(z').$$
+%So $x$ is divisible by 2 and then also $y$.  
 
 This finishes the proof of (i) of Proposition~\ref{Alpha35}.
 \subsection{The fifth cohomology group}\label{d5}
@@ -231,13 +236,13 @@ It follows that $$H^{5}(A^{[2]},\Z)\supset \pi_{*}(b^*(H^{5}(A\times A,\Z)))\opl
 As before, by looking at the Künneth formula, $\pi_{*}(b^*(H^{5}(A\times A,\Z)))$ is primitive in $H^{5}(A^{[2]},\Z)$.
 Moreover, by (\ref{voisin2}):
 \begin{equation}
-l_2^5(\Bl_\Delta(A\! \times\! A))=\rk H^{5}(A\times A,\Z)^{\mathfrak{S}_2}=28,
+l_2^5(\Bl_\Delta(A\! \times\! A))=\rk H^{5}(A\times A,\Z)^{\mathfrak{S}_2}=b_1(A)(b_2(A)+1),
 \label{l2}
 \end{equation}
 and 
-$$l_{1,+}^5(\Bl_\Delta(A\! \times\! A))=\rk H^{3}(\Delta,\Z)^{\mathfrak{S}_2}=4,\ \text{ and }\ l_{1,-}^5(\Bl_\Delta(A\! \times\! A))=0.$$
+$$l_{1,+}^5(\Bl_\Delta(A\! \times\! A))=\rk H^{3}(\Delta,\Z)^{\mathfrak{S}_2}=b_1(A),\ \text{ and }\ l_{1,-}^5(\Bl_\Delta(A\! \times\! A))=0.$$
 \begin{lemma}
-The lattice $\pi_{*}(H^{3}(\Bl_\Delta(A\! \times\! A),\Z)\oplus H^{5}(\Bl_\Delta(A\! \times\! A),\Z))$ has discriminant $2^8$.
+The lattice $\pi_{*}(H^{3}(\Bl_\Delta(A\! \times\! A),\Z)\oplus H^{5}(\Bl_\Delta(A\! \times\! A),\Z))$ has discriminant $2^{2b_1(A)}$.
 \end{lemma}
 \begin{proof}
 By Proposition~\ref{sarti} (ii):
@@ -266,15 +271,16 @@ By Remark~\ref{x+ix} and since $\pi_*(x+\iota^*(x))=2\pi_*(x)$, we have:
 $$\frac{\pi_*(H^3(\Bl_\Delta(A\! \times\! A),\Z)\oplus H^5(\Bl_\Delta(A\! \times\! A),\Z))}{\pi_*(H^3(\Bl_\Delta(A\! \times\! A),\Z)^{\mathfrak{S}_2}\oplus H^5(\Bl_\Delta(A\! \times\! A),\Z)^{\mathfrak{S}_2})}=\left(\frac{\Z}{2\Z}\right)^{\oplus \left(l_2^3(\Bl_\Delta(A\! \times\! A))+l_2^5(\Bl_\Delta(A\! \times\! A))\right)}.$$
 Then by (\ref{odddiscr}) and (\ref{squareDiscr}):
 \begin{equation*}
-\discr \pi_{*}(H^{3}(\Bl_\Delta(A\! \times\! A),\Z)\oplus H^{5}(\Bl_\Delta(A\! \times\! A),\Z))=2^{l_{1,+}^3(\Bl_\Delta(A\! \times\! A))+l_{1,+}^5(\Bl_\Delta(A\! \times\! A))}=2^8.
+\discr \pi_{*}(H^{3}(\Bl_\Delta(A\! \times\! A),\Z)\oplus H^{5}(\Bl_\Delta(A\! \times\! A),\Z))=2^{l_{1,+}^3(\Bl_\Delta(A\! \times\! A))+l_{1,+}^5(\Bl_\Delta(A\! \times\! A))}=2^{2b_1(A)}.
 \qedhere
 \end{equation*}
 \end{proof}
 The lattice $H^{3}(A^{[2]},\Z)\oplus H^{5}(A^{[2]},\Z)$ is unimodular. Hence by (\ref{squareDiscr}):
-$$\frac{H^{3}(A^{[2]},\Z)\oplus H^{5}(A^{[2]},\Z)}{\pi_{*}(H^{3}(\Bl_\Delta(A\! \times\! A),\Z)\oplus H^{5}(\Bl_\Delta(A\! \times\! A),\Z))}=\left(\frac{\Z}{2\Z}\right)^{\oplus 4}.$$
-However, from the last section, we know that $\pi_{*}(H^{3}(\Bl_\Delta(A\! \times\! A),\Z))=H^{3}(A^{[2]},\Z)$.
+$$\frac{H^{3}(A^{[2]},\Z)\oplus H^{5}(A^{[2]},\Z)}{\pi_{*}(H^{3}(\Bl_\Delta(A\! \times\! A),\Z)\oplus H^{5}(\Bl_\Delta(A\! \times\! A),\Z))}=\left(\frac{\Z}{2\Z}\right)^{\oplus b_1(A)}.$$
+However, from the last section, we know that $\frac{H^{3}(A^{[2]},\Z)}{\pi_{*}(H^{3}(\Bl_\Delta(A\! \times\! A),\Z))}=(\Z/2\Z)^{\oplus b_1(A)}$.
 It follows that
 $$
-\frac{H^{5}(A^{[2]},\Z)}{\pi_{*}(H^{5}(\Bl_\Delta(A\! \times\! A),\Z))}=\left(\frac{\Z}{2\Z}\right)^{\oplus 4}.
+\frac{H^{5}(A^{[2]},\Z)}{\pi_{*}(H^{5}(\Bl_\Delta(A\! \times\! A),\Z))}={0},
 $$
-Then by the same argument as used in the end of Section~\ref{=}, we can see that the elements in $\frac{H^{5}(A^{[2]},\Z)}{\pi_{*}(H^{5}(\Bl_\Delta(A\! \times\! A),\Z))}$ are given by $\frac{1}{2}\pi_{*}j_*b_{|E}^{*}(H^{3}(\Delta,\Z))$.
+which proves (ii) of Proposition \ref{Alpha35}.
+%Then by the same argument as used in the end of Section~\ref{=}, we can see that the elements in $\frac{H^{5}(A^{[2]},\Z)}{\pi_{*}(H^{5}(\Bl_\Delta(A\! \times\! A),\Z))}$ are given by $\frac{1}{2}\pi_{*}j_*b_{|E}^{*}(H^{3}(\Delta,\Z))$.

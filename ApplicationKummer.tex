@@ -20,7 +20,9 @@ When $X=K_2(A)$, $\Ker \nu$ can be precisely described using:
 \subsection{Torelli theorem}
 To prove Theorem \ref{SymplecticInvo} (i) we will need to use the global Torelli theorem for IHS manifolds stated by Markman in \cite{Markmansurvey}. We recall this theorem in this section.
 
-Let $X_1$ and $X_2$ be IHS manifolds. We say that the isomorphism $f: H^*(X_1,\Z) \stackrel{\cong}{\rightarrow} H^*(X_2,\Z)$ is a \emph{parallel-transport operator} if there exist a smooth and proper family $\pi : \mathcal{X}\rightarrow B$ of IHS manifolds over an analytic base $B$, points $b_i\in B$, isomorphisms $\psi_i : X_i \rightarrow \mathcal{X}_{b_i}$ for $i=1,2$, and a continuous path $\gamma: \left[ 0, 1 \right] \rightarrow B$, satisfying $\gamma(0)=b_1$, $\gamma(1)=b_2$, such that the parallel transport in the local system $R\pi_* \Z$ along $\gamma$ induces the homomorphism $\psi_{2*}\circ f\circ \psi_1^{*}: H^*(\mathcal{X}_{b_1},\Z)\stackrel{\cong}{\rightarrow} H^*(\mathcal{X}_{b_2},\Z)$. An isomorphism $g: H^{2}(X_1,\Z)\stackrel{\cong}{\rightarrow} H^{2}(X_2,\Z)$ is said to be a \emph{parallel-transport operator} if it is the $2$-th graded summand of a parallel-transport operator $f$ as above. An automorphism $g: H^{2}(X,\Z)\stackrel{\cong}{\rightarrow} H^{2}(X,\Z)$ of the second cohomology group of an IHS manifolds $X$ which a parallel-transport operator is called a \emph{monodromy operator}. We denote by $\Mon^2(X)\subset \mathcal{O}(H^2(X,\Z)$ the subgroup of monodromy operators of $X$.
+Let $X_1$ and $X_2$ be IHS manifolds. We say that the isomorphism $f: H^*(X_1,\Z) \stackrel{\cong}{\rightarrow} H^*(X_2,\Z)$ is a \emph{parallel-transport operator} if there exist a smooth and proper family $\pi : \mathcal{X}\rightarrow B$ of IHS manifolds over an analytic base $B$, points $b_i\in B$, isomorphisms $\psi_i : X_i \rightarrow \mathcal{X}_{b_i}$ for $i=1,2$, and a continuous path $\gamma: \left[ 0, 1 \right] \rightarrow B$, satisfying $\gamma(0)=b_1$, $\gamma(1)=b_2$, such that the parallel transport in the local system $R\pi_* \Z$ along $\gamma$ induces the homomorphism $\psi_{2*}\circ f\circ \psi_1^{*}: H^*(\mathcal{X}_{b_1},\Z)\stackrel{\cong}{\rightarrow} H^*(\mathcal{X}_{b_2},\Z)$. 
+An isomorphism $g: H^{2}(X_1,\Z)\stackrel{\cong}{\rightarrow} H^{2}(X_2,\Z)$ is said to be a \emph{parallel-transport operator} if it is the $2$-th graded summand of a parallel-transport operator $f$ as above. 
+Remark that an automorphism $g: H^{2}(X,\Z)\stackrel{\cong}{\rightarrow} H^{2}(X,\Z)$ of the second cohomology group of an IHS manifolds $X$ which is a parallel-transport operator is a monodromy operator. We denote by $\Mon^2(X)\subset \mathcal{O}(H^2(X,\Z)$ the subgroup of monodromy operators of $X$.
 
 
 \begin{thm}\cite[Theorem 1.3]{Markmansurvey} \label{Torelli}
@@ -76,7 +78,10 @@ $$\mathscr{P}(Y,\varphi)=\mathscr{P}(K_2(A),\varphi').$$
 %\label{periodequality}
 %\end{equation}
 We recall in few words how this is shown in \cite{MongardiDef}. First, since $\iota$ is symplectic, a period of $X$ is contained in the sub-period domain $\Omega_{\Lambda_\iota}:= \left\{\left.x\in\mathbb{P}(\Lambda_\iota\otimes\C)\right|\ x^2=0\ \text{and}\ x\cdot\overline{x}>0\right\}$.
-Moreover we can find $x\in \Omega_{\Lambda_\iota}$ such that $x^\bot\cap\Lambda_\iota=\Z d$ with $d^2=-6$ and $d\cdot \Lambda_2=6\Z$. Moreover we can link $x$ to a period of $X$ by a chain of twisted lines in $\Omega_{\Lambda_\iota}$ (see for instance Proposition 3.7 of \cite{HuybrechtsSurvey}). Then Remark 1 of \cite{MongardiDef} explains that there exists a couple $(Y,\iota')$ deformation equivalent to $(X,\iota)$ and a mark $\varphi$ such that $\mathscr{P}(Y,\varphi)=x$. Moreover, $d^\bot$ in $\Lambda_2$ is isomorphic to the torus lattice, so by surjectivity of the period map of 2-dimensional torus, we can find a torus $A$ and a mark $\varphi'$ such that $\mathscr{P}(K_2(A),\varphi')=x$. Remark, moreover, that we have chosen $x$ such that the $NS(A)$ is minimal, that is $NS(A)\simeq \mathcal{S}_{\iota'}:=(H^2(Y,\Z)^{\iota'})^\bot$. To be more precise, if we denote by $j:H^2(K_2(A),\Z)\rightarrow H^2(A,\Z)\oplus\Z\delta$ the natural Hodge isometry with $\delta$ half the class of the diagonal divisor in $K_2(A)$, then 
+Moreover we can find $x\in \Omega_{\Lambda_\iota}$ such that $x^\bot\cap\Lambda_\iota=\Z d$ with $d^2=-6$ and $d\cdot \Lambda_2=6\Z$. Furthermore we can link $x$ to a period of $X$ by a chain of twisted lines in $\Omega_{\Lambda_\iota}$ (see for instance Proposition 3.7 of \cite{HuybrechtsSurvey}). 
+Then Remark 1 of \cite{MongardiDef} explains that there exists a couple $(Y,\iota')$ deformation equivalent to $(X,\iota)$ and a mark $\varphi$ such that $\mathscr{P}(Y,\varphi)=x$. 
+Moreover, $d^\bot$ in $\Lambda_2$ is isomorphic to the torus lattice, so by surjectivity of the period map of 2-dimensional torus, we can find a torus $A$ and a mark $\varphi'$ such that $\mathscr{P}(K_2(A),\varphi')=x$. 
+Remark, in addition, that we have chosen $x$ such that the $NS(A)$ is minimal, that is $NS(A)\simeq \mathcal{S}_{\iota'}:=(H^2(Y,\Z)^{\iota'})^\bot$. To be more precise, if we denote by $j:H^2(K_2(A),\Z)\rightarrow H^2(A,\Z)\oplus\Z\delta$ the natural Hodge isometry with $\delta$ half the class of the diagonal divisor in $K_2(A)$, then 
 \begin{equation}
 \NS (A)=j\circ\varphi'^{-1}\circ \varphi(\mathcal{S}_{\iota'}).
 \label{MongNS}
@@ -111,7 +116,7 @@ Let $A$ be an abelian surface. By Section 1.2.1 of \cite{Tari}, the fixed locus 
 Now let $X$ be an irreducible symplectic fourfold of Kummer type and $\iota$ a symplectic involution on $X$. 
 By (ii) of the above theorem, $\Fix\iota$ deforms to the disjoint union of a K3 surface and 36 isolated points. 
 Moreover, $\iota$ is a symplectic involution, so the holomorphic 2-form of $X$ restricts to a non-degenerate holomorphic 2-form on $\Fix\iota$. So $\Fix\iota$ can only contain K3 surfaces, complex tori and isolated points.
-It follows, necessarily, that $\Fix\iota$ consists of a K3 surface and 36 isolated points.
+It follows, necessarily for topological reason, that $\Fix\iota$ consists of a K3 surface and 36 isolated points.
 \end{proof}
 \begin{rmk}
 With the same ideas as in proof of Theorem \ref{SymplecticInvo} (i), when $n+1$ is a prime power, we can show that a numerically standard symplectic automorphism on an irreducible symplectic $2n$-fold of Kummer type is standard (see \cite{MongardiDef} for the definition of standard and numerically standard).
@@ -600,7 +605,7 @@ $$D_e=D_1+...+D_{36}.$$
 \end{lemme}
 \begin{proof}
 We know from Remark \ref{SPA2} that the image of the monodromy representation on $A[2]$ contains the symplectic group $\Sp A[2]$. 
-We recall from Remark \ref{RemarkSymplecticInv} (2), that the $D_1,...,D_{35}$ are given by $\pi_2(s^{-1}(\mathcal{P})$.
+We recall from Remark \ref{RemarkSymplecticInv} (2), that the $D_1,...,D_{35}$ are given by $\pi_2(s^{-1}(\mathcal{P}))$.
 It follows that the image of the monodromy representation on $H^2(\widetilde{K},\Z)$ contains the isometries which act on $D_1,...,D_{35}$
 as the elements $f$ of $\Sp A[2]$:
 $$f\cdot \pi_2(s^{-1}(\{a_1,a_2,a_3\})=\pi_2(s^{-1}(\{f(a_1),f(a_2),f(a_3)\}),$$

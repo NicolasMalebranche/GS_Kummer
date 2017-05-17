@@ -8,14 +8,14 @@ A basis of $H^3(\X,\Z)$ is given by:
 \label{A3_1}
 \frac{1}{2}\theta^*\Big( \q_1(a^*_i)\q_1(1)^2\vac \Big), \\
 \label{A3_2}
-\theta^*\Big(\q_2(a_i)\q_1(1)\vac\Big).
+\frac{1}{2}\theta^*\Big(\q_2(a_i)\q_1(1)\vac\Big).
 \end{gather}
 and a dual basis of $H^5(\X,\Z)$ is given by:
 \begin{gather}
 \label{A5_1}
  \theta^*\Big( \q_1(a_ia_j)\q_1(a_j^*)\q_1(1) \vac \Big) \ \text{for any } j\neq i, \\
 \label{A5_2}
-\frac{1}{2}\theta^*\Big( \q_2(a^*_i)\q_1(1)\vac \Big).
+\theta^*\Big( \q_2(a^*_i)\q_1(1)\vac \Big).
 \end{gather}
 \end{proposition}
 \begin{proof}
@@ -28,7 +28,7 @@ The classes (\ref{A3_1}) are Poincar\'e dual to (\ref{A5_1}) and the classes (\r
  = [\X]\cdot \left( 2\q_3(x) - \q_1(x)^2\q_1(1) \right) \vac = 0-1=-1.
 \end{gather*}
 It remains to show that all classes are integral.
-It is clear from Lemma~\ref{IntegralOperators} that (\ref{A3_1}) is integral, while the integrality of (\ref{A3_2}) and (\ref{A5_1}) is obvious. By Proposition~\ref{A2Basis}, $\frac{1}{2}\q_2(a^*_i)\vac$ is integral as well. If the operator $ \q_1(1)$ is applied, we get again an integral class.
+It is clear from Lemma~\ref{IntegralOperators} that (\ref{A3_1}) is integral, while the integrality of (\ref{A5_1}) and (\ref{A5_2}) is obvious. By Proposition~\ref{A2Basis}, $\frac{1}{2}\q_2(a_i)\vac$ is integral as well. If the operator $ \q_1(1)$ is applied, we get again an integral class.
 \end{proof}
 %\textcolor{green}{Corollary~\ref{actionH3} to put after Proposition 3.18~\ref{} saying that it will be use in Part 2}
 \begin{cor}\label{actionH3}
@@ -38,7 +38,7 @@ By Proposition~\ref{oddcohomology}, $H^3(K_2(A),\Z)\cong H^1(A,\Z)\oplus H^3(A,\
 \begin{proof}
 By Proposition \ref{oddcohomology}, we have an isomorphism:
 $$f:H^1(A,\Z)\oplus H^3(A,\Z)\rightarrow H^3(K_2(A),\Z),$$
-given by $f(a_i)=\theta^*\Big(\q_2(a_i)\q_1(1)\vac\Big)$ and $f(a_i^*)=\frac{1}{2}\theta^*\Big( \q_1(a^*_i)\q_1(1)^2\vac \Big)$, for all $i\in\{1,...,4\}$.
+given by $f(a_i)=\frac{1}{2}\theta^*\Big(\q_2(a_i)\q_1(1)\vac\Big)$ and $f(a_i^*)=\frac{1}{2}\theta^*\Big( \q_1(a^*_i)\q_1(1)^2\vac \Big)$, for all $i\in\{1,...,4\}$.
 We want to prove that $f\circ g^*=g^{[[3]]*}\circ f$. 
 To do so, it is enought to show that $f\circ g^*(a_i)=g^{[[3]]*}\circ f(a_i)$ and $f\circ g^*(a_i^*)=g^{[[3]]*}\circ f(a_i^*)$ for all $i\in\{1,...,4\}$.
 Let $g^{[3]}$ be the morphism induced by $g$ on $A^{[3]}$. By definition of $g^{[[3]]}$:
