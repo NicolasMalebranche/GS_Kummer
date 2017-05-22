@@ -137,7 +137,8 @@ Using Künneth again, we get:
 H^{2}(A\times A,\Z)&=H^{0}(A,\Z)\otimes H^{2}(A,\Z)\oplus H^{1}(A,\Z)\otimes H^{1}(A,\Z)\\
 &\oplus H^{2}(A,\Z)\otimes H^{0}(A,\Z).
 \end{align*}
-As before, elements $z\otimes y\in H^{2}(A\times A,\Z)$ are sent to $-y\otimes z$ by the action of $\sigma_2$. Such an element is anti-invariant by the action of $\sigma_2$ if $z=y$. It follows:
+As before, the elements of $H^{0}(A,\Z)\otimes H^{2}(A,\Z)$ and $H^{2}(A,\Z)\otimes H^{0}(A,\Z)$ are exchanged under the action of $\sigma_2$.
+Futhermore, the elements $z\otimes y\in H^{1}(A\times A,\Z)\otimes H^{1}(A\times A,\Z)$ are sent to $-y\otimes z$ by the action of $\sigma_2$. Such an element is anti-invariant by the action of $\sigma_2$ if $z=y$. It follows:
 $$l_{2}^{2}(A\times A)=b_2(A)+\frac{b_1(A)(b_1(A)-1)}{2},$$
 $$l_{1,-}^{2}(A\times A)=b_1(A),$$
 and thus:
@@ -207,7 +208,7 @@ This comes from the fact that all elements in $\pi_{*}b^{*}(H^{3}(\Bl_\Delta(A\!
 
 More detailed, let $y\in \pi_*b^{*}(H^{3}(A\times A,\Z))$ and $z\in \pi_*j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$. It is enough to show that if $\frac{y+z}{2}\in H^{3}(A^{[2]},\Z)$, then $\frac{y}{2}\in H^{3}(A^{[2]},\Z)$ and $\frac{z}{2}\in H^{3}(A^{[2]},\Z)$.
 As we have seen, we can write $y=\frac{1}{2}\pi_*(w+\sigma_{2}^{*}(w))$, with $w\in b^{*}(H^{3}(A\times A,\Z))$ and $z=\frac{1}{2}\pi_*(z')$, with $z'\in j_*b_{|E}^{*}(H^{1}(\Delta,\Z))$. If $$\frac{\frac{1}{2}\pi_*(w+\sigma_{2}^{*}(w))+\frac{1}{2}\pi_*(z')}{2}\in H^{3}(A^{[2]},\Z)$$ then taking the image by $\pi^{*}$ of this element, we obtain $$\frac{w+\sigma_{2}^{*}(w)+z'}{2}\in H^{3}(\Bl_\Delta(A\! \times\! A),\Z).$$ 
-Hence from (\ref{voisin1}), necessarely $z'$ is divisible by 2. It follows that $z$ is divisible by 2 and so $y$.
+Hence from (\ref{voisin1}), necessarily $z'$ is divisible by 2. It follows that $z$ is divisible by 2 and so $y$.
 %$\frac{z+\sigma_{2}^{*}(z)}{2}\in b^{*}(H^{3}(A\times A,\Z))^{\mathfrak{S}_2}$. 
 %Hence there is $z'\in b^{*}(H^{3}(A\times A,\Z))$ such that 
 %$$\frac{z+\sigma_{2}^{*}(z)}{2}=z'+\sigma_{2}^{*}(z').$$
@@ -225,6 +226,9 @@ Then
 |M\DP L|=\sqrt{\frac{\discr L}{\discr M}}.
 \label{squareDiscr}
 \end{equation}
+We recall that the \emph{discriminant} $\discr L$ of a lattice $L$
+is defined by the absolute value of the determinant of the matrix of its bilinear form. 
+
 If $M$ is unimodular and $L\subset M$ is a primitive embedding, then 
 \begin{equation}
 \discr L = \discr L^\perp.
