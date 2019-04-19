@@ -136,7 +136,7 @@ In this paper, we are going to prove the following result.
 The cohomology $H^*(K_2(A),\Z)$ is torsion free.
 \end{thm}
 \begin{rmk}
-Because of the Poincaré duality and the universal coefficient theorem, we only have to prove that $H^3(K_2(A),\Z)$ and $H^5(K_2(A),\Z)$ are torsion free. \textbf{A faire: Plus de d\'etails sur dualit\'e de Poincar\'e (ou r\'ef\'erence) avec torsion. Pourquoi la torsion est 0 dans les degr\'es 4, 6, 7? } Moreover, since Theorem \ref{main} is only a topological result, without loss of generality, we can assume that $A$ is an abelian surface.
+Because of the Poincaré duality and the universal coefficient theorem, we only have to prove that $H^3(K_2(A),\Z)$ and $H^5(K_2(A),\Z)$ are torsion free. Moreover, since Theorem \ref{main} is only a topological result, without loss of generality, we can assume that $A$ is an abelian surface.
 \end{rmk}
 Let $\tau\in A[3]$, we denote by $W_\tau$ the subspace of $K_2(A)$ containing the subschemes supported entirely at $\tau$. As it is explained in \cite[Section 4]{Hassett}, we have:
 \begin{equation}
@@ -166,7 +166,7 @@ We denote $W_\tau^*:=W_\tau\smallsetminus pt_\tau$ and we consider the following
 \label{exact1}
 \end{equation}
 By Thom's isomorphism, $H^3(U',U,\Z)=0$ and $H^{4}(U',U,\Z)=\bigoplus_{\tau\in A[3]}H^0(W_\tau^*,\Z)$  is torsion free.
-Moreover $H^{5}(U',U,\Z)=\bigoplus_{\tau\in A[3]}H^1(W_\tau^*,\Z)=0$; indeed, $W_\tau^*$ can be seen as the quotient of $\mathbb{P}^2\smallsetminus \left\{pt\right\}$ by an automorphism of order 3. \textbf{Je crois \c ca, mais je ne vois pas l'argument. Le $H^1 (\mathbb{P}^2 \smallsetminus \left\{pt\right\}) $ est bien nul, mais comment tu le d\'eduis pour le quotient?}
+Moreover $H^{5}(U',U,\Z)=\bigoplus_{\tau\in A[3]}H^1(W_\tau^*,\Z)=0$; indeed, $W_\tau^*$ can be seen as the quotient of $\mathbb{P}^2\smallsetminus \left\{pt\right\}$ by an automorphism of order 3. 
 It follows from (\ref{exact1}):
 $$\tors H^3(U',\Z)=\tors H^3(U,\Z)\ \text{and}\ \tors H^5(U',\Z)\hookrightarrow\tors H^5(U,\Z).$$
 Then (\ref{U'}) concludes the proof.
@@ -194,7 +194,7 @@ Let $$S':=\left\{\left.\xi\in A^{[2]}\right|\ \Supp \xi=\left\{x,-2x\right\},\ x
 The surface $S'$ is isomorphic to $\widetilde{A}$, which we define as the blow-up of $A$ in $A[3]$.
 We consider $r:\widetilde{A^{[2]}}\rightarrow A^{[2]}$ the blow-up of $A^{[2]}$ in $S'$.
 We denote $$\Sigma_\tau:=r^{-1}\left(\left\{\left.\xi\in A^{[2]}\right|\ \Supp \xi=\left\{\tau\right\}\right\}\right).$$
-The surfaces $\Sigma_\tau$ are Hirzebruch surfaces \textbf{r\'ef\'erence?}.
+The surfaces $\Sigma_\tau$ are Hirzebruch surfaces.
 We also consider 
 $$\widetilde{\mathcal{W}}:=\widetilde{A^{[2]}}\smallsetminus \bigcup_{\tau\in A[3]}\Sigma_\tau.$$
 We have:
@@ -340,10 +340,16 @@ Hence by \cite[Corollary 4.2]{Lol} and Proposition \ref{AA}, we have: $H^{p}(\ma
 
 Since $\mathfrak{A}_3$ acts freely on $V$, the spectral sequence of equivariant cohomology provides that $H^3(V/\mathfrak{A}_3,\Z)$ and $H^5(V/\mathfrak{A}_3,\Z)$ are torsion free. 
 Moreover $\widetilde{V}/\mathfrak{A}_3$ is obtained from $V/\mathfrak{A}_3$ by blowing-up the image $\overline{\Delta}$ of $\Delta$ in $V/\mathfrak{A}_3$. 
-Since $V/\mathfrak{A}_3$ and $\overline{\Delta}$ are smooth, by  \cite[Theorem 4.1]{Li}:
-\textbf{Le th\'eor\`eme cit\'e donne une suite exacte concise, sans degr\'es cohomologiques...}  
-$$\tors H^3(\widetilde{V}/\mathfrak{A}_3,\Z)=\tors H^3(V/\mathfrak{A}_3,\Z)=0,$$ and 
-$$\tors H^5(\widetilde{V}/\mathfrak{A}_3,\Z)=\tors H^5(V/\mathfrak{A}_3,\Z)\oplus \tors H^1(\overline{\Delta},\Z)=0.$$
+Since $V/\mathfrak{A}_3$ and $\overline{\Delta}$ are smooth, by  \cite[Theorem 4.1]{Li} we have an isomorphism of graded $\Z$-module:
+$$H^*(\widetilde{V},\Z)\simeq H^*(V,\Z)\oplus t\cdot H^*(\overline{\Delta},\Z),$$
+where $t$ is a class of degree 2. Hence, in degree 3 and 5, we obtain:
+%\textbf{Le th\'eor\`eme cit\'e donne une suite exacte concise, sans degr\'es cohomologiques...}  
+$$\tors H^3(\widetilde{V}/\mathfrak{A}_3,\Z)=\tors H^3(V/\mathfrak{A}_3,\Z)\oplus \tors H^1(\overline{\Delta},\Z)=0,$$ and 
+$$\tors H^5(\widetilde{V}/\mathfrak{A}_3,\Z)=\tors H^5(V/\mathfrak{A}_3,\Z)\oplus \tors H^3(\overline{\Delta},\Z)=\tors H^3(\overline{\Delta},\Z).$$
+It remains to verify that $H^3(\overline{\Delta},\Z)$ is torsion free to conclude the proof. Since $\overline{\Delta}\simeq A\smallsetminus A[3]$, it can be done considering the following exact sequence:
+$$\xymatrix{ 0\ar[r] & H^3(A,\Z)\ar[r] & H^{3}(A\smallsetminus A[3],\Z)\ar[r]&H^{4}(A,A\smallsetminus A[3],\Z)
+,}$$
+where $H^3(A,\Z)$ is torsion free and $H^{4}(A,A\smallsetminus A[3],\Z)\simeq \Z^{81}$ by Thom's isomorphism.
 \end{proof}
 \bibliographystyle{amssort}
 \begin{thebibliography}{10}
