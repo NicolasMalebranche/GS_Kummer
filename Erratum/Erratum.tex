@@ -137,9 +137,9 @@ The cohomology $H^*(K_2(A),\Z)$ is torsion free.
 \end{thm}
 \begin{rmk}
 Because of the Poincaré duality and the universal coefficient theorem, we have:
-\begin{align}
-\tors H^6=\tors H_2&=\tors H^3 & \tors H^6=\tors H_2&=\tors H^3
-\end{align}
+\begin{align*}
+\tors H^4=\tors H_4&=\tors H^5,& \tors H^6=\tors H_2&=\tors H^3,& \tors H^7=\tors H_1&=\tors H^2=0.
+\end{align*}
 Thus it remains to prove that $H^3(K_2(A),\Z)$ and $H^5(K_2(A),\Z)$ are torsion free. Moreover, since Theorem \ref{main} is only a topological result, without loss of generality, we can assume that $A$ is an abelian surface.
 \end{rmk}
 Let $\tau\in A[3]$ be a point of 3-torsion. We denote by $W_\tau$ the subspace of $K_2(A)$ containing the subschemes supported entirely at $\tau$. As it is explained in \cite[Section 4]{Hassett}, we have:
@@ -169,7 +169,7 @@ We denote $W_\tau^*:=W_\tau\smallsetminus pt_\tau$ and we consider the following
 .}
 \label{exact1}
 \end{equation}
-By Thom's isomorphism, $H^3(U',U;\Z)=0$ and $H^{4}(U',U;\Z)=\bigoplus_{\tau\in A[3]}H^0(W_\tau^*,\Z)$  is torsion free.
+By Thom's isomorphism, $H^3(U',U,\Z)=0$ and $H^{4}(U',U,\Z)=\bigoplus_{\tau\in A[3]}H^0(W_\tau^*,\Z)$  is torsion free.
 Moreover, $H^{5}(U',U,\Z)=\bigoplus_{\tau\in A[3]}H^1(W_\tau^*,\Z)=0$; indeed, $W_\tau^*$ can be seen as the quotient of $\mathbb{P}^2\smallsetminus \left\{pt\right\}$ by an automorphism of order 3. 
 It follows from (\ref{exact1}):
 $$\tors H^3(U',\Z)=\tors H^3(U,\Z)\ \text{and}\ \tors H^5(U',\Z)\hookrightarrow\tors H^5(U,\Z).$$
@@ -183,7 +183,7 @@ where $A[3]$ is embedded in $A\times A$ diagonally: $A[3]\hookrightarrow A\times
 Let $r:\widetilde{V}\rightarrow V$ be the blow-up of $V$ in the 3 surfaces $\Delta$, $S_1$ and $S_2$, where 
 \begin{align*}
 \Delta&:=\left\{\left.(x,x)\in V\right|\ x\in A\right\}, 
-S_1&:=\left\{\left.(x,-2x)\in V\right|\ x\in A\right\} \text{ and}\\
+&S_1:=\left\{\left.(x,-2x)\in V\right|\ x\in A\right\} \text{ and}\\
 S_2&:=\left\{\left.(-2x,x)\in V\right|\ x\in A\right\}.
 \end{align*}
 As explained in \cite[Section 7]{Beauville}, 
@@ -218,8 +218,8 @@ Then, if we consider $V_1$ the blow-up of $V$ in $\Delta$, we have $V_1/\mathfra
 Therefore
 by \cite[Corollary II 7.15]{Hartshorne}, we obtain a commutative diagram:
 $$\xymatrix{\widetilde{V}\ar[r]\ar[d]&V_1\ar[d]\\
-\widetilde{\mathcal{W}}\ar[r]&V_1/\mathfrak{S}_2
-}.$$
+\widetilde{\mathcal{W}}\ar[r]&V_1/\mathfrak{S}_2.
+}$$
 This provides (\ref{key2}).
 Then, it follows from (\ref{Beauvilleequa}) a triple cover:
 $$\pi:\widetilde{\mathcal{W}}\rightarrow U.$$
