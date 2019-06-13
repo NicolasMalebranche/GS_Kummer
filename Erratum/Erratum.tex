@@ -1,4 +1,4 @@
-\documentclass[a4paper]{article}
+\documentclass{alggeom}
 
 
 \usepackage[latin1]{inputenc}
@@ -8,7 +8,7 @@
 \usepackage{color}
 \usepackage{float}
 \usepackage{array}
-\usepackage[margin=3cm]{geometry}
+%\usepackage[margin=3cm]{geometry}
 %\usepackage{caption}
 
 \newtheorem{THM}{Theorem}
@@ -117,7 +117,20 @@
 \begin{document}
 \title{\emph{Erratum}:\ \bf  Integral cohomology of the Generalized Kummer fourfold}
 
-\author{Simon \textsc{Kapfer}; Gr\'egoire \textsc{Menet}} 
+\author{Simon Kapfer}
+\email{kapfer.simon@freenet.de}
+\address{Institute of Mathematics of Augsburg university, D--86159 Augsburg, Germany}
+\author{Gr\'egoire Menet}
+\email{gregoire.menet@univ-grenoble-alpes.fr}
+\address{Institut Fourier, 100 rue des Mathématiques, 38610 Gières, France}
+%\address{Simon Kapfer, Institut f\"ur Mathematik, Universit\"at Augsburg, D--86159 Augsburg}
+%\email{simon.kapfer@math.univ-poitiers.fr}
+%\email{simon.kapfer@math.uni-augsburg.de}
+%\urladdr{http://www.math.uni-augsburg.de/alg/}
+\classification{14J17, 14J35, 14F43.}
+\keywords{Integral cohomology, generalized Kummer fourfolds, torsion in cohomology, cohomology of quotients.}
+
+%\author{Simon \textsc{Kapfer}; Grégoire \textsc{Menet}} 
 
 \maketitle
 It was pointed out by B. Totaro that the reference used for \cite[Theorem 5.2]{Original} is unappropriate. The latter concern the torsion of the integral cohomology of the generalized Kummer fourfold. We are going to show that \cite[Theorem 5.2]{Original} remains true at least for the generalized Kummer fourfold. All the other results of \cite{Original} remain unaffected. It would also be interesting to find out whether the generalized Kummer varieties of higher dimension have torsion-free cohomology or not.
@@ -128,32 +141,36 @@ It was pointed out by B. Totaro that the reference used for \cite[Theorem 5.2]{O
  \end{center}
 Let $A$ be a 2-dimensional complex torus and $K_2(A)$ the generalized Kummer fourfold. Consider the embedding $j:A\times A\hookrightarrow A\times A \times A: (x,y)\rightarrow (x,y,-x-y)$.
 This way, the action of the symmetric group $\mathfrak{S}_3$ on $A\times A \times A$ induces an action on $A\times A$.
-Then $K_2(A)$ can be seen as a resolution of $\left(A\times A\right)/\mathfrak{S}_3$. 
+Then, $K_2(A)$ can be seen as a resolution of $\left(A\times A\right)/\mathfrak{S}_3$.
 By analyzing that resolution, we are going to prove:
 \begin{thm}\label{main}
 The cohomology $H^*(K_2(A),\Z)$ is torsion free.
 \end{thm}
 \begin{rmk}
-Because of Poincar\'e duality and the universal coefficient theorem, we have:
-\begin{align*}
-\tors H^4=\tors H_4&=\tors H^5,& \tors H^6=\tors H_2&=\tors H^3,& \tors H^7=\tors H_1&=\tors H^2=0.
-\end{align*}
-Thus it remains to prove that $H^3(K_2(A),\Z)$ and $H^5(K_2(A),\Z)$ are torsion free. Moreover, since Theorem \ref{main} is only a topological result, without loss of generality, we can assume that $A$ is an abelian surface.
+Because of the Poincar\'e duality and the universal coefficient theorem, we only have
+%\begin{align*}
+%\tors H^4=\tors H_4&=\tors H^5,& \tors H^6=\tors H_2&=\tors H^3,& \tors H^7=\tors H_1&=\tors H^2=0.
+%\end{align*}
+to prove that $H^3(K_2(A),\Z)$ and $H^5(K_2(A),\Z)$ are torsion free. 
+%Moreover, since Theorem \ref{main} is only a topological result, without loss of generality, we can assume that $A$ is an abelian surface.
 \end{rmk}
-\begin{defi}
-From \cite[Notation 6.19]{Original}, recall the definion of $W_\tau$. From \cite[Section 4]{Hassett}, we have:
-$W_\tau\simeq \mathbb{P}(1,1,3)$. 
+\begin{nota}
+%From \cite[Notation 6.19]{Original}, recall the definion of $W_\tau$. 
+Let $\tau\in A[3]$ be a point of 3-torsion. We denote by $W_\tau$ the subspace of $K_2(A)$ containing the subschemes supported entirely at $\tau$.
+From \cite[Section 4]{Hassett}, we have:
+$W_\tau\simeq \mathbb{P}(1,1,3)$.
 Denote by $pt_\tau$ the singular point of the surface $W_\tau$ and $W_\tau^*:=W_\tau\smallsetminus pt_\tau$.
 We set:
 \begin{align*}
 U&:=K_2(A)\setminus \bigcup_{\tau\in A[3]} W_\tau, &
 U'&:=K_2(A)\setminus \bigcup_{\tau\in A[3]} pt_\tau.
 \end{align*}
-\end{defi}
+\end{nota}
 \begin{lemme}
 We have $\tors H^3(U,\Z)=\tors H^3(K_2(A),\Z)$ and an injection $\tors H^5(K_2(A),\Z)\hookrightarrow\tors H^5(U,\Z)$.
 \end{lemme}
 \begin{proof}
+%By (\ref{Briançon}), the surface $W_\tau$ admits one singular point that we denote $pt_\tau$. Let $$U':=K_2(A)\smallsetminus \left\{\left. pt_\tau\right|\ \tau\in A[3]\right\}.$$
 The generalized Kummer $K_2(A)$ is smooth in $pt_\tau$. Hence, applying Thom's isomorphism to the long exact sequence of the relative cohomology
 of the pair $(K_2(A),U')$,
 %$H^*(K_2(A),U',\Z)$, 
@@ -179,7 +196,7 @@ Hence, it remains to prove that $H^3(U,\Z)$ and $H^5(U,\Z)$ are torsion free.
 To do so, we consider
 $V:=\left(A\times A\right)\smallsetminus A[3]$,
 where $A[3]\hookrightarrow A\times A$ is embedded diagonally: $x\rightarrow (x,x)$.
-Let $\widetilde{V}\rightarrow V$ be the blow-up of $V$ in the 3 (disjoint) surfaces $\Delta$, $S_1$ and $S_2$, given by 
+Let $\widetilde{V}\rightarrow V$ be the blow-up of $V$ in the 3 (disjoint) surfaces $\Delta$, $S_1$ and $S_2$, given by:
 \begin{align*}
 \Delta&:=\left\{\left.(x,x)\in V\right|\ x\in A\right\}, &
 S_1 &:=\left\{\left.(x,-2x)\in V\right|\ x\in A\right\}, &
@@ -198,27 +215,27 @@ The groups $H^3(U,\Z)$ and $H^5(U,\Z)$ can only have 3-torsion.
 \end{lemme}
 \begin{proof}
 Let $$S':=\left\{\left.\xi\in A^{[2]}\right|\ \Supp \xi=\left\{x,-2x\right\},\ x\in A\right\}.$$
-The surface $S'$ is isomorphic to a blow-up $\widetilde{A} \rightarrow A $ of $A$ in $A[3]$.
+The surface $S'$ is isomorphic to the blow-up $\widetilde{A} \rightarrow A $ of $A$ in $A[3]$.
 We consider $r:\widetilde{A^{[2]}}\rightarrow A^{[2]}$ the blow-up of $A^{[2]}$ in $S'$.
 For $\tau\in A[3]$, we denote $$\Sigma_\tau:=r^{-1}\left(\left\{\left.\xi\in A^{[2]}\right|\ \Supp \xi=\left\{\tau\right\}\right\}\right).$$
 The surfaces $\Sigma_\tau$ are Hirzebruch surfaces.
 We also consider 
 $$\widetilde{\mathcal{W}}:=\widetilde{A^{[2]}}\smallsetminus \bigcup_{\tau\in A[3]}\Sigma_\tau.$$
-We have:
-\begin{equation}
-\widetilde{\mathcal{W}}\simeq \widetilde{V}/\mathfrak{S}_2.
-\label{key2}
-\end{equation}
-Indeed, if we denote by $\widetilde{A\times A}$ the blow-up of $A\times A$ in the diagonal, it is well known that $\widetilde{A\times A}/\mathfrak{S}_2\simeq A^{[2]}$. 
-%(see for instance \cite[Section 6]{Beauville}).
-For $\tau\in A[3]$, we denote $\ell_\tau:=\left\{\left.\xi\in A^{[2]}\right|\ \Supp \xi=\left\{\tau\right\}\right\}$.
-Then, if we consider $V_1$ the blow-up of $V$ in $\Delta$, we have $V_1/\mathfrak{S}_2\simeq A^{[2]}\smallsetminus \bigcup_{\tau\in A[3]} \ell_\tau$.  
-Therefore
-by \cite[Corollary II 7.15]{Hartshorne}, we obtain a commutative diagram:
-$$\xymatrix{\widetilde{V}\ar[r]\ar[d]&V_1\ar[d]\\
-\widetilde{\mathcal{W}}\ar[r]&V_1/\mathfrak{S}_2.
-}$$
-This provides (\ref{key2}).
+We have
+%\begin{equation}
+$\widetilde{\mathcal{W}}\simeq \widetilde{V}/\mathfrak{S}_2.$
+%\label{key2}
+%\end{equation}
+%Indeed, if we denote by $\widetilde{A\times A}$ the blow-up of $A\times A$ in the diagonal, it is well known that $\widetilde{A\times A}/\mathfrak{S}_2\simeq A^{[2]}$. 
+%%(see for instance \cite[Section 6]{Beauville}).
+%For $\tau\in A[3]$, we denote $\ell_\tau:=\left\{\left.\xi\in A^{[2]}\right|\ \Supp \xi=\left\{\tau\right\}\right\}$.
+%Then, if we consider $V_1$ the blow-up of $V$ in $\Delta$, we have $V_1/\mathfrak{S}_2\simeq A^{[2]}\smallsetminus \bigcup_{\tau\in A[3]} \ell_\tau$.  
+%Therefore
+%by \cite[Corollary II 7.15]{Hartshorne}, we obtain a commutative diagram:
+%$$\xymatrix{\widetilde{V}\ar[r]\ar[d]&V_1\ar[d]\\
+%\widetilde{\mathcal{W}}\ar[r]&V_1/\mathfrak{S}_2.
+%}$$
+%This provides (\ref{key2}).
 Then, it follows from (\ref{Beauvilleequa}) a triple cover:
 $$\pi:\widetilde{\mathcal{W}}\rightarrow U.$$
 Hence if we prove that $H^3(\widetilde{\mathcal{W}},\Z)$ and $H^5(\widetilde{\mathcal{W}},\Z)$ are torsion free, Lemma \ref{2torsion} will be proven by \cite[Theorem 5.4 ]{Transfers}.
@@ -253,42 +270,10 @@ The groups $H^3(\widetilde{V}/\mathfrak{A}_3,\Z)$ and $H^5(\widetilde{V}/\mathfr
 The first step is to prove that $H^3(V/\mathfrak{A}_3,\Z)$ and $H^5(V/\mathfrak{A}_3,\Z)$ are torsion free.
 Since the action of $\mathfrak{A}_3$ on $V$ is free, it can be realized using the equivariant cohomology as explained in \cite[Section 4]{Lol}.
 The computation of the equivariant cohomology can be done using the Boissi\`ere--Sarti--Nieper-Wi\ss kirchen invariants defined in \cite[Section 2]{SmithTh}. 
-We recall their definition in our specific case. Let $T$ be a $3$-torsion-free $\Z$-module of finite rank equipped with a linear action of $\mathfrak{A}_3=\left\langle \sigma_{1,2,3}\right\rangle$. 
-We consider the action of $\mathfrak{A}_3$ on $T\otimes\mathbb{F}_3$. Then the matrix of the endomorphism $\sigma_{1,2,3}$ on $T\otimes\mathbb{F}_3$ admits a Jordan normal form.  
-%Let $p$ be a prime number, 
-%$T$ a $p$-torsion-free $\Z$-module of finite rank and $G=\left\langle g\right\rangle$ a group of prime order $p$ acting linearly on $T$.
-%Then, $T\otimes\F$ is a $\F$-vector space equipped with a linear action of $G$. 
-%The minimal polynomial of $g$, as an endomorphism of $T\otimes\F$, divides $X^{p}-1=(X-1)^{p}\in\F[X]$, hence $g$ admits a Jordan normal form over $\F$. 
-We can decompose $T\otimes\mathbb{F}_3$ as a direct sum of some $\mathbb{F}_3[\mathfrak{A}_3]$-modules $N_{q}$ of dimension $q$ with $1\leq q\leq 3$, where $\sigma_{1,2,3}$ acts on the $N_{q}$ in a suitable basis, respectively by matrices of the following form:
-$$\begin{pmatrix}
-1\end{pmatrix},\ 
-\begin{pmatrix}
-1 & 1\\
-0 & 1
-\end{pmatrix}\
-\text{and}\
-\begin{pmatrix}
-1 & 1 & 0\\
-0 & 1 & 1\\
-0 & 0 & 1
-\end{pmatrix}.
-$$
-%$$\begin{pmatrix}
-%1 & 1 & & &  \\
-% & \ddots & \ddots &{\fontsize{1cm}{0.5cm}\selectfont\text{0}} & \\
-% & & \ddots & \ddots & \\
-% & {\fontsize{1cm}{0.5cm}\selectfont\text{0}}& & \ddots & 1\\
-% & & & & 1
-%\end{pmatrix}$$
-\begin{defi}
-We define the integer $\ell_{q}(T)$ as the number of blocks of size $q$ in the Jordan decomposition of the $\mathbb{F}_3[\mathfrak{A}_3]$-module $T\otimes\mathbb{F}_3$, so that $T\otimes\mathbb{F}_3\simeq \bigoplus_{q=1}^{3} N_{q}^{\oplus \ell_{q}(T)}$.
-For $X$ a topological space we abbreviate
-$ \ell_q^k(X)=\ell_q(H^k(X,\Z))$.
-\end{defi}
 %Our first goal is to compute the $\ell_q^k(A\times A)$ for $q\in \left\{1,2,3\right\}$ and $k\in \left\{1,2,3,4\right\}$.
 %Let $A$ be an abelian variety. The alternating group $\mathscr{A}_3=\left\langle \sigma_{1,2,3}\right\rangle$ acts naturally on $A^3$.
 %It also acts on $A^2$ via the embedding: $j:A\times A\hookrightarrow A\times A \times A: (x,y)\rightarrow (x,y,-x-y)$.
-%We want to calculate the $\ell_q^k(A\times A)$, $q\in \left\{1,2,3\right\}$ for the action of $\mathscr{A}_3$. Then, as explained in \cite[Section 4]{Lol}, we will be able to calculate the equivariant cohomology of $A\times A$. As it is state in \cite[Proposition 3.9]{Lol}, we only need to calculate $\ell_q^k(A\times A)$, $q\in \left\{1,2,3\right\}$ for $k\leq 4$, the other invariant can be deduced by Poincare duality.
+%We want to calculate the $\ell_q^k(A\times A)$, $q\in \left\{1,2,3\right\}$ for the action of $\mathscr{A}_3$. Then, as explained in \cite[Section 4]{Lol}, we will be able to calculate the equivariant cohomology of $A\times A$. As it is state in \cite[Proposition 3.9]{Lol}, we only need to calculate $\ell_q^k(A\times A)$, $q\in \left\{1,2,3\right\}$ for $k\leq 4$, the other invariant can be deduced by Poincar\'e duality.
 \begin{prop}\label{AA}
 The Boissi\`ere--Sarti--Nieper-Wi\ss kirchen invariants for the action of $\mathfrak{A}_3$ on $A\times A$ are the following.
 \begin{itemize}
@@ -303,10 +288,11 @@ $\ell_1^4(A\times A)=19$, $\ell_2^4(A\times A)=0$ and  $\ell_3^4(A\times A)=17$.
 \end{itemize}
 \end{prop}
 \begin{proof}
-We can start by calculating the $\ell_q^1(A\times A)$, $q\in \left\{1,2,3\right\}$. Then applying the same idea as \cite[Lemma 6.14]{SmithTh}, we deduce the other invariants $\ell_q^k(A\times A)$ using the fact that: 
+We can start by calculating the $\ell_q^1(A\times A)$, $q\in \left\{1,2,3\right\}$. 
+Then applying the same idea as \cite[Lemma 6.14]{SmithTh}, we deduce the other invariants $\ell_q^k(A\times A)$ using the fact that: 
 $$H^k(A\times A,\Z)\simeq\wedge^k H^1(A\times A,\Z).$$
 \begin{itemize}
-\item[(i)]
+\item[(i)] 
 For $a\in H^1(A,\Z)$ and a generator $A$ of $H^0(A,\Z)$, we note that
 $\sigma_{1,2,3}^*(A\otimes a)=-a\otimes A,\ \text{and}\ \sigma_{1,2,3}^*(a\otimes A)=-A\otimes a+a\otimes A.$
 It follows (i).
@@ -337,8 +323,7 @@ Moreover:
 \end{itemize}
 \end{proof}
 \begin{proof}[Proof of Lemma \ref{last}]
-Since $H^k(A\times A,\Z)\simeq H^k(V,\Z)$ for all $k\leq 6$, the invariants of $A\times A$ and $V$ coincide:
- $\ell_q^k(V)=\ell_q^k(A\times A)$ for all $q\in \left\{1,2,3\right\}$ and $k\leq 6$. 
+Since $H^k(A\times A,\Z)\simeq H^k(V,\Z)$ for all $k\leq 6$, the invariants of $A\times A$ and $V$ coincide: $\ell_q^k(V)=\ell_q^k(A\times A)$ for all $q\in \left\{1,2,3\right\}$ and $k\leq 6$. 
 Hence by \cite[Corollary 4.2]{Lol} and Proposition \ref{AA}, we have $H^{p}(\mathfrak{A}_3,H^q(V,\Z))=0$ for all $p+q=3$, $p\neq 0$, and $p+q=5$, $p\neq 0$.
 
 Since $\mathfrak{A}_3$ acts freely on $V$, the spectral sequence of equivariant cohomology provides that $H^3(V/\mathfrak{A}_3,\Z)$ and $H^5(V/\mathfrak{A}_3,\Z)$ are torsion free (see \cite[Section 4]{Lol} for a reminder about this spectral sequence). 
@@ -354,6 +339,9 @@ $$\xymatrix{ 0\ar[r] & H^3(A,\Z)\ar[r] & H^{3}(A\smallsetminus A[3],\Z)\ar[r]&H^
 ,}$$
 where $H^3(A,\Z)$ is torsion free and $H^{4}(A,A\smallsetminus A[3],\Z)\simeq \Z^{81}$ by Thom's isomorphism.
 \end{proof}
+\begin{acknowledgements}
+This work was supported by the ERC ALKAGE.
+\end{acknowledgements}
 \bibliographystyle{amssort}
 \begin{thebibliography}{10}
 \bibitem{Transfers}
@@ -369,7 +357,7 @@ A.~Beauville,
 \newblock 18 (1983) 755-782.
 
 \bibitem{SmithTh}
-S.~Boissi\`ere, M.~Nieper-Wisskirchen, A.~Sarti,
+S.~Boissi\`ere, M.~Nieper-Wi\ss kirchen, A.~Sarti,
 \newblock {\em Smith theory and irreducible holomorphic symplectic manifolds},
 \newblock J. Topo. 6 (2013), no. 2, 361-390.
 
@@ -378,10 +366,10 @@ D.~Haibao, L.~Banghe,
 \newblock {\em Topology of Blow-ups and Enumerative Geometry},
 \newblock Graduate Texts in Mathematics.
 
-\bibitem{Hartshorne}
-R.~Hartshorne,
-\newblock {\em Algebraic Geometry},
-\newblock Graduate Texts in Mathematics.
+%\bibitem{Hartshorne}
+%R.~Hartshorne,
+%\newblock {\em Algebraic Geometry},
+%\newblock Graduate Texts in Mathematics.
 
 \bibitem{Hassett}
 B.~Hassett and Y.~Tschinkel,
